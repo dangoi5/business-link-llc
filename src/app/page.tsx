@@ -15,6 +15,7 @@ import {
   heroHighlights,
   images,
   manufacturerServices,
+  ownBrand,
   portfolioCategories,
   processSteps,
   regionCards,
@@ -36,16 +37,16 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
 
         <div className="relative mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-end px-5 pb-28 pt-32 md:justify-center md:px-8 md:pb-36">
-          <SectionLabel light>Global food trade</SectionLabel>
+          <SectionLabel light>Master distributor & exporter</SectionLabel>
           <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
             Developing Businesses.
             <br />
             Building Markets.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-            Your partner for international food & beverage market development—connecting
-            manufacturers, brands and distributors across the Americas, Caribbean, Africa, Europe and
-            Asia-Pacific.
+            Business Link LLC is a master distributor and exporter of food & beverage products—with
+            our own Fresh Elements line—connecting supply and markets across the Americas, Caribbean,
+            Africa, Europe and Asia-Pacific.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <PrimaryButton href="/portfolio">Request portfolio</PrimaryButton>
@@ -93,13 +94,14 @@ export default function HomePage() {
           <Reveal>
             <SectionLabel>Who we are</SectionLabel>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink md:text-4xl">
-              A commercial platform for international food supply.
+              Master distributor, exporter, and brand owner.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-slate md:text-lg">{company.description}</p>
+            <p className="mt-4 text-base leading-relaxed text-slate">{company.role}</p>
             <p className="mt-4 text-base leading-relaxed text-slate">
-              We work with manufacturers, brands, distributors, importers and strategic partners that
-              need reliable routes to market—coordinating products, commercial relationships and
-              execution to turn opportunities into lasting business.
+              Alongside partner brands and manufacturers, we market{" "}
+              <span className="font-semibold text-ink">{ownBrand.name}</span>—our own product line
+              developed for international commercial channels.
             </p>
             <div className="mt-8">
               <TextLink href="/capabilities">Learn more about our capabilities →</TextLink>
@@ -126,7 +128,7 @@ export default function HomePage() {
               <SectionHeading
                 label="Product portfolio"
                 title="Categories prepared for retail, foodservice and trade."
-                description="Our growing international food portfolio combines established manufacturers, selected brands and sourcing capabilities."
+                description="Our portfolio includes Fresh Elements—our own product line—plus established manufacturers, selected brands and sourcing capabilities."
               />
               <TextLink href="/portfolio">Explore full portfolio →</TextLink>
             </div>

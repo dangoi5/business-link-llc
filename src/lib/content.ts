@@ -1,11 +1,22 @@
 export const company = {
   name: "Business Link LLC",
   tagline: "Developing Businesses. Building Markets. Connecting the World",
-  subtitle: "International Business & Market Development",
+  subtitle: "Master Distributor · Exporter · Own Brand",
   description:
-    "Business Link LLC develops and executes commercial opportunities across international markets. We work with manufacturers, brands, distributors and strategic partners to establish sustainable routes to market, develop distribution structures and create long-term business.",
+    "Business Link LLC is a master distributor and exporter of food and beverage products. We develop and execute commercial opportunities across international markets—working with manufacturers, brands, distributors and strategic partners to establish sustainable routes to market and long-term business.",
+  role:
+    "As a master distributor and exporter, we manage international supply, distribution structures and commercial relationships across our active markets.",
   email: "info@businesslinkllc.com",
   phone: "",
+};
+
+export const ownBrand = {
+  name: "Fresh Elements",
+  tagline: "Our own product line",
+  description:
+    "In addition to distributing and exporting partner brands, Business Link develops and markets Fresh Elements—our own line of food products built for retail, foodservice and international trade.",
+  ctaLabel: "Explore portfolio",
+  ctaHref: "/portfolio",
 };
 
 export const navLinks = [
@@ -18,12 +29,13 @@ export const navLinks = [
 
 export const heroHighlights = [
   {
-    title: "Import / Export",
-    description: "International commercial operations across food & beverage.",
+    title: "Master Distributor & Exporter",
+    description: "We export and distribute food & beverage products across international markets.",
   },
   {
-    title: "Market Development",
-    description: "Routes to market, partners and sustainable distribution.",
+    title: "Import / Export & Market Development",
+    description:
+      "International commercial operations across food & beverage—with routes to market, partners and sustainable distribution.",
   },
   {
     title: "Americas · Caribbean · Africa · Europe · Asia-Pacific",
@@ -79,6 +91,14 @@ export const buyerServices = [
 
 export const capabilities = [
   {
+    slug: "master-distribution-export",
+    title: "Master Distribution & Export",
+    summary:
+      "We operate as a master distributor and exporter—managing product supply, commercial terms and routes to market for partner brands and our own Fresh Elements line.",
+    detail:
+      "Buyers and market partners gain a single commercial counterpart for international supply, with structured distribution support across our active footprint.",
+  },
+  {
     slug: "international-business-development",
     title: "International Business Development",
     summary:
@@ -109,6 +129,14 @@ export const capabilities = [
       "We identify products and manufacturing capabilities based on specific market requirements while evaluating sourcing, routing and supply-chain alternatives.",
     detail:
       "Buyers and distributors gain access to manufacturing capacity matched to specification, volume and compliance needs—with routing options that protect margin and reliability.",
+  },
+  {
+    slug: "own-brand-fresh-elements",
+    title: "Own Brand — Fresh Elements",
+    summary:
+      "We develop and market Fresh Elements, our own food product line, alongside the international brands and manufacturers we represent and distribute.",
+    detail:
+      "Fresh Elements gives buyers access to Business Link’s proprietary range, developed for commercial channels including retail, foodservice and institutional supply.",
   },
 ];
 
@@ -241,9 +269,14 @@ export const regionCards = [
 
 export const partners = [
   {
+    type: "Fresh Elements",
+    description:
+      "Our own product line—developed and marketed by Business Link for retail, foodservice and international distribution.",
+  },
+  {
     type: "Manufacturers",
     description:
-      "Selected food and beverage manufacturers seeking structured access to new international markets.",
+      "Selected food and beverage manufacturers seeking structured access to new international markets through our master distribution and export network.",
   },
   {
     type: "Brands",

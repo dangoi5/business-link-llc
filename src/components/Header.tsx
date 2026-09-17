@@ -40,7 +40,7 @@ export function Header() {
             Business Link
           </span>
           <span className={`block text-[10px] font-medium tracking-[0.12em] uppercase ${solid ? "text-teal" : "text-white/70"}`}>
-            International Trade
+            Master Distributor & Exporter
           </span>
         </Link>
 

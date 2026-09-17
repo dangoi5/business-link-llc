@@ -33,7 +33,7 @@ export function Footer() {
             {company.email}
           </a>
           <p className="mt-3 text-sm leading-relaxed text-white/65">
-            International food & beverage market development, distribution and sourcing.
+            Master distributor & exporter · Fresh Elements · International food & beverage trade
           </p>
         </div>
       </div>

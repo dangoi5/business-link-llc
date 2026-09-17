@@ -12,16 +12,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Business Link LLC | International Market Development",
+    title: {
+    default: "Business Link LLC | Master Distributor & Exporter",
     template: "%s | Business Link LLC",
   },
   description:
-    "Business Link LLC develops international commercial opportunities for food and beverage manufacturers, brands, distributors and strategic partners worldwide.",
+    "Business Link LLC is a master distributor and exporter of food and beverage products, with our own Fresh Elements line, serving manufacturers, brands and buyers worldwide.",
   openGraph: {
     title: "Business Link LLC",
     description:
-      "Developing businesses. Building markets. Connecting the world through international food and beverage trade.",
+      "Master distributor and exporter of food & beverage products. Own brand: Fresh Elements.",
     type: "website",
   },
 };

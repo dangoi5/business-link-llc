@@ -7,7 +7,7 @@ import { buyerServices, capabilities, manufacturerServices, processSteps } from 
 export const metadata: Metadata = {
   title: "Capabilities",
   description:
-    "International business development, market development, distribution execution and strategic sourcing from Business Link LLC.",
+    "Master distribution, export, Fresh Elements own brand, market development and sourcing from Business Link LLC.",
 };
 
 export default function CapabilitiesPage() {
@@ -15,8 +15,8 @@ export default function CapabilitiesPage() {
     <>
       <PageHero
         label="Capabilities"
-        title="Active market development—not introductions alone."
-        description="From audit and commercial structure to sourcing and logistics coordination, we support exporters and importers with comprehensive trade services."
+        title="Master distribution, export and market development."
+        description="Business Link operates as a master distributor and exporter—supporting partner brands and our own Fresh Elements line with market development, distribution and sourcing."
       />
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">

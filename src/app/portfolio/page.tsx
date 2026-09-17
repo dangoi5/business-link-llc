@@ -8,7 +8,7 @@ import { portfolioCategories } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Explore Business Link LLC's international food portfolio across shelf-stable foods, oils & fats, foodservice, grocery and snacks.",
+    "Business Link LLC portfolio: Fresh Elements and partner food categories across shelf-stable foods, oils & fats, foodservice, grocery and snacks.",
 };
 
 export default function PortfolioPage() {
@@ -17,7 +17,7 @@ export default function PortfolioPage() {
       <PageHero
         label="Portfolio"
         title="Food categories built for international distribution."
-        description="Categories prepared for retail, foodservice, food industry and international trade, with a focus on B2B supply and commercial response."
+        description="As a master distributor and exporter, Business Link supplies partner brands and our own Fresh Elements line across retail, foodservice, food industry and international trade."
       />
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
