@@ -16,6 +16,67 @@ export const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+export const heroHighlights = [
+  {
+    title: "Import / Export",
+    description: "International commercial operations across food & beverage.",
+  },
+  {
+    title: "Market Development",
+    description: "Routes to market, partners and sustainable distribution.",
+  },
+  {
+    title: "Americas · Caribbean · Africa · Europe · Asia-Pacific",
+    description: "A multisector commercial network activated by opportunity.",
+  },
+];
+
+export const manufacturerServices = [
+  {
+    title: "Export Sales Representation",
+    description:
+      "We represent your brand and products in international markets to grow your sales network with qualified buyers and distributors.",
+  },
+  {
+    title: "Market Entry & Distributor Sourcing",
+    description:
+      "We identify ideal markets and connect you with trusted importers, distributors and retail partners to enter and scale.",
+  },
+  {
+    title: "Export Strategy Development",
+    description:
+      "We build a custom market plan, evaluate commercial fit and guide expansion into new regions with lasting partnerships.",
+  },
+  {
+    title: "Distribution Structure",
+    description:
+      "We design market-specific distribution models using qualified import, warehousing and logistics partners where required.",
+  },
+];
+
+export const buyerServices = [
+  {
+    title: "Strategic Product Sourcing",
+    description:
+      "We identify products and manufacturing capabilities matched to specification, volume and destination-market requirements.",
+  },
+  {
+    title: "Supplier & Brand Discovery",
+    description:
+      "Access selected manufacturers and brands whose capabilities complement your channels and commercial goals.",
+  },
+  {
+    title: "Purchasing & Supply Support",
+    description:
+      "Assistance across sourcing, commercial structure and supply coordination so purchasing needs become viable operations.",
+  },
+  {
+    title: "Logistics Coordination",
+    description:
+      "We work with warehousing, fulfillment and logistics partners to support efficient product movement into your market.",
+  },
+];
+
 export const capabilities = [
   {
     slug: "international-business-development",
@@ -66,6 +127,8 @@ export const portfolioCategories = [
     summary:
       "Long shelf-life proteins, prepared meals, shelf-stable dairy and other ambient food solutions designed for efficient storage and distribution.",
     channels: ["Retail", "Distribution", "Institutional"],
+    image:
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "oils-fats",
@@ -73,6 +136,8 @@ export const portfolioCategories = [
     summary:
       "Edible oils, palm-based products, vegetable oil blends, margarines and shortenings for retail and foodservice applications.",
     channels: ["Retail", "Foodservice", "Industrial"],
+    image:
+      "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "foodservice-institutional",
@@ -80,6 +145,8 @@ export const portfolioCategories = [
     summary:
       "Products and supply solutions for foodservice, hospitality, catering, institutional feeding and other high-volume applications.",
     channels: ["Hospitality", "Catering", "Institutional"],
+    image:
+      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "grocery-consumer",
@@ -87,6 +154,8 @@ export const portfolioCategories = [
     summary:
       "Selected consumer food products and grocery categories developed according to individual market opportunities.",
     channels: ["Retail", "Grocery", "Wholesale"],
+    image:
+      "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "snacks-nuts",
@@ -94,6 +163,8 @@ export const portfolioCategories = [
     summary:
       "Selected peanuts, flavored nuts and snack products for markets where the product, positioning and distribution opportunity provide the right commercial fit.",
     channels: ["Retail", "Snacking", "Foodservice"],
+    image:
+      "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
@@ -124,6 +195,14 @@ export const regions = [
   "Europe",
   "Asia-Pacific",
 ] as const;
+
+export const regionCards = [
+  { region: "Americas", detail: "Commercial relationships and distribution partners." },
+  { region: "Caribbean", detail: "Import, wholesale and retail market access." },
+  { region: "Africa", detail: "Market development and supply opportunities." },
+  { region: "Europe", detail: "Sourcing and international trade gateway." },
+  { region: "Asia-Pacific", detail: "Manufacturing links and buyer networks." },
+];
 
 export const partners = [
   {
@@ -165,3 +244,10 @@ export const distributionPoints = [
       "We evaluate opportunities to redirect qualifying excess or short-dated shelf-stable food inventories into selected markets. Products with at least 90 days of remaining shelf life may be evaluated based on destination requirements, transit time, regulatory compliance and commercial viability.",
   },
 ];
+
+export const images = {
+  hero: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2000&q=80",
+  about: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80",
+  markets: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1600&q=80",
+  operations: "https://images.unsplash.com/photo-1605745341112-859df7b39370?auto=format&fit=crop&w=1400&q=80",
+};

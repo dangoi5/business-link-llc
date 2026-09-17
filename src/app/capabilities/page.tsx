@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
-import { PageHero, TextLink } from "@/components/ui";
-import { capabilities, processSteps } from "@/lib/content";
+import { PageHero, SectionLabel } from "@/components/ui";
+import { buyerServices, capabilities, manufacturerServices, processSteps } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Capabilities",
@@ -13,59 +14,82 @@ export default function CapabilitiesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Capabilities"
+        label="Capabilities"
         title="Active market development—not introductions alone."
-        description="Business Link takes an active role in identifying opportunities, developing markets, structuring commercial relationships and supporting their execution and growth."
+        description="From audit and commercial structure to sourcing and logistics coordination, we support exporters and importers with comprehensive trade services."
       />
 
-      <section className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-        <div className="divide-y divide-border border-y border-border">
+      <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+        <div className="grid gap-6 md:grid-cols-2">
           {capabilities.map((item, index) => (
-            <Reveal key={item.slug}>
-              <article className="grid gap-4 py-10 md:grid-cols-12 md:gap-10 md:py-12">
-                <div className="md:col-span-4">
-                  <p className="text-sm text-muted">{String(index + 1).padStart(2, "0")}</p>
-                  <h2 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-black md:text-2xl">
-                    {item.title}
-                  </h2>
-                </div>
-                <div className="md:col-span-8">
-                  <p className="text-base leading-relaxed text-muted md:text-lg">{item.summary}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">{item.detail}</p>
-                </div>
+            <Reveal key={item.slug} delay={index * 50}>
+              <article className="h-full rounded-2xl border border-line bg-white p-7 md:p-8">
+                <p className="text-xs font-bold text-orange">{String(index + 1).padStart(2, "0")}</p>
+                <h2 className="mt-2 text-xl font-bold text-ink md:text-2xl">{item.title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-slate md:text-base">{item.summary}</p>
+                <p className="mt-3 text-sm leading-relaxed text-slate/80">{item.detail}</p>
               </article>
             </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-border bg-surface">
-        <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
+      <section className="bg-surface py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
-            <p className="text-sm font-medium text-navy">Process</p>
-            <h2 className="mt-2 max-w-2xl text-2xl font-semibold tracking-[-0.03em] text-black md:text-3xl">
+            <SectionLabel>How we work</SectionLabel>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink md:text-4xl">
               From opportunity to market
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
-              Each engagement is evaluated across product, market, commercial structure, and route
-              to market.
-            </p>
           </Reveal>
-
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {processSteps.map((step) => (
               <Reveal key={step.step}>
-                <p className="text-xs font-medium text-muted">{step.step}</p>
-                <h3 className="mt-2 text-base font-semibold text-black">{step.label}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted">{step.description}</p>
+                <div className="rounded-2xl border border-line bg-white p-5">
+                  <p className="text-xs font-bold text-orange">{step.step}</p>
+                  <h3 className="mt-2 font-bold text-ink">{step.label}</h3>
+                  <p className="mt-2 text-sm text-slate">{step.description}</p>
+                </div>
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
 
-          <Reveal className="mt-10">
-            <TextLink href="/contact">Talk through an opportunity →</TextLink>
+      <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <Reveal>
+            <div className="rounded-2xl border border-line p-8">
+              <h3 className="text-xl font-bold text-ink">For manufacturers</h3>
+              <ul className="mt-5 space-y-4">
+                {manufacturerServices.map((s) => (
+                  <li key={s.title}>
+                    <p className="font-semibold text-teal">{s.title}</p>
+                    <p className="mt-1 text-sm text-slate">{s.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="rounded-2xl border border-line p-8">
+              <h3 className="text-xl font-bold text-ink">For buyers</h3>
+              <ul className="mt-5 space-y-4">
+                {buyerServices.map((s) => (
+                  <li key={s.title}>
+                    <p className="font-semibold text-teal">{s.title}</p>
+                    <p className="mt-1 text-sm text-slate">{s.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Reveal>
         </div>
+        <Reveal className="mt-10 text-center">
+          <Link href="/contact" className="text-sm font-semibold text-orange hover:underline">
+            Talk through an opportunity →
+          </Link>
+        </Reveal>
       </section>
     </>
   );

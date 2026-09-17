@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import "./globals.css";
 
-const plex = IBM_Plex_Sans({
-  variable: "--font-plex",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${plex.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-white text-black">
+    <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col bg-white text-ink">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
