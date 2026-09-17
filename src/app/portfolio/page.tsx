@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, TextLink } from "@/components/ui";
 import { portfolioCategories } from "@/lib/content";
@@ -51,6 +52,14 @@ export default function PortfolioPage() {
                         {channel}
                       </span>
                     ))}
+                  </div>
+                  <div className="mt-7">
+                    <Link
+                      href={`/portfolio/${category.slug}`}
+                      className="inline-flex rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-hover"
+                    >
+                      View products
+                    </Link>
                   </div>
                 </div>
               </article>

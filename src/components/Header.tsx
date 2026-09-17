@@ -69,27 +69,7 @@ export function Header() {
             })}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
-          <Link
-            href="/contact?audience=manufacturer"
-            className={`rounded-full px-3.5 py-2 text-xs font-semibold transition ${
-              solid
-                ? "bg-teal/10 text-teal hover:bg-teal/15"
-                : "bg-white/10 text-white hover:bg-white/20"
-            }`}
-          >
-            I am a manufacturer
-          </Link>
-          <Link
-            href="/contact?audience=buyer"
-            className={`rounded-full px-3.5 py-2 text-xs font-semibold transition ${
-              solid
-                ? "bg-teal/10 text-teal hover:bg-teal/15"
-                : "bg-white/10 text-white hover:bg-white/20"
-            }`}
-          >
-            I am a buyer
-          </Link>
+        <div className="hidden items-center md:flex">
           <Link
             href="/contact"
             className="rounded-full bg-orange px-4 py-2 text-xs font-semibold text-white transition hover:bg-orange-hover"
@@ -121,14 +101,8 @@ export function Header() {
               </Link>
             ))}
           </div>
-          <div className="mt-4 flex flex-col gap-2">
-            <Link href="/contact?audience=manufacturer" className="rounded-full bg-teal/10 px-4 py-2.5 text-center text-sm font-semibold text-teal">
-              I am a manufacturer
-            </Link>
-            <Link href="/contact?audience=buyer" className="rounded-full bg-teal/10 px-4 py-2.5 text-center text-sm font-semibold text-teal">
-              I am a buyer
-            </Link>
-            <Link href="/contact" className="rounded-full bg-orange px-4 py-2.5 text-center text-sm font-semibold text-white">
+          <div className="mt-4">
+            <Link href="/contact" className="block rounded-full bg-orange px-4 py-2.5 text-center text-sm font-semibold text-white">
               Get in touch
             </Link>
           </div>

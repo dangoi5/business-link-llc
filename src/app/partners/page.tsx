@@ -60,7 +60,7 @@ export default function PartnersPage() {
             </p>
           </div>
           <Link
-            href="/contact?audience=buyer"
+            href="/contact"
             className="inline-flex shrink-0 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-hover"
           >
             Partner with us

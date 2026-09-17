@@ -135,27 +135,34 @@ export default function HomePage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {portfolioCategories.map((category, index) => (
               <Reveal key={category.slug} delay={index * 60}>
-                <Link
-                  href={`/portfolio#${category.slug}`}
-                  className="group block overflow-hidden rounded-2xl border border-line bg-white transition hover:shadow-lg hover:shadow-ink/5"
-                >
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={category.image}
-                      alt={category.title}
-                      fill
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
+                <article className="group overflow-hidden rounded-2xl border border-line bg-white transition hover:shadow-lg hover:shadow-ink/5">
+                  <Link href={`/portfolio/${category.slug}`} className="block">
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={category.image}
+                        alt={category.title}
+                        fill
+                        className="object-cover transition duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-lg font-bold text-ink group-hover:text-teal">{category.title}</h3>
+                      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate">
+                        {category.summary}
+                      </p>
+                    </div>
+                  </Link>
+                  <div className="border-t border-line px-5 py-4">
+                    <Link
+                      href={`/portfolio/${category.slug}`}
+                      className="text-sm font-semibold text-orange transition hover:text-orange-hover"
+                    >
+                      View products →
+                    </Link>
                   </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-bold text-ink group-hover:text-teal">{category.title}</h3>
-                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate">
-                      {category.summary}
-                    </p>
-                  </div>
-                </Link>
+                </article>
               </Reveal>
             ))}
           </div>
@@ -215,7 +222,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <div className="mt-8">
-                <PrimaryButton href="/contact?audience=manufacturer">I am a manufacturer</PrimaryButton>
+                <PrimaryButton href="/contact">Contact us</PrimaryButton>
               </div>
             </div>
           </Reveal>
@@ -233,10 +240,10 @@ export default function HomePage() {
               </ul>
               <div className="mt-8">
                 <Link
-                  href="/contact?audience=buyer"
+                  href="/contact"
                   className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-teal transition hover:bg-white/90"
                 >
-                  I am a buyer
+                  Contact us
                 </Link>
               </div>
             </div>

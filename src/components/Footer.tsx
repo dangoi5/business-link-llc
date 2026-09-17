@@ -8,20 +8,12 @@ export function Footer() {
         <div>
           <p className="text-lg font-bold tracking-tight">Business Link LLC</p>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/65">{company.tagline}</p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            <Link
-              href="/contact?audience=manufacturer"
-              className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/15"
-            >
-              Manufacturers
-            </Link>
-            <Link
-              href="/contact?audience=buyer"
-              className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/15"
-            >
-              Buyers
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="mt-6 inline-flex rounded-full bg-orange px-4 py-2 text-xs font-semibold text-white transition hover:bg-orange-hover"
+          >
+            Get in touch
+          </Link>
         </div>
         <div>
           <p className="text-sm font-semibold text-white">Explore</p>

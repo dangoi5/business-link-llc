@@ -120,15 +120,42 @@ export const processSteps = [
   { step: "05", label: "Grow", description: "Expand presence and sustain long-term volume" },
 ];
 
-export const portfolioCategories = [
+export type PortfolioProduct = {
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  /** Optional short details like pack size, origin, or format */
+  details?: string[];
+};
+
+export type PortfolioCategory = {
+  slug: string;
+  title: string;
+  summary: string;
+  channels: string[];
+  image: string;
+  products: PortfolioProduct[];
+};
+
+export const portfolioCategories: PortfolioCategory[] = [
   {
     slug: "shelf-stable-foods",
     title: "Shelf-Stable Foods",
     summary:
       "Long shelf-life proteins, prepared meals, shelf-stable dairy and other ambient food solutions designed for efficient storage and distribution.",
     channels: ["Retail", "Distribution", "Institutional"],
-    image:
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80",
+    image: "/categories/shelf-stable-foods.jpg",
+    products: [
+      // Add products here, for example:
+      // {
+      //   slug: "long-life-milk",
+      //   name: "Long-Life Milk",
+      //   description: "UHT milk for retail and institutional distribution.",
+      //   image: "/products/shelf-stable/long-life-milk.jpg",
+      //   details: ["1L", "Retail", "Foodservice"],
+      // },
+    ],
   },
   {
     slug: "oils-fats",
@@ -138,6 +165,7 @@ export const portfolioCategories = [
     channels: ["Retail", "Foodservice", "Industrial"],
     image:
       "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1200&q=80",
+    products: [],
   },
   {
     slug: "foodservice-institutional",
@@ -147,6 +175,7 @@ export const portfolioCategories = [
     channels: ["Hospitality", "Catering", "Institutional"],
     image:
       "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80",
+    products: [],
   },
   {
     slug: "grocery-consumer",
@@ -156,6 +185,7 @@ export const portfolioCategories = [
     channels: ["Retail", "Grocery", "Wholesale"],
     image:
       "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1200&q=80",
+    products: [],
   },
   {
     slug: "snacks-nuts",
@@ -165,8 +195,13 @@ export const portfolioCategories = [
     channels: ["Retail", "Snacking", "Foodservice"],
     image:
       "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=1200&q=80",
+    products: [],
   },
 ];
+
+export function getCategoryBySlug(slug: string) {
+  return portfolioCategories.find((category) => category.slug === slug);
+}
 
 export const activeMarkets = [
   { name: "United States", region: "Americas" },
