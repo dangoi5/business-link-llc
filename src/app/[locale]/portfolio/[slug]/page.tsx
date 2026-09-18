@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Reveal } from "@/components/Reveal";
+import { ProductGrid } from "@/components/ProductGrid";
 import { PrimaryButton, TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, locales, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
@@ -94,41 +94,7 @@ export default async function PortfolioCategoryPage({
         </div>
 
         {category.products.length > 0 ? (
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {category.products.map((product, index) => (
-              <Reveal key={product.slug} delay={index * 50}>
-                <article className="overflow-hidden rounded-2xl border border-line bg-white">
-                  <div className="relative aspect-[4/3]">
-                    <Image
-                      src={product.image}
-                      alt={t(locale, product.name)}
-                      fill
-                      className={product.imageFit === "contain" ? "object-contain bg-[#f7f4ee]" : "object-cover"}
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-bold text-ink">{t(locale, product.name)}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate">
-                      {t(locale, product.description)}
-                    </p>
-                    {product.details && product.details.length > 0 ? (
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {product.details.map((detail) => (
-                          <span
-                            key={detail.en}
-                            className="rounded-full bg-surface px-2.5 py-1 text-xs font-medium text-slate"
-                          >
-                            {t(locale, detail)}
-                          </span>
-                        ))}
-                      </div>
-                    ) : null}
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <ProductGrid products={category.products} locale={locale} />
         ) : (
           <div className="mt-8 rounded-2xl border border-dashed border-line bg-surface p-8 md:p-10">
             <h3 className="text-lg font-bold text-ink">{t(locale, ui.categoryPage.comingSoonTitle)}</h3>

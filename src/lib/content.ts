@@ -34,6 +34,7 @@ export const ownBrand = {
 export const navLinks = [
   { href: "/capabilities", label: loc("Capabilities", "Capacidades") },
   { href: "/portfolio", label: loc("Portfolio", "Portafolio") },
+  { href: "/portfolio/fresh-elements", label: loc("Fresh Elements", "Fresh Elements") },
   { href: "/markets", label: loc("Markets", "Mercados") },
   { href: "/partners", label: loc("Partners", "Socios") },
   { href: "/contact", label: loc("Contact", "Contacto") },
@@ -684,9 +685,220 @@ export const portfolioCategories: PortfolioCategory[] = [
       loc("Snacking", "Snacking"),
       loc("Foodservice", "Foodservice"),
     ],
-    image:
-      "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=1200&q=80",
-    products: [],
+    image: "/products/star-brands/flint-croutons.jpg",
+    products: [
+      {
+        slug: "flint-croutons",
+        name: loc("Flint Wheat-Rye Croutons", "Crutones Flint de trigo-centeno"),
+        description: loc(
+          "Flint wheat-rye croutons from Star Brands. Flavors include bacon, sour cream and greens, crab, jellied meat with horseradish, red caviar, cheese, kebab and hunting sausages. Packs from 35 g to 150 g.",
+          "Crutones Flint de trigo-centeno de Star Brands. Sabores: tocino, crema agria y verdes, cangrejo, gelatina con rábano picante, caviar rojo, queso, kebab y salchichas de caza. Empaques de 35 g a 150 g.",
+        ),
+        image: "/products/star-brands/flint-croutons.jpg",
+        details: [
+          loc("Flint", "Flint"),
+          loc("Star Brands", "Star Brands"),
+          loc("35–150 g", "35–150 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "flint-baguette",
+        name: loc("Flint Baguette", "Flint Baguette"),
+        description: loc(
+          "Round wheat baguette snacks from Flint. Flavors include lobster, spicy pork, creamy sauce with herbs, French cheese, mushroom in creamy sauce, and cream and onions. 60 g, 100 g and 150 g packs.",
+          "Snacks de baguette de trigo Flint. Sabores: langosta, cerdo picante, salsa cremosa con hierbas, queso francés, champiñones en salsa cremosa, y crema y cebolla. Empaques de 60 g, 100 g y 150 g.",
+        ),
+        image: "/products/star-brands/flint-baguette.jpg",
+        details: [
+          loc("Flint", "Flint"),
+          loc("Star Brands", "Star Brands"),
+          loc("60 / 100 / 150 g", "60 / 100 / 150 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "flint-grenki",
+        name: loc("Flint Grenki Rye Croutons", "Grenki Flint de centeno"),
+        description: loc(
+          "True rye toasts roasted with bar-snack flavors: Bavarian sausages, garlic, bacon and horseradish, spicy tomato, and veal with adjika. 65 g, 70 g and 100 g packs.",
+          "Tostadas de centeno con sabores de bar: salchichas bávaras, ajo, tocino y rábano picante, tomate picante y ternera con adjika. Empaques de 65 g, 70 g y 100 g.",
+        ),
+        image: "/products/star-brands/flint-grenki.jpg",
+        details: [
+          loc("Flint Grenki", "Flint Grenki"),
+          loc("Star Brands", "Star Brands"),
+          loc("65–100 g", "65–100 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "flint-craft",
+        name: loc("Flint Craft Bars & Bread Chips", "Flint Craft barras y chips de pan"),
+        description: loc(
+          "Craft-recipe Flint snacks in bar and bread-chip shapes. Flavors include kabanosa with mustard, garlic, and spicy jerky. 90 g packs.",
+          "Snacks Flint de receta craft en forma de barra y chip de pan. Sabores: kabanosa con mostaza, ajo y cecina picante. Empaques de 90 g.",
+        ),
+        image: "/products/star-brands/flint-craft.jpg",
+        details: [
+          loc("Flint Craft", "Flint Craft"),
+          loc("Star Brands", "Star Brands"),
+          loc("90 g", "90 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "big-bob-peanuts",
+        name: loc("Big Bob Peanuts", "Maní Big Bob"),
+        description: loc(
+          "Roasted peanuts from Big Bob in salted, cheese and bacon flavors. Cups and bags from 30 g to 160 g, including big-pack formats.",
+          "Maní tostado Big Bob en sabores salado, queso y tocino. Vasos y bolsas de 30 g a 160 g, incluidos formatos big pack.",
+        ),
+        image: "/products/star-brands/big-bob-peanuts.jpg",
+        details: [
+          loc("Big Bob", "Big Bob"),
+          loc("Star Brands", "Star Brands"),
+          loc("30–160 g", "30–160 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "big-bob-crunch",
+        name: loc("Big Bob Crunch Peanuts", "Maní crujiente Big Bob"),
+        description: loc(
+          "Peanuts in a crispy shell: cheese, veal with adjika, wasabi and sweet chili. 55 g and 90 g packs.",
+          "Maní con cobertura crujiente: queso, ternera con adjika, wasabi y chile dulce. Empaques de 55 g y 90 g.",
+        ),
+        image: "/products/star-brands/big-bob-crunch.jpg",
+        details: [
+          loc("Big Bob Crunch", "Big Bob Crunch"),
+          loc("Star Brands", "Star Brands"),
+          loc("55 / 90 g", "55 / 90 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "big-bob-corn",
+        name: loc("Big Bob Fried Corn", "Maíz frito Big Bob"),
+        description: loc(
+          "Crunchy fried Spanish corn in barbecue, cheese, and honey-mustard flavors (60 g), plus peanut-and-corn mixes in cheese and BBQ sausage (70 g).",
+          "Maíz español frito y crujiente en sabores barbacoa, queso y miel-mostaza (60 g), más mezclas de maní y maíz en queso y salchicha BBQ (70 g).",
+        ),
+        image: "/products/star-brands/big-bob-corn.jpg",
+        details: [
+          loc("Big Bob", "Big Bob"),
+          loc("Star Brands", "Star Brands"),
+          loc("60 / 70 g", "60 / 70 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "big-bob-popcorn",
+        name: loc("Big Bob Popcorn", "Palomitas Big Bob"),
+        description: loc(
+          "Ready-to-eat and microwave popcorn: salted, cheese, bacon, caramel, fruit, cherry and sugar. Packs from 25 g to 90 g.",
+          "Palomitas listas y para microondas: saladas, queso, tocino, caramelo, frutas, cereza y azúcar. Empaques de 25 g a 90 g.",
+        ),
+        image: "/products/star-brands/big-bob-popcorn.jpg",
+        details: [
+          loc("Big Bob", "Big Bob"),
+          loc("Star Brands", "Star Brands"),
+          loc("25–90 g", "25–90 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "san-sanych-seeds",
+        name: loc("San Sanych Roasted Seeds", "Semillas tostadas San Sanych"),
+        description: loc(
+          "Roasted sunflower seeds from San Sanych: classic, salted, premium white and striped, kernels and pumpkin seeds. Packs from 50 g to 285 g.",
+          "Semillas de girasol tostadas San Sanych: clásicas, saladas, premium blancas y rayadas, pepitas y calabaza. Empaques de 50 g a 285 g.",
+        ),
+        image: "/products/star-brands/san-sanych-seeds.jpg",
+        details: [
+          loc("San Sanych", "San Sanych"),
+          loc("Star Brands", "Star Brands"),
+          loc("50–285 g", "50–285 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "chipsters-classic",
+        name: loc("Chipster’s Classic Potato Chips", "Papas clásicas Chipster’s"),
+        description: loc(
+          "Classic Chipster’s potato chips in sour cream and herbs, crab, bacon, cheese, grilled sausages, sour cream and onions, salt, jalapeño, cheddar BBQ and Texas steak. Packs from 25 g to 180 g.",
+          "Papas clásicas Chipster’s: crema agria y hierbas, cangrejo, tocino, queso, salchichas a la parrilla, crema agria y cebolla, sal, jalapeño, cheddar BBQ y bistec Texas. Empaques de 25 g a 180 g.",
+        ),
+        image: "/products/star-brands/chipsters-classic.jpg",
+        details: [
+          loc("Chipster’s", "Chipster’s"),
+          loc("Star Brands", "Star Brands"),
+          loc("25–180 g", "25–180 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "chipsters-bbq-superwave",
+        name: loc("Chipster’s BBQ & Superwave", "Chipster’s BBQ y Superwave"),
+        description: loc(
+          "Chipster’s BBQ chips (wings, grilled meat, cheese and onion) and wavy Superwave chips (mushroom cream sauce, sausages with mustard, spicy tomato, cheese sauce with onion). 110 g and 120 g packs.",
+          "Papas Chipster’s BBQ (alitas, carne a la parrilla, queso y cebolla) y Superwave onduladas (champiñones en crema, salchichas con mostaza, tomate picante, salsa de queso con cebolla). Empaques de 110 g y 120 g.",
+        ),
+        image: "/products/star-brands/chipsters-bbq.jpg",
+        details: [
+          loc("Chipster’s", "Chipster’s"),
+          loc("Star Brands", "Star Brands"),
+          loc("110 / 120 g", "110 / 120 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "crispy-cris",
+        name: loc("Crispy Cris Corn Snacks", "Snacks de maíz Crispy Cris"),
+        description: loc(
+          "Unfried corn balls and rings from Crispy Cris: cheese balls, sour cream and greens rings, and bacon balls. 55 g packs.",
+          "Bolitas y aros de maíz sin freír de Crispy Cris: bolitas de queso, aros de crema agria y verdes, y bolitas de tocino. Empaques de 55 g.",
+        ),
+        image: "/products/star-brands/crispy-cris.jpg",
+        details: [
+          loc("Crispy Cris", "Crispy Cris"),
+          loc("Star Brands", "Star Brands"),
+          loc("55 g", "55 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "hroom-chips",
+        name: loc("Hroom Sliced Potato Chips", "Papas en rodaja Hroom"),
+        description: loc(
+          "Thin sliced Hroom potato chips in crab, bacon, cheese, kebab, sour cream with herbs, cheese and onion, grilled meat and paprika. 50 g and 100 g packs.",
+          "Papas Hroom en rodaja fina: cangrejo, tocino, queso, kebab, crema agria con hierbas, queso y cebolla, carne a la parrilla y paprika. Empaques de 50 g y 100 g.",
+        ),
+        image: "/products/star-brands/hroom-chips.jpg",
+        details: [
+          loc("Hroom", "Hroom"),
+          loc("Star Brands", "Star Brands"),
+          loc("50 / 100 g", "50 / 100 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
+        slug: "do-bochkovogo",
+        name: loc("Do Bochkovogo Pub Toasts", "Tostadas Do Bochkovogo"),
+        description: loc(
+          "Pub-style toasts in wavy rye-wheat, rye-wheat pencil and wheat pencil shapes. Flavors include garlic, spicy tomato, veal with adjika, sausages with mustard and horseradish. 90 g and 130 g packs.",
+          "Tostadas estilo pub: trigo-centeno ondulado, palito de trigo-centeno y palito de trigo. Sabores: ajo, tomate picante, ternera con adjika, salchichas con mostaza y rábano picante. Empaques de 90 g y 130 g.",
+        ),
+        image: "/products/star-brands/do-bochkovogo.jpg",
+        details: [
+          loc("Do Bochkovogo", "Do Bochkovogo"),
+          loc("Star Brands", "Star Brands"),
+          loc("90 / 130 g", "90 / 130 g"),
+        ],
+        imageFit: "contain",
+      },
+      ...freshElementsBrand.products.filter((product) => product.line === "snacks"),
+    ],
   },
 ];
 

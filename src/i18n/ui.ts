@@ -183,8 +183,8 @@ export const ui = {
   partnersPage: {
     metaTitle: loc("Partners", "Socios"),
     metaDescription: loc(
-      "Brands we represent—including AmeriQual, Star Grocery, Tronix, Lasco and Camagüey—plus Fresh Elements and strategic partners working with Business Link LLC.",
-      "Marcas que representamos —incluyendo AmeriQual, Star Grocery, Tronix, Lasco y Camagüey— más Fresh Elements y socios estratégicos de Business Link LLC.",
+      "Brands we represent—including AmeriQual, Star Grocery, Star Brands, Tronix, Lasco and Camagüey—plus Fresh Elements and strategic partners working with Business Link LLC.",
+      "Marcas que representamos —incluyendo AmeriQual, Star Grocery, Star Brands, Tronix, Lasco y Camagüey— más Fresh Elements y socios estratégicos de Business Link LLC.",
     ),
     heroLabel: loc("Partners & brands", "Socios y marcas"),
     heroTitle: loc(
@@ -234,6 +234,12 @@ export const ui = {
       "Category coverage across retail, foodservice, food industry and international trade.",
       "Cobertura de categorías en retail, foodservice, industria alimentaria y comercio internacional.",
     ),
+    ownBrandCatalogTitle: loc("Fresh Elements catalog", "Catálogo Fresh Elements"),
+    ownBrandCatalogBody: loc(
+      "See every Fresh Elements product in one place—snacks now, with oils, rice and condiments as they launch.",
+      "Vea todos los productos Fresh Elements en un solo lugar: snacks ahora, y aceites, arroz y condimentos a medida que se lancen.",
+    ),
+    viewOwnBrandCatalog: loc("View catalog", "Ver catálogo"),
     categoryPrefix: loc("Category", "Categoría"),
     viewProducts: loc("View products", "Ver productos"),
     lookingTitle: loc("Looking for a specific product range?", "¿Busca una línea de producto específica?"),
@@ -258,6 +264,26 @@ export const ui = {
     inquire: loc("Inquire about this category", "Consultar esta categoría"),
     otherCategories: loc("Other categories", "Otras categorías"),
     fallbackTitle: loc("Category", "Categoría"),
+  },
+  freshElements: {
+    metaTitle: loc("Fresh Elements", "Fresh Elements"),
+    metaDescription: loc(
+      "Fresh Elements product catalog from Business Link LLC: flavored peanuts, Platanitos plantain chips, and additional lines for retail, foodservice and international trade.",
+      "Catálogo de productos Fresh Elements de Business Link LLC: maní saborizado, Platanitos y líneas adicionales para retail, foodservice y comercio internacional.",
+    ),
+    heroLabel: loc("Own brand", "Marca propia"),
+    heroTitle: loc("Fresh Elements product catalog.", "Catálogo de productos Fresh Elements."),
+    heroDescription: loc(
+      "Our own food line for retail, foodservice and international distribution. Browse current products below; oils, rice and condiments will be added as they launch.",
+      "Nuestra línea de alimentos para retail, foodservice y distribución internacional. Vea los productos actuales abajo; aceites, arroz y condimentos se agregarán a medida que se lancen.",
+    ),
+    intro: loc(
+      "Fresh Elements is developed and marketed by Business Link. This catalog is the on-site product list for the brand—separate from partner manufacturers in the broader portfolio.",
+      "Fresh Elements es desarrollada y comercializada por Business Link. Este catálogo es la lista de productos de la marca en el sitio, aparte de los fabricantes asociados del portafolio general.",
+    ),
+    lineComingSoon: loc("Products in this line will appear here as they are added.", "Los productos de esta línea aparecerán aquí a medida que se agreguen."),
+    inquireLine: loc("Inquire about this line", "Consultar esta línea"),
+    backToPortfolio: loc("← Portfolio", "← Portafolio"),
   },
   contactPage: {
     metaTitle: loc("Contact", "Contacto"),

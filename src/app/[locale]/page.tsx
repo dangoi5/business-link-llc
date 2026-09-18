@@ -114,7 +114,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <p className="mt-4 text-base leading-relaxed text-slate">{t(locale, company.role)}</p>
             <p className="mt-4 text-base leading-relaxed text-slate">
               {t(locale, ui.home.whoAlongside)}{" "}
-              <span className="font-semibold text-ink">{ownBrand.name}</span>
+              <Link href={localizedHref(locale, "/portfolio/fresh-elements")} className="font-semibold text-ink underline decoration-orange/60 underline-offset-4 hover:text-teal">
+                {ownBrand.name}
+              </Link>
               {t(locale, ui.home.whoAlongsideAfter)}
             </p>
             <div className="mt-8">

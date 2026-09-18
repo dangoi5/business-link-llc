@@ -16,6 +16,7 @@ import { loc, type Loc } from "@/i18n/t";
  */
 
 export type ProductLine = {
+  id?: string;
   label: Loc;
   detail?: Loc;
 };
@@ -41,26 +42,69 @@ export const freshElementsBrand = {
     "In addition to distributing and exporting partner brands, Business Link develops and markets Fresh Elements—our own line of food products built for retail, foodservice and international trade.",
     "Además de distribuir y exportar marcas asociadas, Business Link desarrolla y comercializa Fresh Elements: nuestra línea de alimentos para retail, foodservice y comercio internacional.",
   ),
-  ctaLabel: loc("Explore portfolio", "Ver portafolio"),
-  ctaHref: "/portfolio",
+  ctaLabel: loc("View catalog", "Ver catálogo"),
+  ctaHref: "/portfolio/fresh-elements",
   futureSite: "https://freshelementsholdings.com",
   logo: undefined as string | undefined,
-  catalogHref: undefined as string | undefined,
-  catalogLabel: loc("View full catalog", "Ver catálogo completo"),
+  catalogHref: "/portfolio/fresh-elements",
+  catalogLabel: loc("View product catalog", "Ver catálogo de productos"),
   photos: [] as string[],
   productLines: [
-    { label: loc("Oils", "Aceites") },
     {
+      id: "snacks",
       label: loc("Snacks", "Snacks"),
       detail: loc(
-        "Includes Platanitos plantain chips — gluten free, multiple flavors",
-        "Incluye Platanitos — chips de plátano sin gluten, varios sabores",
+        "Platanitos plantain chips — gluten free, Salt and Chile Limón — and flavored peanuts in five 42 g flavors",
+        "Platanitos — chips de plátano sin gluten, Sal y Chile Limón — y maní saborizado en cinco sabores de 42 g",
       ),
     },
-    { label: loc("Rice", "Arroz") },
-    { label: loc("Condiments", "Condimentos") },
+    { id: "oils", label: loc("Oils", "Aceites") },
+    { id: "rice", label: loc("Rice", "Arroz") },
+    { id: "condiments", label: loc("Condiments", "Condimentos") },
   ] satisfies ProductLine[],
+  products: [
+    {
+      slug: "flavored-peanuts",
+      line: "snacks",
+      name: loc("Flavored Peanuts", "Maní saborizado"),
+      description: loc(
+        "Retail peanut snacks from our Fresh Elements line. Five 42 g (1.5 oz) flavors: spicy, Japanese-style, lime & salt, salted, and caramelized with sesame.",
+        "Snacks de maní de nuestra línea Fresh Elements. Cinco sabores de 42 g (1.5 oz): picante, estilo japonés, limón y sal, con sal, y caramelizado con ajonjolí.",
+      ),
+      image: "/products/fresh-elements/flavored-peanuts.jpg",
+      details: [
+        loc("42 g / 1.5 oz", "42 g / 1.5 oz"),
+        loc("5 flavors", "5 sabores"),
+        loc("Retail snack", "Snack de retail"),
+      ],
+      imageFit: "contain" as const,
+    },
+    {
+      slug: "platanitos",
+      line: "snacks",
+      name: loc("Platanitos", "Platanitos"),
+      description: loc(
+        "Gluten-free plantain chips from Fresh Elements. Two flavors: Salt and Chile Limón (Spicy Lime), packed for retail snacking.",
+        "Chips de plátano sin gluten de Fresh Elements. Dos sabores: Sal y Chile Limón, en empaque para snack de retail.",
+      ),
+      image: "/products/fresh-elements/platanitos.jpg",
+      details: [
+        loc("Gluten free", "Sin gluten"),
+        loc("Salt & Chile Limón", "Sal y chile limón"),
+        loc("1 oz (28 g) serving", "Porción de 1 oz (28 g)"),
+      ],
+      imageFit: "contain" as const,
+    },
+  ],
 };
+
+export type FreshElementsLineId = (typeof freshElementsBrand.productLines)[number]["id"];
+
+export type FreshElementsProduct = (typeof freshElementsBrand.products)[number];
+
+export function freshElementsProductsForLine(line: FreshElementsLineId) {
+  return freshElementsBrand.products.filter((product) => product.line === line);
+}
 
 export const representedBrands: Brand[] = [
   {
@@ -163,6 +207,68 @@ export const representedBrands: Brand[] = [
     ],
     catalogHref: "/catalogs/star-grocery-2025.pdf",
     catalogLabel: loc("View 2025 catalog", "Ver catálogo 2025"),
+    photos: [],
+  },
+  {
+    slug: "star-brands",
+    name: "Star Brands",
+    logo: "/brands/star-brands.png",
+    note: loc(
+      "Ukrainian snack manufacturer. Flint, Big Bob, Chipster’s, San Sanych, Crispy Cris, Hroom and Do Bochkovogo.",
+      "Fabricante de snacks de Ucrania. Flint, Big Bob, Chipster’s, San Sanych, Crispy Cris, Hroom y Do Bochkovogo.",
+    ),
+    subBrands: [
+      "Flint",
+      "Big Bob",
+      "Chipster’s",
+      "San Sanych",
+      "Crispy Cris",
+      "Hroom",
+      "Do Bochkovogo",
+    ],
+    productLines: [
+      {
+        label: loc("Flint croutons", "Crutones Flint"),
+        detail: loc(
+          "Wheat-rye croutons, baguette, Grenki rye toasts and Craft bars/chips",
+          "Crutones de trigo-centeno, baguette, Grenki de centeno y barras/chips Craft",
+        ),
+      },
+      {
+        label: loc("Big Bob nuts & corn", "Frutos secos y maíz Big Bob"),
+        detail: loc(
+          "Roasted peanuts, crunch peanuts in casing, fried corn and popcorn",
+          "Maní tostado, maní crujiente en cobertura, maíz frito y palomitas",
+        ),
+      },
+      {
+        label: loc("Potato chips", "Papas fritas"),
+        detail: loc(
+          "Chipster’s classic, BBQ and Superwave; Hroom sliced chips",
+          "Chipster’s clásicas, BBQ y Superwave; papas en rodaja Hroom",
+        ),
+      },
+      {
+        label: loc("Seeds", "Semillas"),
+        detail: loc(
+          "San Sanych roasted sunflower, striped, white, pumpkin and kernels",
+          "San Sanych: girasol tostado, rayadas, blancas, calabaza y pepitas",
+        ),
+      },
+      {
+        label: loc("Corn snacks", "Snacks de maíz"),
+        detail: loc("Crispy Cris corn balls and rings", "Crispy Cris: bolitas y aros de maíz"),
+      },
+      {
+        label: loc("Pub toasts", "Tostadas"),
+        detail: loc(
+          "Do Bochkovogo wavy and pencil toasts — rye-wheat and wheat",
+          "Do Bochkovogo: tostadas onduladas y en palito — trigo-centeno y trigo",
+        ),
+      },
+    ],
+    catalogHref: "/catalogs/star-brands-snacks-2024.pdf",
+    catalogLabel: loc("View 2024 snack catalog", "Ver catálogo de snacks 2024"),
     photos: [],
   },
   {

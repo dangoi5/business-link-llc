@@ -1,14 +1,48 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { ReactNode } from "react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/ui";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
-import type { Locale } from "@/i18n/config";
+import { localizedHref, type Locale } from "@/i18n/config";
 import {
   brandsWithProductLines,
   representedBrands,
   type Brand,
 } from "@/lib/brands";
+
+function isPdfOrExternalCatalog(href: string) {
+  return !href.startsWith("/") || href.startsWith("/catalogs/") || href.startsWith("//");
+}
+
+function CatalogAnchor({
+  href,
+  locale,
+  className,
+  children,
+  ...rest
+}: {
+  href: string;
+  locale: Locale;
+  className?: string;
+  children: ReactNode;
+  "aria-label"?: string;
+}) {
+  if (isPdfOrExternalCatalog(href)) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className} {...rest}>
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={localizedHref(locale, href)} className={className} {...rest}>
+      {children}
+    </Link>
+  );
+}
 
 function BrandLogoInner({ brand, locale }: { brand: Brand; locale: Locale }) {
   if (brand.comingSoon) {
@@ -46,15 +80,14 @@ function BrandLogoInner({ brand, locale }: { brand: Brand; locale: Locale }) {
 function BrandLogoCard({ brand, locale }: { brand: Brand; locale: Locale }) {
   if (brand.catalogHref) {
     return (
-      <a
+      <CatalogAnchor
         href={brand.catalogHref}
-        target="_blank"
-        rel="noopener noreferrer"
+        locale={locale}
         aria-label={`${brand.name} ${t(locale, ui.common.catalogAria)}`}
         className="block"
       >
         <BrandLogoInner brand={brand} locale={locale} />
-      </a>
+      </CatalogAnchor>
     );
   }
 
@@ -88,14 +121,13 @@ function BrandCatalogLink({ brand, locale }: { brand: Brand; locale: Locale }) {
   if (!brand.catalogHref) return null;
 
   return (
-    <a
+    <CatalogAnchor
       href={brand.catalogHref}
-      target="_blank"
-      rel="noopener noreferrer"
+      locale={locale}
       className="mt-5 inline-flex text-sm font-semibold text-teal transition hover:text-teal-deep"
     >
       {t(locale, brand.catalogLabel ?? ui.common.viewFullCatalog)} →
-    </a>
+    </CatalogAnchor>
   );
 }
 

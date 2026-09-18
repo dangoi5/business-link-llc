@@ -46,7 +46,7 @@ export default async function PartnersPage({ params }: PageProps<"/[locale]/part
             </div>
             <div className="mt-6 shrink-0 md:mt-0">
               <PrimaryButton href={localizedHref(locale, ownBrand.ctaHref)}>
-                {t(locale, ui.partnersPage.viewPortfolio)}
+                {t(locale, ownBrand.ctaLabel)}
               </PrimaryButton>
             </div>
           </div>
