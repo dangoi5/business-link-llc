@@ -156,6 +156,8 @@ export type PortfolioProduct = {
   image: string;
   /** Optional short details like pack size, origin, or format */
   details?: string[];
+  /** Pack shots look better contained on a light field. */
+  imageFit?: "cover" | "contain";
 };
 
 export type PortfolioCategory = {
@@ -176,14 +178,102 @@ export const portfolioCategories: PortfolioCategory[] = [
     channels: ["Retail", "Distribution", "Institutional"],
     image: "/categories/shelf-stable-foods.jpg",
     products: [
-      // Add products here, for example:
-      // {
-      //   slug: "long-life-milk",
-      //   name: "Long-Life Milk",
-      //   description: "UHT milk for retail and institutional distribution.",
-      //   image: "/products/shelf-stable/long-life-milk.jpg",
-      //   details: ["1L", "Retail", "Foodservice"],
-      // },
+      {
+        slug: "premium-white-chicken",
+        name: "Premium White Chicken",
+        description:
+          "Fully cooked pouched white chicken from Food Life Balanced. Ready to eat or heat, with a 4-year shelf life from production.",
+        image: "/products/ameriqual/white-chicken.jpg",
+        details: ["Food Life Balanced", "2.6 oz pouch", "4-year shelf life", "Dairy free", "Gluten free"],
+      },
+      {
+        slug: "premium-chicken-salad",
+        name: "Premium Chicken Salad",
+        description:
+          "Fully cooked chicken salad in an easy-tear pouch. Ambient storage for retail, foodservice and institutional distribution.",
+        image: "/products/ameriqual/chicken-salad.jpg",
+        details: ["Food Life Balanced", "2.6 oz pouch", "4-year shelf life", "Dairy free", "Gluten free"],
+      },
+      {
+        slug: "buffalo-style-chicken",
+        name: "Buffalo Style Chicken",
+        description:
+          "Fully cooked buffalo-style chicken with a 4-year shelf life. No MSG, dairy free and gluten free.",
+        image: "/products/ameriqual/buffalo-chicken.jpg",
+        details: ["Food Life Balanced", "4.5 oz pouch", "4-year shelf life", "No MSG"],
+      },
+      {
+        slug: "bbq-style-white-chicken",
+        name: "BBQ Style White Chicken",
+        description:
+          "Fully cooked BBQ-style white chicken in a shelf-stable pouch for sandwiches, plates and emergency feeding.",
+        image: "/products/ameriqual/bbq-white-chicken.jpg",
+        details: ["Food Life Balanced", "4.5 oz pouch", "4-year shelf life"],
+      },
+      {
+        slug: "cheesy-mac",
+        name: "Cheesy Mac",
+        description:
+          "Fully cooked macaroni and cheese dinner. Heat and serve from an easy-tear pouch with a 4-year shelf life.",
+        image: "/products/ameriqual/cheesy-mac.jpg",
+        details: ["Food Life Balanced", "7 oz pouch", "4-year shelf life"],
+      },
+      {
+        slug: "pasta-traditional-meat-sauce",
+        name: "Pasta with Traditional Meat Sauce",
+        description:
+          "Fully cooked pasta in a traditional meat sauce. A 15 oz entrée pouch built for long-life storage and distribution.",
+        image: "/products/ameriqual/pasta-meat-sauce.jpg",
+        details: ["Food Life Balanced", "15 oz pouch", "4-year shelf life", "Dairy free"],
+      },
+      {
+        slug: "hearty-beef-stew",
+        name: "Hearty Beef Stew",
+        description:
+          "Fully cooked beef stew with vegetables in a shelf-stable pouch. Ready to heat and serve for foodservice or institutional use.",
+        image: "/products/ameriqual/hearty-beef-stew.jpg",
+        details: ["Food Life Balanced", "15 oz pouch", "4-year shelf life", "Dairy free"],
+      },
+      {
+        slug: "ring-o-roni",
+        name: "Ring-O-Roni",
+        description:
+          "Fully cooked pasta rings in tomato sauce. A familiar, long-life entrée for retail and high-volume feeding programs.",
+        image: "/products/ameriqual/ring-o-roni.jpg",
+        details: ["Food Life Balanced", "15 oz pouch", "4-year shelf life"],
+      },
+      {
+        slug: "condensed-chicken-noodle-soup",
+        name: "Condensed Chicken Noodle Soup",
+        description:
+          "Shelf-stable condensed chicken noodle soup in a 10 oz pouch. Dairy free, with a 4-year shelf life from production.",
+        image: "/products/ameriqual/chicken-noodle-soup.jpg",
+        details: ["Food Life Balanced", "10 oz pouch", "4-year shelf life", "Dairy free"],
+      },
+      {
+        slug: "mediterranean-chicken-mushroom-orzo",
+        name: "Mediterranean Chicken Mushroom Orzo",
+        description:
+          "Food Life Balanced+ fully cooked entrée with chicken, mushrooms and orzo. A Food as Medicine solution with a 4-year shelf life.",
+        image: "/products/ameriqual/mediterranean-chicken-orzo.jpg",
+        details: ["Food Life Balanced+", "14 oz pouch", "4-year shelf life"],
+      },
+      {
+        slug: "chicken-sausage-quinoa",
+        name: "Chicken Sausage & Quinoa",
+        description:
+          "Food Life Balanced+ fully cooked chicken sausage and quinoa. Gluten free, ready to eat or heat, with a 4-year shelf life.",
+        image: "/products/ameriqual/chicken-sausage-quinoa.jpg",
+        details: ["Food Life Balanced+", "14 oz pouch", "4-year shelf life", "Gluten free"],
+      },
+      {
+        slug: "joy2-peanut-butter",
+        name: "Joy2 Peanut Butter",
+        description:
+          "Single-serve peanut butter pouch from Joy2. Easy-tear format with a 3-year shelf life — no refrigeration required.",
+        image: "/products/ameriqual/joy2-peanut-butter.jpg",
+        details: ["Joy2", "1.10 oz pouch", "3-year shelf life"],
+      },
     ],
   },
   {
@@ -202,9 +292,33 @@ export const portfolioCategories: PortfolioCategory[] = [
     summary:
       "Products and supply solutions for foodservice, hospitality, catering, institutional feeding and other high-volume applications.",
     channels: ["Hospitality", "Catering", "Institutional"],
-    image:
-      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80",
-    products: [],
+    image: "/categories/foodservice-institutional.jpg",
+    products: [
+      {
+        slug: "hearty-beef-stew-foodservice",
+        name: "Hearty Beef Stew",
+        description:
+          "Fully cooked 15 oz beef stew pouches for catering, institutional feeding and other high-volume applications. 4-year shelf life from production.",
+        image: "/products/ameriqual/hearty-beef-stew.jpg",
+        details: ["Food Life Balanced", "15 oz pouch", "Institutional"],
+      },
+      {
+        slug: "pasta-meat-sauce-foodservice",
+        name: "Pasta with Traditional Meat Sauce",
+        description:
+          "Fully cooked 15 oz pasta entrée pouches. Ambient storage for foodservice and institutional distribution.",
+        image: "/products/ameriqual/pasta-meat-sauce.jpg",
+        details: ["Food Life Balanced", "15 oz pouch", "Institutional"],
+      },
+      {
+        slug: "condensed-chicken-noodle-foodservice",
+        name: "Condensed Chicken Noodle Soup",
+        description:
+          "Shelf-stable condensed chicken noodle soup in a 10 oz pouch. Dairy free, built for long-life foodservice supply.",
+        image: "/products/ameriqual/chicken-noodle-soup.jpg",
+        details: ["Food Life Balanced", "10 oz pouch", "Institutional"],
+      },
+    ],
   },
   {
     slug: "grocery-consumer",
@@ -214,7 +328,89 @@ export const portfolioCategories: PortfolioCategory[] = [
     channels: ["Retail", "Grocery", "Wholesale"],
     image:
       "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1200&q=80",
-    products: [],
+    products: [
+      {
+        slug: "la-pasta-penne-rigate",
+        name: "La Pasta Penne Rigate",
+        description:
+          "Durum wheat penne rigate from the La Pasta range. A core dry-pasta shape for retail and wholesale grocery.",
+        image: "/products/star-grocery/la-pasta-penne.jpg",
+        details: ["La Pasta", "400 g", "Star Grocery"],
+        imageFit: "contain",
+      },
+      {
+        slug: "la-pasta-spaghetti",
+        name: "La Pasta Spaghetti",
+        description:
+          "Classic spaghetti from La Pasta, packed for grocery distribution. Additional pack sizes are listed in the full catalog.",
+        image: "/products/star-grocery/la-pasta-spaghetti.jpg",
+        details: ["La Pasta", "400 g", "Star Grocery"],
+        imageFit: "contain",
+      },
+      {
+        slug: "la-pasta-whole-grain-fusilli",
+        name: "La Pasta Whole Grain Fusilli",
+        description:
+          "Whole-grain fusilli from La Pasta. A whole-wheat pasta option alongside the standard durum shapes.",
+        image: "/products/star-grocery/la-pasta-whole-grain-fusilli.jpg",
+        details: ["La Pasta", "400 g", "Whole grain"],
+        imageFit: "contain",
+      },
+      {
+        slug: "la-pasta-semolina-flour",
+        name: "La Pasta Semolina Flour",
+        description:
+          "Semola di grano duro tipo 1 — durum wheat semolina flour from La Pasta for pasta, bakery and foodservice use.",
+        image: "/products/star-grocery/la-pasta-semola.jpg",
+        details: ["La Pasta", "1 kg", "Durum wheat"],
+        imageFit: "contain",
+      },
+      {
+        slug: "khutorok-buckwheat-groats",
+        name: "Khutorok Panskyi Buckwheat Groats",
+        description:
+          "Khutorok Panskyi roasted buckwheat groats. A staple groat for retail grocery and foodservice.",
+        image: "/products/star-grocery/khutorok-buckwheat.jpg",
+        details: ["Khutorok Panskyi", "1 kg"],
+        imageFit: "contain",
+      },
+      {
+        slug: "khutorok-jasmine-rice",
+        name: "Khutorok Panskyi Jasmine Rice",
+        description:
+          "Long-grain jasmine rice from the Khutorok Panskyi groats and rice line. Polished, 1 kg retail pack.",
+        image: "/products/star-grocery/khutorok-jasmine-rice.jpg",
+        details: ["Khutorok Panskyi", "1 kg", "Long grain"],
+        imageFit: "contain",
+      },
+      {
+        slug: "khutorok-creamy-mashed-potatoes",
+        name: "Khutorok Creamy Mashed Potatoes",
+        description:
+          "Instant mashed potatoes with a creamy taste from Khutorok. A 30 g single-serve pouch for grocery and foodservice.",
+        image: "/products/star-grocery/khutorok-mashed-creamy.jpg",
+        details: ["Khutorok", "30 g pouch", "Instant"],
+        imageFit: "contain",
+      },
+      {
+        slug: "kitto-classic-soy-sauce",
+        name: "Kitto Classic Soy Sauce",
+        description:
+          "Classic soy sauce from Kitto. Available in 200 ml to 1 L bottles, with ginger, garlic and mushroom variants in the catalog.",
+        image: "/products/star-grocery/kitto-classic-soy.jpg",
+        details: ["Kitto", "1 L"],
+        imageFit: "contain",
+      },
+      {
+        slug: "kitto-sweet-chili-sauce",
+        name: "Kitto Sweet Chili Sauce",
+        description:
+          "Sweet chili sauce from Kitto. A grocery condiment alongside Kitto teriyaki, unagi and sweet-and-sour sauces.",
+        image: "/products/star-grocery/kitto-sweet-chili.jpg",
+        details: ["Kitto", "200 ml"],
+        imageFit: "contain",
+      },
+    ],
   },
   {
     slug: "snacks-nuts",

@@ -91,7 +91,7 @@ export default async function PortfolioCategoryPage({ params }: Props) {
                       src={product.image}
                       alt={product.name}
                       fill
-                      className="object-cover"
+                      className={product.imageFit === "contain" ? "object-contain bg-[#f7f4ee]" : "object-cover"}
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>

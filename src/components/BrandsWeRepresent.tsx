@@ -103,7 +103,7 @@ export function BrandsWeRepresent() {
         <SectionHeading
           label="Brands we represent"
           title="Manufacturers and brands in our distribution portfolio."
-          description="A selected group of manufacturers and brands we represent as master distributor and exporter. Product line categories are listed below—catalogs and representative photos can be added as they become available."
+          description="A selected group of manufacturers and brands we represent as master distributor and exporter. Product line categories are listed below, with full catalogs linked where available."
         />
       </Reveal>
 

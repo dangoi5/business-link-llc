@@ -98,16 +98,38 @@ export const representedBrands: Brand[] = [
         detail: "Multiple shapes, whole grain option available",
       },
     ],
-    catalogHref: undefined,
-    catalogLabel: "View full catalog",
+    catalogHref: "/catalogs/food-life-balanced-2026.pdf",
+    catalogLabel: "View 2026 catalog",
     photos: [],
   },
   {
     slug: "star-grocery",
     name: "Star Grocery LLC",
     logo: "/brands/star-grocery.png",
-    catalogHref: undefined,
-    catalogLabel: "View full catalog",
+    productLines: [
+      {
+        label: "Dry pasta",
+        detail: "La Pasta — shapes including penne, spaghetti, tagliatelle, whole grain",
+      },
+      {
+        label: "Flours",
+        detail: "La Pasta — semolina, rice, chickpea and wheat flours",
+      },
+      {
+        label: "Rice, groats & pulses",
+        detail: "Khutorok Panskyi — buckwheat, rice, lentils, couscous, bulgur",
+      },
+      {
+        label: "Instant mashed potatoes",
+        detail: "Khutorok — flavored 30 g pouches",
+      },
+      {
+        label: "Sauces",
+        detail: "Kitto — soy, teriyaki, sweet chili, sweet and sour",
+      },
+    ],
+    catalogHref: "/catalogs/star-grocery-2025.pdf",
+    catalogLabel: "View 2025 catalog",
     photos: [],
   },
   {
