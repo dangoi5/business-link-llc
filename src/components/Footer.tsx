@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CompanyLogo } from "@/components/CompanyLogo";
 import { company, navLinks } from "@/lib/content";
 
 export function Footer() {
@@ -6,7 +7,11 @@ export function Footer() {
     <footer className="bg-ink text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.3fr_1fr_1fr] md:px-8">
         <div>
-          <p className="text-lg font-bold tracking-tight">Business Link LLC</p>
+          <Link href="/" aria-label="Business Link LLC home" className="inline-block">
+            <span className="relative block h-12 w-[220px]">
+              <CompanyLogo variant="wordmark" onDark sizes="220px" className="object-left" />
+            </span>
+          </Link>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/65">{company.tagline}</p>
           <Link
             href="/contact"

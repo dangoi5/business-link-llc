@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { CompanyLogo } from "@/components/CompanyLogo";
 import { navLinks } from "@/lib/content";
 
 export function Header() {
@@ -31,16 +32,18 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
-        <Link href="/" className="min-w-0">
-          <span
-            className={`block text-base font-bold tracking-tight md:text-lg ${
-              solid ? "text-ink" : "text-white"
-            }`}
-          >
-            Business Link
+        <Link href="/" className="flex min-w-0 items-center" aria-label="Business Link LLC home">
+          <span className="relative h-10 w-10 shrink-0 sm:hidden">
+            <CompanyLogo variant="mark" onDark={!solid} priority sizes="40px" />
           </span>
-          <span className={`block text-[10px] font-medium tracking-[0.12em] uppercase ${solid ? "text-teal" : "text-white/70"}`}>
-            Master Distributor & Exporter
+          <span className="relative hidden h-11 w-[168px] sm:block md:h-12 md:w-[184px]">
+            <CompanyLogo
+              variant="lockup"
+              onDark={!solid}
+              priority
+              sizes="184px"
+              className="object-left"
+            />
           </span>
         </Link>
 
