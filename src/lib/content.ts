@@ -1,13 +1,24 @@
 import { freshElementsBrand } from "@/lib/brands";
+import { loc, type Loc } from "@/i18n/t";
 
 export const company = {
   name: "Business Link LLC",
-  tagline: "Developing Businesses. Building Markets. Connecting the World",
-  subtitle: "Master Distributor · Exporter · Own Brand",
-  description:
+  tagline: loc(
+    "Developing Businesses. Building Markets. Connecting the World",
+    "Desarrollamos negocios. Construimos mercados. Conectamos el mundo",
+  ),
+  subtitle: loc(
+    "Master Distributor · Exporter · Own Brand",
+    "Distribuidor maestro · Exportador · Marca propia",
+  ),
+  description: loc(
     "Business Link LLC is a master distributor and exporter of food and beverage products. We develop and execute commercial opportunities across international markets—working with manufacturers, brands, distributors and strategic partners to establish sustainable routes to market and long-term business.",
-  role:
+    "Business Link LLC es un distribuidor maestro y exportador de alimentos y bebidas. Desarrollamos y ejecutamos oportunidades comerciales en mercados internacionales, trabajando con fabricantes, marcas, distribuidores y socios estratégicos para establecer rutas de mercado sostenibles y negocios de largo plazo.",
+  ),
+  role: loc(
     "As a master distributor and exporter, we manage international supply, distribution structures and commercial relationships across our active markets.",
+    "Como distribuidor maestro y exportador, gestionamos el abastecimiento internacional, las estructuras de distribución y las relaciones comerciales en nuestros mercados activos.",
+  ),
   email: "info@businesslinkllc.com",
   phone: "",
 };
@@ -21,150 +32,234 @@ export const ownBrand = {
 };
 
 export const navLinks = [
-  { href: "/capabilities", label: "Capabilities" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/markets", label: "Markets" },
-  { href: "/partners", label: "Partners" },
-  { href: "/contact", label: "Contact" },
+  { href: "/capabilities", label: loc("Capabilities", "Capacidades") },
+  { href: "/portfolio", label: loc("Portfolio", "Portafolio") },
+  { href: "/markets", label: loc("Markets", "Mercados") },
+  { href: "/partners", label: loc("Partners", "Socios") },
+  { href: "/contact", label: loc("Contact", "Contacto") },
 ];
 
 export const heroHighlights = [
   {
-    title: "Master Distributor & Exporter",
-    description: "We export and distribute food & beverage products across international markets.",
+    title: loc("Master Distributor & Exporter", "Distribuidor maestro y exportador"),
+    description: loc(
+      "We export and distribute food & beverage products across international markets.",
+      "Exportamos y distribuimos alimentos y bebidas en mercados internacionales.",
+    ),
   },
   {
-    title: "Import / Export & Market Development",
-    description:
+    title: loc("Import / Export & Market Development", "Importación / exportación y desarrollo de mercados"),
+    description: loc(
       "International commercial operations across food & beverage—with routes to market, partners and sustainable distribution.",
+      "Operaciones comerciales internacionales de alimentos y bebidas, con rutas de mercado, socios y distribución sostenible.",
+    ),
   },
   {
-    title: "Americas · Caribbean · Africa · Europe · Asia-Pacific",
-    description: "A multisector commercial network activated by opportunity.",
+    title: loc(
+      "Americas · Caribbean · Africa · Europe · Asia-Pacific",
+      "Américas · Caribe · África · Europa · Asia-Pacífico",
+    ),
+    description: loc(
+      "A multisector commercial network activated by opportunity.",
+      "Una red comercial multisectorial activada por la oportunidad.",
+    ),
   },
 ];
 
 export const manufacturerServices = [
   {
-    title: "Export Sales Representation",
-    description:
+    title: loc("Export Sales Representation", "Representación de ventas de exportación"),
+    description: loc(
       "We represent your brand and products in international markets to grow your sales network with qualified buyers and distributors.",
+      "Representamos su marca y productos en mercados internacionales para ampliar su red de ventas con compradores y distribuidores calificados.",
+    ),
   },
   {
-    title: "Market Entry & Distributor Sourcing",
-    description:
+    title: loc("Market Entry & Distributor Sourcing", "Entrada a mercados y búsqueda de distribuidores"),
+    description: loc(
       "We identify ideal markets and connect you with trusted importers, distributors and retail partners to enter and scale.",
+      "Identificamos mercados ideales y lo conectamos con importadores, distribuidores y socios de retail de confianza para entrar y escalar.",
+    ),
   },
   {
-    title: "Export Strategy Development",
-    description:
+    title: loc("Export Strategy Development", "Desarrollo de estrategia de exportación"),
+    description: loc(
       "We build a custom market plan, evaluate commercial fit and guide expansion into new regions with lasting partnerships.",
+      "Construimos un plan de mercado a medida, evaluamos el encaje comercial y guiamos la expansión a nuevas regiones con alianzas duraderas.",
+    ),
   },
   {
-    title: "Distribution Structure",
-    description:
+    title: loc("Distribution Structure", "Estructura de distribución"),
+    description: loc(
       "We design market-specific distribution models using qualified import, warehousing and logistics partners where required.",
+      "Diseñamos modelos de distribución por mercado, con socios calificados de importación, almacenamiento y logística cuando se requiere.",
+    ),
   },
 ];
 
 export const buyerServices = [
   {
-    title: "Strategic Product Sourcing",
-    description:
+    title: loc("Strategic Product Sourcing", "Abastecimiento estratégico de productos"),
+    description: loc(
       "We identify products and manufacturing capabilities matched to specification, volume and destination-market requirements.",
+      "Identificamos productos y capacidades de fabricación acordes a especificación, volumen y requisitos del mercado de destino.",
+    ),
   },
   {
-    title: "Supplier & Brand Discovery",
-    description:
+    title: loc("Supplier & Brand Discovery", "Descubrimiento de proveedores y marcas"),
+    description: loc(
       "Access selected manufacturers and brands whose capabilities complement your channels and commercial goals.",
+      "Acceso a fabricantes y marcas seleccionados cuyas capacidades complementan sus canales y objetivos comerciales.",
+    ),
   },
   {
-    title: "Purchasing & Supply Support",
-    description:
+    title: loc("Purchasing & Supply Support", "Apoyo de compras y abastecimiento"),
+    description: loc(
       "Assistance across sourcing, commercial structure and supply coordination so purchasing needs become viable operations.",
+      "Asistencia en abastecimiento, estructura comercial y coordinación de suministro para convertir necesidades de compra en operaciones viables.",
+    ),
   },
   {
-    title: "Logistics Coordination",
-    description:
+    title: loc("Logistics Coordination", "Coordinación logística"),
+    description: loc(
       "We work with warehousing, fulfillment and logistics partners to support efficient product movement into your market.",
+      "Trabajamos con socios de almacenamiento, fulfillment y logística para mover el producto de forma eficiente a su mercado.",
+    ),
   },
 ];
 
 export const capabilities = [
   {
     slug: "master-distribution-export",
-    title: "Master Distribution & Export",
-    summary:
+    title: loc("Master Distribution & Export", "Distribución maestra y exportación"),
+    summary: loc(
       "We operate as a master distributor and exporter—managing product supply, commercial terms and routes to market for partner brands and our own Fresh Elements line.",
-    detail:
+      "Operamos como distribuidor maestro y exportador: gestionamos suministro, términos comerciales y rutas de mercado para marcas asociadas y nuestra línea Fresh Elements.",
+    ),
+    detail: loc(
       "Buyers and market partners gain a single commercial counterpart for international supply, with structured distribution support across our active footprint.",
+      "Compradores y socios de mercado obtienen un único interlocutor comercial para el suministro internacional, con apoyo de distribución estructurado en nuestra huella activa.",
+    ),
   },
   {
     slug: "international-business-development",
-    title: "International Business Development",
-    summary:
+    title: loc("International Business Development", "Desarrollo de negocios internacionales"),
+    summary: loc(
       "We identify and develop commercial opportunities by bringing together the right products, manufacturers, partners and markets.",
-    detail:
+      "Identificamos y desarrollamos oportunidades comerciales reuniendo los productos, fabricantes, socios y mercados adecuados.",
+    ),
+    detail: loc(
       "From first contact through sustained commercial activity, we evaluate fit across product, partner capability and destination market demand—then open the relationships that turn opportunity into revenue.",
+      "Desde el primer contacto hasta la actividad comercial sostenida, evaluamos el encaje de producto, capacidad del socio y demanda del mercado de destino, y abrimos las relaciones que convierten la oportunidad en ingresos.",
+    ),
   },
   {
     slug: "market-development",
-    title: "Market Development",
-    summary:
+    title: loc("Market Development", "Desarrollo de mercados"),
+    summary: loc(
       "We evaluate opportunities, establish routes to market and develop the commercial relationships required to build sustainable market presence.",
-    detail:
+      "Evaluamos oportunidades, establecemos rutas de mercado y desarrollamos las relaciones comerciales necesarias para construir una presencia sostenible.",
+    ),
+    detail: loc(
       "Each market has its own regulatory, logistics and channel realities. We map those constraints early and build presence that can scale beyond a single shipment.",
+      "Cada mercado tiene sus propias realidades regulatorias, logísticas y de canal. Mapeamos esas restricciones desde el inicio y construimos una presencia que puede escalar más allá de un solo embarque.",
+    ),
   },
   {
     slug: "distribution-market-execution",
-    title: "Distribution & Market Execution",
-    summary:
+    title: loc("Distribution & Market Execution", "Distribución y ejecución de mercado"),
+    summary: loc(
       "We structure distribution solutions according to each market, working with qualified importers, distributors, warehousing providers and logistics partners where required.",
-    detail:
+      "Estructuramos soluciones de distribución según cada mercado, trabajando con importadores, distribuidores, operadores de almacén y socios logísticos calificados cuando se requiere.",
+    ),
+    detail: loc(
       "Whether the right model is a local importer, regional hub or hybrid fulfillment structure, we design around the opportunity—not a one-size template.",
+      "Ya sea un importador local, un hub regional o una estructura híbrida de fulfillment, diseñamos en torno a la oportunidad, no a un modelo único.",
+    ),
   },
   {
     slug: "strategic-sourcing",
-    title: "Strategic Sourcing & Supply Solutions",
-    summary:
+    title: loc("Strategic Sourcing & Supply Solutions", "Abastecimiento estratégico y soluciones de suministro"),
+    summary: loc(
       "We identify products and manufacturing capabilities based on specific market requirements while evaluating sourcing, routing and supply-chain alternatives.",
-    detail:
+      "Identificamos productos y capacidades de fabricación según requisitos de mercado específicos, evaluando alternativas de origen, ruteo y cadena de suministro.",
+    ),
+    detail: loc(
       "Buyers and distributors gain access to manufacturing capacity matched to specification, volume and compliance needs—with routing options that protect margin and reliability.",
+      "Compradores y distribuidores acceden a capacidad de fabricación acorde a especificación, volumen y cumplimiento, con opciones de ruteo que protegen margen y confiabilidad.",
+    ),
   },
   {
     slug: "own-brand-fresh-elements",
-    title: "Own Brand — Fresh Elements",
-    summary:
+    title: loc("Own Brand — Fresh Elements", "Marca propia — Fresh Elements"),
+    summary: loc(
       "We develop and market Fresh Elements, our own food product line, alongside the international brands and manufacturers we represent and distribute.",
-    detail:
+      "Desarrollamos y comercializamos Fresh Elements, nuestra línea de alimentos, junto a las marcas y fabricantes internacionales que representamos y distribuimos.",
+    ),
+    detail: loc(
       "Fresh Elements gives buyers access to Business Link’s proprietary range, developed for commercial channels including retail, foodservice and institutional supply.",
+      "Fresh Elements da a los compradores acceso a la gama propia de Business Link, desarrollada para canales comerciales de retail, foodservice y suministro institucional.",
+    ),
   },
 ];
 
 export const processSteps = [
-  { step: "01", label: "Identify", description: "Qualify product, market and commercial fit" },
-  { step: "02", label: "Develop", description: "Build partner relationships and market access" },
-  { step: "03", label: "Structure", description: "Define distribution, pricing and supply terms" },
-  { step: "04", label: "Execute", description: "Coordinate logistics, compliance and launch" },
-  { step: "05", label: "Grow", description: "Expand presence and sustain long-term volume" },
+  {
+    step: "01",
+    label: loc("Identify", "Identificar"),
+    description: loc(
+      "Qualify product, market and commercial fit",
+      "Calificar el encaje de producto, mercado y negocio",
+    ),
+  },
+  {
+    step: "02",
+    label: loc("Develop", "Desarrollar"),
+    description: loc(
+      "Build partner relationships and market access",
+      "Construir relaciones con socios y acceso a mercado",
+    ),
+  },
+  {
+    step: "03",
+    label: loc("Structure", "Estructurar"),
+    description: loc(
+      "Define distribution, pricing and supply terms",
+      "Definir distribución, precios y términos de suministro",
+    ),
+  },
+  {
+    step: "04",
+    label: loc("Execute", "Ejecutar"),
+    description: loc(
+      "Coordinate logistics, compliance and launch",
+      "Coordinar logística, cumplimiento y lanzamiento",
+    ),
+  },
+  {
+    step: "05",
+    label: loc("Grow", "Crecer"),
+    description: loc(
+      "Expand presence and sustain long-term volume",
+      "Expandir la presencia y sostener el volumen a largo plazo",
+    ),
+  },
 ];
 
 export type PortfolioProduct = {
   slug: string;
-  name: string;
-  description: string;
+  name: Loc;
+  description: Loc;
   image: string;
-  /** Optional short details like pack size, origin, or format */
-  details?: string[];
-  /** Pack shots look better contained on a light field. */
+  details?: Loc[];
   imageFit?: "cover" | "contain";
 };
 
 export type PortfolioCategory = {
   slug: string;
-  title: string;
-  summary: string;
-  channels: string[];
+  title: Loc;
+  summary: Loc;
+  channels: Loc[];
   image: string;
   products: PortfolioProduct[];
 };
@@ -172,252 +267,423 @@ export type PortfolioCategory = {
 export const portfolioCategories: PortfolioCategory[] = [
   {
     slug: "shelf-stable-foods",
-    title: "Shelf-Stable Foods",
-    summary:
+    title: loc("Shelf-Stable Foods", "Alimentos de larga duración"),
+    summary: loc(
       "Long shelf-life proteins, prepared meals, shelf-stable dairy and other ambient food solutions designed for efficient storage and distribution.",
-    channels: ["Retail", "Distribution", "Institutional"],
+      "Proteínas de larga vida, comidas preparadas, lácteos a temperatura ambiente y otras soluciones de alimentos que no requieren frío, diseñadas para almacenamiento y distribución eficientes.",
+    ),
+    channels: [
+      loc("Retail", "Retail"),
+      loc("Distribution", "Distribución"),
+      loc("Institutional", "Institucional"),
+    ],
     image: "/categories/shelf-stable-foods.jpg",
     products: [
       {
         slug: "premium-white-chicken",
-        name: "Premium White Chicken",
-        description:
+        name: loc("Premium White Chicken", "Pollo blanco premium"),
+        description: loc(
           "Fully cooked pouched white chicken from Food Life Balanced. Ready to eat or heat, with a 4-year shelf life from production.",
+          "Pollo blanco cocido en sobre de Food Life Balanced. Listo para comer o calentar, con 4 años de vida útil desde la producción.",
+        ),
         image: "/products/ameriqual/white-chicken.jpg",
-        details: ["Food Life Balanced", "2.6 oz pouch", "4-year shelf life", "Dairy free", "Gluten free"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("2.6 oz pouch", "Sobre de 2.6 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+          loc("Dairy free", "Sin lácteos"),
+          loc("Gluten free", "Sin gluten"),
+        ],
       },
       {
         slug: "premium-chicken-salad",
-        name: "Premium Chicken Salad",
-        description:
+        name: loc("Premium Chicken Salad", "Ensalada de pollo premium"),
+        description: loc(
           "Fully cooked chicken salad in an easy-tear pouch. Ambient storage for retail, foodservice and institutional distribution.",
+          "Ensalada de pollo cocida en sobre de fácil apertura. Almacenamiento a temperatura ambiente para retail, foodservice y distribución institucional.",
+        ),
         image: "/products/ameriqual/chicken-salad.jpg",
-        details: ["Food Life Balanced", "2.6 oz pouch", "4-year shelf life", "Dairy free", "Gluten free"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("2.6 oz pouch", "Sobre de 2.6 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+          loc("Dairy free", "Sin lácteos"),
+          loc("Gluten free", "Sin gluten"),
+        ],
       },
       {
         slug: "buffalo-style-chicken",
-        name: "Buffalo Style Chicken",
-        description:
+        name: loc("Buffalo Style Chicken", "Pollo estilo búfalo"),
+        description: loc(
           "Fully cooked buffalo-style chicken with a 4-year shelf life. No MSG, dairy free and gluten free.",
+          "Pollo estilo búfalo cocido, con 4 años de vida útil. Sin glutamato, sin lácteos y sin gluten.",
+        ),
         image: "/products/ameriqual/buffalo-chicken.jpg",
-        details: ["Food Life Balanced", "4.5 oz pouch", "4-year shelf life", "No MSG"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("4.5 oz pouch", "Sobre de 4.5 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+          loc("No MSG", "Sin glutamato"),
+        ],
       },
       {
         slug: "bbq-style-white-chicken",
-        name: "BBQ Style White Chicken",
-        description:
+        name: loc("BBQ Style White Chicken", "Pollo blanco estilo BBQ"),
+        description: loc(
           "Fully cooked BBQ-style white chicken in a shelf-stable pouch for sandwiches, plates and emergency feeding.",
+          "Pollo blanco estilo BBQ cocido en sobre de larga duración, para sándwiches, platos y alimentación de emergencia.",
+        ),
         image: "/products/ameriqual/bbq-white-chicken.jpg",
-        details: ["Food Life Balanced", "4.5 oz pouch", "4-year shelf life"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("4.5 oz pouch", "Sobre de 4.5 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+        ],
       },
       {
         slug: "cheesy-mac",
-        name: "Cheesy Mac",
-        description:
+        name: loc("Cheesy Mac", "Cheesy Mac"),
+        description: loc(
           "Fully cooked macaroni and cheese dinner. Heat and serve from an easy-tear pouch with a 4-year shelf life.",
+          "Macarrones con queso cocidos. Caliente y sirva desde un sobre de fácil apertura, con 4 años de vida útil.",
+        ),
         image: "/products/ameriqual/cheesy-mac.jpg",
-        details: ["Food Life Balanced", "7 oz pouch", "4-year shelf life"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("7 oz pouch", "Sobre de 7 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+        ],
       },
       {
         slug: "pasta-traditional-meat-sauce",
-        name: "Pasta with Traditional Meat Sauce",
-        description:
+        name: loc("Pasta with Traditional Meat Sauce", "Pasta con salsa de carne tradicional"),
+        description: loc(
           "Fully cooked pasta in a traditional meat sauce. A 15 oz entrée pouch built for long-life storage and distribution.",
+          "Pasta cocida en salsa de carne tradicional. Entrada de 15 oz en sobre, pensada para almacenamiento y distribución de larga duración.",
+        ),
         image: "/products/ameriqual/pasta-meat-sauce.jpg",
-        details: ["Food Life Balanced", "15 oz pouch", "4-year shelf life", "Dairy free"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("15 oz pouch", "Sobre de 15 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+          loc("Dairy free", "Sin lácteos"),
+        ],
       },
       {
         slug: "hearty-beef-stew",
-        name: "Hearty Beef Stew",
-        description:
+        name: loc("Hearty Beef Stew", "Estofado de res"),
+        description: loc(
           "Fully cooked beef stew with vegetables in a shelf-stable pouch. Ready to heat and serve for foodservice or institutional use.",
+          "Estofado de res con verduras, cocido en sobre de larga duración. Listo para calentar y servir en foodservice o uso institucional.",
+        ),
         image: "/products/ameriqual/hearty-beef-stew.jpg",
-        details: ["Food Life Balanced", "15 oz pouch", "4-year shelf life", "Dairy free"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("15 oz pouch", "Sobre de 15 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+          loc("Dairy free", "Sin lácteos"),
+        ],
       },
       {
         slug: "ring-o-roni",
-        name: "Ring-O-Roni",
-        description:
+        name: loc("Ring-O-Roni", "Ring-O-Roni"),
+        description: loc(
           "Fully cooked pasta rings in tomato sauce. A familiar, long-life entrée for retail and high-volume feeding programs.",
+          "Aros de pasta cocidos en salsa de tomate. Una entrada familiar de larga duración para retail y programas de alimentación de alto volumen.",
+        ),
         image: "/products/ameriqual/ring-o-roni.jpg",
-        details: ["Food Life Balanced", "15 oz pouch", "4-year shelf life"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("15 oz pouch", "Sobre de 15 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+        ],
       },
       {
         slug: "condensed-chicken-noodle-soup",
-        name: "Condensed Chicken Noodle Soup",
-        description:
+        name: loc("Condensed Chicken Noodle Soup", "Sopa condensada de pollo con fideos"),
+        description: loc(
           "Shelf-stable condensed chicken noodle soup in a 10 oz pouch. Dairy free, with a 4-year shelf life from production.",
+          "Sopa condensada de pollo con fideos en sobre de 10 oz. Sin lácteos, con 4 años de vida útil desde la producción.",
+        ),
         image: "/products/ameriqual/chicken-noodle-soup.jpg",
-        details: ["Food Life Balanced", "10 oz pouch", "4-year shelf life", "Dairy free"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("10 oz pouch", "Sobre de 10 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+          loc("Dairy free", "Sin lácteos"),
+        ],
       },
       {
         slug: "mediterranean-chicken-mushroom-orzo",
-        name: "Mediterranean Chicken Mushroom Orzo",
-        description:
+        name: loc("Mediterranean Chicken Mushroom Orzo", "Pollo mediterráneo con hongos y orzo"),
+        description: loc(
           "Food Life Balanced+ fully cooked entrée with chicken, mushrooms and orzo. A Food as Medicine solution with a 4-year shelf life.",
+          "Entrada cocida Food Life Balanced+ con pollo, hongos y orzo. Una solución de alimento como medicina, con 4 años de vida útil.",
+        ),
         image: "/products/ameriqual/mediterranean-chicken-orzo.jpg",
-        details: ["Food Life Balanced+", "14 oz pouch", "4-year shelf life"],
+        details: [
+          loc("Food Life Balanced+", "Food Life Balanced+"),
+          loc("14 oz pouch", "Sobre de 14 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+        ],
       },
       {
         slug: "chicken-sausage-quinoa",
-        name: "Chicken Sausage & Quinoa",
-        description:
+        name: loc("Chicken Sausage & Quinoa", "Salchicha de pollo y quinua"),
+        description: loc(
           "Food Life Balanced+ fully cooked chicken sausage and quinoa. Gluten free, ready to eat or heat, with a 4-year shelf life.",
+          "Salchicha de pollo y quinua cocidas de Food Life Balanced+. Sin gluten, lista para comer o calentar, con 4 años de vida útil.",
+        ),
         image: "/products/ameriqual/chicken-sausage-quinoa.jpg",
-        details: ["Food Life Balanced+", "14 oz pouch", "4-year shelf life", "Gluten free"],
+        details: [
+          loc("Food Life Balanced+", "Food Life Balanced+"),
+          loc("14 oz pouch", "Sobre de 14 oz"),
+          loc("4-year shelf life", "Vida útil de 4 años"),
+          loc("Gluten free", "Sin gluten"),
+        ],
       },
       {
         slug: "joy2-peanut-butter",
-        name: "Joy2 Peanut Butter",
-        description:
+        name: loc("Joy2 Peanut Butter", "Mantequilla de maní Joy2"),
+        description: loc(
           "Single-serve peanut butter pouch from Joy2. Easy-tear format with a 3-year shelf life — no refrigeration required.",
+          "Sobre individual de mantequilla de maní Joy2. Formato de fácil apertura, 3 años de vida útil y sin refrigeración.",
+        ),
         image: "/products/ameriqual/joy2-peanut-butter.jpg",
-        details: ["Joy2", "1.10 oz pouch", "3-year shelf life"],
+        details: [
+          loc("Joy2", "Joy2"),
+          loc("1.10 oz pouch", "Sobre de 1.10 oz"),
+          loc("3-year shelf life", "Vida útil de 3 años"),
+        ],
       },
     ],
   },
   {
     slug: "oils-fats",
-    title: "Oils & Fats",
-    summary:
+    title: loc("Oils & Fats", "Aceites y grasas"),
+    summary: loc(
       "Edible oils, palm-based products, vegetable oil blends, margarines and shortenings for retail and foodservice applications.",
-    channels: ["Retail", "Foodservice", "Industrial"],
+      "Aceites comestibles, productos a base de palma, mezclas vegetales, margarinas y mantecas para retail y foodservice.",
+    ),
+    channels: [
+      loc("Retail", "Retail"),
+      loc("Foodservice", "Foodservice"),
+      loc("Industrial", "Industrial"),
+    ],
     image:
       "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1200&q=80",
     products: [],
   },
   {
     slug: "foodservice-institutional",
-    title: "Foodservice & Institutional",
-    summary:
+    title: loc("Foodservice & Institutional", "Foodservice e institucional"),
+    summary: loc(
       "Products and supply solutions for foodservice, hospitality, catering, institutional feeding and other high-volume applications.",
-    channels: ["Hospitality", "Catering", "Institutional"],
+      "Productos y soluciones de suministro para foodservice, hospitalidad, catering, alimentación institucional y otras aplicaciones de alto volumen.",
+    ),
+    channels: [
+      loc("Hospitality", "Hospitalidad"),
+      loc("Catering", "Catering"),
+      loc("Institutional", "Institucional"),
+    ],
     image: "/categories/foodservice-institutional.jpg",
     products: [
       {
         slug: "hearty-beef-stew-foodservice",
-        name: "Hearty Beef Stew",
-        description:
+        name: loc("Hearty Beef Stew", "Estofado de res"),
+        description: loc(
           "Fully cooked 15 oz beef stew pouches for catering, institutional feeding and other high-volume applications. 4-year shelf life from production.",
+          "Sobres de 15 oz de estofado de res cocido para catering, alimentación institucional y alto volumen. 4 años de vida útil desde la producción.",
+        ),
         image: "/products/ameriqual/hearty-beef-stew.jpg",
-        details: ["Food Life Balanced", "15 oz pouch", "Institutional"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("15 oz pouch", "Sobre de 15 oz"),
+          loc("Institutional", "Institucional"),
+        ],
       },
       {
         slug: "pasta-meat-sauce-foodservice",
-        name: "Pasta with Traditional Meat Sauce",
-        description:
+        name: loc("Pasta with Traditional Meat Sauce", "Pasta con salsa de carne tradicional"),
+        description: loc(
           "Fully cooked 15 oz pasta entrée pouches. Ambient storage for foodservice and institutional distribution.",
+          "Entradas de pasta cocida de 15 oz en sobre. Almacenamiento a temperatura ambiente para foodservice y distribución institucional.",
+        ),
         image: "/products/ameriqual/pasta-meat-sauce.jpg",
-        details: ["Food Life Balanced", "15 oz pouch", "Institutional"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("15 oz pouch", "Sobre de 15 oz"),
+          loc("Institutional", "Institucional"),
+        ],
       },
       {
         slug: "condensed-chicken-noodle-foodservice",
-        name: "Condensed Chicken Noodle Soup",
-        description:
+        name: loc("Condensed Chicken Noodle Soup", "Sopa condensada de pollo con fideos"),
+        description: loc(
           "Shelf-stable condensed chicken noodle soup in a 10 oz pouch. Dairy free, built for long-life foodservice supply.",
+          "Sopa condensada de pollo con fideos en sobre de 10 oz. Sin lácteos, para suministro de foodservice de larga duración.",
+        ),
         image: "/products/ameriqual/chicken-noodle-soup.jpg",
-        details: ["Food Life Balanced", "10 oz pouch", "Institutional"],
+        details: [
+          loc("Food Life Balanced", "Food Life Balanced"),
+          loc("10 oz pouch", "Sobre de 10 oz"),
+          loc("Institutional", "Institucional"),
+        ],
       },
     ],
   },
   {
     slug: "grocery-consumer",
-    title: "Grocery & Consumer Foods",
-    summary:
+    title: loc("Grocery & Consumer Foods", "Abarrotes y alimentos de consumo"),
+    summary: loc(
       "Selected consumer food products and grocery categories developed according to individual market opportunities.",
-    channels: ["Retail", "Grocery", "Wholesale"],
+      "Productos de consumo y categorías de abarrotes seleccionados según las oportunidades de cada mercado.",
+    ),
+    channels: [
+      loc("Retail", "Retail"),
+      loc("Grocery", "Abarrotes"),
+      loc("Wholesale", "Mayoreo"),
+    ],
     image:
       "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1200&q=80",
     products: [
       {
         slug: "la-pasta-penne-rigate",
-        name: "La Pasta Penne Rigate",
-        description:
+        name: loc("La Pasta Penne Rigate", "La Pasta Penne Rigate"),
+        description: loc(
           "Durum wheat penne rigate from the La Pasta range. A core dry-pasta shape for retail and wholesale grocery.",
+          "Penne rigate de trigo duro de la línea La Pasta. Un formato central de pasta seca para retail y mayoreo.",
+        ),
         image: "/products/star-grocery/la-pasta-penne.jpg",
-        details: ["La Pasta", "400 g", "Star Grocery"],
+        details: [
+          loc("La Pasta", "La Pasta"),
+          loc("400 g", "400 g"),
+          loc("Star Grocery", "Star Grocery"),
+        ],
         imageFit: "contain",
       },
       {
         slug: "la-pasta-spaghetti",
-        name: "La Pasta Spaghetti",
-        description:
+        name: loc("La Pasta Spaghetti", "La Pasta Spaghetti"),
+        description: loc(
           "Classic spaghetti from La Pasta, packed for grocery distribution. Additional pack sizes are listed in the full catalog.",
+          "Spaghetti clásico de La Pasta, empacado para distribución de abarrotes. Otros tamaños aparecen en el catálogo completo.",
+        ),
         image: "/products/star-grocery/la-pasta-spaghetti.jpg",
-        details: ["La Pasta", "400 g", "Star Grocery"],
+        details: [
+          loc("La Pasta", "La Pasta"),
+          loc("400 g", "400 g"),
+          loc("Star Grocery", "Star Grocery"),
+        ],
         imageFit: "contain",
       },
       {
         slug: "la-pasta-whole-grain-fusilli",
-        name: "La Pasta Whole Grain Fusilli",
-        description:
+        name: loc("La Pasta Whole Grain Fusilli", "La Pasta Fusilli integral"),
+        description: loc(
           "Whole-grain fusilli from La Pasta. A whole-wheat pasta option alongside the standard durum shapes.",
+          "Fusilli integral de La Pasta. Una opción de pasta de trigo integral junto a los formatos de sémola estándar.",
+        ),
         image: "/products/star-grocery/la-pasta-whole-grain-fusilli.jpg",
-        details: ["La Pasta", "400 g", "Whole grain"],
+        details: [
+          loc("La Pasta", "La Pasta"),
+          loc("400 g", "400 g"),
+          loc("Whole grain", "Integral"),
+        ],
         imageFit: "contain",
       },
       {
         slug: "la-pasta-semolina-flour",
-        name: "La Pasta Semolina Flour",
-        description:
+        name: loc("La Pasta Semolina Flour", "Harina de sémola La Pasta"),
+        description: loc(
           "Semola di grano duro tipo 1 — durum wheat semolina flour from La Pasta for pasta, bakery and foodservice use.",
+          "Sémola de trigo duro tipo 1 de La Pasta, para pasta, panadería y foodservice.",
+        ),
         image: "/products/star-grocery/la-pasta-semola.jpg",
-        details: ["La Pasta", "1 kg", "Durum wheat"],
+        details: [
+          loc("La Pasta", "La Pasta"),
+          loc("1 kg", "1 kg"),
+          loc("Durum wheat", "Trigo duro"),
+        ],
         imageFit: "contain",
       },
       {
         slug: "khutorok-buckwheat-groats",
-        name: "Khutorok Panskyi Buckwheat Groats",
-        description:
+        name: loc("Khutorok Panskyi Buckwheat Groats", "Trigo sarraceno Khutorok Panskyi"),
+        description: loc(
           "Khutorok Panskyi roasted buckwheat groats. A staple groat for retail grocery and foodservice.",
+          "Trigo sarraceno tostado Khutorok Panskyi. Un cereal básico para abarrotes y foodservice.",
+        ),
         image: "/products/star-grocery/khutorok-buckwheat.jpg",
-        details: ["Khutorok Panskyi", "1 kg"],
+        details: [loc("Khutorok Panskyi", "Khutorok Panskyi"), loc("1 kg", "1 kg")],
         imageFit: "contain",
       },
       {
         slug: "khutorok-jasmine-rice",
-        name: "Khutorok Panskyi Jasmine Rice",
-        description:
+        name: loc("Khutorok Panskyi Jasmine Rice", "Arroz jazmín Khutorok Panskyi"),
+        description: loc(
           "Long-grain jasmine rice from the Khutorok Panskyi groats and rice line. Polished, 1 kg retail pack.",
+          "Arroz jazmín de grano largo de la línea Khutorok Panskyi. Pulido, empaque retail de 1 kg.",
+        ),
         image: "/products/star-grocery/khutorok-jasmine-rice.jpg",
-        details: ["Khutorok Panskyi", "1 kg", "Long grain"],
+        details: [
+          loc("Khutorok Panskyi", "Khutorok Panskyi"),
+          loc("1 kg", "1 kg"),
+          loc("Long grain", "Grano largo"),
+        ],
         imageFit: "contain",
       },
       {
         slug: "khutorok-creamy-mashed-potatoes",
-        name: "Khutorok Creamy Mashed Potatoes",
-        description:
+        name: loc("Khutorok Creamy Mashed Potatoes", "Puré de papa cremoso Khutorok"),
+        description: loc(
           "Instant mashed potatoes with a creamy taste from Khutorok. A 30 g single-serve pouch for grocery and foodservice.",
+          "Puré de papa instantáneo con sabor cremoso de Khutorok. Sobre individual de 30 g para abarrotes y foodservice.",
+        ),
         image: "/products/star-grocery/khutorok-mashed-creamy.jpg",
-        details: ["Khutorok", "30 g pouch", "Instant"],
+        details: [
+          loc("Khutorok", "Khutorok"),
+          loc("30 g pouch", "Sobre de 30 g"),
+          loc("Instant", "Instantáneo"),
+        ],
         imageFit: "contain",
       },
       {
         slug: "kitto-classic-soy-sauce",
-        name: "Kitto Classic Soy Sauce",
-        description:
+        name: loc("Kitto Classic Soy Sauce", "Salsa de soya clásica Kitto"),
+        description: loc(
           "Classic soy sauce from Kitto. Available in 200 ml to 1 L bottles, with ginger, garlic and mushroom variants in the catalog.",
+          "Salsa de soya clásica Kitto. Disponible de 200 ml a 1 L, con variantes de jengibre, ajo y champiñón en el catálogo.",
+        ),
         image: "/products/star-grocery/kitto-classic-soy.jpg",
-        details: ["Kitto", "1 L"],
+        details: [loc("Kitto", "Kitto"), loc("1 L", "1 L")],
         imageFit: "contain",
       },
       {
         slug: "kitto-sweet-chili-sauce",
-        name: "Kitto Sweet Chili Sauce",
-        description:
+        name: loc("Kitto Sweet Chili Sauce", "Salsa chile dulce Kitto"),
+        description: loc(
           "Sweet chili sauce from Kitto. A grocery condiment alongside Kitto teriyaki, unagi and sweet-and-sour sauces.",
+          "Salsa de chile dulce Kitto. Un condimento de abarrotes junto a las salsas teriyaki, unagi y agridulce de Kitto.",
+        ),
         image: "/products/star-grocery/kitto-sweet-chili.jpg",
-        details: ["Kitto", "200 ml"],
+        details: [loc("Kitto", "Kitto"), loc("200 ml", "200 ml")],
         imageFit: "contain",
       },
     ],
   },
   {
     slug: "snacks-nuts",
-    title: "Snacks & Nuts",
-    summary:
+    title: loc("Snacks & Nuts", "Snacks y frutos secos"),
+    summary: loc(
       "Selected peanuts, flavored nuts and snack products for markets where the product, positioning and distribution opportunity provide the right commercial fit.",
-    channels: ["Retail", "Snacking", "Foodservice"],
+      "Maní, frutos secos saborizados y snacks seleccionados para mercados donde el producto, el posicionamiento y la distribución encajan comercialmente.",
+    ),
+    channels: [
+      loc("Retail", "Retail"),
+      loc("Snacking", "Snacking"),
+      loc("Foodservice", "Foodservice"),
+    ],
     image:
       "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=1200&q=80",
     products: [],
@@ -429,23 +695,23 @@ export function getCategoryBySlug(slug: string) {
 }
 
 export const activeMarkets = [
-  { name: "United States", region: "Americas" },
-  { name: "Jamaica", region: "Caribbean" },
-  { name: "Dominican Republic", region: "Caribbean" },
-  { name: "Colombia", region: "Americas" },
-  { name: "Peru", region: "Americas" },
-  { name: "Panama", region: "Americas" },
-  { name: "El Salvador", region: "Americas" },
-  { name: "Guatemala", region: "Americas" },
-  { name: "Ghana", region: "Africa" },
-  { name: "Benin", region: "Africa" },
-  { name: "Italy", region: "Europe" },
-  { name: "Philippines", region: "Asia-Pacific" },
+  { name: loc("United States", "Estados Unidos"), region: "Americas" as const },
+  { name: loc("Jamaica", "Jamaica"), region: "Caribbean" as const },
+  { name: loc("Dominican Republic", "República Dominicana"), region: "Caribbean" as const },
+  { name: loc("Colombia", "Colombia"), region: "Americas" as const },
+  { name: loc("Peru", "Perú"), region: "Americas" as const },
+  { name: loc("Panama", "Panamá"), region: "Americas" as const },
+  { name: loc("El Salvador", "El Salvador"), region: "Americas" as const },
+  { name: loc("Guatemala", "Guatemala"), region: "Americas" as const },
+  { name: loc("Ghana", "Ghana"), region: "Africa" as const },
+  { name: loc("Benin", "Benín"), region: "Africa" as const },
+  { name: loc("Italy", "Italia"), region: "Europe" as const },
+  { name: loc("Philippines", "Filipinas"), region: "Asia-Pacific" as const },
 ];
 
 export const marketsInDevelopment = [
-  { name: "Venezuela", region: "Americas" },
-  { name: "Gulf Region", region: "Middle East" },
+  { name: loc("Venezuela", "Venezuela"), region: "Americas" as const },
+  { name: loc("Gulf Region", "Región del Golfo"), region: "Middle East" as const },
 ];
 
 export const regions = [
@@ -456,57 +722,111 @@ export const regions = [
   "Asia-Pacific",
 ] as const;
 
+export const regionLabels: Record<(typeof regions)[number], Loc> = {
+  Americas: loc("Americas", "Américas"),
+  Caribbean: loc("Caribbean", "Caribe"),
+  Africa: loc("Africa", "África"),
+  Europe: loc("Europe", "Europa"),
+  "Asia-Pacific": loc("Asia-Pacific", "Asia-Pacífico"),
+};
+
 export const regionCards = [
-  { region: "Americas", detail: "Commercial relationships and distribution partners." },
-  { region: "Caribbean", detail: "Import, wholesale and retail market access." },
-  { region: "Africa", detail: "Market development and supply opportunities." },
-  { region: "Europe", detail: "Sourcing and international trade gateway." },
-  { region: "Asia-Pacific", detail: "Manufacturing links and buyer networks." },
+  {
+    region: "Americas" as const,
+    detail: loc(
+      "Commercial relationships and distribution partners.",
+      "Relaciones comerciales y socios de distribución.",
+    ),
+  },
+  {
+    region: "Caribbean" as const,
+    detail: loc(
+      "Import, wholesale and retail market access.",
+      "Acceso a importación, mayoreo y retail.",
+    ),
+  },
+  {
+    region: "Africa" as const,
+    detail: loc(
+      "Market development and supply opportunities.",
+      "Desarrollo de mercados y oportunidades de suministro.",
+    ),
+  },
+  {
+    region: "Europe" as const,
+    detail: loc(
+      "Sourcing and international trade gateway.",
+      "Abastecimiento y puerta de comercio internacional.",
+    ),
+  },
+  {
+    region: "Asia-Pacific" as const,
+    detail: loc(
+      "Manufacturing links and buyer networks.",
+      "Vínculos de manufactura y redes de compradores.",
+    ),
+  },
 ];
 
 export const partners = [
   {
-    type: "Fresh Elements",
-    description:
+    type: loc("Fresh Elements", "Fresh Elements"),
+    description: loc(
       "Our own product line—developed and marketed by Business Link for retail, foodservice and international distribution.",
+      "Nuestra línea de productos, desarrollada y comercializada por Business Link para retail, foodservice y distribución internacional.",
+    ),
   },
   {
-    type: "Manufacturers",
-    description:
+    type: loc("Manufacturers", "Fabricantes"),
+    description: loc(
       "Selected food and beverage manufacturers seeking structured access to new international markets through our master distribution and export network.",
+      "Fabricantes de alimentos y bebidas seleccionados que buscan acceso estructurado a nuevos mercados internacionales a través de nuestra red de distribución maestra y exportación.",
+    ),
   },
   {
-    type: "Brands",
-    description:
+    type: loc("Brands", "Marcas"),
+    description: loc(
       "Established and emerging brands whose product range fits the retail, foodservice and institutional channels we serve.",
+      "Marcas establecidas y emergentes cuyo portafolio encaja en los canales de retail, foodservice e institucionales que atendemos.",
+    ),
   },
   {
-    type: "Distributors & Importers",
-    description:
+    type: loc("Distributors & Importers", "Distribuidores e importadores"),
+    description: loc(
       "Qualified local partners with import capability, warehousing and route-to-market coverage in destination markets.",
+      "Socios locales calificados con capacidad de importación, almacenamiento y cobertura de ruta a mercado en los destinos.",
+    ),
   },
   {
-    type: "Logistics & Warehousing",
-    description:
+    type: loc("Logistics & Warehousing", "Logística y almacenamiento"),
+    description: loc(
       "Strategic logistics and fulfillment partners supporting inventory, cross-docking and efficient product movement.",
+      "Socios estratégicos de logística y fulfillment que apoyan inventario, cross-docking y movimiento eficiente de producto.",
+    ),
   },
 ];
 
 export const distributionPoints = [
   {
-    title: "Market-Specific Models",
-    description:
+    title: loc("Market-Specific Models", "Modelos por mercado"),
+    description: loc(
       "Not every market requires the same distribution model. We structure solutions using qualified third-party import, warehousing, fulfillment and logistics resources.",
+      "No todos los mercados requieren el mismo modelo de distribución. Estructuramos soluciones con recursos calificados de importación, almacenamiento, fulfillment y logística.",
+    ),
   },
   {
-    title: "Regional Hubs",
-    description:
+    title: loc("Regional Hubs", "Hubs regionales"),
+    description: loc(
       "Where justified by the opportunity, regional or market-specific distribution hubs can be established to support inventory, cross-docking, order fulfillment and efficient product movement.",
+      "Cuando la oportunidad lo justifica, se pueden establecer hubs regionales o por mercado para inventario, cross-docking, fulfillment de pedidos y movimiento eficiente de producto.",
+    ),
   },
   {
-    title: "Inventory Reallocation",
-    description:
+    title: loc("Inventory Reallocation", "Reasignación de inventario"),
+    description: loc(
       "We evaluate opportunities to redirect qualifying excess or short-dated shelf-stable food inventories into selected markets. Products with at least 90 days of remaining shelf life may be evaluated based on destination requirements, transit time, regulatory compliance and commercial viability.",
+      "Evaluamos oportunidades para redirigir inventarios excedentes o de fecha corta de alimentos de larga duración a mercados seleccionados. Productos con al menos 90 días de vida útil restante pueden evaluarse según requisitos de destino, tránsito, cumplimiento y viabilidad comercial.",
+    ),
   },
 ];
 

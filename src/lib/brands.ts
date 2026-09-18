@@ -1,3 +1,5 @@
+import { loc, type Loc } from "@/i18n/t";
+
 /**
  * Brand portfolio data for Business Link LLC.
  *
@@ -9,11 +11,13 @@
  *   (opens in a new tab). Leave it undefined to keep the link hidden.
  * - Add paths to `photos` to show a few representative product images
  *   under a brand. Leave empty to stay logo-and-text only.
+ *
+ * Translatable strings use loc(en, es) so both languages stay in one place.
  */
 
 export type ProductLine = {
-  label: string;
-  detail?: string;
+  label: Loc;
+  detail?: Loc;
 };
 
 export type Brand = {
@@ -21,39 +25,40 @@ export type Brand = {
   name: string;
   logo?: string;
   comingSoon?: boolean;
-  /** Short note under the name (parent company, facilities, etc.) */
-  note?: string;
+  note?: Loc;
   subBrands?: string[];
   productLines?: ProductLine[];
-  /** Hosted PDF catalog. When set, a “View full catalog” link is shown. */
   catalogHref?: string;
-  catalogLabel?: string;
-  /** Optional representative product photos (not SKU grids). */
+  catalogLabel?: Loc;
   photos?: string[];
 };
 
 export const freshElementsBrand = {
   slug: "fresh-elements",
   name: "Fresh Elements",
-  tagline: "Our own product line",
-  description:
+  tagline: loc("Our own product line", "Nuestra línea de productos"),
+  description: loc(
     "In addition to distributing and exporting partner brands, Business Link develops and markets Fresh Elements—our own line of food products built for retail, foodservice and international trade.",
-  ctaLabel: "Explore portfolio",
+    "Además de distribuir y exportar marcas asociadas, Business Link desarrolla y comercializa Fresh Elements: nuestra línea de alimentos para retail, foodservice y comercio internacional.",
+  ),
+  ctaLabel: loc("Explore portfolio", "Ver portafolio"),
   ctaHref: "/portfolio",
-  /** Future dedicated site — not built yet. */
   futureSite: "https://freshelementsholdings.com",
   logo: undefined as string | undefined,
   catalogHref: undefined as string | undefined,
-  catalogLabel: "View full catalog",
+  catalogLabel: loc("View full catalog", "Ver catálogo completo"),
   photos: [] as string[],
   productLines: [
-    { label: "Oils" },
+    { label: loc("Oils", "Aceites") },
     {
-      label: "Snacks",
-      detail: "Includes Platanitos plantain chips — gluten free, multiple flavors",
+      label: loc("Snacks", "Snacks"),
+      detail: loc(
+        "Includes Platanitos plantain chips — gluten free, multiple flavors",
+        "Incluye Platanitos — chips de plátano sin gluten, varios sabores",
+      ),
     },
-    { label: "Rice" },
-    { label: "Condiments" },
+    { label: loc("Rice", "Arroz") },
+    { label: loc("Condiments", "Condimentos") },
   ] satisfies ProductLine[],
 };
 
@@ -62,7 +67,10 @@ export const representedBrands: Brand[] = [
     slug: "ameriqual",
     name: "AmeriQual Group, LLC",
     logo: "/brands/ameriqual-group.jpg",
-    note: "Parent company. Facilities in Evansville, IN and Stone Mountain, GA.",
+    note: loc(
+      "Parent company. Facilities in Evansville, IN and Stone Mountain, GA.",
+      "Empresa matriz. Plantas en Evansville, IN y Stone Mountain, GA.",
+    ),
     subBrands: [
       "Food Life Balanced",
       "Food Life Balanced+",
@@ -72,34 +80,47 @@ export const representedBrands: Brand[] = [
     ],
     productLines: [
       {
-        label: "Shelf-stable prepared meals",
-        detail:
+        label: loc("Shelf-stable prepared meals", "Comidas preparadas de larga duración"),
+        detail: loc(
           "4-year shelf life (pouched entrées: chicken, beef, pasta, chili, mac & cheese varieties)",
+          "Vida útil de 4 años (entradas en sobre: pollo, res, pasta, chili, macarrones con queso)",
+        ),
       },
       {
-        label: "Condensed soups",
-        detail: "Chicken noodle, cream of mushroom, tomato, vegetable",
+        label: loc("Condensed soups", "Sopas condensadas"),
+        detail: loc(
+          "Chicken noodle, cream of mushroom, tomato, vegetable",
+          "Pollo con fideos, crema de champiñones, tomate, verduras",
+        ),
       },
       {
-        label: "Shelf-stable yogurt cups",
-        detail: "Joy2 Yo-2-Go — no refrigeration needed until opened",
+        label: loc("Shelf-stable yogurt cups", "Yogur de larga duración"),
+        detail: loc(
+          "Joy2 Yo-2-Go — no refrigeration needed until opened",
+          "Joy2 Yo-2-Go — no requiere refrigeración hasta abrirse",
+        ),
       },
       {
-        label: "Peanut butter pouches",
-        detail: "Joy2",
+        label: loc("Peanut butter pouches", "Sobres de mantequilla de maní"),
+        detail: loc("Joy2", "Joy2"),
       },
       {
-        label: "Self-heating emergency meal kits",
-        detail:
+        label: loc("Self-heating emergency meal kits", "Kits de comida de emergencia auto-calentables"),
+        detail: loc(
           "Ready Ration, APack — FEMA-compliant, entrée + sides + dessert + drink",
+          "Ready Ration, APack — conformes a FEMA, entrada + acompañamientos + postre + bebida",
+        ),
       },
       {
-        label: "Dry pasta",
-        detail: "Multiple shapes, whole grain option available",
+        label: loc("Dry pasta", "Pasta seca"),
+        detail: loc(
+          "Multiple shapes, whole grain option available",
+          "Varios formatos, opción integral disponible",
+        ),
       },
     ],
     catalogHref: "/catalogs/food-life-balanced-2026.pdf",
-    catalogLabel: "View 2026 catalog",
+    catalogLabel: loc("View 2026 catalog", "Ver catálogo 2026"),
     photos: [],
   },
   {
@@ -108,28 +129,40 @@ export const representedBrands: Brand[] = [
     logo: "/brands/star-grocery.png",
     productLines: [
       {
-        label: "Dry pasta",
-        detail: "La Pasta — shapes including penne, spaghetti, tagliatelle, whole grain",
+        label: loc("Dry pasta", "Pasta seca"),
+        detail: loc(
+          "La Pasta — shapes including penne, spaghetti, tagliatelle, whole grain",
+          "La Pasta — formatos que incluyen penne, spaghetti, tagliatelle e integral",
+        ),
       },
       {
-        label: "Flours",
-        detail: "La Pasta — semolina, rice, chickpea and wheat flours",
+        label: loc("Flours", "Harinas"),
+        detail: loc(
+          "La Pasta — semolina, rice, chickpea and wheat flours",
+          "La Pasta — sémola, arroz, garbanzo y harinas de trigo",
+        ),
       },
       {
-        label: "Rice, groats & pulses",
-        detail: "Khutorok Panskyi — buckwheat, rice, lentils, couscous, bulgur",
+        label: loc("Rice, groats & pulses", "Arroz, cereales y legumbres"),
+        detail: loc(
+          "Khutorok Panskyi — buckwheat, rice, lentils, couscous, bulgur",
+          "Khutorok Panskyi — trigo sarraceno, arroz, lentejas, cuscús, bulgur",
+        ),
       },
       {
-        label: "Instant mashed potatoes",
-        detail: "Khutorok — flavored 30 g pouches",
+        label: loc("Instant mashed potatoes", "Puré de papa instantáneo"),
+        detail: loc("Khutorok — flavored 30 g pouches", "Khutorok — sobres saborizados de 30 g"),
       },
       {
-        label: "Sauces",
-        detail: "Kitto — soy, teriyaki, sweet chili, sweet and sour",
+        label: loc("Sauces", "Salsas"),
+        detail: loc(
+          "Kitto — soy, teriyaki, sweet chili, sweet and sour",
+          "Kitto — soya, teriyaki, chile dulce, agridulce",
+        ),
       },
     ],
     catalogHref: "/catalogs/star-grocery-2025.pdf",
-    catalogLabel: "View 2025 catalog",
+    catalogLabel: loc("View 2025 catalog", "Ver catálogo 2025"),
     photos: [],
   },
   {
@@ -137,7 +170,7 @@ export const representedBrands: Brand[] = [
     name: "Tronix",
     logo: "/brands/tronix.png",
     catalogHref: undefined,
-    catalogLabel: "View full catalog",
+    catalogLabel: loc("View full catalog", "Ver catálogo completo"),
     photos: [],
   },
   {
@@ -145,7 +178,7 @@ export const representedBrands: Brand[] = [
     name: "Lasco",
     logo: "/brands/lasco.png",
     catalogHref: undefined,
-    catalogLabel: "View full catalog",
+    catalogLabel: loc("View full catalog", "Ver catálogo completo"),
     photos: [],
   },
   {
@@ -153,7 +186,7 @@ export const representedBrands: Brand[] = [
     name: "Camagüey",
     logo: "/brands/camaguey.png",
     catalogHref: undefined,
-    catalogLabel: "View full catalog",
+    catalogLabel: loc("View full catalog", "Ver catálogo completo"),
     photos: [],
   },
   {

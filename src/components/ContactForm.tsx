@@ -1,13 +1,21 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { t } from "@/i18n/t";
+import { ui } from "@/i18n/ui";
+import type { Locale } from "@/i18n/config";
 import { company } from "@/lib/content";
 
-const roles = ["Manufacturer", "Buyer", "Other"] as const;
+const roleKeys = ["manufacturer", "buyer", "other"] as const;
 
-export function ContactForm() {
+export function ContactForm({ locale }: { locale: Locale }) {
   const [submitted, setSubmitted] = useState(false);
-  const [role, setRole] = useState<(typeof roles)[number]>("Manufacturer");
+  const [role, setRole] = useState<(typeof roleKeys)[number]>("manufacturer");
+  const roleLabels = {
+    manufacturer: t(locale, ui.form.manufacturer),
+    buyer: t(locale, ui.form.buyer),
+    other: t(locale, ui.form.other),
+  };
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -22,17 +30,17 @@ export function ContactForm() {
     const volume = String(data.get("volume") || "");
     const message = String(data.get("message") || "");
 
-    const subject = encodeURIComponent(`Business Link inquiry — ${role}`);
+    const subject = encodeURIComponent(`${t(locale, ui.form.mailSubject)} ${roleLabels[role]}`);
     const body = encodeURIComponent(
       [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Organization: ${organization}`,
-        `Phone: ${phone}`,
-        `I am a: ${role}`,
-        `Product: ${product}`,
-        `Destination: ${destination}`,
-        `Volume: ${volume}`,
+        `${t(locale, ui.form.mailName)}: ${name}`,
+        `${t(locale, ui.form.mailEmail)}: ${email}`,
+        `${t(locale, ui.form.mailOrganization)}: ${organization}`,
+        `${t(locale, ui.form.mailPhone)}: ${phone}`,
+        `${t(locale, ui.form.mailRole)}: ${roleLabels[role]}`,
+        `${t(locale, ui.form.mailProduct)}: ${product}`,
+        `${t(locale, ui.form.mailDestination)}: ${destination}`,
+        `${t(locale, ui.form.mailVolume)}: ${volume}`,
         "",
         message,
       ].join("\n"),
@@ -44,15 +52,13 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="rounded-2xl border border-line bg-white p-6 shadow-sm md:p-8">
-      <p className="text-sm font-semibold text-teal">Send an inquiry</p>
-      <p className="mt-1 text-sm text-slate">
-        The more precise the information, the faster the commercial evaluation.
-      </p>
+      <p className="text-sm font-semibold text-teal">{t(locale, ui.form.sendInquiry)}</p>
+      <p className="mt-1 text-sm text-slate">{t(locale, ui.form.intro)}</p>
 
       <fieldset className="mt-6">
-        <legend className="text-sm font-medium text-ink">I am a</legend>
+        <legend className="text-sm font-medium text-ink">{t(locale, ui.form.iAmA)}</legend>
         <div className="mt-2 grid grid-cols-3 gap-2">
-          {roles.map((option) => {
+          {roleKeys.map((option) => {
             const selected = role === option;
             return (
               <label
@@ -71,7 +77,7 @@ export function ContactForm() {
                   onChange={() => setRole(option)}
                   className="sr-only"
                 />
-                {option}
+                {roleLabels[option]}
               </label>
             );
           })}
@@ -80,7 +86,7 @@ export function ContactForm() {
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         <label className="block text-sm">
-          <span className="font-medium text-ink">Name</span>
+          <span className="font-medium text-ink">{t(locale, ui.form.name)}</span>
           <input
             required
             name="name"
@@ -88,7 +94,7 @@ export function ContactForm() {
           />
         </label>
         <label className="block text-sm">
-          <span className="font-medium text-ink">Email</span>
+          <span className="font-medium text-ink">{t(locale, ui.form.email)}</span>
           <input
             required
             type="email"
@@ -100,14 +106,14 @@ export function ContactForm() {
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         <label className="block text-sm">
-          <span className="font-medium text-ink">Organization</span>
+          <span className="font-medium text-ink">{t(locale, ui.form.organization)}</span>
           <input
             name="organization"
             className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
           />
         </label>
         <label className="block text-sm">
-          <span className="font-medium text-ink">WhatsApp / Phone</span>
+          <span className="font-medium text-ink">{t(locale, ui.form.phone)}</span>
           <input
             name="phone"
             className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
@@ -117,21 +123,21 @@ export function ContactForm() {
 
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
         <label className="block text-sm">
-          <span className="font-medium text-ink">Product of interest</span>
+          <span className="font-medium text-ink">{t(locale, ui.form.product)}</span>
           <input
             name="product"
             className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
           />
         </label>
         <label className="block text-sm">
-          <span className="font-medium text-ink">Destination market</span>
+          <span className="font-medium text-ink">{t(locale, ui.form.destination)}</span>
           <input
             name="destination"
             className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
           />
         </label>
         <label className="block text-sm">
-          <span className="font-medium text-ink">Estimated volume</span>
+          <span className="font-medium text-ink">{t(locale, ui.form.volume)}</span>
           <input
             name="volume"
             className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
@@ -140,13 +146,13 @@ export function ContactForm() {
       </div>
 
       <label className="mt-4 block text-sm">
-        <span className="font-medium text-ink">Message</span>
+        <span className="font-medium text-ink">{t(locale, ui.form.message)}</span>
         <textarea
           required
           name="message"
           rows={5}
           className="mt-1.5 w-full resize-y rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
-          placeholder="Tell us about the product, market, or partnership you want to explore."
+          placeholder={t(locale, ui.form.placeholder)}
         />
       </label>
 
@@ -154,13 +160,12 @@ export function ContactForm() {
         type="submit"
         className="mt-6 inline-flex rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-hover"
       >
-        Send inquiry
+        {t(locale, ui.form.submit)}
       </button>
 
       {submitted ? (
         <p className="mt-3 text-sm text-slate">
-          Your email client should open with the inquiry drafted. If it does not, email{" "}
-          {company.email} directly.
+          {t(locale, ui.form.submitted)} {company.email} {t(locale, ui.form.submittedAfter)}
         </p>
       ) : null}
     </form>

@@ -4,28 +4,37 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
 import { PrimaryButton, TextLink } from "@/components/ui";
+import { isLocale, localeAlternates, localizedHref, locales, type Locale } from "@/i18n/config";
+import { t } from "@/i18n/t";
+import { ui } from "@/i18n/ui";
 import { getCategoryBySlug, portfolioCategories } from "@/lib/content";
 
-type Props = {
-  params: Promise<{ slug: string }>;
-};
-
 export function generateStaticParams() {
-  return portfolioCategories.map((category) => ({ slug: category.slug }));
+  return locales.flatMap((locale) =>
+    portfolioCategories.map((category) => ({ locale, slug: category.slug })),
+  );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/portfolio/[slug]">): Promise<Metadata> {
+  const { slug, locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : "en";
   const category = getCategoryBySlug(slug);
-  if (!category) return { title: "Category" };
+  if (!category) return { title: t(locale, ui.categoryPage.fallbackTitle) };
   return {
-    title: category.title,
-    description: category.summary,
+    title: t(locale, category.title),
+    description: t(locale, category.summary),
+    alternates: localeAlternates(`/portfolio/${slug}`),
   };
 }
 
-export default async function PortfolioCategoryPage({ params }: Props) {
-  const { slug } = await params;
+export default async function PortfolioCategoryPage({
+  params,
+}: PageProps<"/[locale]/portfolio/[slug]">) {
+  const { slug, locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
+  const locale: Locale = raw;
   const category = getCategoryBySlug(slug);
   if (!category) notFound();
 
@@ -37,7 +46,7 @@ export default async function PortfolioCategoryPage({ params }: Props) {
         <div className="absolute inset-0">
           <Image
             src={category.image}
-            alt={category.title}
+            alt={t(locale, category.title)}
             fill
             priority
             className="object-cover"
@@ -47,13 +56,13 @@ export default async function PortfolioCategoryPage({ params }: Props) {
         </div>
         <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 md:px-8 md:pb-20 md:pt-12">
           <p className="eyebrow text-orange">
-            <span>Portfolio</span>
+            <span>{t(locale, ui.portfolioPage.heroLabel)}</span>
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">
-            {category.title}
+            {t(locale, category.title)}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-            {category.summary}
+            {t(locale, category.summary)}
           </p>
         </div>
       </section>
@@ -63,21 +72,24 @@ export default async function PortfolioCategoryPage({ params }: Props) {
           <div className="flex flex-wrap gap-2">
             {category.channels.map((channel) => (
               <span
-                key={channel}
+                key={channel.en}
                 className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-slate"
               >
-                {channel}
+                {t(locale, channel)}
               </span>
             ))}
           </div>
-          <TextLink href="/portfolio">← All categories</TextLink>
+          <TextLink href={localizedHref(locale, "/portfolio")}>
+            {t(locale, ui.categoryPage.allCategories)}
+          </TextLink>
         </div>
 
         <div className="mt-10">
-          <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">Products</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+            {t(locale, ui.categoryPage.products)}
+          </h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
-            Selected products in this category. Ask us for availability, packaging options, and
-            destination-market fit.
+            {t(locale, ui.categoryPage.productsIntro)}
           </p>
         </div>
 
@@ -89,23 +101,25 @@ export default async function PortfolioCategoryPage({ params }: Props) {
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={product.image}
-                      alt={product.name}
+                      alt={t(locale, product.name)}
                       fill
                       className={product.imageFit === "contain" ? "object-contain bg-[#f7f4ee]" : "object-cover"}
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg font-bold text-ink">{product.name}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate">{product.description}</p>
+                    <h3 className="text-lg font-bold text-ink">{t(locale, product.name)}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate">
+                      {t(locale, product.description)}
+                    </p>
                     {product.details && product.details.length > 0 ? (
                       <div className="mt-4 flex flex-wrap gap-2">
                         {product.details.map((detail) => (
                           <span
-                            key={detail}
+                            key={detail.en}
                             className="rounded-full bg-surface px-2.5 py-1 text-xs font-medium text-slate"
                           >
-                            {detail}
+                            {t(locale, detail)}
                           </span>
                         ))}
                       </div>
@@ -117,27 +131,28 @@ export default async function PortfolioCategoryPage({ params }: Props) {
           </div>
         ) : (
           <div className="mt-8 rounded-2xl border border-dashed border-line bg-surface p-8 md:p-10">
-            <h3 className="text-lg font-bold text-ink">Products coming soon</h3>
+            <h3 className="text-lg font-bold text-ink">{t(locale, ui.categoryPage.comingSoonTitle)}</h3>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate">
-              Product names, images, and descriptions for this category will appear here as they are
-              added. Contact us in the meantime to discuss sourcing or distribution opportunities.
+              {t(locale, ui.categoryPage.comingSoonBody)}
             </p>
             <div className="mt-6">
-              <PrimaryButton href="/contact">Inquire about this category</PrimaryButton>
+              <PrimaryButton href={localizedHref(locale, "/contact")}>
+                {t(locale, ui.categoryPage.inquire)}
+              </PrimaryButton>
             </div>
           </div>
         )}
 
         <div className="mt-16 border-t border-line pt-10">
-          <h3 className="text-lg font-bold text-ink">Other categories</h3>
+          <h3 className="text-lg font-bold text-ink">{t(locale, ui.categoryPage.otherCategories)}</h3>
           <div className="mt-4 flex flex-wrap gap-2">
             {otherCategories.map((item) => (
               <Link
                 key={item.slug}
-                href={`/portfolio/${item.slug}`}
+                href={localizedHref(locale, `/portfolio/${item.slug}`)}
                 className="rounded-full border border-line px-4 py-2 text-sm font-medium text-ink transition hover:border-teal hover:text-teal"
               >
-                {item.title}
+                {t(locale, item.title)}
               </Link>
             ))}
           </div>

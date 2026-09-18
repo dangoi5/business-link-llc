@@ -1,0 +1,335 @@
+import { loc } from "@/i18n/t";
+
+export const ui = {
+  meta: {
+    titleDefault: loc(
+      "Business Link LLC | Master Distributor & Exporter",
+      "Business Link LLC | Distribuidor maestro y exportador",
+    ),
+    titleTemplate: loc("%s | Business Link LLC", "%s | Business Link LLC"),
+    description: loc(
+      "Business Link LLC is a master distributor and exporter of food and beverage products, with our own Fresh Elements line, serving manufacturers, brands and buyers worldwide.",
+      "Business Link LLC es un distribuidor maestro y exportador de alimentos y bebidas, con nuestra línea Fresh Elements, al servicio de fabricantes, marcas y compradores en todo el mundo.",
+    ),
+    openGraphTitle: loc("Business Link LLC", "Business Link LLC"),
+    openGraphDescription: loc(
+      "Master distributor and exporter of food & beverage products. Own brand: Fresh Elements.",
+      "Distribuidor maestro y exportador de alimentos y bebidas. Marca propia: Fresh Elements.",
+    ),
+  },
+  language: {
+    en: loc("English", "Inglés"),
+    es: loc("Spanish", "Español"),
+    switchTo: loc("Language", "Idioma"),
+  },
+  common: {
+    getInTouch: loc("Get in touch", "Contáctenos"),
+    contactUs: loc("Contact us", "Contáctenos"),
+    homeAria: loc("Business Link LLC home", "Inicio de Business Link LLC"),
+    openMenu: loc("Open menu", "Abrir menú"),
+    closeMenu: loc("Close menu", "Cerrar menú"),
+    explore: loc("Explore", "Explorar"),
+    contact: loc("Contact", "Contacto"),
+    footerBlurb: loc(
+      "Master distributor & exporter · Fresh Elements · International food & beverage trade",
+      "Distribuidor maestro y exportador · Fresh Elements · Comercio internacional de alimentos y bebidas",
+    ),
+    rights: loc("All rights reserved.", "Todos los derechos reservados."),
+    regionsLine: loc(
+      "Americas · Caribbean · Africa · Europe · Asia-Pacific",
+      "Américas · Caribe · África · Europa · Asia-Pacífico",
+    ),
+    comingSoon: loc("Coming soon", "Próximamente"),
+    brandToBeAnnounced: loc("Brand to be announced", "Marca por anunciar"),
+    ownBrand: loc("Own brand", "Marca propia"),
+    manufacturer: loc("Manufacturer", "Fabricante"),
+    viewFullCatalog: loc("View full catalog", "Ver catálogo completo"),
+    catalogAria: loc("catalog", "catálogo"),
+  },
+  home: {
+    heroLabel: loc("Master distributor & exporter", "Distribuidor maestro y exportador"),
+    heroTitle1: loc("Developing Businesses.", "Desarrollamos negocios."),
+    heroTitle2: loc("Building Markets.", "Construimos mercados."),
+    heroBody: loc(
+      "Business Link LLC is a master distributor and exporter of food & beverage products—with our own Fresh Elements line—connecting supply and markets across the Americas, Caribbean, Africa, Europe and Asia-Pacific.",
+      "Business Link LLC es un distribuidor maestro y exportador de alimentos y bebidas —con nuestra línea Fresh Elements— que conecta oferta y mercados en las Américas, el Caribe, África, Europa y Asia-Pacífico.",
+    ),
+    requestPortfolio: loc("Request portfolio", "Solicitar portafolio"),
+    letsWork: loc("Let's work together", "Trabajemos juntos"),
+    activeMarkets: loc("Active markets", "Mercados activos"),
+    productCategories: loc("Product categories", "Categorías de producto"),
+    worldRegions: loc("World regions", "Regiones del mundo"),
+    whoWeAre: loc("Who we are", "Quiénes somos"),
+    whoTitle: loc(
+      "Master distributor, exporter, and brand owner.",
+      "Distribuidor maestro, exportador y dueño de marca.",
+    ),
+    whoAlongside: loc(
+      "Alongside partner brands and manufacturers, we market",
+      "Junto a marcas y fabricantes asociados, comercializamos",
+    ),
+    whoAlongsideAfter: loc(
+      "—our own product line developed for international commercial channels.",
+      "—nuestra línea de productos para canales comerciales internacionales.",
+    ),
+    learnCapabilities: loc("Learn more about our capabilities →", "Conozca más sobre nuestras capacidades →"),
+    aboutAlt: loc(
+      "Warehouse logistics for food distribution",
+      "Logística de almacén para distribución de alimentos",
+    ),
+    heroAlt: loc(
+      "Container ship at sea representing international trade",
+      "Buque de contenedores en el mar, símbolo del comercio internacional",
+    ),
+    portfolioLabel: loc("Product portfolio", "Portafolio de productos"),
+    portfolioTitle: loc(
+      "Categories prepared for retail, foodservice and trade.",
+      "Categorías para retail, foodservice y comercio.",
+    ),
+    portfolioDescription: loc(
+      "Our portfolio includes Fresh Elements—our own product line—plus established manufacturers, selected brands and sourcing capabilities.",
+      "Nuestro portafolio incluye Fresh Elements —nuestra línea propia— además de fabricantes establecidos, marcas seleccionadas y capacidades de abastecimiento.",
+    ),
+    explorePortfolio: loc("Explore full portfolio →", "Ver portafolio completo →"),
+    viewProducts: loc("View products →", "Ver productos →"),
+    marketsLabel: loc("Markets", "Mercados"),
+    marketsTitle: loc(
+      "Commercial connectivity across international markets.",
+      "Conectividad comercial en mercados internacionales.",
+    ),
+    marketsDescription: loc(
+      "Business Link has developed a network of commercial relationships and strategic partners that can be activated according to each opportunity.",
+      "Business Link ha desarrollado una red de relaciones comerciales y socios estratégicos que se activa según cada oportunidad.",
+    ),
+    viewFootprint: loc("View our market footprint →", "Ver nuestra presencia de mercado →"),
+    gatewayLabel: loc("Your gateway to global growth", "Su puerta al crecimiento global"),
+    gatewayTitle: loc(
+      "Services for manufacturers and buyers.",
+      "Servicios para fabricantes y compradores.",
+    ),
+    gatewayDescription: loc(
+      "From market entry to sourcing and logistics coordination, we support both exporters and importers with comprehensive trade services.",
+      "Desde la entrada a mercados hasta el abastecimiento y la coordinación logística, apoyamos a exportadores e importadores con servicios comerciales integrales.",
+    ),
+    forManufacturers: loc("For manufacturers & brands", "Para fabricantes y marcas"),
+    expandMarkets: loc("Expand into new markets", "Expanda a nuevos mercados"),
+    forBuyers: loc("For buyers & distributors", "Para compradores y distribuidores"),
+    sourceSupply: loc("Source reliable supply", "Abastecimiento confiable"),
+    howWeWork: loc("How we work", "Cómo trabajamos"),
+    fromOpportunity: loc("From opportunity to market", "De la oportunidad al mercado"),
+    howDescription: loc(
+      "Business Link approaches each opportunity as a business to be developed—not simply a transaction.",
+      "Business Link aborda cada oportunidad como un negocio por desarrollar, no como una simple transacción.",
+    ),
+    ctaTitle: loc("Ready to develop the next opportunity?", "¿Listo para desarrollar la próxima oportunidad?"),
+    ctaBody: loc(
+      "Tell us about your product, market or sourcing requirement. We evaluate opportunities where our network and execution can create sustainable business.",
+      "Cuéntenos sobre su producto, mercado o necesidad de abastecimiento. Evaluamos oportunidades en las que nuestra red y ejecución pueden crear un negocio sostenible.",
+    ),
+    ourPartners: loc("Our partners", "Nuestros socios"),
+  },
+  capabilities: {
+    metaTitle: loc("Capabilities", "Capacidades"),
+    metaDescription: loc(
+      "Master distribution, export, Fresh Elements own brand, market development and sourcing from Business Link LLC.",
+      "Distribución maestra, exportación, marca propia Fresh Elements, desarrollo de mercados y abastecimiento de Business Link LLC.",
+    ),
+    heroLabel: loc("Capabilities", "Capacidades"),
+    heroTitle: loc(
+      "Master distribution, export and market development.",
+      "Distribución maestra, exportación y desarrollo de mercados.",
+    ),
+    heroDescription: loc(
+      "Business Link operates as a master distributor and exporter—supporting partner brands and our own Fresh Elements line with market development, distribution and sourcing.",
+      "Business Link opera como distribuidor maestro y exportador: apoyamos marcas asociadas y nuestra línea Fresh Elements con desarrollo de mercados, distribución y abastecimiento.",
+    ),
+    howWeWork: loc("How we work", "Cómo trabajamos"),
+    fromOpportunity: loc("From opportunity to market", "De la oportunidad al mercado"),
+    forManufacturers: loc("For manufacturers", "Para fabricantes"),
+    forBuyers: loc("For buyers", "Para compradores"),
+    talkOpportunity: loc("Talk through an opportunity →", "Hablemos de una oportunidad →"),
+  },
+  marketsPage: {
+    metaTitle: loc("Markets", "Mercados"),
+    metaDescription: loc(
+      "Business Link LLC's international market footprint across the Americas, Caribbean, Africa, Europe and Asia-Pacific.",
+      "Presencia internacional de Business Link LLC en las Américas, el Caribe, África, Europa y Asia-Pacífico.",
+    ),
+    heroLabel: loc("Markets", "Mercados"),
+    heroTitle: loc(
+      "Commercial relationships activated by opportunity.",
+      "Relaciones comerciales activadas por la oportunidad.",
+    ),
+    heroDescription: loc(
+      "Business Link has developed a network of commercial relationships and strategic partners across the Americas, Caribbean, Africa, Europe and Asia-Pacific.",
+      "Business Link ha desarrollado una red de relaciones comerciales y socios estratégicos en las Américas, el Caribe, África, Europa y Asia-Pacífico.",
+    ),
+    intro: loc(
+      "Our footprint provides access to local market knowledge and commercial, import, distribution, warehousing and logistics resources that can be activated according to the requirements of each opportunity.",
+      "Nuestra presencia da acceso a conocimiento local y a recursos comerciales, de importación, distribución, almacenamiento y logística que se activan según los requisitos de cada oportunidad.",
+    ),
+    inDevelopment: loc("Markets in development", "Mercados en desarrollo"),
+    inDevelopmentBody: loc(
+      "Active evaluation where commercial structure, compliance and logistics pathways are being established.",
+      "Evaluación activa donde se está estableciendo la estructura comercial, el cumplimiento y las rutas logísticas.",
+    ),
+    distribution: loc("Distribution", "Distribución"),
+    distributionTitle: loc(
+      "Not every market requires the same distribution model.",
+      "No todos los mercados requieren el mismo modelo de distribución.",
+    ),
+    discussMarket: loc("Discuss a market opportunity →", "Hablemos de una oportunidad de mercado →"),
+  },
+  partnersPage: {
+    metaTitle: loc("Partners", "Socios"),
+    metaDescription: loc(
+      "Brands we represent—including AmeriQual, Star Grocery, Tronix, Lasco and Camagüey—plus Fresh Elements and strategic partners working with Business Link LLC.",
+      "Marcas que representamos —incluyendo AmeriQual, Star Grocery, Tronix, Lasco y Camagüey— más Fresh Elements y socios estratégicos de Business Link LLC.",
+    ),
+    heroLabel: loc("Partners & brands", "Socios y marcas"),
+    heroTitle: loc(
+      "Our brand, manufacturers and strategic partners.",
+      "Nuestra marca, fabricantes y socios estratégicos.",
+    ),
+    heroDescription: loc(
+      "Business Link is a master distributor and exporter. We market our own Fresh Elements line and work with partners whose capabilities complement the markets we develop.",
+      "Business Link es un distribuidor maestro y exportador. Comercializamos nuestra línea Fresh Elements y trabajamos con socios cuyas capacidades complementan los mercados que desarrollamos.",
+    ),
+    viewPortfolio: loc("View portfolio", "Ver portafolio"),
+    becomePartner: loc("Become a distribution partner", "Conviértase en socio de distribución"),
+    becomePartnerBody: loc(
+      "Importers and distributors with established local coverage can explore Fresh Elements and partner-brand opportunities aligned to their channels and market demand.",
+      "Importadores y distribuidores con cobertura local establecida pueden explorar Fresh Elements y marcas asociadas alineadas a sus canales y demanda de mercado.",
+    ),
+    partnerWithUs: loc("Partner with us", "Asóciese con nosotros"),
+  },
+  brands: {
+    label: loc("Brands we represent", "Marcas que representamos"),
+    title: loc(
+      "Manufacturers and brands in our distribution portfolio.",
+      "Fabricantes y marcas de nuestro portafolio de distribución.",
+    ),
+    description: loc(
+      "A selected group of manufacturers and brands we represent as master distributor and exporter. Product line categories are listed below, with full catalogs linked where available.",
+      "Un grupo seleccionado de fabricantes y marcas que representamos como distribuidor maestro y exportador. Las líneas de producto se listan abajo, con catálogos completos cuando están disponibles.",
+    ),
+  },
+  portfolioPage: {
+    metaTitle: loc("Portfolio", "Portafolio"),
+    metaDescription: loc(
+      "Business Link LLC portfolio: brands we represent, Fresh Elements product lines, and food categories across shelf-stable foods, oils & fats, foodservice, grocery and snacks.",
+      "Portafolio de Business Link LLC: marcas que representamos, líneas Fresh Elements y categorías de alimentos de larga duración, aceites, foodservice, abarrotes y snacks.",
+    ),
+    heroLabel: loc("Portfolio", "Portafolio"),
+    heroTitle: loc(
+      "Food categories built for international distribution.",
+      "Categorías de alimentos para distribución internacional.",
+    ),
+    heroDescription: loc(
+      "As a master distributor and exporter, Business Link supplies partner brands and our own Fresh Elements line across retail, foodservice, food industry and international trade.",
+      "Como distribuidor maestro y exportador, Business Link abastece marcas asociadas y nuestra línea Fresh Elements en retail, foodservice, industria alimentaria y comercio internacional.",
+    ),
+    foodCategories: loc("Food categories", "Categorías de alimentos"),
+    foodCategoriesBody: loc(
+      "Category coverage across retail, foodservice, food industry and international trade.",
+      "Cobertura de categorías en retail, foodservice, industria alimentaria y comercio internacional.",
+    ),
+    categoryPrefix: loc("Category", "Categoría"),
+    viewProducts: loc("View products", "Ver productos"),
+    lookingTitle: loc("Looking for a specific product range?", "¿Busca una línea de producto específica?"),
+    lookingBody: loc(
+      "Share your category, volume profile and target markets. We evaluate sourcing and distribution opportunities against our network and active routes to market.",
+      "Indique su categoría, perfil de volumen y mercados objetivo. Evaluamos oportunidades de abastecimiento y distribución con nuestra red y rutas activas.",
+    ),
+    discussPortfolio: loc("Discuss a portfolio opportunity →", "Hablemos de una oportunidad de portafolio →"),
+  },
+  categoryPage: {
+    allCategories: loc("← All categories", "← Todas las categorías"),
+    products: loc("Products", "Productos"),
+    productsIntro: loc(
+      "Selected products in this category. Ask us for availability, packaging options, and destination-market fit.",
+      "Productos seleccionados de esta categoría. Consúltenos disponibilidad, empaque y adecuación al mercado de destino.",
+    ),
+    comingSoonTitle: loc("Products coming soon", "Productos próximamente"),
+    comingSoonBody: loc(
+      "Product names, images, and descriptions for this category will appear here as they are added. Contact us in the meantime to discuss sourcing or distribution opportunities.",
+      "Los nombres, imágenes y descripciones de esta categoría aparecerán aquí a medida que se agreguen. Contáctenos mientras tanto para hablar de abastecimiento o distribución.",
+    ),
+    inquire: loc("Inquire about this category", "Consultar esta categoría"),
+    otherCategories: loc("Other categories", "Otras categorías"),
+    fallbackTitle: loc("Category", "Categoría"),
+  },
+  contactPage: {
+    metaTitle: loc("Contact", "Contacto"),
+    metaDescription: loc(
+      "Contact Business Link LLC to discuss market development, distribution, sourcing and partnership opportunities.",
+      "Contacte a Business Link LLC para hablar de desarrollo de mercados, distribución, abastecimiento y alianzas.",
+    ),
+    heroLabel: loc("Contact", "Contacto"),
+    heroTitle: loc(
+      "Let's build your next market opportunity.",
+      "Construyamos su próxima oportunidad de mercado.",
+    ),
+    heroDescription: loc(
+      "Tell us what product, volume and destination you need—or which markets you want to enter. We will evaluate the opportunity and respond.",
+      "Indíquenos el producto, volumen y destino que necesita —o a qué mercados quiere entrar. Evaluaremos la oportunidad y le responderemos.",
+    ),
+    whyLabel: loc("Why reach out", "Por qué escribirnos"),
+    whyTitle: loc("Manufacturers, buyers and partners", "Fabricantes, compradores y socios"),
+    reason1: loc(
+      "Manufacturers and brands seeking structured international market access",
+      "Fabricantes y marcas que buscan acceso internacional estructurado",
+    ),
+    reason2: loc(
+      "Distributors and importers looking for curated product opportunities",
+      "Distribuidores e importadores que buscan oportunidades de producto seleccionadas",
+    ),
+    reason3: loc(
+      "Organizations with defined sourcing or supply-chain requirements",
+      "Organizaciones con requisitos definidos de abastecimiento o cadena de suministro",
+    ),
+    response: loc("Response", "Respuesta"),
+    commercialFollowUp: loc("Commercial follow-up", "Seguimiento comercial"),
+    focus: loc("Focus", "Enfoque"),
+    foodTrade: loc("Food & beverage trade", "Comercio de alimentos y bebidas"),
+    email: loc("Email", "Correo"),
+  },
+  form: {
+    sendInquiry: loc("Send an inquiry", "Enviar una consulta"),
+    intro: loc(
+      "The more precise the information, the faster the commercial evaluation.",
+      "Cuanto más precisa sea la información, más rápida será la evaluación comercial.",
+    ),
+    iAmA: loc("I am a", "Soy"),
+    manufacturer: loc("Manufacturer", "Fabricante"),
+    buyer: loc("Buyer", "Comprador"),
+    other: loc("Other", "Otro"),
+    name: loc("Name", "Nombre"),
+    email: loc("Email", "Correo"),
+    organization: loc("Organization", "Organización"),
+    phone: loc("WhatsApp / Phone", "WhatsApp / Teléfono"),
+    product: loc("Product of interest", "Producto de interés"),
+    destination: loc("Destination market", "Mercado de destino"),
+    volume: loc("Estimated volume", "Volumen estimado"),
+    message: loc("Message", "Mensaje"),
+    placeholder: loc(
+      "Tell us about the product, market, or partnership you want to explore.",
+      "Cuéntenos sobre el producto, mercado o alianza que desea explorar.",
+    ),
+    submit: loc("Send inquiry", "Enviar consulta"),
+    submitted: loc(
+      "Your email client should open with the inquiry drafted. If it does not, email",
+      "Su cliente de correo debería abrir con la consulta redactada. Si no ocurre, escriba a",
+    ),
+    submittedAfter: loc("directly.", "directamente."),
+    mailName: loc("Name", "Nombre"),
+    mailEmail: loc("Email", "Correo"),
+    mailOrganization: loc("Organization", "Organización"),
+    mailPhone: loc("Phone", "Teléfono"),
+    mailRole: loc("I am a", "Soy"),
+    mailProduct: loc("Product", "Producto"),
+    mailDestination: loc("Destination", "Destino"),
+    mailVolume: loc("Volume", "Volumen"),
+    mailSubject: loc("Business Link inquiry —", "Consulta Business Link —"),
+  },
+} as const;

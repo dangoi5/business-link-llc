@@ -4,13 +4,58 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CompanyLogo } from "@/components/CompanyLogo";
+import { locales, localizedHref, switchLocalePath, type Locale } from "@/i18n/config";
+import { t } from "@/i18n/t";
+import { ui } from "@/i18n/ui";
 import { navLinks } from "@/lib/content";
 
-export function Header() {
+export function LanguageSwitcher({
+  locale,
+  solid,
+}: {
+  locale: Locale;
+  solid: boolean;
+}) {
+  const pathname = usePathname();
+
+  return (
+    <div
+      className={`flex items-center gap-1.5 text-[11px] font-bold tracking-wide ${
+        solid ? "text-slate" : "text-white/80"
+      }`}
+      aria-label={t(locale, ui.language.switchTo)}
+    >
+      {locales.map((item, index) => (
+        <span key={item} className="flex items-center gap-1.5">
+          {index > 0 ? <span className="opacity-40">|</span> : null}
+          <Link
+            href={switchLocalePath(pathname, item)}
+            hrefLang={item}
+            aria-current={item === locale ? "true" : undefined}
+            className={`uppercase transition ${
+              item === locale
+                ? solid
+                  ? "text-teal"
+                  : "text-white"
+                : solid
+                  ? "hover:text-ink"
+                  : "hover:text-white"
+            }`}
+          >
+            {item}
+          </Link>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+export function Header({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const isHome = pathname === "/";
+  const homeHref = localizedHref(locale, "/");
+  const isHome = pathname === homeHref || pathname === `${homeHref}/`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -32,7 +77,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
-        <Link href="/" className="flex min-w-0 items-center" aria-label="Business Link LLC home">
+        <Link href={homeHref} className="flex min-w-0 items-center" aria-label={t(locale, ui.common.homeAria)}>
           <span className="relative h-10 w-10 shrink-0 sm:hidden">
             <CompanyLogo variant="mark" onDark={!solid} priority sizes="40px" />
           </span>
@@ -51,11 +96,12 @@ export function Header() {
           {navLinks
             .filter((link) => link.href !== "/contact")
             .map((link) => {
-              const active = pathname === link.href;
+              const href = localizedHref(locale, link.href);
+              const active = pathname === href;
               return (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  href={href}
                   className={`text-sm font-medium transition ${
                     solid
                       ? active
@@ -66,47 +112,58 @@ export function Header() {
                         : "text-white/75 hover:text-white"
                   }`}
                 >
-                  {link.label}
+                  {t(locale, link.label)}
                 </Link>
               );
             })}
         </nav>
 
-        <div className="hidden items-center md:flex">
+        <div className="hidden items-center gap-4 md:flex">
+          <LanguageSwitcher locale={locale} solid={solid} />
           <Link
-            href="/contact"
+            href={localizedHref(locale, "/contact")}
             className="rounded-full bg-orange px-4 py-2 text-xs font-semibold text-white transition hover:bg-orange-hover"
           >
-            Get in touch
+            {t(locale, ui.common.getInTouch)}
           </Link>
         </div>
 
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          className={`md:hidden ${solid ? "text-ink" : "text-white"}`}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <div className="flex h-4 w-5 flex-col justify-between">
-            <span className={`block h-0.5 w-full bg-current transition ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-            <span className={`block h-0.5 w-full bg-current transition ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-full bg-current transition ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
-          </div>
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher locale={locale} solid={solid} />
+          <button
+            type="button"
+            aria-label={open ? t(locale, ui.common.closeMenu) : t(locale, ui.common.openMenu)}
+            className={solid ? "text-ink" : "text-white"}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <div className="flex h-4 w-5 flex-col justify-between">
+              <span className={`block h-0.5 w-full bg-current transition ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+              <span className={`block h-0.5 w-full bg-current transition ${open ? "opacity-0" : ""}`} />
+              <span className={`block h-0.5 w-full bg-current transition ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+            </div>
+          </button>
+        </div>
       </div>
 
       {open && (
         <div className="border-t border-line bg-white px-5 py-5 md:hidden">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="rounded-lg px-2 py-2.5 text-base font-medium text-ink">
-                {link.label}
+              <Link
+                key={link.href}
+                href={localizedHref(locale, link.href)}
+                className="rounded-lg px-2 py-2.5 text-base font-medium text-ink"
+              >
+                {t(locale, link.label)}
               </Link>
             ))}
           </div>
           <div className="mt-4">
-            <Link href="/contact" className="block rounded-full bg-orange px-4 py-2.5 text-center text-sm font-semibold text-white">
-              Get in touch
+            <Link
+              href={localizedHref(locale, "/contact")}
+              className="block rounded-full bg-orange px-4 py-2.5 text-center text-sm font-semibold text-white"
+            >
+              {t(locale, ui.common.getInTouch)}
             </Link>
           </div>
         </div>
