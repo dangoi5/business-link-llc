@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BrandsWeRepresent } from "@/components/BrandsWeRepresent";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, PrimaryButton } from "@/components/ui";
 import { ownBrand, partners } from "@/lib/content";
@@ -7,7 +8,7 @@ import { ownBrand, partners } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Partners",
   description:
-    "Fresh Elements and selected manufacturers, brands, distributors and logistics partners working with Business Link LLC.",
+    "Brands we represent—including AmeriQual, Star Grocery, Tronix, Lasco and Camagüey—plus Fresh Elements and strategic partners working with Business Link LLC.",
 };
 
 export default function PartnersPage() {
@@ -51,26 +52,9 @@ export default function PartnersPage() {
             ))}
         </div>
 
-        <Reveal className="mt-14">
-          <h2 className="text-2xl font-bold text-ink">Featured brands & partners</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
-            Fresh Elements leads our brand portfolio. Additional partner marks appear here as
-            commercial relationships and brand approvals allow.
-          </p>
-          <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
-            <div className="flex h-24 items-center justify-center rounded-xl border border-teal/30 bg-teal/5 px-3 text-center text-sm font-bold text-teal">
-              Fresh Elements
-            </div>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <div
-                key={index}
-                className="flex h-24 items-center justify-center rounded-xl border border-line bg-surface text-xs font-medium text-slate/50"
-              >
-                Logo
-              </div>
-            ))}
-          </div>
-        </Reveal>
+        <div className="mt-16 border-t border-line pt-16">
+          <BrandsWeRepresent />
+        </div>
 
         <Reveal className="mt-16 flex flex-col gap-6 rounded-2xl bg-ink p-8 text-white md:flex-row md:items-center md:justify-between md:p-10">
           <div className="max-w-xl">

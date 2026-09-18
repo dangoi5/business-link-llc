@@ -1,3 +1,5 @@
+import { freshElementsBrand } from "@/lib/brands";
+
 export const company = {
   name: "Business Link LLC",
   tagline: "Developing Businesses. Building Markets. Connecting the World",
@@ -11,12 +13,11 @@ export const company = {
 };
 
 export const ownBrand = {
-  name: "Fresh Elements",
-  tagline: "Our own product line",
-  description:
-    "In addition to distributing and exporting partner brands, Business Link develops and markets Fresh Elements—our own line of food products built for retail, foodservice and international trade.",
-  ctaLabel: "Explore portfolio",
-  ctaHref: "/portfolio",
+  name: freshElementsBrand.name,
+  tagline: freshElementsBrand.tagline,
+  description: freshElementsBrand.description,
+  ctaLabel: freshElementsBrand.ctaLabel,
+  ctaHref: freshElementsBrand.ctaHref,
 };
 
 export const navLinks = [

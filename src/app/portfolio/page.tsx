@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BrandsWeRepresent } from "@/components/BrandsWeRepresent";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, TextLink } from "@/components/ui";
 import { portfolioCategories } from "@/lib/content";
@@ -8,7 +9,7 @@ import { portfolioCategories } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Business Link LLC portfolio: Fresh Elements and partner food categories across shelf-stable foods, oils & fats, foodservice, grocery and snacks.",
+    "Business Link LLC portfolio: brands we represent, Fresh Elements product lines, and food categories across shelf-stable foods, oils & fats, foodservice, grocery and snacks.",
 };
 
 export default function PortfolioPage() {
@@ -21,6 +22,19 @@ export default function PortfolioPage() {
       />
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+        <div className="mb-16">
+          <BrandsWeRepresent />
+        </div>
+
+        <Reveal className="mb-10">
+          <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+            Food categories
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
+            Category coverage across retail, foodservice, food industry and international trade.
+          </p>
+        </Reveal>
+
         <div className="grid gap-8">
           {portfolioCategories.map((category, index) => (
             <Reveal key={category.slug}>
