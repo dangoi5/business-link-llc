@@ -78,18 +78,12 @@ export function Header({ locale }: { locale: Locale }) {
     >
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
         <Link href={homeHref} className="flex min-w-0 items-center" aria-label={t(locale, ui.common.homeAria)}>
-          <span className="relative h-10 w-10 shrink-0 sm:hidden">
-            <CompanyLogo variant="mark" onDark={!solid} priority sizes="40px" />
-          </span>
-          <span className="relative hidden h-11 w-[168px] sm:block md:h-12 md:w-[184px]">
-            <CompanyLogo
-              variant="lockup"
-              onDark={!solid}
-              priority
-              sizes="184px"
-              className="object-left"
-            />
-          </span>
+          <CompanyLogo
+            variant="lockup"
+            onDark={!solid}
+            priority
+            className="h-7 w-max max-w-full min-[360px]:h-8 sm:h-10 md:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
@@ -118,7 +112,7 @@ export function Header({ locale }: { locale: Locale }) {
             })}
         </nav>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden shrink-0 items-center gap-4 md:flex">
           <LanguageSwitcher locale={locale} solid={solid} />
           <Link
             href={localizedHref(locale, "/contact")}
@@ -128,7 +122,7 @@ export function Header({ locale }: { locale: Locale }) {
           </Link>
         </div>
 
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex shrink-0 items-center gap-3 md:hidden">
           <LanguageSwitcher locale={locale} solid={solid} />
           <button
             type="button"

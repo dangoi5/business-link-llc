@@ -264,6 +264,13 @@ export const ui = {
     inquire: loc("Inquire about this category", "Consultar esta categoría"),
     otherCategories: loc("Other categories", "Otras categorías"),
     fallbackTitle: loc("Category", "Categoría"),
+    nutritionFacts: loc("Nutrition Facts", "Información nutricional"),
+    perServing: loc("Per serving", "Por porción"),
+    calories: loc("Calories", "Calorías"),
+    protein: loc("Protein", "Proteína"),
+    fat: loc("Fat", "Grasa"),
+    carbs: loc("Carbs", "Carbohidratos"),
+    sodium: loc("Sodium", "Sodio"),
   },
   freshElements: {
     metaTitle: loc("Fresh Elements", "Fresh Elements"),

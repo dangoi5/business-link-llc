@@ -1,49 +1,86 @@
 import Image from "next/image";
 
-const logos = {
-  mark: {
-    src: "/company/mark.png",
-    onDark: "/company/mark-on-dark.png",
-    width: 968,
-    height: 923,
-  },
-  lockup: {
-    src: "/company/lockup.png",
-    onDark: "/company/lockup-on-dark.png",
-    width: 1024,
-    height: 320,
-  },
-  wordmark: {
-    src: "/company/wordmark.png",
-    onDark: "/company/wordmark-on-dark.png",
-    width: 975,
-    height: 211,
-  },
+const brandIcon = {
+  src: "/branding/business-link-icon.png",
+  width: 996,
+  height: 628,
 } as const;
+
+const wordmark = {
+  src: "/company/wordmark.png",
+  onDark: "/company/wordmark-on-dark.png",
+  width: 975,
+  height: 211,
+} as const;
+
+function BrandIcon({
+  className = "",
+  priority = false,
+  decorative = false,
+}: {
+  className?: string;
+  priority?: boolean;
+  decorative?: boolean;
+}) {
+  return (
+    <Image
+      src={brandIcon.src}
+      alt={decorative ? "" : "Business Link LLC"}
+      width={brandIcon.width}
+      height={brandIcon.height}
+      className={`h-full w-auto object-contain ${className}`.trim()}
+      sizes="80px"
+      priority={priority}
+    />
+  );
+}
+
+function WordmarkImage({
+  onDark = false,
+  className = "",
+  priority = false,
+}: {
+  onDark?: boolean;
+  className?: string;
+  priority?: boolean;
+}) {
+  return (
+    <Image
+      src={onDark ? wordmark.onDark : wordmark.src}
+      alt="Business Link LLC"
+      width={wordmark.width}
+      height={wordmark.height}
+      className={`h-full w-auto object-contain object-left ${className}`.trim()}
+      sizes="240px"
+      priority={priority}
+    />
+  );
+}
 
 export function CompanyLogo({
   variant = "lockup",
   onDark = false,
   className = "",
   priority = false,
-  sizes = "240px",
 }: {
-  variant?: keyof typeof logos;
+  variant?: "mark" | "lockup" | "wordmark";
   onDark?: boolean;
   className?: string;
   priority?: boolean;
   sizes?: string;
 }) {
-  const logo = logos[variant];
+  if (variant === "lockup") {
+    return (
+      <span className={`inline-flex items-center gap-2 sm:gap-2.5 ${className}`.trim()}>
+        <BrandIcon decorative priority={priority} className="shrink-0" />
+        <WordmarkImage onDark={onDark} priority={priority} />
+      </span>
+    );
+  }
 
-  return (
-    <Image
-      src={onDark ? logo.onDark : logo.src}
-      alt="Business Link LLC"
-      fill
-      sizes={sizes}
-      className={`object-contain ${className}`.trim()}
-      priority={priority}
-    />
-  );
+  if (variant === "mark") {
+    return <BrandIcon className={className} priority={priority} />;
+  }
+
+  return <WordmarkImage onDark={onDark} className={className} priority={priority} />;
 }

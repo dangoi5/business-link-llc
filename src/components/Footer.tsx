@@ -15,8 +15,8 @@ export function Footer({ locale }: { locale: Locale }) {
             aria-label={t(locale, ui.common.homeAria)}
             className="inline-block"
           >
-            <span className="relative block h-12 w-[220px]">
-              <CompanyLogo variant="wordmark" onDark sizes="220px" className="object-left" />
+            <span className="flex h-12 items-center">
+              <CompanyLogo variant="wordmark" onDark className="h-12" />
             </span>
           </Link>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/65">

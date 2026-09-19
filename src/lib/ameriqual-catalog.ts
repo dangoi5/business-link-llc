@@ -1,0 +1,581 @@
+import { loc } from "@/i18n/t";
+import type { NutritionFacts, PortfolioProduct } from "@/lib/content";
+
+function nf(
+  servingEn: string,
+  servingEs: string,
+  calories: string,
+  extras: {
+    servingsEn?: string;
+    servingsEs?: string;
+    protein?: string;
+    fat?: string;
+    carbs?: string;
+    sodium?: string;
+  } = {},
+): NutritionFacts {
+  return {
+    servingSize: loc(servingEn, servingEs),
+    ...(extras.servingsEn && extras.servingsEs
+      ? { servingsPerContainer: loc(extras.servingsEn, extras.servingsEs) }
+      : {}),
+    calories,
+    protein: extras.protein,
+    totalFat: extras.fat,
+    totalCarbohydrate: extras.carbs,
+    sodium: extras.sodium,
+  };
+}
+
+const flb = loc("Food Life Balanced", "Food Life Balanced");
+const flbPlus = loc("Food Life Balanced+", "Food Life Balanced+");
+const shelf4 = loc("4-year shelf life", "Vida útil de 4 años");
+const dairyFree = loc("Dairy free", "Sin lácteos");
+const glutenFree = loc("Gluten free", "Sin gluten");
+const noMsg = loc("No MSG", "Sin glutamato");
+const vegan = loc("Vegan", "Vegano");
+const easyTear = loc("Easy-tear pouch", "Sobre de fácil apertura");
+
+export const ameriqualShelfStableProducts: PortfolioProduct[] = [
+  {
+    slug: "premium-white-chicken",
+    name: loc("Premium White Chicken", "Pollo blanco premium"),
+    description: loc(
+      "Fully cooked pouched white chicken from Food Life Balanced. Ready to eat or heat, with a 4-year shelf life from production.",
+      "Pollo blanco cocido en sobre de Food Life Balanced. Listo para comer o calentar, con 4 años de vida útil desde la producción.",
+    ),
+    image: "/products/ameriqual/white-chicken.jpg",
+    details: [flb, loc("2.6 oz pouch", "Sobre de 2.6 oz"), shelf4, dairyFree, glutenFree],
+  },
+  {
+    slug: "premium-chicken-salad",
+    name: loc("Premium Chicken Salad", "Ensalada de pollo premium"),
+    description: loc(
+      "Fully cooked chicken salad in an easy-tear pouch. Available in 2.6 oz and 4.5 oz packs for retail, foodservice and institutional distribution.",
+      "Ensalada de pollo cocida en sobre de fácil apertura. Disponible en 2.6 oz y 4.5 oz para retail, foodservice y distribución institucional.",
+    ),
+    image: "/products/ameriqual/chicken-salad.jpg",
+    details: [flb, loc("2.6 / 4.5 oz", "2.6 / 4.5 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("2 oz (56g)", "2 oz (56 g)", "80", {
+      servingsEn: "About 2 servings (4.5 oz pouch)",
+      servingsEs: "Aprox. 2 porciones (sobre de 4.5 oz)",
+      protein: "7g",
+      fat: "2.5g",
+      carbs: "2g",
+      sodium: "260mg",
+    }),
+  },
+  {
+    slug: "buffalo-style-chicken",
+    name: loc("Buffalo Style Chicken", "Pollo estilo búfalo"),
+    description: loc(
+      "Fully cooked buffalo-style chicken. No MSG, dairy free and gluten free, in 2.6 oz and 4.5 oz easy-tear pouches with a 4-year shelf life.",
+      "Pollo estilo búfalo cocido. Sin glutamato, sin lácteos y sin gluten, en sobres de 2.6 oz y 4.5 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/buffalo-chicken.jpg",
+    details: [flb, loc("2.6 / 4.5 oz", "2.6 / 4.5 oz"), shelf4, noMsg, dairyFree, glutenFree],
+    nutrition: nf("2 oz (56g)", "2 oz (56 g)", "90", {
+      servingsEn: "About 2 servings (4.5 oz pouch)",
+      servingsEs: "Aprox. 2 porciones (sobre de 4.5 oz)",
+      protein: "9g",
+      fat: "3.5g",
+      carbs: "3g",
+      sodium: "210mg",
+    }),
+  },
+  {
+    slug: "bbq-style-white-chicken",
+    name: loc("BBQ Style White Chicken", "Pollo blanco estilo BBQ"),
+    description: loc(
+      "Fully cooked BBQ-style white chicken in 2.6 oz and 4.5 oz shelf-stable pouches for sandwiches, plates and emergency feeding.",
+      "Pollo blanco estilo BBQ cocido en sobres de 2.6 oz y 4.5 oz de larga duración, para sándwiches, platos y alimentación de emergencia.",
+    ),
+    image: "/products/ameriqual/bbq-white-chicken.jpg",
+    details: [flb, loc("2.6 / 4.5 oz", "2.6 / 4.5 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("2 oz (56g)", "2 oz (56 g)", "90", {
+      servingsEn: "About 2 servings (4.5 oz pouch)",
+      servingsEs: "Aprox. 2 porciones (sobre de 4.5 oz)",
+      protein: "11g",
+      fat: "3.5g",
+      carbs: "3g",
+      sodium: "410mg",
+    }),
+  },
+  {
+    slug: "pollo-asado",
+    name: loc("Pollo Asado", "Pollo asado"),
+    description: loc(
+      "Fully cooked mild and smoky citrus marinated chicken. Dairy free and gluten free, in a 4.5 oz easy-tear pouch with a 4-year shelf life.",
+      "Pollo cocido con marinada cítrica suave y ahumada. Sin lácteos y sin gluten, en sobre de 4.5 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/pollo-asado.jpg",
+    details: [flb, loc("4.5 oz pouch", "Sobre de 4.5 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("2 oz (56g)", "2 oz (56 g)", "90", {
+      servingsEn: "About 2 servings",
+      servingsEs: "Aprox. 2 porciones",
+      protein: "11g",
+      fat: "3.5g",
+      carbs: "3g",
+      sodium: "310mg",
+    }),
+  },
+  {
+    slug: "bbq-style-sauce-with-beef",
+    name: loc("BBQ Style Sauce with Beef", "Salsa BBQ con res"),
+    description: loc(
+      "Fully cooked beef in BBQ-style sauce. Dairy free and gluten free, in a 4.5 oz easy-tear pouch with a 4-year shelf life.",
+      "Res cocida en salsa estilo BBQ. Sin lácteos y sin gluten, en sobre de 4.5 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/bbq-sauce-with-beef.jpg",
+    details: [flb, loc("4.5 oz pouch", "Sobre de 4.5 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("2 oz (56g)", "2 oz (56 g)", "70", {
+      servingsEn: "About 2 servings",
+      servingsEs: "Aprox. 2 porciones",
+      protein: "8g",
+      fat: "1.5g",
+      carbs: "7g",
+      sodium: "180mg",
+    }),
+  },
+  {
+    slug: "hearty-beef-stew",
+    name: loc("Hearty Beef Stew", "Estofado de res"),
+    description: loc(
+      "Fully cooked beef stew with vegetables in a shelf-stable pouch. Available in 7 oz and 15 oz packs, ready to heat and serve.",
+      "Estofado de res con verduras, cocido en sobre de larga duración. Disponible en 7 oz y 15 oz, listo para calentar y servir.",
+    ),
+    image: "/products/ameriqual/hearty-beef-stew.jpg",
+    details: [flb, loc("7 / 15 oz", "7 / 15 oz"), shelf4, dairyFree],
+    nutrition: nf("1 cup (270g)", "1 taza (270 g)", "170", {
+      servingsEn: "About 2 servings (15 oz pouch)",
+      servingsEs: "Aprox. 2 porciones (sobre de 15 oz)",
+      protein: "6g",
+      fat: "3.5g",
+      carbs: "27g",
+      sodium: "590mg",
+    }),
+  },
+  {
+    slug: "cheesy-mac",
+    name: loc("Cheesy Mac", "Cheesy Mac"),
+    description: loc(
+      "Fully cooked macaroni and cheese dinner. Heat and serve from an easy-tear pouch with a 4-year shelf life.",
+      "Macarrones con queso cocidos. Caliente y sirva desde un sobre de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/cheesy-mac.jpg",
+    details: [flb, loc("7 oz pouch", "Sobre de 7 oz"), shelf4, easyTear],
+    nutrition: nf("1 pouch (198g)", "1 sobre (198 g)", "160", {
+      protein: "8g",
+      fat: "2.5g",
+      carbs: "24g",
+      sodium: "470mg",
+    }),
+  },
+  {
+    slug: "spaghetti-tomato-sauce",
+    name: loc("Spaghetti in Tomato Sauce", "Espagueti en salsa de tomate"),
+    description: loc(
+      "Fully cooked spaghetti in tomato sauce. Dairy free, in a 7 oz easy-tear pouch with a 4-year shelf life.",
+      "Espagueti cocido en salsa de tomate. Sin lácteos, en sobre de 7 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/spaghetti-tomato-sauce.jpg",
+    details: [flb, loc("7 oz pouch", "Sobre de 7 oz"), shelf4, dairyFree],
+    nutrition: nf("1 pouch (198g)", "1 sobre (198 g)", "150", {
+      protein: "5g",
+      fat: "2.5g",
+      carbs: "28g",
+      sodium: "470mg",
+    }),
+  },
+  {
+    slug: "chili-with-bean",
+    name: loc("Chili with Bean", "Chili con frijol"),
+    description: loc(
+      "Fully cooked chili with beans. Dairy free and gluten free, in 7 oz and 15 oz easy-tear pouches with a 4-year shelf life.",
+      "Chili cocido con frijoles. Sin lácteos y sin gluten, en sobres de 7 oz y 15 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/chili-with-bean.jpg",
+    details: [flb, loc("7 / 15 oz", "7 / 15 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("1 cup (230g)", "1 taza (230 g)", "260", {
+      servingsEn: "About 2 servings (15 oz pouch)",
+      servingsEs: "Aprox. 2 porciones (sobre de 15 oz)",
+      protein: "14g",
+      fat: "5g",
+      carbs: "41g",
+      sodium: "330mg",
+    }),
+  },
+  {
+    slug: "pasta-garden-vegetables",
+    name: loc("Pasta with Garden Vegetables", "Pasta con verduras de jardín"),
+    description: loc(
+      "Fully cooked pasta with garden vegetables in tomato sauce. Dairy free, in an 8 oz easy-tear pouch with a 4-year shelf life.",
+      "Pasta cocida con verduras de jardín en salsa de tomate. Sin lácteos, en sobre de 8 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/pasta-garden-vegetables.jpg",
+    details: [flb, loc("8 oz pouch", "Sobre de 8 oz"), shelf4, dairyFree],
+    nutrition: nf("1 pouch (227g)", "1 sobre (227 g)", "380", {
+      protein: "11g",
+      fat: "15g",
+      carbs: "46g",
+      sodium: "300mg",
+    }),
+  },
+  {
+    slug: "southwestern-chicken-rice",
+    name: loc("Southwestern Chicken with Beans & Rice", "Pollo sureño con frijoles y arroz"),
+    description: loc(
+      "Fully cooked southwestern-style chicken with beans and rice. Dairy free, in 8 oz and 15 oz easy-tear pouches with a 4-year shelf life.",
+      "Pollo estilo sureño cocido con frijoles y arroz. Sin lácteos, en sobres de 8 oz y 15 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/southwestern-chicken-rice.jpg",
+    details: [flb, loc("8 / 15 oz", "8 / 15 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("1 cup (275g)", "1 taza (275 g)", "220", {
+      servingsEn: "About 2 servings (15 oz pouch)",
+      servingsEs: "Aprox. 2 porciones (sobre de 15 oz)",
+      protein: "14g",
+      fat: "3.5g",
+      carbs: "42g",
+      sodium: "480mg",
+    }),
+  },
+  {
+    slug: "white-chicken-chili",
+    name: loc("White Chicken Chili", "Chili blanco de pollo"),
+    description: loc(
+      "Fully cooked white chicken chili. Dairy free and gluten free, in 8 oz and 15 oz easy-tear pouches with a 4-year shelf life.",
+      "Chili blanco de pollo cocido. Sin lácteos y sin gluten, en sobres de 8 oz y 15 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/white-chicken-chili.jpg",
+    details: [flb, loc("8 / 15 oz", "8 / 15 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("1 cup (275g)", "1 taza (275 g)", "200", {
+      servingsEn: "About 2 servings (15 oz pouch)",
+      servingsEs: "Aprox. 2 porciones (sobre de 15 oz)",
+      protein: "17g",
+      fat: "5g",
+      carbs: "28g",
+      sodium: "480mg",
+    }),
+  },
+  {
+    slug: "spaghetti-meat-sauce",
+    name: loc("Spaghetti with Meat Sauce", "Espagueti con salsa de carne"),
+    description: loc(
+      "Fully cooked spaghetti with meat sauce. Dairy free, in an 8 oz easy-tear pouch with a 4-year shelf life.",
+      "Espagueti cocido con salsa de carne. Sin lácteos, en sobre de 8 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/spaghetti-meat-sauce.jpg",
+    details: [flb, loc("8 oz pouch", "Sobre de 8 oz"), shelf4, dairyFree],
+    nutrition: nf("1 pouch (227g)", "1 sobre (227 g)", "210", {
+      protein: "8g",
+      fat: "6g",
+      carbs: "32g",
+      sodium: "480mg",
+    }),
+  },
+  {
+    slug: "pizza-mac",
+    name: loc("Pizza Mac", "Pizza Mac"),
+    description: loc(
+      "Fully cooked pasta in pepperoni pizza flavored sauce. A 15 oz easy-tear entrée pouch with a 4-year shelf life.",
+      "Pasta cocida en salsa con sabor a pizza de pepperoni. Entrada de 15 oz en sobre de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/pizza-mac.jpg",
+    details: [flb, loc("15 oz pouch", "Sobre de 15 oz"), shelf4, easyTear],
+    nutrition: nf("1 cup (260g)", "1 taza (260 g)", "170", {
+      servingsEn: "About 2 servings",
+      servingsEs: "Aprox. 2 porciones",
+      protein: "5g",
+      fat: "1.5g",
+      carbs: "35g",
+      sodium: "310mg",
+    }),
+  },
+  {
+    slug: "pasta-traditional-meat-sauce",
+    name: loc("Pasta with Traditional Meat Sauce", "Pasta con salsa de carne tradicional"),
+    description: loc(
+      "Fully cooked pasta in a traditional meat sauce. A 15 oz entrée pouch built for long-life storage and distribution.",
+      "Pasta cocida en salsa de carne tradicional. Entrada de 15 oz en sobre, pensada para almacenamiento y distribución de larga duración.",
+    ),
+    image: "/products/ameriqual/pasta-meat-sauce.jpg",
+    details: [flb, loc("15 oz pouch", "Sobre de 15 oz"), shelf4, dairyFree],
+    nutrition: nf("1 cup (270g)", "1 taza (270 g)", "210", {
+      servingsEn: "About 2 servings",
+      servingsEs: "Aprox. 2 porciones",
+      protein: "8g",
+      fat: "2.5g",
+      carbs: "38g",
+      sodium: "480mg",
+    }),
+  },
+  {
+    slug: "marinara-mac",
+    name: loc("Marinara Mac", "Marinara Mac"),
+    description: loc(
+      "Fully cooked pasta in tomato sauce. Dairy free and vegan, in a 15 oz easy-tear pouch with a 4-year shelf life.",
+      "Pasta cocida en salsa de tomate. Sin lácteos y vegana, en sobre de 15 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/marinara-mac.jpg",
+    details: [flb, loc("15 oz pouch", "Sobre de 15 oz"), shelf4, dairyFree, vegan],
+    nutrition: nf("1 cup (260g)", "1 taza (260 g)", "170", {
+      servingsEn: "About 2 servings",
+      servingsEs: "Aprox. 2 porciones",
+      protein: "5g",
+      fat: "0.5g",
+      carbs: "35g",
+      sodium: "310mg",
+    }),
+  },
+  {
+    slug: "hot-chili",
+    name: loc("Hot Chili", "Chili picante"),
+    description: loc(
+      "Fully cooked hot chili in a 15 oz entrée pouch. Dairy free and gluten free, with a 4-year shelf life from production.",
+      "Chili picante cocido en sobre de 15 oz. Sin lácteos y sin gluten, con 4 años de vida útil desde la producción.",
+    ),
+    image: "/products/ameriqual/hot-chili.jpg",
+    details: [flb, loc("15 oz pouch", "Sobre de 15 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("1 cup (275g)", "1 taza (275 g)", "210", {
+      servingsEn: "About 2 servings",
+      servingsEs: "Aprox. 2 porciones",
+      protein: "12g",
+      fat: "4.5g",
+      carbs: "38g",
+      sodium: "480mg",
+    }),
+  },
+  {
+    slug: "ring-o-roni",
+    name: loc("Ring-O-Roni", "Ring-O-Roni"),
+    description: loc(
+      "Fully cooked pasta rings in tomato sauce. A familiar, long-life entrée for retail and high-volume feeding programs.",
+      "Aros de pasta cocidos en salsa de tomate. Una entrada familiar de larga duración para retail y programas de alimentación de alto volumen.",
+    ),
+    image: "/products/ameriqual/ring-o-roni.jpg",
+    details: [flb, loc("15 oz pouch", "Sobre de 15 oz"), shelf4],
+    nutrition: nf("1 cup (260g)", "1 taza (260 g)", "170", {
+      servingsEn: "About 2 servings",
+      servingsEs: "Aprox. 2 porciones",
+      protein: "5g",
+      fat: "1g",
+      carbs: "35g",
+      sodium: "480mg",
+    }),
+  },
+  {
+    slug: "condensed-chicken-noodle-soup",
+    name: loc("Condensed Chicken Noodle Soup", "Sopa condensada de pollo con fideos"),
+    description: loc(
+      "Shelf-stable condensed chicken noodle soup in a 10 oz pouch. Dairy free, with a 4-year shelf life from production.",
+      "Sopa condensada de pollo con fideos en sobre de 10 oz. Sin lácteos, con 4 años de vida útil desde la producción.",
+    ),
+    image: "/products/ameriqual/chicken-noodle-soup.jpg",
+    details: [flb, loc("10 oz pouch", "Sobre de 10 oz"), shelf4, dairyFree],
+    nutrition: nf("1/2 cup condensed (140g)", "1/2 taza condensada (140 g)", "70", {
+      servingsEn: "About 2 servings",
+      servingsEs: "Aprox. 2 porciones",
+      protein: "3g",
+      fat: "1g",
+      carbs: "12g",
+      sodium: "340mg",
+    }),
+  },
+  {
+    slug: "condensed-cream-of-mushroom-soup",
+    name: loc("Condensed Cream of Mushroom Soup", "Sopa condensada crema de champiñones"),
+    description: loc(
+      "Shelf-stable condensed cream of mushroom soup in a 10 oz easy-tear pouch. Four-year shelf life from production.",
+      "Sopa condensada crema de champiñones en sobre de 10 oz de fácil apertura. 4 años de vida útil desde la producción.",
+    ),
+    image: "/products/ameriqual/cream-of-mushroom.jpg",
+    details: [flb, loc("10 oz pouch", "Sobre de 10 oz"), shelf4, easyTear],
+    nutrition: nf("1/2 cup condensed (110g)", "1/2 taza condensada (110 g)", "90", {
+      servingsEn: "About 2.5 servings",
+      servingsEs: "Aprox. 2.5 porciones",
+      protein: "3g",
+      fat: "5g",
+      carbs: "9g",
+      sodium: "340mg",
+    }),
+  },
+  {
+    slug: "condensed-tomato-soup",
+    name: loc("Condensed Tomato Soup", "Sopa condensada de tomate"),
+    description: loc(
+      "Shelf-stable condensed tomato soup. Dairy free and vegan, in a 10 oz easy-tear pouch with a 4-year shelf life.",
+      "Sopa condensada de tomate de larga duración. Sin lácteos y vegana, en sobre de 10 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/tomato-soup.jpg",
+    details: [flb, loc("10 oz pouch", "Sobre de 10 oz"), shelf4, dairyFree, vegan],
+    nutrition: nf("1/2 cup condensed (110g)", "1/2 taza condensada (110 g)", "80", {
+      servingsEn: "About 2.5 servings",
+      servingsEs: "Aprox. 2.5 porciones",
+      protein: "2g",
+      fat: "0g",
+      carbs: "17g",
+      sodium: "150mg",
+    }),
+  },
+  {
+    slug: "condensed-vegetable-soup",
+    name: loc("Condensed Vegetable Soup", "Sopa condensada de verduras"),
+    description: loc(
+      "Shelf-stable condensed vegetable soup. Dairy free, in a 10 oz easy-tear pouch with a 4-year shelf life.",
+      "Sopa condensada de verduras de larga duración. Sin lácteos, en sobre de 10 oz de fácil apertura, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/vegetable-soup.jpg",
+    details: [flb, loc("10 oz pouch", "Sobre de 10 oz"), shelf4, dairyFree],
+    nutrition: nf("1/2 cup condensed (102g)", "1/2 taza condensada (102 g)", "60", {
+      servingsEn: "About 2.5 servings",
+      servingsEs: "Aprox. 2.5 porciones",
+      protein: "2g",
+      fat: "0g",
+      carbs: "11g",
+      sodium: "135mg",
+    }),
+  },
+  {
+    slug: "rustic-beef-stew",
+    name: loc("Rustic Beef Stew with Vegetables", "Estofado rústico de res con verduras"),
+    description: loc(
+      "Food Life Balanced+ fully cooked rustic beef stew with vegetables. A Food as Medicine solution — dairy free, gluten free, with a 4-year shelf life.",
+      "Estofado rústico de res con verduras de Food Life Balanced+. Solución de alimento como medicina: sin lácteos, sin gluten, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/rustic-beef-stew.jpg",
+    details: [flbPlus, loc("14 oz pouch", "Sobre de 14 oz"), shelf4, dairyFree, glutenFree],
+    nutrition: nf("1 pouch (397g)", "1 sobre (397 g)", "580", {
+      protein: "48g",
+      fat: "19g",
+      carbs: "57g",
+      sodium: "590mg",
+    }),
+  },
+  {
+    slug: "savory-breakfast-hash",
+    name: loc("Savory Breakfast Hash", "Hash salado de desayuno"),
+    description: loc(
+      "Food Life Balanced+ fully cooked savory breakfast hash with chicken sausage, potatoes and vegetables. Gluten free, ready to eat or heat.",
+      "Hash salado de desayuno Food Life Balanced+ con salchicha de pollo, papas y verduras. Sin gluten, listo para comer o calentar.",
+    ),
+    image: "/products/ameriqual/savory-breakfast-hash.jpg",
+    details: [flbPlus, loc("14 oz pouch", "Sobre de 14 oz"), shelf4, glutenFree],
+    nutrition: nf("1 pouch (397g)", "1 sobre (397 g)", "500", {
+      protein: "21g",
+      fat: "24g",
+      carbs: "60g",
+      sodium: "550mg",
+    }),
+  },
+  {
+    slug: "mediterranean-chicken-mushroom-orzo",
+    name: loc("Mediterranean Chicken Mushroom Orzo", "Pollo mediterráneo con hongos y orzo"),
+    description: loc(
+      "Food Life Balanced+ fully cooked entrée with chicken, mushrooms and orzo. A Food as Medicine solution with a 4-year shelf life.",
+      "Entrada cocida Food Life Balanced+ con pollo, hongos y orzo. Una solución de alimento como medicina, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/mediterranean-chicken-orzo.jpg",
+    details: [flbPlus, loc("14 oz pouch", "Sobre de 14 oz"), shelf4],
+    nutrition: nf("1 pouch (397g)", "1 sobre (397 g)", "510", {
+      protein: "38g",
+      fat: "18g",
+      carbs: "49g",
+      sodium: "590mg",
+    }),
+  },
+  {
+    slug: "chicken-sausage-quinoa",
+    name: loc("Chicken Sausage & Quinoa", "Salchicha de pollo y quinua"),
+    description: loc(
+      "Food Life Balanced+ fully cooked chicken sausage and quinoa. Gluten free, ready to eat or heat, with a 4-year shelf life.",
+      "Salchicha de pollo y quinua cocidas de Food Life Balanced+. Sin gluten, lista para comer o calentar, con 4 años de vida útil.",
+    ),
+    image: "/products/ameriqual/chicken-sausage-quinoa.jpg",
+    details: [flbPlus, loc("14 oz pouch", "Sobre de 14 oz"), shelf4, glutenFree],
+    nutrition: nf("1 pouch (397g)", "1 sobre (397 g)", "540", {
+      protein: "23g",
+      fat: "26g",
+      carbs: "54g",
+      sodium: "500mg",
+    }),
+  },
+  {
+    slug: "joy2-peanut-butter",
+    name: loc("Joy2 Peanut Butter", "Mantequilla de maní Joy2"),
+    description: loc(
+      "Single-serve peanut butter pouch from Joy2. Easy-tear format with a 3-year shelf life — no refrigeration required.",
+      "Sobre individual de mantequilla de maní Joy2. Formato de fácil apertura, 3 años de vida útil y sin refrigeración.",
+    ),
+    image: "/products/ameriqual/joy2-peanut-butter.jpg",
+    details: [loc("Joy2", "Joy2"), loc("1.10 oz pouch", "Sobre de 1.10 oz"), loc("3-year shelf life", "Vida útil de 3 años")],
+    nutrition: nf("1 pouch (31g)", "1 sobre (31 g)", "170", {
+      protein: "7g",
+      fat: "15g",
+      carbs: "6g",
+      sodium: "115mg",
+    }),
+  },
+  {
+    slug: "elbows-pasta",
+    name: loc("Food Life Balanced Elbows", "Coditos Food Life Balanced"),
+    description: loc(
+      "Domestic enriched elbow macaroni from Food Life Balanced. 1 lb retail carton, with additional shapes and a whole-grain option available.",
+      "Coditos enriquecidos de producción nacional de Food Life Balanced. Caja retail de 1 lb, con otros formatos y opción integral disponibles.",
+    ),
+    image: "/products/ameriqual/elbows-pasta.jpg",
+    details: [
+      flb,
+      loc("1 lb carton", "Caja de 1 lb"),
+      loc("Domestic product", "Producto nacional"),
+      loc("Enriched macaroni", "Macarrón enriquecido"),
+    ],
+    imageFit: "contain",
+    nutrition: nf("2 oz (55g)", "2 oz (55 g)", "190", {
+      servingsEn: "8 servings per container",
+      servingsEs: "8 porciones por envase",
+      protein: "7g",
+      fat: "1g",
+      carbs: "40g",
+      sodium: "0mg",
+    }),
+  },
+];
+
+export const ameriqualFoodserviceProducts: PortfolioProduct[] = [
+  {
+    slug: "ready-ration",
+    name: loc("Ready Ration Self-Heating Meal Kit", "Kit Ready Ration auto-calentable"),
+    description: loc(
+      "Self-heating emergency meal kit. Each lightweight case holds 12 meals across six varieties. The entrée is ready in 10–12 minutes; two meals cover a full day’s calories. Menus may include chicken stir fry, chili with beans, beef taco filling, chicken noodle, beef patty jalapeño, chicken burrito bowl and spaghetti with meat sauce.",
+      "Kit de comida de emergencia auto-calentable. Cada caja liviana trae 12 comidas en seis variedades. La entrada está lista en 10–12 minutos; dos comidas cubren las calorías de un día. Los menús pueden incluir salteado de pollo, chili con frijoles, relleno de taco de res, pollo con fideos, hamburguesa jalapeño, bowl burrito de pollo y espagueti con salsa de carne.",
+    ),
+    image: "/products/ameriqual/ready-ration.jpg",
+    details: [
+      loc("Ready Ration", "Ready Ration"),
+      loc("Self-heating", "Auto-calentable"),
+      loc("12 meals / case", "12 comidas / caja"),
+      loc("895–1,025 cal / meal", "895–1,025 cal / comida"),
+    ],
+    nutrition: nf("1 complete meal kit", "1 kit de comida completo", "895–1,025", {
+      protein: "29–46g",
+    }),
+  },
+  {
+    slug: "apack-ready-meal",
+    name: loc("A-Pack Ready Meal Low Sodium Kit", "Kit A-Pack Ready Meal bajo en sodio"),
+    description: loc(
+      "Self-heating emergency meal built to FEMA requirements, in a low-sodium format. Each case holds 12 meals across six varieties. The entrée is ready in 10–12 minutes; two meals cover a full day’s calories. Menus may include bean salad, chicken with BBQ sauce and rice, homestyle vegetables with noodles and chicken, spaghetti with Italian-style meat sauce, sweet and sour chicken with rice, and pasta with garden vegetables.",
+      "Comida de emergencia auto-calentable conforme a requisitos FEMA, en formato bajo en sodio. Cada caja trae 12 comidas en seis variedades. La entrada está lista en 10–12 minutos; dos comidas cubren las calorías de un día. Los menús pueden incluir ensalada de frijol, pollo BBQ con arroz, verduras caseras con fideos y pollo, espagueti con salsa italiana, pollo agridulce con arroz y pasta con verduras.",
+    ),
+    image: "/products/ameriqual/apack-ready-meal.jpg",
+    details: [
+      loc("A-Pack Ready Meal", "A-Pack Ready Meal"),
+      loc("Low sodium", "Bajo en sodio"),
+      loc("Self-heating", "Auto-calentable"),
+      loc("FEMA requirements", "Requisitos FEMA"),
+    ],
+    nutrition: nf("1 complete meal kit", "1 kit de comida completo", "1,050–1,190", {
+      protein: "25–36g",
+    }),
+  },
+];

@@ -1,3 +1,7 @@
+import {
+  ameriqualFoodserviceProducts,
+  ameriqualShelfStableProducts,
+} from "@/lib/ameriqual-catalog";
 import { freshElementsBrand } from "@/lib/brands";
 import { loc, type Loc } from "@/i18n/t";
 
@@ -247,6 +251,16 @@ export const processSteps = [
   },
 ];
 
+export type NutritionFacts = {
+  servingSize: Loc;
+  servingsPerContainer?: Loc;
+  calories: string;
+  protein?: string;
+  totalFat?: string;
+  totalCarbohydrate?: string;
+  sodium?: string;
+};
+
 export type PortfolioProduct = {
   slug: string;
   name: Loc;
@@ -254,6 +268,7 @@ export type PortfolioProduct = {
   image: string;
   details?: Loc[];
   imageFit?: "cover" | "contain";
+  nutrition?: NutritionFacts;
 };
 
 export type PortfolioCategory = {
@@ -279,185 +294,7 @@ export const portfolioCategories: PortfolioCategory[] = [
       loc("Institutional", "Institucional"),
     ],
     image: "/categories/shelf-stable-foods.jpg",
-    products: [
-      {
-        slug: "premium-white-chicken",
-        name: loc("Premium White Chicken", "Pollo blanco premium"),
-        description: loc(
-          "Fully cooked pouched white chicken from Food Life Balanced. Ready to eat or heat, with a 4-year shelf life from production.",
-          "Pollo blanco cocido en sobre de Food Life Balanced. Listo para comer o calentar, con 4 años de vida útil desde la producción.",
-        ),
-        image: "/products/ameriqual/white-chicken.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("2.6 oz pouch", "Sobre de 2.6 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-          loc("Dairy free", "Sin lácteos"),
-          loc("Gluten free", "Sin gluten"),
-        ],
-      },
-      {
-        slug: "premium-chicken-salad",
-        name: loc("Premium Chicken Salad", "Ensalada de pollo premium"),
-        description: loc(
-          "Fully cooked chicken salad in an easy-tear pouch. Ambient storage for retail, foodservice and institutional distribution.",
-          "Ensalada de pollo cocida en sobre de fácil apertura. Almacenamiento a temperatura ambiente para retail, foodservice y distribución institucional.",
-        ),
-        image: "/products/ameriqual/chicken-salad.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("2.6 oz pouch", "Sobre de 2.6 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-          loc("Dairy free", "Sin lácteos"),
-          loc("Gluten free", "Sin gluten"),
-        ],
-      },
-      {
-        slug: "buffalo-style-chicken",
-        name: loc("Buffalo Style Chicken", "Pollo estilo búfalo"),
-        description: loc(
-          "Fully cooked buffalo-style chicken with a 4-year shelf life. No MSG, dairy free and gluten free.",
-          "Pollo estilo búfalo cocido, con 4 años de vida útil. Sin glutamato, sin lácteos y sin gluten.",
-        ),
-        image: "/products/ameriqual/buffalo-chicken.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("4.5 oz pouch", "Sobre de 4.5 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-          loc("No MSG", "Sin glutamato"),
-        ],
-      },
-      {
-        slug: "bbq-style-white-chicken",
-        name: loc("BBQ Style White Chicken", "Pollo blanco estilo BBQ"),
-        description: loc(
-          "Fully cooked BBQ-style white chicken in a shelf-stable pouch for sandwiches, plates and emergency feeding.",
-          "Pollo blanco estilo BBQ cocido en sobre de larga duración, para sándwiches, platos y alimentación de emergencia.",
-        ),
-        image: "/products/ameriqual/bbq-white-chicken.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("4.5 oz pouch", "Sobre de 4.5 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-        ],
-      },
-      {
-        slug: "cheesy-mac",
-        name: loc("Cheesy Mac", "Cheesy Mac"),
-        description: loc(
-          "Fully cooked macaroni and cheese dinner. Heat and serve from an easy-tear pouch with a 4-year shelf life.",
-          "Macarrones con queso cocidos. Caliente y sirva desde un sobre de fácil apertura, con 4 años de vida útil.",
-        ),
-        image: "/products/ameriqual/cheesy-mac.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("7 oz pouch", "Sobre de 7 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-        ],
-      },
-      {
-        slug: "pasta-traditional-meat-sauce",
-        name: loc("Pasta with Traditional Meat Sauce", "Pasta con salsa de carne tradicional"),
-        description: loc(
-          "Fully cooked pasta in a traditional meat sauce. A 15 oz entrée pouch built for long-life storage and distribution.",
-          "Pasta cocida en salsa de carne tradicional. Entrada de 15 oz en sobre, pensada para almacenamiento y distribución de larga duración.",
-        ),
-        image: "/products/ameriqual/pasta-meat-sauce.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("15 oz pouch", "Sobre de 15 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-          loc("Dairy free", "Sin lácteos"),
-        ],
-      },
-      {
-        slug: "hearty-beef-stew",
-        name: loc("Hearty Beef Stew", "Estofado de res"),
-        description: loc(
-          "Fully cooked beef stew with vegetables in a shelf-stable pouch. Ready to heat and serve for foodservice or institutional use.",
-          "Estofado de res con verduras, cocido en sobre de larga duración. Listo para calentar y servir en foodservice o uso institucional.",
-        ),
-        image: "/products/ameriqual/hearty-beef-stew.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("15 oz pouch", "Sobre de 15 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-          loc("Dairy free", "Sin lácteos"),
-        ],
-      },
-      {
-        slug: "ring-o-roni",
-        name: loc("Ring-O-Roni", "Ring-O-Roni"),
-        description: loc(
-          "Fully cooked pasta rings in tomato sauce. A familiar, long-life entrée for retail and high-volume feeding programs.",
-          "Aros de pasta cocidos en salsa de tomate. Una entrada familiar de larga duración para retail y programas de alimentación de alto volumen.",
-        ),
-        image: "/products/ameriqual/ring-o-roni.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("15 oz pouch", "Sobre de 15 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-        ],
-      },
-      {
-        slug: "condensed-chicken-noodle-soup",
-        name: loc("Condensed Chicken Noodle Soup", "Sopa condensada de pollo con fideos"),
-        description: loc(
-          "Shelf-stable condensed chicken noodle soup in a 10 oz pouch. Dairy free, with a 4-year shelf life from production.",
-          "Sopa condensada de pollo con fideos en sobre de 10 oz. Sin lácteos, con 4 años de vida útil desde la producción.",
-        ),
-        image: "/products/ameriqual/chicken-noodle-soup.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("10 oz pouch", "Sobre de 10 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-          loc("Dairy free", "Sin lácteos"),
-        ],
-      },
-      {
-        slug: "mediterranean-chicken-mushroom-orzo",
-        name: loc("Mediterranean Chicken Mushroom Orzo", "Pollo mediterráneo con hongos y orzo"),
-        description: loc(
-          "Food Life Balanced+ fully cooked entrée with chicken, mushrooms and orzo. A Food as Medicine solution with a 4-year shelf life.",
-          "Entrada cocida Food Life Balanced+ con pollo, hongos y orzo. Una solución de alimento como medicina, con 4 años de vida útil.",
-        ),
-        image: "/products/ameriqual/mediterranean-chicken-orzo.jpg",
-        details: [
-          loc("Food Life Balanced+", "Food Life Balanced+"),
-          loc("14 oz pouch", "Sobre de 14 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-        ],
-      },
-      {
-        slug: "chicken-sausage-quinoa",
-        name: loc("Chicken Sausage & Quinoa", "Salchicha de pollo y quinua"),
-        description: loc(
-          "Food Life Balanced+ fully cooked chicken sausage and quinoa. Gluten free, ready to eat or heat, with a 4-year shelf life.",
-          "Salchicha de pollo y quinua cocidas de Food Life Balanced+. Sin gluten, lista para comer o calentar, con 4 años de vida útil.",
-        ),
-        image: "/products/ameriqual/chicken-sausage-quinoa.jpg",
-        details: [
-          loc("Food Life Balanced+", "Food Life Balanced+"),
-          loc("14 oz pouch", "Sobre de 14 oz"),
-          loc("4-year shelf life", "Vida útil de 4 años"),
-          loc("Gluten free", "Sin gluten"),
-        ],
-      },
-      {
-        slug: "joy2-peanut-butter",
-        name: loc("Joy2 Peanut Butter", "Mantequilla de maní Joy2"),
-        description: loc(
-          "Single-serve peanut butter pouch from Joy2. Easy-tear format with a 3-year shelf life — no refrigeration required.",
-          "Sobre individual de mantequilla de maní Joy2. Formato de fácil apertura, 3 años de vida útil y sin refrigeración.",
-        ),
-        image: "/products/ameriqual/joy2-peanut-butter.jpg",
-        details: [
-          loc("Joy2", "Joy2"),
-          loc("1.10 oz pouch", "Sobre de 1.10 oz"),
-          loc("3-year shelf life", "Vida útil de 3 años"),
-        ],
-      },
-    ],
+    products: ameriqualShelfStableProducts,
   },
   {
     slug: "oils-fats",
@@ -488,50 +325,7 @@ export const portfolioCategories: PortfolioCategory[] = [
       loc("Institutional", "Institucional"),
     ],
     image: "/categories/foodservice-institutional.jpg",
-    products: [
-      {
-        slug: "hearty-beef-stew-foodservice",
-        name: loc("Hearty Beef Stew", "Estofado de res"),
-        description: loc(
-          "Fully cooked 15 oz beef stew pouches for catering, institutional feeding and other high-volume applications. 4-year shelf life from production.",
-          "Sobres de 15 oz de estofado de res cocido para catering, alimentación institucional y alto volumen. 4 años de vida útil desde la producción.",
-        ),
-        image: "/products/ameriqual/hearty-beef-stew.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("15 oz pouch", "Sobre de 15 oz"),
-          loc("Institutional", "Institucional"),
-        ],
-      },
-      {
-        slug: "pasta-meat-sauce-foodservice",
-        name: loc("Pasta with Traditional Meat Sauce", "Pasta con salsa de carne tradicional"),
-        description: loc(
-          "Fully cooked 15 oz pasta entrée pouches. Ambient storage for foodservice and institutional distribution.",
-          "Entradas de pasta cocida de 15 oz en sobre. Almacenamiento a temperatura ambiente para foodservice y distribución institucional.",
-        ),
-        image: "/products/ameriqual/pasta-meat-sauce.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("15 oz pouch", "Sobre de 15 oz"),
-          loc("Institutional", "Institucional"),
-        ],
-      },
-      {
-        slug: "condensed-chicken-noodle-foodservice",
-        name: loc("Condensed Chicken Noodle Soup", "Sopa condensada de pollo con fideos"),
-        description: loc(
-          "Shelf-stable condensed chicken noodle soup in a 10 oz pouch. Dairy free, built for long-life foodservice supply.",
-          "Sopa condensada de pollo con fideos en sobre de 10 oz. Sin lácteos, para suministro de foodservice de larga duración.",
-        ),
-        image: "/products/ameriqual/chicken-noodle-soup.jpg",
-        details: [
-          loc("Food Life Balanced", "Food Life Balanced"),
-          loc("10 oz pouch", "Sobre de 10 oz"),
-          loc("Institutional", "Institucional"),
-        ],
-      },
-    ],
+    products: ameriqualFoodserviceProducts,
   },
   {
     slug: "grocery-consumer",
@@ -685,7 +479,7 @@ export const portfolioCategories: PortfolioCategory[] = [
       loc("Snacking", "Snacking"),
       loc("Foodservice", "Foodservice"),
     ],
-    image: "/products/star-brands/flint-croutons.jpg",
+    image: "/products/star-brands/flint-wheat-rye-croutons.jpg",
     products: [
       {
         slug: "flint-croutons",
@@ -694,7 +488,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Flint wheat-rye croutons from Star Brands. Flavors include bacon, sour cream and greens, crab, jellied meat with horseradish, red caviar, cheese, kebab and hunting sausages. Packs from 35 g to 150 g.",
           "Crutones Flint de trigo-centeno de Star Brands. Sabores: tocino, crema agria y verdes, cangrejo, gelatina con rábano picante, caviar rojo, queso, kebab y salchichas de caza. Empaques de 35 g a 150 g.",
         ),
-        image: "/products/star-brands/flint-croutons.jpg",
+        image: "/products/star-brands/flint-wheat-rye-croutons.jpg",
         details: [
           loc("Flint", "Flint"),
           loc("Star Brands", "Star Brands"),
@@ -709,7 +503,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Round wheat baguette snacks from Flint. Flavors include lobster, spicy pork, creamy sauce with herbs, French cheese, mushroom in creamy sauce, and cream and onions. 60 g, 100 g and 150 g packs.",
           "Snacks de baguette de trigo Flint. Sabores: langosta, cerdo picante, salsa cremosa con hierbas, queso francés, champiñones en salsa cremosa, y crema y cebolla. Empaques de 60 g, 100 g y 150 g.",
         ),
-        image: "/products/star-brands/flint-baguette.jpg",
+        image: "/products/star-brands/flint-baguette.png",
         details: [
           loc("Flint", "Flint"),
           loc("Star Brands", "Star Brands"),
@@ -724,7 +518,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "True rye toasts roasted with bar-snack flavors: Bavarian sausages, garlic, bacon and horseradish, spicy tomato, and veal with adjika. 65 g, 70 g and 100 g packs.",
           "Tostadas de centeno con sabores de bar: salchichas bávaras, ajo, tocino y rábano picante, tomate picante y ternera con adjika. Empaques de 65 g, 70 g y 100 g.",
         ),
-        image: "/products/star-brands/flint-grenki.jpg",
+        image: "/products/star-brands/flint-grenki.png",
         details: [
           loc("Flint Grenki", "Flint Grenki"),
           loc("Star Brands", "Star Brands"),
@@ -754,7 +548,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Roasted peanuts from Big Bob in salted, cheese and bacon flavors. Cups and bags from 30 g to 160 g, including big-pack formats.",
           "Maní tostado Big Bob en sabores salado, queso y tocino. Vasos y bolsas de 30 g a 160 g, incluidos formatos big pack.",
         ),
-        image: "/products/star-brands/big-bob-peanuts.jpg",
+        image: "/products/star-brands/big-bob-peanuts.webp",
         details: [
           loc("Big Bob", "Big Bob"),
           loc("Star Brands", "Star Brands"),
@@ -784,7 +578,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Crunchy fried Spanish corn in barbecue, cheese, and honey-mustard flavors (60 g), plus peanut-and-corn mixes in cheese and BBQ sausage (70 g).",
           "Maíz español frito y crujiente en sabores barbacoa, queso y miel-mostaza (60 g), más mezclas de maní y maíz en queso y salchicha BBQ (70 g).",
         ),
-        image: "/products/star-brands/big-bob-corn.jpg",
+        image: "/products/star-brands/big-bob-corn.png",
         details: [
           loc("Big Bob", "Big Bob"),
           loc("Star Brands", "Star Brands"),
@@ -874,7 +668,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Thin sliced Hroom potato chips in crab, bacon, cheese, kebab, sour cream with herbs, cheese and onion, grilled meat and paprika. 50 g and 100 g packs.",
           "Papas Hroom en rodaja fina: cangrejo, tocino, queso, kebab, crema agria con hierbas, queso y cebolla, carne a la parrilla y paprika. Empaques de 50 g y 100 g.",
         ),
-        image: "/products/star-brands/hroom-chips.jpg",
+        image: "/products/star-brands/hroom-chips.png",
         details: [
           loc("Hroom", "Hroom"),
           loc("Star Brands", "Star Brands"),
