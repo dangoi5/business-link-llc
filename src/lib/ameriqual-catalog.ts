@@ -516,6 +516,72 @@ export const ameriqualShelfStableProducts: PortfolioProduct[] = [
     }),
   },
   {
+    slug: "joy2-yo-2-go-mixed-berry",
+    name: loc("Joy2 Yo-2-Go Mixed Berry Yogurt", "Yogur Joy2 Yo-2-Go frutos rojos"),
+    description: loc(
+      "Shelf-stable mixed berry yogurt cup from Joy2 Yo-2-Go. No artificial dyes, no live and active cultures, and no refrigeration needed until opened. 3.5 oz cups packed 48 per case.",
+      "Vaso de yogur de frutos rojos de larga duración Joy2 Yo-2-Go. Sin colorantes artificiales, sin cultivos vivos y sin refrigeración hasta abrirse. Vasos de 3.5 oz, 48 por caja.",
+    ),
+    image: "/products/ameriqual/joy2-yogurt-mixed-berry.jpg",
+    details: [
+      loc("Joy2 Yo-2-Go", "Joy2 Yo-2-Go"),
+      loc("3.5 oz cup", "Vaso de 3.5 oz"),
+      loc("48 cups / case", "48 vasos / caja"),
+      loc("No refrigeration until opened", "Sin refrigeración hasta abrirse"),
+      loc("No artificial dyes", "Sin colorantes artificiales"),
+    ],
+    nutrition: nf("1 cup (99g)", "1 vaso (99 g)", "120", {
+      protein: "2g",
+      fat: "4g",
+      carbs: "18g",
+      sodium: "40mg",
+    }),
+  },
+  {
+    slug: "joy2-yo-2-go-strawberry",
+    name: loc("Joy2 Yo-2-Go Strawberry Yogurt", "Yogur Joy2 Yo-2-Go de fresa"),
+    description: loc(
+      "Shelf-stable strawberry yogurt cup from Joy2 Yo-2-Go. No artificial dyes, no live and active cultures, and no refrigeration needed until opened. 3.5 oz cups packed 48 per case.",
+      "Vaso de yogur de fresa de larga duración Joy2 Yo-2-Go. Sin colorantes artificiales, sin cultivos vivos y sin refrigeración hasta abrirse. Vasos de 3.5 oz, 48 por caja.",
+    ),
+    image: "/products/ameriqual/joy2-yogurt-strawberry.jpg",
+    details: [
+      loc("Joy2 Yo-2-Go", "Joy2 Yo-2-Go"),
+      loc("3.5 oz cup", "Vaso de 3.5 oz"),
+      loc("48 cups / case", "48 vasos / caja"),
+      loc("No refrigeration until opened", "Sin refrigeración hasta abrirse"),
+      loc("No artificial dyes", "Sin colorantes artificiales"),
+    ],
+    nutrition: nf("1 cup (99g)", "1 vaso (99 g)", "120", {
+      protein: "2g",
+      fat: "4g",
+      carbs: "18g",
+      sodium: "40mg",
+    }),
+  },
+  {
+    slug: "joy2-yo-2-go-vanilla",
+    name: loc("Joy2 Yo-2-Go Vanilla Yogurt", "Yogur Joy2 Yo-2-Go de vainilla"),
+    description: loc(
+      "Shelf-stable vanilla yogurt cup from Joy2 Yo-2-Go. No artificial dyes, no live and active cultures, and no refrigeration needed until opened. 3.5 oz cups packed 48 per case.",
+      "Vaso de yogur de vainilla de larga duración Joy2 Yo-2-Go. Sin colorantes artificiales, sin cultivos vivos y sin refrigeración hasta abrirse. Vasos de 3.5 oz, 48 por caja.",
+    ),
+    image: "/products/ameriqual/joy2-yogurt-vanilla.jpg",
+    details: [
+      loc("Joy2 Yo-2-Go", "Joy2 Yo-2-Go"),
+      loc("3.5 oz cup", "Vaso de 3.5 oz"),
+      loc("48 cups / case", "48 vasos / caja"),
+      loc("No refrigeration until opened", "Sin refrigeración hasta abrirse"),
+      loc("No artificial dyes", "Sin colorantes artificiales"),
+    ],
+    nutrition: nf("1 cup (99g)", "1 vaso (99 g)", "120", {
+      protein: "2g",
+      fat: "4g",
+      carbs: "18g",
+      sodium: "40mg",
+    }),
+  },
+  {
     slug: "elbows-pasta",
     name: loc("Food Life Balanced Elbows", "Coditos Food Life Balanced"),
     description: loc(
