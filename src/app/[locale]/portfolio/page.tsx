@@ -9,7 +9,6 @@ import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/c
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import { portfolioCategories } from "@/lib/content";
-import { freshElementsBrand } from "@/lib/brands";
 
 export async function generateMetadata({
   params,
@@ -38,39 +37,8 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <div className="mb-16">
-          <BrandsWeRepresent locale={locale} />
+          <BrandsWeRepresent locale={locale} includeOwnBrand={false} />
         </div>
-
-        <Reveal className="mb-16 overflow-hidden rounded-2xl border border-line bg-white md:grid md:grid-cols-2">
-          <div className="relative min-h-[240px]">
-            <Image
-              src="/products/fresh-elements/flavored-peanuts.jpg"
-              alt={freshElementsBrand.name}
-              fill
-              className="object-contain bg-[#f7f4ee] md:object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-          <div className="flex flex-col justify-center p-8 md:p-10">
-            <p className="text-xs font-bold tracking-wider text-orange uppercase">
-              {t(locale, ui.common.ownBrand)}
-            </p>
-            <h2 className="mt-2 text-2xl font-bold text-ink md:text-3xl">
-              {t(locale, ui.portfolioPage.ownBrandCatalogTitle)}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-slate">
-              {t(locale, ui.portfolioPage.ownBrandCatalogBody)}
-            </p>
-            <div className="mt-7">
-              <Link
-                href={localizedHref(locale, "/portfolio/fresh-elements")}
-                className="inline-flex rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-hover"
-              >
-                {t(locale, ui.portfolioPage.viewOwnBrandCatalog)}
-              </Link>
-            </div>
-          </div>
-        </Reveal>
 
         <Reveal className="mb-10">
           <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">

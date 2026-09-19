@@ -131,7 +131,17 @@ function BrandCatalogLink({ brand, locale }: { brand: Brand; locale: Locale }) {
   );
 }
 
-export function BrandsWeRepresent({ locale }: { locale: Locale }) {
+export function BrandsWeRepresent({
+  locale,
+  includeOwnBrand = true,
+}: {
+  locale: Locale;
+  includeOwnBrand?: boolean;
+}) {
+  const brands = includeOwnBrand
+    ? brandsWithProductLines
+    : brandsWithProductLines.filter((brand) => brand.slug !== "fresh-elements");
+
   return (
     <div id="brands">
       <Reveal>
@@ -151,7 +161,7 @@ export function BrandsWeRepresent({ locale }: { locale: Locale }) {
       </div>
 
       <div className="mt-14 grid gap-8">
-        {brandsWithProductLines.map((brand, index) => (
+        {brands.map((brand, index) => (
           <Reveal key={brand.slug} delay={index * 50}>
             <article id={brand.slug} className="scroll-mt-28 border-t border-line pt-8">
               <p className="text-xs font-bold tracking-wider text-orange uppercase">
