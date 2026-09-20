@@ -320,8 +320,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <PrimaryButton href={localizedHref(locale, "/contact")}>
               {t(locale, ui.common.getInTouch)}
             </PrimaryButton>
-            <SecondaryButton href={localizedHref(locale, "/partners")} light>
-              {t(locale, ui.home.ourPartners)}
+            <SecondaryButton href={localizedHref(locale, "/portfolio")} light>
+              {t(locale, ui.home.viewPortfolio)}
             </SecondaryButton>
           </div>
         </div>

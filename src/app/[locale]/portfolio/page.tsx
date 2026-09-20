@@ -37,7 +37,7 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <div className="mb-16">
-          <BrandsWeRepresent locale={locale} includeOwnBrand={false} />
+          <BrandsWeRepresent locale={locale} />
         </div>
 
         <Reveal className="mb-10">

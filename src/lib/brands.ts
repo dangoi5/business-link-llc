@@ -307,16 +307,6 @@ export const representedBrands: Brand[] = [
   },
 ];
 
-export const brandsWithProductLines: Brand[] = [
-  ...representedBrands.filter((brand) => (brand.productLines?.length ?? 0) > 0),
-  {
-    slug: freshElementsBrand.slug,
-    name: freshElementsBrand.name,
-    logo: freshElementsBrand.logo,
-    note: freshElementsBrand.tagline,
-    productLines: freshElementsBrand.productLines,
-    catalogHref: freshElementsBrand.catalogHref,
-    catalogLabel: freshElementsBrand.catalogLabel,
-    photos: freshElementsBrand.photos,
-  },
-];
+export const brandsWithProductLines: Brand[] = representedBrands.filter(
+  (brand) => (brand.productLines?.length ?? 0) > 0,
+);

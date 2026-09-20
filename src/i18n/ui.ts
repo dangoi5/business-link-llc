@@ -126,7 +126,7 @@ export const ui = {
       "Tell us about your product, market or sourcing requirement. We evaluate opportunities where our network and execution can create sustainable business.",
       "Cuéntenos sobre su producto, mercado o necesidad de abastecimiento. Evaluamos oportunidades en las que nuestra red y ejecución pueden crear un negocio sostenible.",
     ),
-    ourPartners: loc("Our partners", "Nuestros socios"),
+    viewPortfolio: loc("View portfolio", "Ver portafolio"),
   },
   capabilities: {
     metaTitle: loc("Capabilities", "Capacidades"),
@@ -179,29 +179,6 @@ export const ui = {
       "No todos los mercados requieren el mismo modelo de distribución.",
     ),
     discussMarket: loc("Discuss a market opportunity →", "Hablemos de una oportunidad de mercado →"),
-  },
-  partnersPage: {
-    metaTitle: loc("Partners", "Socios"),
-    metaDescription: loc(
-      "Brands we represent—including AmeriQual, Star Grocery, Star Brands, Tronix, Lasco and Camagüey—plus Fresh Elements and strategic partners working with Business Link LLC.",
-      "Marcas que representamos —incluyendo AmeriQual, Star Grocery, Star Brands, Tronix, Lasco y Camagüey— más Fresh Elements y socios estratégicos de Business Link LLC.",
-    ),
-    heroLabel: loc("Partners & brands", "Socios y marcas"),
-    heroTitle: loc(
-      "Our brand, manufacturers and strategic partners.",
-      "Nuestra marca, fabricantes y socios estratégicos.",
-    ),
-    heroDescription: loc(
-      "Business Link is a master distributor and exporter. We market our own Fresh Elements line and work with partners whose capabilities complement the markets we develop.",
-      "Business Link es un distribuidor maestro y exportador. Comercializamos nuestra línea Fresh Elements y trabajamos con socios cuyas capacidades complementan los mercados que desarrollamos.",
-    ),
-    viewPortfolio: loc("View portfolio", "Ver portafolio"),
-    becomePartner: loc("Become a distribution partner", "Conviértase en socio de distribución"),
-    becomePartnerBody: loc(
-      "Importers and distributors with established local coverage can explore Fresh Elements and partner-brand opportunities aligned to their channels and market demand.",
-      "Importadores y distribuidores con cobertura local establecida pueden explorar Fresh Elements y marcas asociadas alineadas a sus canales y demanda de mercado.",
-    ),
-    partnerWithUs: loc("Partner with us", "Asóciese con nosotros"),
   },
   brands: {
     label: loc("Brands we represent", "Marcas que representamos"),

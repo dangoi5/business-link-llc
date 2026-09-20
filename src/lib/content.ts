@@ -40,7 +40,6 @@ export const navLinks = [
   { href: "/portfolio", label: loc("Portfolio", "Portafolio") },
   { href: "/portfolio/fresh-elements", label: loc("Fresh Elements", "Fresh Elements") },
   { href: "/markets", label: loc("Markets", "Mercados") },
-  { href: "/partners", label: loc("Partners", "Socios") },
   { href: "/contact", label: loc("Contact", "Contacto") },
 ];
 
@@ -770,44 +769,6 @@ export const regionCards = [
     detail: loc(
       "Manufacturing links and buyer networks.",
       "Vínculos de manufactura y redes de compradores.",
-    ),
-  },
-];
-
-export const partners = [
-  {
-    type: loc("Fresh Elements", "Fresh Elements"),
-    description: loc(
-      "Our own product line—developed and marketed by Business Link for retail, foodservice and international distribution.",
-      "Nuestra línea de productos, desarrollada y comercializada por Business Link para retail, foodservice y distribución internacional.",
-    ),
-  },
-  {
-    type: loc("Manufacturers", "Fabricantes"),
-    description: loc(
-      "Selected food and beverage manufacturers seeking structured access to new international markets through our master distribution and export network.",
-      "Fabricantes de alimentos y bebidas seleccionados que buscan acceso estructurado a nuevos mercados internacionales a través de nuestra red de distribución maestra y exportación.",
-    ),
-  },
-  {
-    type: loc("Brands", "Marcas"),
-    description: loc(
-      "Established and emerging brands whose product range fits the retail, foodservice and institutional channels we serve.",
-      "Marcas establecidas y emergentes cuyo portafolio encaja en los canales de retail, foodservice e institucionales que atendemos.",
-    ),
-  },
-  {
-    type: loc("Distributors & Importers", "Distribuidores e importadores"),
-    description: loc(
-      "Qualified local partners with import capability, warehousing and route-to-market coverage in destination markets.",
-      "Socios locales calificados con capacidad de importación, almacenamiento y cobertura de ruta a mercado en los destinos.",
-    ),
-  },
-  {
-    type: loc("Logistics & Warehousing", "Logística y almacenamiento"),
-    description: loc(
-      "Strategic logistics and fulfillment partners supporting inventory, cross-docking and efficient product movement.",
-      "Socios estratégicos de logística y fulfillment que apoyan inventario, cross-docking y movimiento eficiente de producto.",
     ),
   },
 ];
