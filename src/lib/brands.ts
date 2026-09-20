@@ -133,7 +133,7 @@ export const freshElementsBrand = {
         "Fresh Elements Do-It-All table and cooking spread. 15.5 oz (440 g) tub, 44 servings.",
         "Untable Fresh Elements Do-It-All para mesa y cocina. Pote de 15.5 oz (440 g), 44 porciones.",
       ),
-      image: "/products/fresh-elements/do-it-all-spread.jpg",
+      image: "/products/fresh-elements/do-it-all-spread-tub.jpg",
       details: [
         loc("15.5 oz / 440 g", "15.5 oz / 440 g"),
         loc("Table & cooking", "Mesa y cocina"),
