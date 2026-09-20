@@ -37,6 +37,8 @@ export default async function FreshElementsCatalogPage({
         label={t(locale, ui.freshElements.heroLabel)}
         title={t(locale, ui.freshElements.heroTitle)}
         description={t(locale, ui.freshElements.heroDescription)}
+        logoSrc={freshElementsBrand.logo}
+        logoAlt={freshElementsBrand.name}
       />
 
       <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">

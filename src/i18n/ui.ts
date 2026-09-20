@@ -213,8 +213,8 @@ export const ui = {
     ),
     ownBrandCatalogTitle: loc("Fresh Elements catalog", "Catálogo Fresh Elements"),
     ownBrandCatalogBody: loc(
-      "See every Fresh Elements product in one place—snacks now, with oils, rice and condiments as they launch.",
-      "Vea todos los productos Fresh Elements en un solo lugar: snacks ahora, y aceites, arroz y condimentos a medida que se lancen.",
+      "See every Fresh Elements product in one place—snacks, oils, rice and condiments as they launch.",
+      "Vea todos los productos Fresh Elements en un solo lugar: snacks, aceites, arroz y condimentos a medida que se lancen.",
     ),
     viewOwnBrandCatalog: loc("View catalog", "Ver catálogo"),
     categoryPrefix: loc("Category", "Categoría"),
@@ -248,18 +248,22 @@ export const ui = {
     fat: loc("Fat", "Grasa"),
     carbs: loc("Carbs", "Carbohidratos"),
     sodium: loc("Sodium", "Sodio"),
+    notAvailableForExport: loc(
+      "Not available for export at the moment",
+      "No disponible para exportación por el momento",
+    ),
   },
   freshElements: {
     metaTitle: loc("Fresh Elements", "Fresh Elements"),
     metaDescription: loc(
-      "Fresh Elements product catalog from Business Link LLC: flavored peanuts, Platanitos plantain chips, and additional lines for retail, foodservice and international trade.",
-      "Catálogo de productos Fresh Elements de Business Link LLC: maní saborizado, Platanitos y líneas adicionales para retail, foodservice y comercio internacional.",
+      "Fresh Elements product catalog from Business Link LLC: flavored peanuts, Platanitos, palm oil, margarine spreads, basmati and jasmine rice, for retail, foodservice and international trade.",
+      "Catálogo de productos Fresh Elements de Business Link LLC: maní saborizado, Platanitos, aceite de palma, margarinas, arroz basmati y jazmín, para retail, foodservice y comercio internacional.",
     ),
     heroLabel: loc("Own brand", "Marca propia"),
     heroTitle: loc("Fresh Elements product catalog.", "Catálogo de productos Fresh Elements."),
     heroDescription: loc(
-      "Our own food line for retail, foodservice and international distribution. Browse current products below; oils, rice and condiments will be added as they launch.",
-      "Nuestra línea de alimentos para retail, foodservice y distribución internacional. Vea los productos actuales abajo; aceites, arroz y condimentos se agregarán a medida que se lancen.",
+      "Our own food line for retail, foodservice and international distribution. Browse snacks, oils, rice and condiments below.",
+      "Nuestra línea de alimentos para retail, foodservice y distribución internacional. Vea snacks, aceites, arroz y condimentos abajo.",
     ),
     intro: loc(
       "Fresh Elements is developed and marketed by Business Link. This catalog is the on-site product list for the brand—separate from partner manufacturers in the broader portfolio.",

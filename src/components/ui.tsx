@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 export function SectionLabel({ children, light = false }: { children: ReactNode; light?: boolean }) {
@@ -94,10 +95,14 @@ export function PageHero({
   label,
   title,
   description,
+  logoSrc,
+  logoAlt,
 }: {
   label: string;
   title: string;
   description: string;
+  logoSrc?: string;
+  logoAlt?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-ink pt-28 pb-16 md:pt-36 md:pb-20">
@@ -110,6 +115,18 @@ export function PageHero({
         }}
       />
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+        {logoSrc ? (
+          <div className="relative mb-6 h-36 w-64 md:h-44 md:w-80">
+            <Image
+              src={logoSrc}
+              alt={logoAlt ?? ""}
+              fill
+              priority
+              unoptimized
+              className="object-contain object-left"
+            />
+          </div>
+        ) : null}
         <SectionLabel light>{label}</SectionLabel>
         <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">
           {title}

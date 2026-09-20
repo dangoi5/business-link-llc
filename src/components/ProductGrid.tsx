@@ -14,6 +14,7 @@ export type CatalogProduct = {
   details?: Loc[];
   imageFit?: "cover" | "contain";
   nutrition?: NutritionFacts;
+  unavailableForExport?: boolean;
 };
 
 function NutritionBlock({
@@ -77,6 +78,11 @@ export function ProductGrid({
             </div>
             <div className="p-5">
               <h3 className="text-lg font-bold text-ink">{t(locale, product.name)}</h3>
+              {product.unavailableForExport ? (
+                <p className="mt-2 inline-flex rounded-full bg-orange/10 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-orange uppercase">
+                  {t(locale, ui.categoryPage.notAvailableForExport)}
+                </p>
+              ) : null}
               <p className="mt-2 text-sm leading-relaxed text-slate">{t(locale, product.description)}</p>
               {product.details && product.details.length > 0 ? (
                 <div className="mt-4 flex flex-wrap gap-2">

@@ -4,6 +4,10 @@ import {
 } from "@/lib/ameriqual-catalog";
 import { freshElementsBrand } from "@/lib/brands";
 import { loc, type Loc } from "@/i18n/t";
+import {
+  quinoaClubGroceryProducts,
+  quinoaClubSnackProducts,
+} from "@/lib/quinoa-club-catalog";
 
 export const company = {
   name: "Business Link LLC",
@@ -268,6 +272,7 @@ export type PortfolioProduct = {
   details?: Loc[];
   imageFit?: "cover" | "contain";
   nutrition?: NutritionFacts;
+  unavailableForExport?: boolean;
 };
 
 export type PortfolioCategory = {
@@ -299,17 +304,16 @@ export const portfolioCategories: PortfolioCategory[] = [
     slug: "oils-fats",
     title: loc("Oils & Fats", "Aceites y grasas"),
     summary: loc(
-      "Edible oils, palm-based products, vegetable oil blends, margarines and shortenings for retail and foodservice applications.",
-      "Aceites comestibles, productos a base de palma, mezclas vegetales, margarinas y mantecas para retail y foodservice.",
+      "Edible oils, palm-based products, vegetable oil blends, margarines and shortenings for retail and foodservice. We can also partner to bottle in specific markets.",
+      "Aceites comestibles, productos a base de palma, mezclas vegetales, margarinas y mantecas para retail y foodservice. También podemos asociarnos para embotellar en mercados específicos.",
     ),
     channels: [
       loc("Retail", "Retail"),
       loc("Foodservice", "Foodservice"),
       loc("Industrial", "Industrial"),
     ],
-    image:
-      "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1200&q=80",
-    products: [],
+    image: "/products/fresh-elements/palm-oil-blend-900ml.jpg",
+    products: freshElementsBrand.products.filter((product) => product.line === "oils"),
   },
   {
     slug: "foodservice-institutional",
@@ -464,6 +468,23 @@ export const portfolioCategories: PortfolioCategory[] = [
         details: [loc("Kitto", "Kitto"), loc("200 ml", "200 ml")],
         imageFit: "contain",
       },
+      ...quinoaClubGroceryProducts,
+      ...freshElementsBrand.products.filter((product) => product.line === "rice"),
+      {
+        slug: "lasco-food-drink",
+        name: loc("Lasco Food Drink", "Lasco Food Drink"),
+        description: loc(
+          "Lasco Food Drink — a Jamaican fortified powdered beverage. Vanilla and other flavors; add water or milk. Shown here in the 400 g vanilla pack.",
+          "Lasco Food Drink — bebida en polvo fortificada de Jamaica. Vainilla y otros sabores; se mezcla con agua o leche. Aquí, el empaque de vainilla de 400 g.",
+        ),
+        image: "/products/lasco/food-drink.jpg",
+        details: [
+          loc("Lasco", "Lasco"),
+          loc("400 g", "400 g"),
+          loc("Vanilla & other flavors", "Vainilla y otros sabores"),
+        ],
+        imageFit: "contain",
+      },
     ],
   },
   {
@@ -541,66 +562,6 @@ export const portfolioCategories: PortfolioCategory[] = [
         imageFit: "contain",
       },
       {
-        slug: "big-bob-peanuts",
-        name: loc("Big Bob Peanuts", "Maní Big Bob"),
-        description: loc(
-          "Roasted peanuts from Big Bob in salted, cheese and bacon flavors. Cups and bags from 30 g to 160 g, including big-pack formats.",
-          "Maní tostado Big Bob en sabores salado, queso y tocino. Vasos y bolsas de 30 g a 160 g, incluidos formatos big pack.",
-        ),
-        image: "/products/star-brands/big-bob-peanuts.webp",
-        details: [
-          loc("Big Bob", "Big Bob"),
-          loc("Star Brands", "Star Brands"),
-          loc("30–160 g", "30–160 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "big-bob-crunch",
-        name: loc("Big Bob Crunch Peanuts", "Maní crujiente Big Bob"),
-        description: loc(
-          "Peanuts in a crispy shell: cheese, veal with adjika, wasabi and sweet chili. 55 g and 90 g packs.",
-          "Maní con cobertura crujiente: queso, ternera con adjika, wasabi y chile dulce. Empaques de 55 g y 90 g.",
-        ),
-        image: "/products/star-brands/big-bob-crunch.jpg",
-        details: [
-          loc("Big Bob Crunch", "Big Bob Crunch"),
-          loc("Star Brands", "Star Brands"),
-          loc("55 / 90 g", "55 / 90 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "big-bob-corn",
-        name: loc("Big Bob Fried Corn", "Maíz frito Big Bob"),
-        description: loc(
-          "Crunchy fried Spanish corn in barbecue, cheese, and honey-mustard flavors (60 g), plus peanut-and-corn mixes in cheese and BBQ sausage (70 g).",
-          "Maíz español frito y crujiente en sabores barbacoa, queso y miel-mostaza (60 g), más mezclas de maní y maíz en queso y salchicha BBQ (70 g).",
-        ),
-        image: "/products/star-brands/big-bob-corn.png",
-        details: [
-          loc("Big Bob", "Big Bob"),
-          loc("Star Brands", "Star Brands"),
-          loc("60 / 70 g", "60 / 70 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "big-bob-popcorn",
-        name: loc("Big Bob Popcorn", "Palomitas Big Bob"),
-        description: loc(
-          "Ready-to-eat and microwave popcorn: salted, cheese, bacon, caramel, fruit, cherry and sugar. Packs from 25 g to 90 g.",
-          "Palomitas listas y para microondas: saladas, queso, tocino, caramelo, frutas, cereza y azúcar. Empaques de 25 g a 90 g.",
-        ),
-        image: "/products/star-brands/big-bob-popcorn.jpg",
-        details: [
-          loc("Big Bob", "Big Bob"),
-          loc("Star Brands", "Star Brands"),
-          loc("25–90 g", "25–90 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
         slug: "san-sanych-seeds",
         name: loc("San Sanych Roasted Seeds", "Semillas tostadas San Sanych"),
         description: loc(
@@ -649,8 +610,8 @@ export const portfolioCategories: PortfolioCategory[] = [
         slug: "crispy-cris",
         name: loc("Crispy Cris Corn Snacks", "Snacks de maíz Crispy Cris"),
         description: loc(
-          "Unfried corn balls and rings from Crispy Cris: cheese balls, sour cream and greens rings, and bacon balls. 55 g packs.",
-          "Bolitas y aros de maíz sin freír de Crispy Cris: bolitas de queso, aros de crema agria y verdes, y bolitas de tocino. Empaques de 55 g.",
+          "Unfried corn balls and rings from Crispy Cris: cheese balls, sour cream and greens rings, and bacon balls. 55 g packs. Not available for export at the moment.",
+          "Bolitas y aros de maíz sin freír de Crispy Cris: bolitas de queso, aros de crema agria y verdes, y bolitas de tocino. Empaques de 55 g. No disponible para exportación por el momento.",
         ),
         image: "/products/star-brands/crispy-cris.jpg",
         details: [
@@ -659,6 +620,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           loc("55 g", "55 g"),
         ],
         imageFit: "contain",
+        unavailableForExport: true,
       },
       {
         slug: "hroom-chips",
@@ -690,6 +652,7 @@ export const portfolioCategories: PortfolioCategory[] = [
         ],
         imageFit: "contain",
       },
+      ...quinoaClubSnackProducts,
       ...freshElementsBrand.products.filter((product) => product.line === "snacks"),
     ],
   },
