@@ -76,7 +76,7 @@ export const ameriqualMilitaryRations: MilitaryRation[] = [
       {
         slug: "menu-01-chili-with-beans",
         name: loc("Menu 1 — Chili with Beans", "Menú 1 — Chili con frijoles", "Menu 1 — Chili con fagioli"),
-        image: "/ameriqual-military/mre-examples/menu-01-chili-with-beans.jpg",
+        image: "/ameriqual-military/mre-examples/menu-01-chili-with-beans.webp",
       },
       {
         slug: "menu-02-beef-shredded-bbq",
@@ -85,7 +85,7 @@ export const ameriqualMilitaryRations: MilitaryRation[] = [
           "Menú 2 — Res deshebrada en salsa barbacoa",
           "Menu 2 — Manzo sfilacciato in salsa barbecue",
         ),
-        image: "/ameriqual-military/mre-examples/menu-02-beef-shredded-bbq.jpg",
+        image: "/ameriqual-military/mre-examples/menu-02-beef-shredded-bbq.webp",
       },
       {
         slug: "menu-03-chicken-noodles-and-vegetables",
@@ -94,7 +94,7 @@ export const ameriqualMilitaryRations: MilitaryRation[] = [
           "Menú 3 — Pollo, fideos y vegetales en salsa",
           "Menu 3 — Pollo, noodles e verdure in salsa",
         ),
-        image: "/ameriqual-military/mre-examples/menu-03-chicken-noodles-and-vegetables.jpg",
+        image: "/ameriqual-military/mre-examples/menu-03-chicken-noodles-and-vegetables.webp",
       },
       {
         slug: "menu-14-mexican-style-rice-and-bean-bowl",
@@ -103,7 +103,7 @@ export const ameriqualMilitaryRations: MilitaryRation[] = [
           "Menú 14 — Bowl de arroz y frijoles estilo mexicano",
           "Menu 14 — Bowl di riso e fagioli stile messicano",
         ),
-        image: "/ameriqual-military/mre-examples/menu-14-mexican-style-rice-and-bean-bowl.jpg",
+        image: "/ameriqual-military/mre-examples/menu-14-mexican-style-rice-and-bean-bowl.webp",
       },
     ],
   },

@@ -141,20 +141,20 @@ export default async function AmeriqualMilitaryPage({
                     <p className="text-xs font-bold tracking-wider text-orange uppercase">
                       {t(locale, ui.ameriqualMilitary.menuExamples)}
                     </p>
-                    <div className="mt-3 flex flex-wrap gap-5">
+                    <div className="mt-4 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
                       {mre.examples.map((example) => (
-                        <figure key={example.slug} className="w-[168px]">
-                          <div className="relative mx-auto h-56 w-[148px] overflow-hidden rounded-lg bg-[#f7f4ee]">
+                        <figure key={example.slug} className="min-w-0">
+                          <div className="relative aspect-square overflow-hidden rounded-xl bg-white ring-1 ring-line">
                             <Image
                               src={example.image}
                               alt={t(locale, example.name)}
                               fill
-                              className="object-contain p-2"
-                              sizes="148px"
+                              className="object-contain p-2 md:p-3"
+                              sizes="(max-width: 1024px) 45vw, 220px"
                             />
                           </div>
-                          <figcaption className="mt-2 text-center">
-                            <p className="text-xs font-semibold leading-snug text-ink">
+                          <figcaption className="mt-2.5 text-center">
+                            <p className="text-xs font-semibold leading-snug text-ink md:text-sm">
                               {t(locale, example.name)}
                             </p>
                           </figcaption>
