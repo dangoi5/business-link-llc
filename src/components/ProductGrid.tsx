@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Reveal } from "@/components/Reveal";
 import { localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
@@ -66,9 +65,10 @@ export function ProductGrid({
 }) {
   return (
     <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {products.map((product, index) => {
+      {products.map((product) => {
         const card = (
           <article
+            key={product.slug}
             className={`overflow-hidden rounded-2xl border border-line bg-white ${
               product.href ? "h-full transition hover:border-teal hover:shadow-lg hover:shadow-ink/5" : ""
             }`}
@@ -107,16 +107,12 @@ export function ProductGrid({
           </article>
         );
 
-        return (
-          <Reveal key={product.slug} delay={index * 50}>
-            {product.href ? (
-              <Link href={localizedHref(locale, product.href)} className="block h-full">
-                {card}
-              </Link>
-            ) : (
-              card
-            )}
-          </Reveal>
+        return product.href ? (
+          <Link key={product.slug} href={localizedHref(locale, product.href)} className="block h-full">
+            {card}
+          </Link>
+        ) : (
+          card
         );
       })}
     </div>

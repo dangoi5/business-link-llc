@@ -363,9 +363,9 @@ export const ui = {
     heroLabel: loc("Manufacturer", "Fabricante", "Produttore"),
     heroTitle: loc("Star Grocery product families.", "Familias de producto Star Grocery.", "Famiglie di prodotto Star Grocery."),
     heroDescription: loc(
-      "Family covers named after the product images. Click a family to see individual flavors and pack shots.",
-      "Portadas de familia con los nombres de las imágenes. Abra una familia para ver sabores y empaques individuales.",
-      "Copertine di famiglia con i nomi delle immagini. Apra una famiglia per vedere gusti e confezioni individuali.",
+      "Click a family to see individual flavors and pack shots.",
+      "Abra una familia para ver sabores y empaques individuales.",
+      "Apra una famiglia per vedere gusti e confezioni individuali.",
     ),
     intro: loc(
       "Star Grocery is a grocery manufacturer we represent as master distributor and exporter. Each cover is a product family; click through to the individual SKUs.",

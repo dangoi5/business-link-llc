@@ -43,7 +43,7 @@ function item(family: string, folder: string, n: string, en: string, es: string,
 export const starGroceryFamilies: StarGroceryFamily[] = [
   {
     slug: "la-pasta-family-collection-showcase",
-    name: loc("La Pasta Family Collection Showcase", "La Pasta Family Collection Showcase", "La Pasta Family Collection Showcase"),
+    name: loc("La Pasta Dry Pasta", "Pasta seca La Pasta", "Pasta secca La Pasta"),
     description: loc(
       "La Pasta dry-pasta family. Open the collection to see individual shapes and pack shots.",
       "Familia de pasta seca La Pasta. Abra la colección para ver formatos e imágenes individuales.",
@@ -77,7 +77,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "la-pasta-premium-assortment-showcase",
-    name: loc("La Pasta premium assortment showcase", "La Pasta premium assortment showcase", "La Pasta premium assortment showcase"),
+    name: loc("La Pasta Premium Pasta", "Pasta premium La Pasta", "Pasta premium La Pasta"),
     description: loc(
       "Premium La Pasta shapes, including nests and specialty cuts. Click through for individual packs.",
       "Formatos premium La Pasta, incluidos nidos y cortes especiales. Entre para ver empaques individuales.",
@@ -106,7 +106,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "la-pasta-bread-assortment-showcase",
-    name: loc("La Pasta bread assortment showcase", "La Pasta bread assortment showcase", "La Pasta bread assortment showcase"),
+    name: loc("La Pasta Flours & Bread Mixes", "Harinas y mezclas para pan La Pasta", "Farine e miscele per pane La Pasta"),
     description: loc(
       "La Pasta flours and bread mixes. Open the family to see each mix.",
       "Harinas y mezclas para pan La Pasta. Abra la familia para ver cada mezcla.",
@@ -130,7 +130,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "la-pasta-bread-and-flour-collection",
-    name: loc("La Pasta bread and flour collection", "La Pasta bread and flour collection", "La Pasta bread and flour collection"),
+    name: loc("La Pasta Kids Pasta", "Pasta infantil La Pasta", "Pasta per bambini La Pasta"),
     description: loc(
       "Kids pasta shapes from La Pasta. Click through for the individual packs.",
       "Pasta infantil La Pasta. Entre para ver los empaques individuales.",
@@ -151,7 +151,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "perfetto-pasta-family-hero",
-    name: loc("Perfetto Pasta Family Hero", "Perfetto Pasta Family Hero", "Perfetto Pasta Family Hero"),
+    name: loc("Perfetto Premium Pasta", "Pasta premium Perfetto", "Pasta premium Perfetto"),
     description: loc(
       "Perfetto premium pasta family. Open to see each colored pack and shape.",
       "Familia de pasta premium Perfetto. Abra para ver cada empaque y formato.",
@@ -177,7 +177,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-pasta-family-showcase",
-    name: loc("Hutorok Pasta Family Showcase", "Hutorok Pasta Family Showcase", "Hutorok Pasta Family Showcase"),
+    name: loc("Hutorok Pasta", "Pasta Hutorok", "Pasta Hutorok"),
     description: loc(
       "Hutorok pasta family, 800 g range. Click through for individual shapes.",
       "Familia de pasta Hutorok, línea de 800 g. Entre para ver cada formato.",
@@ -207,7 +207,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-flour-family-styled-for-baking",
-    name: loc("Hutorok flour family, styled for baking", "Hutorok flour family, styled for baking", "Hutorok flour family, styled for baking"),
+    name: loc("Hutorok Flours & Pizza Mixes", "Harinas y mezclas para pizza Hutorok", "Farine e miscele per pizza Hutorok"),
     description: loc(
       "Hutorok flours and pizza mixes. Open the family for each SKU.",
       "Harinas y mezclas para pizza Hutorok. Abra la familia para ver cada SKU.",
@@ -235,7 +235,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-groats-family-collection",
-    name: loc("Hutorok Groats Family Collection", "Hutorok Groats Family Collection", "Hutorok Groats Family Collection"),
+    name: loc("Hutorok Groats & Rice", "Cereales y arroz Hutorok", "Cereali e riso Hutorok"),
     description: loc(
       "Hutorok groats and rice family. Click through for buckwheat, rice, millet and more.",
       "Familia de cereales y arroz Hutorok. Entre para trigo sarraceno, arroz, mijo y más.",
@@ -266,7 +266,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-groats-family-collection-400g",
-    name: loc("Hutorok Groats Family Collection 400 g", "Hutorok Groats Family Collection 400 g", "Hutorok Groats Family Collection 400 g"),
+    name: loc("Hutorok Groats 400 g", "Cereales Hutorok 400 g", "Cereali Hutorok 400 g"),
     description: loc(
       "Hutorok groats in the smaller 400 g family. Open for individual packs.",
       "Cereales Hutorok en la familia de 400 g. Abra para ver empaques individuales.",
@@ -291,7 +291,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-mashed-potato-family-spread",
-    name: loc("Hutorok mashed potato family spread", "Hutorok mashed potato family spread", "Hutorok mashed potato family spread"),
+    name: loc("Hutorok Instant Mashed Potatoes", "Puré de papa instantáneo Hutorok", "Purè di patate istantaneo Hutorok"),
     description: loc(
       "Hutorok instant mashed potatoes. Click through for each flavor pouch.",
       "Puré de papa instantáneo Hutorok. Entre para ver cada sabor.",
@@ -316,7 +316,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-pilaf-family-feast",
-    name: loc("Hutorok pilaf family feast", "Hutorok pilaf family feast", "Hutorok pilaf family feast"),
+    name: loc("Hutorok Instant Cereals & Pilaf", "Cereales instantáneos y pilaf Hutorok", "Cereali istantanei e pilaf Hutorok"),
     description: loc(
       "Hutorok instant cereal and pilaf boxes. Open for each variety.",
       "Cajas de cereal y pilaf instantáneo Hutorok. Abra para cada variedad.",
@@ -339,7 +339,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-canned-meat-family-collection",
-    name: loc("Hutorok Canned Meat Family Collection", "Hutorok Canned Meat Family Collection", "Hutorok Canned Meat Family Collection"),
+    name: loc("Hutorok Canned Meat & Pâtés", "Carnes enlatadas y patés Hutorok", "Carni in scatola e paté Hutorok"),
     description: loc(
       "Hutorok canned meat and pâtés. Click through for each variety.",
       "Carnes enlatadas y patés Hutorok. Entre para ver cada variedad.",
@@ -367,7 +367,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-salt-family-collection",
-    name: loc("Hutorok salt family collection", "Hutorok salt family collection", "Hutorok salt family collection"),
+    name: loc("Hutorok Salt", "Sales Hutorok", "Sali Hutorok"),
     description: loc(
       "Hutorok salt family — extra, iodized and seasoned. Open for individual packs.",
       "Familia de sales Hutorok: extra, yodada y sazonada. Abra para ver cada empaque.",
@@ -392,7 +392,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-sugar-and-baking-soda-showcase",
-    name: loc("Hutorok Sugar and Baking Soda Showcase", "Hutorok Sugar and Baking Soda Showcase", "Hutorok Sugar and Baking Soda Showcase"),
+    name: loc("Hutorok Sugar & Baking Soda", "Azúcar y bicarbonato Hutorok", "Zucchero e bicarbonato Hutorok"),
     description: loc(
       "Hutorok sugar, powdered sugar and baking soda. Click through for each pack.",
       "Azúcar, azúcar glass y bicarbonato Hutorok. Entre para ver cada empaque.",
@@ -417,7 +417,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-seasonings-spices-collection",
-    name: loc("Hutorok Seasonings & Spices Collection", "Hutorok Seasonings & Spices Collection", "Hutorok Seasonings & Spices Collection"),
+    name: loc("Hutorok Seasoning Blends", "Mezclas de sazón Hutorok", "Miscele di condimento Hutorok"),
     description: loc(
       "Hutorok seasoning blends. Open the family for potato, meat, fish, pilaf and more.",
       "Mezclas de sazón Hutorok. Abra la familia: papa, carne, pescado, pilaf y más.",
@@ -445,7 +445,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "hutorok-spices-artfully-staged",
-    name: loc("Hutorok spices, artfully staged", "Hutorok spices, artfully staged", "Hutorok spices, artfully staged"),
+    name: loc("Hutorok Spices & Baking Staples", "Especias y repostería Hutorok", "Spezie e pasticceria Hutorok"),
     description: loc(
       "Hutorok baking spices and pantry staples. Click through for pepper, gelatin, vanilla sugar and more.",
       "Especias de horneo y despensa Hutorok. Entre para pimienta, gelatina, azúcar vainilla y más.",
@@ -473,7 +473,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "pansky-groats-and-rice-family",
-    name: loc("Pansky Groats and Rice Family", "Pansky Groats and Rice Family", "Pansky Groats and Rice Family"),
+    name: loc("Pansky Rice, Groats & Pulses", "Arroz, cereales y legumbres Pansky", "Riso, cereali e legumi Pansky"),
     description: loc(
       "Pansky rice, buckwheat, lentils and bulgur. Open the family for each grain.",
       "Arroz, trigo sarraceno, lentejas y bulgur Pansky. Abra la familia para cada grano.",
@@ -506,7 +506,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "pansky-groats-family-assortment",
-    name: loc("Pansky groats family assortment", "Pansky groats family assortment", "Pansky groats family assortment"),
+    name: loc("Pansky Boxed Groats", "Cereales en caja Pansky", "Cereali in scatola Pansky"),
     description: loc(
       "Pansky boxed rice and groats assortment. Click through for each carton.",
       "Surtido Pansky en cajas de arroz y cereales. Entre para ver cada caja.",
@@ -535,7 +535,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "pansky-pasta-and-flour-showcase",
-    name: loc("Pansky Pasta and Flour Showcase", "Pansky Pasta and Flour Showcase", "Pansky Pasta and Flour Showcase"),
+    name: loc("Pansky Pasta & Flour", "Pasta y harina Pansky", "Pasta e farina Pansky"),
     description: loc(
       "Pansky pasta and wheat flour family. Open for individual packs.",
       "Familia de pasta y harina de trigo Pansky. Abra para ver cada empaque.",
@@ -560,7 +560,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "golden-grain-pasta-family-showcase",
-    name: loc("Golden Grain pasta family showcase", "Golden Grain pasta family showcase", "Golden Grain pasta family showcase"),
+    name: loc("Golden Grain Pasta", "Pasta Golden Grain", "Pasta Golden Grain"),
     description: loc(
       "Golden Grain pasta family. Click through for shells, feathers, spaghetti and vermicelli.",
       "Familia de pasta Golden Grain. Entre para conchas, plumas, spaghetti y fideos.",
@@ -588,7 +588,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "golden-grain-groats-family-collection",
-    name: loc("Golden Grain Groats Family Collection", "Golden Grain Groats Family Collection", "Golden Grain Groats Family Collection"),
+    name: loc("Golden Grain Groats & Staples", "Cereales y despensa Golden Grain", "Cereali e dispensa Golden Grain"),
     description: loc(
       "Golden Grain groats, rice, peas and sugar. Open the family for each bag.",
       "Cereales, arroz, chícharos y azúcar Golden Grain. Abra la familia para cada bolsa.",
@@ -619,7 +619,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "golden-grain-flour-family-showcase",
-    name: loc("Golden Grain Flour Family Showcase", "Golden Grain Flour Family Showcase", "Golden Grain Flour Family Showcase"),
+    name: loc("Golden Grain Wheat Flour", "Harina de trigo Golden Grain", "Farina di grano Golden Grain"),
     description: loc(
       "Golden Grain wheat flour family. Click through for each pack size.",
       "Familia de harina de trigo Golden Grain. Entre para ver cada tamaño.",
@@ -641,7 +641,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "kitto-soy-sauce-family-spread",
-    name: loc("Kitto Soy Sauce Family Spread", "Kitto Soy Sauce Family Spread", "Kitto Soy Sauce Family Spread"),
+    name: loc("Kitto Soy & Asian Sauces", "Salsas de soya y asiáticas Kitto", "Salse di soia e asiatiche Kitto"),
     description: loc(
       "Kitto soy and Asian sauces. Open the family for classic, teriyaki, chili and more.",
       "Salsas de soya y asiáticas Kitto. Abra la familia: clásica, teriyaki, chile y más.",
@@ -670,7 +670,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "kitto-specialty-sauces-elegant-trio",
-    name: loc("Kitto specialty sauces, elegant trio", "Kitto specialty sauces, elegant trio", "Kitto specialty sauces, elegant trio"),
+    name: loc("Kitto Specialty Sauces", "Salsas especiales Kitto", "Salse speciali Kitto"),
     description: loc(
       "Kitto specialty sauces — cranberry, balsamic and pomegranate.",
       "Salsas especiales Kitto: arándano, balsámico y granada.",
@@ -692,7 +692,7 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
   },
   {
     slug: "fitto-soup-family-freshly-served",
-    name: loc("Fitto soup family, freshly served", "Fitto soup family, freshly served", "Fitto soup family, freshly served"),
+    name: loc("Fitto Instant Soups & Porridges", "Sopas y gachas instantáneas Fitto", "Zuppe e porridge istantanei Fitto"),
     description: loc(
       "Fitto soups, cups, oatmeal and savory porridges. Click through for every flavor.",
       "Sopas, vasos, avena y gachas saladas Fitto. Entre para ver cada sabor.",
