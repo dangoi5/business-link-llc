@@ -9,6 +9,7 @@ import {
   quinoaClubSnackProducts,
 } from "@/lib/quinoa-club-catalog";
 import { starGroceryFamilyCovers } from "@/lib/star-grocery-catalog";
+import { lascoGroceryProducts } from "@/lib/lasco-catalog";
 
 export const company = {
   name: "Business Link LLC",
@@ -387,22 +388,7 @@ export const portfolioCategories: PortfolioCategory[] = [
       ...starGroceryFamilyCovers,
       ...quinoaClubGroceryProducts,
       ...freshElementsBrand.products.filter((product) => product.line === "rice"),
-      {
-        slug: "lasco-food-drink",
-        name: loc("Lasco Food Drink", "Lasco Food Drink", "Lasco Food Drink"),
-        description: loc(
-          "Lasco Food Drink — a Jamaican fortified powdered beverage. Vanilla and other flavors; add water or milk. Shown here in the 400 g vanilla pack.",
-          "Lasco Food Drink — bebida en polvo fortificada de Jamaica. Vainilla y otros sabores; se mezcla con agua o leche. Aquí, el empaque de vainilla de 400 g.",
-          "Lasco Food Drink — bevanda in polvere fortificata giamaicana. Vaniglia e altri gusti; da miscelare con acqua o latte. Qui, la confezione vaniglia da 400 g.",
-        ),
-        image: "/products/lasco/food-drink.jpg",
-        details: [
-          loc("Lasco", "Lasco", "Lasco"),
-          loc("400 g", "400 g", "400 g"),
-          loc("Vanilla & other flavors", "Vainilla y otros sabores", "Vaniglia e altri gusti"),
-        ],
-        imageFit: "contain",
-      },
+      ...lascoGroceryProducts,
     ],
   },
   {

@@ -375,7 +375,28 @@ export const ui = {
     backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
     backToFamilies: loc("← All Star Grocery families", "← Todas las familias Star Grocery", "← Tutte le famiglie Star Grocery"),
     flavors: loc("Flavors & pack shots", "Sabores y empaques", "Gusti e confezioni"),
-    viewPdf: loc("View 2025 catalog", "Ver catálogo 2025", "Consulta il catalogo 2025"),
+    viewPdf: loc("View catalog", "Ver catálogo", "Consulta il catalogo"),
+  },
+  lasco: {
+    metaTitle: loc("Lasco", "Lasco", "Lasco"),
+    metaDescription: loc(
+      "Lasco Food Drink flavors and instant chocolate drink mixes from Business Link LLC.",
+      "Sabores de Lasco Food Drink y mezclas de chocolate instantáneo de Business Link LLC.",
+      "Gusti Lasco Food Drink e miscele di cioccolato istantaneo di Business Link LLC.",
+    ),
+    heroLabel: loc("Manufacturer", "Fabricante", "Produttore"),
+    heroTitle: loc("Lasco Food Drink & chocolate.", "Lasco Food Drink y chocolate.", "Lasco Food Drink e cioccolato."),
+    heroDescription: loc(
+      "Fortified powdered food drinks in multiple flavors, plus instant chocolate drink mixes.",
+      "Bebidas alimenticias en polvo fortificadas en varios sabores, más mezclas de chocolate instantáneo.",
+      "Bevande alimentari in polvere fortificate in più gusti, più miscele di cioccolato istantaneo.",
+    ),
+    intro: loc(
+      "Lasco is a Jamaican manufacturer we represent as master distributor and exporter. Browse Food Drink flavors and instant chocolate mixes below.",
+      "Lasco es un fabricante de Jamaica que representamos como distribuidor maestro y exportador. Vea los sabores de Food Drink y las mezclas de chocolate abajo.",
+      "Lasco è un produttore giamaicano che rappresentiamo come distributore master ed esportatore. Consulti i gusti Food Drink e le miscele di cioccolato di seguito.",
+    ),
+    backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
   },
   freshElements: {
     metaTitle: loc("Fresh Elements", "Fresh Elements", "Fresh Elements"),

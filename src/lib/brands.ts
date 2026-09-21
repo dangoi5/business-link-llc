@@ -267,7 +267,7 @@ export const representedBrands: Brand[] = [
       },
     ],
     catalogHref: "/catalogs/food-life-balanced-2026.pdf",
-    catalogLabel: loc("View 2026 catalog", "Ver catálogo 2026", "Consulta il catalogo 2026"),
+    catalogLabel: loc("View catalog", "Ver catálogo", "Consulta il catalogo"),
     extraLinks: [
       {
         href: "/portfolio/ameriqual-military",
@@ -333,17 +333,10 @@ export const representedBrands: Brand[] = [
     extraLinks: [
       {
         href: "/catalogs/star-grocery-2025.pdf",
-        label: loc("View 2025 catalog", "Ver catálogo 2025", "Consulta il catalogo 2025"),
+        label: loc("View catalog", "Ver catálogo", "Consulta il catalogo"),
       },
     ],
-    photos: [
-      "/products/star-grocery/families/la-pasta-family-collection-showcase.jpg",
-      "/products/star-grocery/families/hutorok-mashed-potato-family-spread.jpg",
-      "/products/star-grocery/families/kitto-soy-sauce-family-spread.jpg",
-      "/products/star-grocery/families/fitto-soup-family-freshly-served.jpg",
-      "/products/star-grocery/families/pansky-groats-and-rice-family.jpg",
-      "/products/star-grocery/families/golden-grain-pasta-family-showcase.jpg",
-    ],
+    photos: [],
   },
   {
     slug: "star-brands",
@@ -405,7 +398,7 @@ export const representedBrands: Brand[] = [
       },
     ],
     catalogHref: "/catalogs/star-brands-snacks-2024.pdf",
-    catalogLabel: loc("View 2024 snack catalog", "Ver catálogo de snacks 2024", "Consulta il catalogo snack 2024"),
+    catalogLabel: loc("View snack catalog", "Ver catálogo de snacks", "Consulta il catalogo snack"),
     photos: [],
   },
   {
@@ -476,22 +469,30 @@ export const representedBrands: Brand[] = [
     name: "Lasco",
     logo: "/brands/lasco.png",
     note: loc(
-      "Jamaican manufacturer. Lasco Food Drink is a fortified powdered beverage for the whole family.",
-      "Fabricante de Jamaica. Lasco Food Drink es una bebida en polvo fortificada para toda la familia.",
-      "Produttore giamaicano. Lasco Food Drink è una bevanda in polvere fortificata per tutta la famiglia.",
+      "Jamaican manufacturer. Lasco Food Drink in multiple flavors, plus instant chocolate drink mixes.",
+      "Fabricante de Jamaica. Lasco Food Drink en varios sabores, más mezclas de chocolate instantáneo.",
+      "Produttore giamaicano. Lasco Food Drink in più gusti, più miscele di cioccolato istantaneo.",
     ),
     productLines: [
       {
         label: loc("Food Drink", "Food Drink", "Food Drink"),
         detail: loc(
-          "Fortified powdered food drink — vanilla and other flavors. Add water or milk.",
-          "Bebida alimenticia en polvo fortificada — vainilla y otros sabores. Se mezcla con agua o leche.",
-          "Bevanda alimentare in polvere fortificata — vaniglia e altri gusti. Da miscelare con acqua o latte.",
+          "Fortified powdered food drink — vanilla, chocolate, strawberry, peanut punch, almond and more. Add water or milk.",
+          "Bebida alimenticia en polvo fortificada — vainilla, chocolate, fresa, punch de maní, almendra y más. Se mezcla con agua o leche.",
+          "Bevanda alimentare in polvere fortificata — vaniglia, cioccolato, fragola, punch di arachidi, mandorla e altro. Da miscelare con acqua o latte.",
+        ),
+      },
+      {
+        label: loc("Instant Chocolate Drink", "Chocolate instantáneo", "Cioccolato istantaneo"),
+        detail: loc(
+          "Instant chocolate drink mixes — classic cans plus mint, marshmallow, caramel, nutmeg and French vanilla",
+          "Mezclas de chocolate instantáneo — latas clásicas y sabores menta, malvavisco, caramelo, nuez moscada y vainilla francesa",
+          "Miscele di cioccolato istantaneo — barattoli classici e gusti menta, marshmallow, caramello, noce moscata e vaniglia francese",
         ),
       },
     ],
-    catalogHref: undefined,
-    catalogLabel: loc("View full catalog", "Ver catálogo completo", "Consulta il catalogo completo"),
+    catalogHref: "/portfolio/lasco",
+    catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
     photos: [],
   },
   {
