@@ -56,12 +56,14 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
           <SectionLabel>{t(locale, ui.marketsPage.mapLabel)}</SectionLabel>
           <figure className="mt-5 overflow-hidden rounded-2xl bg-ink">
             <Image
-              src="/markets/active-markets-map.webp"
+              src="/markets/active-markets-map.png"
               alt={t(locale, ui.marketsPage.mapAlt)}
               width={1024}
               height={458}
+              quality={100}
               className="h-auto w-full"
               sizes="(max-width: 1280px) 100vw, 1200px"
+              priority
             />
           </figure>
         </Reveal>
