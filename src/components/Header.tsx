@@ -9,6 +9,31 @@ import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import { navLinks } from "@/lib/content";
 
+function UsFlag({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 16 11" className={className} aria-hidden>
+      <rect width="16" height="11" fill="#fff" />
+      {Array.from({ length: 13 }, (_, i) =>
+        i % 2 === 0 ? (
+          <rect key={i} y={(i * 11) / 13} width="16" height={11 / 13} fill="#b22234" />
+        ) : null,
+      )}
+      <rect width="6.4" height="5.9" fill="#3c3b6e" />
+    </svg>
+  );
+}
+
+function SpainFlag({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 16 11" className={className} aria-hidden>
+      <rect width="16" height="11" fill="#c60b1e" />
+      <rect y="2.75" width="16" height="5.5" fill="#ffc400" />
+    </svg>
+  );
+}
+
+const flagClass = "h-3.5 w-[1.15rem] shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/15";
+
 export function LanguageSwitcher({
   locale,
   solid,
@@ -32,7 +57,8 @@ export function LanguageSwitcher({
             href={switchLocalePath(pathname, item)}
             hrefLang={item}
             aria-current={item === locale ? "true" : undefined}
-            className={`uppercase transition ${
+            aria-label={t(locale, ui.language[item])}
+            className={`inline-flex items-center gap-1.5 uppercase transition ${
               item === locale
                 ? solid
                   ? "text-teal"
@@ -42,6 +68,7 @@ export function LanguageSwitcher({
                   : "hover:text-white"
             }`}
           >
+            {item === "en" ? <UsFlag className={flagClass} /> : <SpainFlag className={flagClass} />}
             {item}
           </Link>
         </span>

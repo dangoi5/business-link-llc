@@ -115,12 +115,6 @@ export const ui = {
     expandMarkets: loc("Expand into new markets", "Expanda a nuevos mercados"),
     forBuyers: loc("For buyers & distributors", "Para compradores y distribuidores"),
     sourceSupply: loc("Source reliable supply", "Abastecimiento confiable"),
-    howWeWork: loc("How we work", "Cómo trabajamos"),
-    fromOpportunity: loc("From opportunity to market", "De la oportunidad al mercado"),
-    howDescription: loc(
-      "Business Link approaches each opportunity as a business to be developed—not simply a transaction.",
-      "Business Link aborda cada oportunidad como un negocio por desarrollar, no como una simple transacción.",
-    ),
     ctaTitle: loc("Ready to develop the next opportunity?", "¿Listo para desarrollar la próxima oportunidad?"),
     ctaBody: loc(
       "Tell us about your product, market or sourcing requirement. We evaluate opportunities where our network and execution can create sustainable business.",

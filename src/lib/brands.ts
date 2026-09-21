@@ -384,8 +384,8 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Snacks", "Snacks"),
         detail: loc(
-          "Cronchy Protein, quinoa toasts, sacha inchi toasts, rings, Quinoa Puff and Quinoa Chips",
-          "Cronchy Protein, tostadas de quinua, tostaditas de sacha inchi, aros, Quinoa Puff y Quinoa Chips",
+          "Cronchy Protein, quinoa toasts, sacha inchi toasts, rings, Quinoa Snacks, Quinoa Puff and Quinoa Chips",
+          "Cronchy Protein, tostadas de quinua, tostaditas de sacha inchi, aros, Quinoa Snacks, Quinoa Puff y Quinoa Chips",
         ),
       },
     ],
@@ -420,7 +420,7 @@ export const representedBrands: Brand[] = [
     ],
     catalogHref: undefined,
     catalogLabel: loc("View full catalog", "Ver catálogo completo"),
-    photos: ["/products/lasco/food-drink.jpg"],
+    photos: [],
   },
   {
     slug: "camaguey",

@@ -20,7 +20,6 @@ import {
   manufacturerServices,
   ownBrand,
   portfolioCategories,
-  processSteps,
   regionCards,
   regionLabels,
 } from "@/lib/content";
@@ -281,29 +280,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               </div>
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      <section className="border-y border-line bg-surface py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal>
-            <SectionHeading
-              label={t(locale, ui.home.howWeWork)}
-              title={t(locale, ui.home.fromOpportunity)}
-              description={t(locale, ui.home.howDescription)}
-            />
-          </Reveal>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            {processSteps.map((step) => (
-              <Reveal key={step.step}>
-                <div className="rounded-2xl bg-white p-5 border border-line">
-                  <p className="text-xs font-bold text-orange">{step.step}</p>
-                  <h3 className="mt-2 text-lg font-bold text-ink">{t(locale, step.label)}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate">{t(locale, step.description)}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
