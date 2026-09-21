@@ -17,7 +17,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       data-scroll-behavior="smooth"
       className={`${montserrat.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-white text-ink">{children}</body>
+      <body className="flex min-h-full flex-col bg-white text-ink" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }
