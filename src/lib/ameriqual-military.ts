@@ -18,6 +18,13 @@ export type MilitaryRationFact = {
   value: Loc;
 };
 
+export type MilitaryRationExample = {
+  slug: string;
+  name: Loc;
+  image: string;
+  detail?: Loc;
+};
+
 export type MilitaryRation = {
   slug: string;
   name: Loc;
@@ -25,6 +32,7 @@ export type MilitaryRation = {
   description: Loc;
   whatIsIt?: Loc;
   facts?: MilitaryRationFact[];
+  examples?: MilitaryRationExample[];
 };
 
 export const ameriqualMilitaryRations: MilitaryRation[] = [
@@ -62,6 +70,40 @@ export const ameriqualMilitaryRations: MilitaryRation[] = [
       {
         label: loc("Pallet", "Palé", "Pallet"),
         value: loc("1,098 lbs · approx. 56.1 cu ft", "1.098 lb · aprox. 56,1 pies³", "1.098 lb · circa 56,1 ft³"),
+      },
+    ],
+    examples: [
+      {
+        slug: "menu-01-chili-with-beans",
+        name: loc("Menu 1 — Chili with Beans", "Menú 1 — Chili con frijoles", "Menu 1 — Chili con fagioli"),
+        image: "/ameriqual-military/mre-examples/menu-01-chili-with-beans.jpg",
+      },
+      {
+        slug: "menu-02-beef-shredded-bbq",
+        name: loc(
+          "Menu 2 — Beef Shredded in Barbecue Sauce",
+          "Menú 2 — Res deshebrada en salsa barbacoa",
+          "Menu 2 — Manzo sfilacciato in salsa barbecue",
+        ),
+        image: "/ameriqual-military/mre-examples/menu-02-beef-shredded-bbq.jpg",
+      },
+      {
+        slug: "menu-03-chicken-noodles-and-vegetables",
+        name: loc(
+          "Menu 3 — Chicken, Noodles and Vegetables in Sauce",
+          "Menú 3 — Pollo, fideos y vegetales en salsa",
+          "Menu 3 — Pollo, noodles e verdure in salsa",
+        ),
+        image: "/ameriqual-military/mre-examples/menu-03-chicken-noodles-and-vegetables.jpg",
+      },
+      {
+        slug: "menu-14-mexican-style-rice-and-bean-bowl",
+        name: loc(
+          "Menu 14 — Mexican Style Rice and Bean Bowl",
+          "Menú 14 — Bowl de arroz y frijoles estilo mexicano",
+          "Menu 14 — Bowl di riso e fagioli stile messicano",
+        ),
+        image: "/ameriqual-military/mre-examples/menu-14-mexican-style-rice-and-bean-bowl.jpg",
       },
     ],
   },

@@ -252,9 +252,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Self-heating emergency meal kits", "Kits de comida de emergencia auto-calentables", "Kit pasto di emergenza autoriscaldanti"),
         detail: loc(
-          "Ready Ration, APack — FEMA-compliant, entrée + sides + dessert + drink",
-          "Ready Ration, APack — conformes a FEMA, entrada + acompañamientos + postre + bebida",
-          "Ready Ration, APack — conformi FEMA, piatto principale + contorni + dessert + bevanda",
+          "APack Ready Meals for disaster relief; Ready Ration — self-heating kits, 12 meals per case",
+          "APack Ready Meals para socorro en desastres; Ready Ration — kits auto-calentables, 12 comidas por caja",
+          "APack Ready Meals per soccorso in caso di disastro; Ready Ration — kit autoriscaldanti, 12 pasti per cartone",
         ),
       },
       {

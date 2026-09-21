@@ -136,6 +136,33 @@ export default async function AmeriqualMilitaryPage({
                     ))}
                   </dl>
                 ) : null}
+                {mre.examples && mre.examples.length > 0 ? (
+                  <div className="mt-8">
+                    <p className="text-xs font-bold tracking-wider text-orange uppercase">
+                      {t(locale, ui.ameriqualMilitary.menuExamples)}
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-5">
+                      {mre.examples.map((example) => (
+                        <figure key={example.slug} className="w-[168px]">
+                          <div className="relative mx-auto h-56 w-[148px] overflow-hidden rounded-lg bg-[#f7f4ee]">
+                            <Image
+                              src={example.image}
+                              alt={t(locale, example.name)}
+                              fill
+                              className="object-contain p-2"
+                              sizes="148px"
+                            />
+                          </div>
+                          <figcaption className="mt-2 text-center">
+                            <p className="text-xs font-semibold leading-snug text-ink">
+                              {t(locale, example.name)}
+                            </p>
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
               </article>
             </Reveal>
           ) : null}

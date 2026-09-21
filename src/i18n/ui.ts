@@ -233,6 +233,7 @@ export const ui = {
       "Sigilli dell'Aeronautica, dell'Esercito, della Guardia Costiera, della Marina e del Corpo dei Marines degli Stati Uniti",
     ),
     whatIsIt: loc("What is it?", "¿Qué es?", "Che cos’è?"),
+    menuExamples: loc("Menu examples", "Ejemplos de menú", "Esempi di menu"),
     individualLabel: loc("Individual rations", "Raciones individuales", "Razioni individuali"),
     individualBody: loc(
       "Packaged operational rations for an individual or a small group when activity, combat intensity or unstable tactical conditions preclude field kitchens.",
@@ -253,9 +254,9 @@ export const ui = {
     ),
     commercialLabel: loc("Commercial emergency meals", "Comidas comerciales de emergencia", "Pasti commerciali di emergenza"),
     commercialBody: loc(
-      "The same manufacturer also produces self-heating Ready Ration and A-Pack Ready Meal kits for disaster relief, institutional and commercial channels — listed with our foodservice products.",
-      "El mismo fabricante produce kits auto-calentables Ready Ration y A-Pack Ready Meal para desastre, institucional y canales comerciales, listados en foodservice.",
-      "Lo stesso produttore realizza anche kit auto-riscaldanti Ready Ration e A-Pack Ready Meal per soccorso in caso di disastro, canali istituzionali e commerciali — elencati tra i nostri prodotti foodservice.",
+      "The same manufacturer also produces APack™ Ready Meals for disaster relief, plus Ready Ration self-heating kits for institutional and commercial channels — listed with our foodservice products.",
+      "El mismo fabricante produce APack™ Ready Meals para socorro en desastres, y kits auto-calentables Ready Ration para canales institucionales y comerciales, listados en foodservice.",
+      "Lo stesso produttore realizza anche APack™ Ready Meals per il soccorso in caso di disastro, più kit autoriscaldanti Ready Ration per canali istituzionali e commerciali — elencati tra i nostri prodotti foodservice.",
     ),
     viewFoodservice: loc("View foodservice meal kits →", "Ver kits de foodservice →", "Vedi i kit foodservice →"),
     backToPortfolio: loc("← Portfolio", "← Portafolio", "← Portafoglio"),

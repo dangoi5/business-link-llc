@@ -682,18 +682,23 @@ export const ameriqualFoodserviceProducts: PortfolioProduct[] = [
   },
   {
     slug: "apack-ready-meal",
-    name: loc("A-Pack Ready Meal Low Sodium Kit", "Kit A-Pack Ready Meal bajo en sodio", "Kit A-Pack Ready Meal a basso contenuto di sodio"),
+    name: loc(
+      "APack Ready Meals — Disaster Relief",
+      "APack Ready Meals — socorro en desastres",
+      "APack Ready Meals — soccorso in caso di disastro",
+    ),
     description: loc(
-      "Self-heating emergency meal built to FEMA requirements, in a low-sodium format. Each case holds 12 meals across six varieties. The entrée is ready in 10–12 minutes; two meals cover a full day’s calories. Menus may include bean salad, chicken with BBQ sauce and rice, homestyle vegetables with noodles and chicken, spaghetti with Italian-style meat sauce, sweet and sour chicken with rice, and pasta with garden vegetables.",
-      "Comida de emergencia auto-calentable conforme a requisitos FEMA, en formato bajo en sodio. Cada caja trae 12 comidas en seis variedades. La entrada está lista en 10–12 minutos; dos comidas cubren las calorías de un día. Los menús pueden incluir ensalada de frijol, pollo BBQ con arroz, verduras caseras con fideos y pollo, espagueti con salsa italiana, pollo agridulce con arroz y pasta con verduras.",
-      "Pasto di emergenza autoriscaldante conforme ai requisiti FEMA, in formato a basso contenuto di sodio. Ogni cartone contiene 12 pasti in sei varietà. Il piatto principale è pronto in 10–12 minuti; due pasti coprono le calorie di una giornata. I menù possono includere insalata di fagioli, pollo BBQ con riso, verdure casalinghe con noodles e pollo, spaghetti con sugo all’italiana, pollo in agrodolce con riso e pasta con verdure.",
+      "AmeriQual APack™ Ready Meals — a series of six self-heating emergency meals for disaster relief and emergency feeding. Individually packaged with durable, easy-open packaging. Each lightweight case holds 12 meals with an extended shelf life; the entrée is ready in 10–12 minutes, and two meals meet a full day’s caloric needs. Available for institutional and commercial purchase, including a FEMA-oriented low-sodium format.",
+      "APack™ Ready Meals de AmeriQual: una serie de seis comidas de emergencia auto-calentables para socorro en desastres y alimentación de emergencia. Empaque individual durable de fácil apertura. Cada caja liviana trae 12 comidas de larga duración; la entrada está lista en 10–12 minutos, y dos comidas cubren las calorías de un día. Disponible para compra institucional y comercial, incluido un formato bajo en sodio orientado a FEMA.",
+      "APack™ Ready Meals di AmeriQual: una serie di sei pasti di emergenza autoriscaldanti per il soccorso in caso di disastro e l’alimentazione di emergenza. Confezione individuale resistente ad apertura facile. Ogni cartone leggero contiene 12 pasti a lunga conservazione; il piatto principale è pronto in 10–12 minuti e due pasti coprono le calorie di una giornata. Disponibile per acquisto istituzionale e commerciale, compreso un formato a basso contenuto di sodio orientato FEMA.",
     ),
     image: "/products/ameriqual/apack-ready-meal.jpg",
     details: [
-      loc("A-Pack Ready Meal", "A-Pack Ready Meal", "A-Pack Ready Meal"),
-      loc("Low sodium", "Bajo en sodio", "Basso contenuto di sodio"),
-      loc("Self-heating", "Auto-calentable", "Autoriscaldante"),
-      loc("FEMA requirements", "Requisitos FEMA", "Requisiti FEMA"),
+      loc("APack Ready Meals", "APack Ready Meals", "APack Ready Meals"),
+      loc("Disaster relief", "Socorro en desastres", "Soccorso in caso di disastro"),
+      loc("Self-heating · 10–12 min", "Auto-calentable · 10–12 min", "Autoriscaldante · 10–12 min"),
+      loc("12 meals / case", "12 comidas / caja", "12 pasti / cartone"),
+      loc("6 varieties", "6 variedades", "6 varietà"),
     ],
     nutrition: nf("1 complete meal kit", "1 kit de comida completo", "1 kit pasto completo", "1,050–1,190", {
       protein: "25–36g",
