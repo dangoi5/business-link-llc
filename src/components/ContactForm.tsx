@@ -4,12 +4,11 @@ import { FormEvent, useState } from "react";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import type { Locale } from "@/i18n/config";
-import { company } from "@/lib/content";
 
 const roleKeys = ["manufacturer", "buyer", "other"] as const;
 
 export function ContactForm({ locale }: { locale: Locale }) {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [role, setRole] = useState<(typeof roleKeys)[number]>("manufacturer");
   const roleLabels = {
     manufacturer: t(locale, ui.form.manufacturer),
@@ -17,43 +16,56 @@ export function ContactForm({ locale }: { locale: Locale }) {
     other: t(locale, ui.form.other),
   };
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
-    const name = String(data.get("name") || "");
-    const email = String(data.get("email") || "");
-    const organization = String(data.get("organization") || "");
-    const phone = String(data.get("phone") || "");
-    const product = String(data.get("product") || "");
-    const destination = String(data.get("destination") || "");
-    const volume = String(data.get("volume") || "");
-    const message = String(data.get("message") || "");
+    setStatus("sending");
 
-    const subject = encodeURIComponent(`${t(locale, ui.form.mailSubject)} ${roleLabels[role]}`);
-    const body = encodeURIComponent(
-      [
-        `${t(locale, ui.form.mailName)}: ${name}`,
-        `${t(locale, ui.form.mailEmail)}: ${email}`,
-        `${t(locale, ui.form.mailOrganization)}: ${organization}`,
-        `${t(locale, ui.form.mailPhone)}: ${phone}`,
-        `${t(locale, ui.form.mailRole)}: ${roleLabels[role]}`,
-        `${t(locale, ui.form.mailProduct)}: ${product}`,
-        `${t(locale, ui.form.mailDestination)}: ${destination}`,
-        `${t(locale, ui.form.mailVolume)}: ${volume}`,
-        "",
-        message,
-      ].join("\n"),
-    );
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: String(data.get("name") || ""),
+          email: String(data.get("email") || ""),
+          organization: String(data.get("organization") || ""),
+          phone: String(data.get("phone") || ""),
+          product: String(data.get("product") || ""),
+          destination: String(data.get("destination") || ""),
+          volume: String(data.get("volume") || ""),
+          message: String(data.get("message") || ""),
+          role,
+          locale,
+          website: String(data.get("website") || ""),
+        }),
+      });
 
-    window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+      if (!response.ok) {
+        throw new Error("send_failed");
+      }
+
+      form.reset();
+      setRole("manufacturer");
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-2xl border border-line bg-white p-6 shadow-sm md:p-8">
+    <form onSubmit={handleSubmit} className="relative rounded-2xl border border-line bg-white p-6 shadow-sm md:p-8">
       <p className="text-sm font-semibold text-teal">{t(locale, ui.form.sendInquiry)}</p>
       <p className="mt-1 text-sm text-slate">{t(locale, ui.form.intro)}</p>
+
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+      />
 
       <fieldset className="mt-6">
         <legend className="text-sm font-medium text-ink">{t(locale, ui.form.iAmA)}</legend>
@@ -158,16 +170,20 @@ export function ContactForm({ locale }: { locale: Locale }) {
 
       <button
         type="submit"
-        className="mt-6 inline-flex rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-hover"
+        disabled={status === "sending"}
+        className="mt-6 inline-flex rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-hover disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {t(locale, ui.form.submit)}
+        {status === "sending" ? t(locale, ui.form.sending) : t(locale, ui.form.submit)}
       </button>
 
-      {submitted ? (
-        <p className="mt-3 text-sm text-slate">
-          {t(locale, ui.form.submitted)} {company.email} {t(locale, ui.form.submittedAfter)}
-        </p>
-      ) : null}
+      <div aria-live="polite">
+        {status === "sent" ? (
+          <p className="mt-3 text-sm font-medium text-teal">{t(locale, ui.form.success)}</p>
+        ) : null}
+        {status === "error" ? (
+          <p className="mt-3 text-sm font-medium text-orange">{t(locale, ui.form.error)}</p>
+        ) : null}
+      </div>
     </form>
   );
 }

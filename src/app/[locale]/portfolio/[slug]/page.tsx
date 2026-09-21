@@ -84,6 +84,50 @@ export default async function PortfolioCategoryPage({
           </TextLink>
         </div>
 
+        {slug === "foodservice-institutional" ? (
+          <Link
+            href={localizedHref(locale, "/portfolio/ameriqual-military")}
+            className="mt-10 block overflow-hidden rounded-2xl border border-line bg-white transition hover:shadow-lg hover:shadow-ink/5"
+          >
+            <div className="grid md:grid-cols-[minmax(0,14rem)_1fr]">
+              <div className="relative min-h-40 bg-ink">
+                <Image
+                  src="/ameriqual-military/us-flag-bg.jpg"
+                  alt=""
+                  fill
+                  className="object-cover opacity-80"
+                  sizes="(max-width: 768px) 100vw, 224px"
+                />
+                <div className="absolute inset-0 bg-ink/40" />
+                <div className="relative flex h-full items-center justify-center p-6">
+                  <div className="relative h-24 w-40">
+                    <Image
+                      src="/ameriqual-military/us-military-seals.png"
+                      alt=""
+                      fill
+                      unoptimized
+                      className="object-contain"
+                      sizes="160px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 md:p-8">
+                <p className="text-xs font-bold tracking-wider text-orange uppercase">AmeriQual Foods</p>
+                <h2 className="mt-2 text-xl font-bold text-ink md:text-2xl">
+                  {t(locale, ui.ameriqualMilitary.bannerTitle)}
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
+                  {t(locale, ui.ameriqualMilitary.bannerBody)}
+                </p>
+                <p className="mt-4 text-sm font-semibold text-teal">
+                  {t(locale, ui.ameriqualMilitary.bannerCta)}
+                </p>
+              </div>
+            </div>
+          </Link>
+        ) : null}
+
         <div className="mt-10">
           <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
             {t(locale, ui.categoryPage.products)}

@@ -27,7 +27,7 @@ export const company = {
     "As a master distributor and exporter, we manage international supply, distribution structures and commercial relationships across our active markets.",
     "Como distribuidor maestro y exportador, gestionamos el abastecimiento internacional, las estructuras de distribución y las relaciones comerciales en nuestros mercados activos.",
   ),
-  email: "info@businesslinkllc.com",
+  email: "info@businesslinkgroup.com",
   phone: "",
 };
 

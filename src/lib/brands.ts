@@ -31,6 +31,7 @@ export type Brand = {
   productLines?: ProductLine[];
   catalogHref?: string;
   catalogLabel?: Loc;
+  extraLinks?: { href: string; label: Loc }[];
   photos?: string[];
 };
 
@@ -227,6 +228,13 @@ export const representedBrands: Brand[] = [
         detail: loc("Joy2", "Joy2"),
       },
       {
+        label: loc("Military & humanitarian rations", "Raciones militares y humanitarias"),
+        detail: loc(
+          "MRE, HDR, First Strike, emergency water, Heat & Serve and A-Rations for U.S. and allied military and relief feeding",
+          "MRE, HDR, First Strike, agua de emergencia, Heat & Serve y A-Rations para alimentación militar y de alivio de EE. UU. y aliados",
+        ),
+      },
+      {
         label: loc("Self-heating emergency meal kits", "Kits de comida de emergencia auto-calentables"),
         detail: loc(
           "Ready Ration, APack — FEMA-compliant, entrée + sides + dessert + drink",
@@ -243,6 +251,12 @@ export const representedBrands: Brand[] = [
     ],
     catalogHref: "/catalogs/food-life-balanced-2026.pdf",
     catalogLabel: loc("View 2026 catalog", "Ver catálogo 2026"),
+    extraLinks: [
+      {
+        href: "/portfolio/ameriqual-military",
+        label: loc("Military & humanitarian rations", "Raciones militares y humanitarias"),
+      },
+    ],
     photos: [],
   },
   {

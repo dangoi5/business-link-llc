@@ -124,7 +124,7 @@ function BrandCatalogLink({ brand, locale }: { brand: Brand; locale: Locale }) {
     <CatalogAnchor
       href={brand.catalogHref}
       locale={locale}
-      className="mt-5 inline-flex text-sm font-semibold text-teal transition hover:text-teal-deep"
+      className="inline-flex text-sm font-semibold text-teal transition hover:text-teal-deep"
     >
       {t(locale, brand.catalogLabel ?? ui.common.viewFullCatalog)} →
     </CatalogAnchor>
@@ -189,7 +189,21 @@ export function BrandsWeRepresent({ locale }: { locale: Locale }) {
               ) : null}
 
               <BrandPhotos brand={brand} />
-              <BrandCatalogLink brand={brand} locale={locale} />
+              {brand.catalogHref || brand.extraLinks?.length ? (
+                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
+                  <BrandCatalogLink brand={brand} locale={locale} />
+                  {brand.extraLinks?.map((link) => (
+                    <CatalogAnchor
+                      key={link.href}
+                      href={link.href}
+                      locale={locale}
+                      className="inline-flex text-sm font-semibold text-teal transition hover:text-teal-deep"
+                    >
+                      {t(locale, link.label)} →
+                    </CatalogAnchor>
+                  ))}
+                </div>
+              ) : null}
             </article>
           </Reveal>
         ))}

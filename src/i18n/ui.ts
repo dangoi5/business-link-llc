@@ -174,6 +174,64 @@ export const ui = {
     ),
     discussMarket: loc("Discuss a market opportunity →", "Hablemos de una oportunidad de mercado →"),
   },
+  ameriqualMilitary: {
+    metaTitle: loc("AmeriQual military rations", "Raciones militares AmeriQual"),
+    metaDescription: loc(
+      "Business Link supplies AmeriQual Foods military, humanitarian and emergency feeding rations — MRE, HDR, First Strike, Heat & Serve and A-Rations — for international distribution.",
+      "Business Link abastece raciones militares, humanitarias y de emergencia de AmeriQual Foods — MRE, HDR, First Strike, Heat & Serve y A-Rations — para distribución internacional.",
+    ),
+    heroLabel: loc("AmeriQual Foods", "AmeriQual Foods"),
+    heroTitle: loc(
+      "Military, humanitarian and emergency feeding rations.",
+      "Raciones militares, humanitarias y de emergencia.",
+    ),
+    heroDescription: loc(
+      "Through AmeriQual Group, LLC, Business Link can supply individual and group feeding rations designed for U.S. and allied militaries, and for humanitarian and disaster-relief programs.",
+      "A través de AmeriQual Group, LLC, Business Link puede abastecer raciones individuales y grupales diseñadas para fuerzas de EE. UU. y aliadas, y para programas humanitarios y de desastre.",
+    ),
+    supportsTitle: loc(
+      "AmeriQual proudly supports Warfighters.",
+      "AmeriQual apoya con orgullo a las fuerzas combatientes.",
+    ),
+    supportsBody: loc(
+      "AmeriQual designs, develops and delivers individual and group feeding rations to militaries around the globe. As a leading supplier to the U.S. military, they have produced high-quality operational food for more than 30 years — and also provide humanitarian and disaster-relief rations for government and non-governmental organizations. Business Link represents AmeriQual as master distributor and exporter.",
+      "AmeriQual diseña, desarrolla y entrega raciones individuales y grupales a fuerzas militares en todo el mundo. Como proveedor líder de las fuerzas de EE. UU., produce alimento operacional de alta calidad desde hace más de 30 años, y también raciones humanitarias y de desastre para gobiernos y ONG. Business Link representa a AmeriQual como distribuidor maestro y exportador.",
+    ),
+    sealsAlt: loc(
+      "U.S. Air Force, Army, Coast Guard, Navy and Marine Corps seals",
+      "Sellos de la Fuerza Aérea, el Ejército, la Guardia Costera, la Armada y el Cuerpo de Marines de EE. UU.",
+    ),
+    individualLabel: loc("Individual rations", "Raciones individuales"),
+    individualBody: loc(
+      "Packaged operational rations for an individual or a small group when activity, combat intensity or unstable tactical conditions preclude field kitchens.",
+      "Raciones operacionales empacadas para un individuo o un grupo pequeño cuando la actividad, la intensidad de combate o una situación táctica inestable impiden usar cocinas de campaña.",
+    ),
+    groupLabel: loc("Group rations", "Raciones grupales"),
+    groupBody: loc(
+      "Nutritionally complete, unitized or pre-configured modules that feed more than one Warfighter at a time — typically in 18- or 50-person modules, depending on the ration type. Heat & Serve and A-Rations combine with quick-prepared commercial foods for complete meals, from remote self-heating to field-kitchen support.",
+      "Módulos nutricionalmente completos, unitizados o preconfigurados que alimentan a más de un combatiente a la vez — normalmente en módulos de 18 o 50 personas, según el tipo. Heat & Serve y A-Rations se combinan con alimentos comerciales de preparación rápida para comidas completas, desde auto-calentado remoto hasta apoyo de cocina de campaña.",
+    ),
+    certificationsLabel: loc("Quality certifications", "Certificaciones de calidad"),
+    certificationsBody: loc(
+      "AmeriQual Foods production is backed by SQF / HACCP, FDA, USDA, USDA Organic and GMA quality marks used on their military programs.",
+      "La producción de AmeriQual Foods está respaldada por sellos SQF / HACCP, FDA, USDA, USDA Organic y GMA utilizados en sus programas militares.",
+    ),
+    commercialLabel: loc("Commercial emergency meals", "Comidas comerciales de emergencia"),
+    commercialBody: loc(
+      "The same manufacturer also produces self-heating Ready Ration and A-Pack Ready Meal kits for disaster relief, institutional and commercial channels — listed with our foodservice products.",
+      "El mismo fabricante produce kits auto-calentables Ready Ration y A-Pack Ready Meal para desastre, institucional y canales comerciales, listados en foodservice.",
+    ),
+    viewFoodservice: loc("View foodservice meal kits →", "Ver kits de foodservice →"),
+    backToPortfolio: loc("← Portfolio", "← Portafolio"),
+    inquire: loc("Inquire about military rations", "Consultar raciones militares"),
+    bannerTitle: loc("AmeriQual military & humanitarian rations", "Raciones militares y humanitarias AmeriQual"),
+    bannerBody: loc(
+      "MRE, HDR, First Strike, Heat & Serve and A-Rations from AmeriQual Foods — plus self-heating emergency kits for institutional feeding.",
+      "MRE, HDR, First Strike, Heat & Serve y A-Rations de AmeriQual Foods, más kits auto-calentables de emergencia para alimentación institucional.",
+    ),
+    bannerCta: loc("View military rations →", "Ver raciones militares →"),
+    brandLink: loc("Military & humanitarian rations", "Raciones militares y humanitarias"),
+  },
   brands: {
     label: loc("Brands we represent", "Marcas que representamos"),
     title: loc(
@@ -325,19 +383,14 @@ export const ui = {
       "Cuéntenos sobre el producto, mercado o alianza que desea explorar.",
     ),
     submit: loc("Send inquiry", "Enviar consulta"),
-    submitted: loc(
-      "Your email client should open with the inquiry drafted. If it does not, email",
-      "Su cliente de correo debería abrir con la consulta redactada. Si no ocurre, escriba a",
+    sending: loc("Sending…", "Enviando…"),
+    success: loc(
+      "Thank you. Your inquiry was sent. We will follow up by email.",
+      "Gracias. Su consulta fue enviada. Le responderemos por correo.",
     ),
-    submittedAfter: loc("directly.", "directamente."),
-    mailName: loc("Name", "Nombre"),
-    mailEmail: loc("Email", "Correo"),
-    mailOrganization: loc("Organization", "Organización"),
-    mailPhone: loc("Phone", "Teléfono"),
-    mailRole: loc("I am a", "Soy"),
-    mailProduct: loc("Product", "Producto"),
-    mailDestination: loc("Destination", "Destino"),
-    mailVolume: loc("Volume", "Volumen"),
-    mailSubject: loc("Business Link inquiry —", "Consulta Business Link —"),
+    error: loc(
+      "The inquiry could not be sent. Please try again or email info@businesslinkgroup.com.",
+      "No se pudo enviar la consulta. Inténtelo de nuevo o escriba a info@businesslinkgroup.com.",
+    ),
   },
 } as const;
