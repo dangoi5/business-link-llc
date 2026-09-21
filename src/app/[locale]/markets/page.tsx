@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
@@ -49,6 +50,20 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
           <p className="max-w-3xl text-base leading-relaxed text-slate md:text-lg">
             {t(locale, ui.marketsPage.intro)}
           </p>
+        </Reveal>
+
+        <Reveal className="mt-12 md:mt-14">
+          <SectionLabel>{t(locale, ui.marketsPage.mapLabel)}</SectionLabel>
+          <figure className="mt-5 overflow-hidden rounded-2xl bg-ink">
+            <Image
+              src="/markets/active-markets-map.webp"
+              alt={t(locale, ui.marketsPage.mapAlt)}
+              width={1024}
+              height={458}
+              className="h-auto w-full"
+              sizes="(max-width: 1280px) 100vw, 1200px"
+            />
+          </figure>
         </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
