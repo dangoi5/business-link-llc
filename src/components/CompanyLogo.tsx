@@ -8,7 +8,7 @@ const brandIcon = {
 
 const lockup = {
   src: "/branding/business-link-lockup.png",
-  onDark: "/branding/business-link-lockup-on-dark.png",
+  onDark: "/branding/business-link-lockup-hero.png",
   width: 993,
   height: 177,
 } as const;
