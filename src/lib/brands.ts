@@ -12,7 +12,7 @@ import { loc, type Loc } from "@/i18n/t";
  * - Add paths to `photos` to show a few representative product images
  *   under a brand. Leave empty to stay logo-and-text only.
  *
- * Translatable strings use loc(en, es) so both languages stay in one place.
+ * Translatable strings use loc(en, es, it) so all languages stay in one place.
  */
 
 export type ProductLine = {
@@ -38,139 +38,149 @@ export type Brand = {
 export const freshElementsBrand = {
   slug: "fresh-elements",
   name: "Fresh Elements",
-  tagline: loc("Our own product line", "Nuestra línea de productos"),
+  tagline: loc("Our own product line", "Nuestra línea de productos", "La nostra linea di prodotti"),
   description: loc(
     "In addition to distributing and exporting partner brands, Business Link develops and markets Fresh Elements—our own line of food products built for retail, foodservice and international trade.",
     "Además de distribuir y exportar marcas asociadas, Business Link desarrolla y comercializa Fresh Elements: nuestra línea de alimentos para retail, foodservice y comercio internacional.",
+    "Oltre a distribuire ed esportare marchi partner, Business Link sviluppa e commercializza Fresh Elements: la nostra linea di prodotti alimentari per il retail, il foodservice e il commercio internazionale.",
   ),
-  ctaLabel: loc("View catalog", "Ver catálogo"),
+  ctaLabel: loc("View catalog", "Ver catálogo", "Consulta il catalogo"),
   ctaHref: "/portfolio/fresh-elements",
   futureSite: "https://freshelementsholdings.com",
   logo: "/brands/fresh-elements-logo.png" as string | undefined,
   catalogHref: "/portfolio/fresh-elements",
-  catalogLabel: loc("View product catalog", "Ver catálogo de productos"),
+  catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
   photos: [] as string[],
   productLines: [
     {
       id: "snacks",
-      label: loc("Snacks", "Snacks"),
+      label: loc("Snacks", "Snacks", "Snack"),
       detail: loc(
         "Platanitos plantain chips — gluten free, Salt and Chile Limón — and flavored peanuts in all pack sizes, including bulk",
         "Platanitos — chips de plátano sin gluten, Sal y Chile Limón — y maní saborizado en todos los tamaños, incluido granel",
+        "Platanitos — chips di platano senza glutine, Sale e Chile Limón — e arachidi aromatizzate in tutti i formati, compresa la rinfusa",
       ),
     },
     {
       id: "oils",
-      label: loc("Oils", "Aceites"),
+      label: loc("Oils", "Aceites", "Oli"),
       detail: loc(
         "Palm oil blend, table & cooking spread, and traditional margarine. We can also partner to bottle in specific markets.",
         "Mezcla de aceite de palma, untables de mesa y cocina, y margarina tradicional. También podemos asociarnos para embotellar en mercados específicos.",
+        "Miscela di olio di palma, spalmabili da tavola e da cucina, e margarina tradizionale. Possiamo inoltre collaborare per l’imbottigliamento in mercati specifici.",
       ),
     },
     {
       id: "rice",
-      label: loc("Rice", "Arroz"),
+      label: loc("Rice", "Arroz", "Riso"),
       detail: loc(
         "Basmati and jasmine rice — box of 4 × 100 g bags, and 1 kg bags",
         "Arroz basmati y jazmín — caja de 4 bolsas de 100 g, y bolsa de 1 kg",
+        "Riso basmati e jasmine — confezione da 4 sacchetti da 100 g e sacchetti da 1 kg",
       ),
     },
-    { id: "condiments", label: loc("Condiments", "Condimentos") },
+    { id: "condiments", label: loc("Condiments", "Condimentos", "Condimenti") },
   ] satisfies ProductLine[],
   products: [
     {
       slug: "flavored-peanuts",
       line: "snacks",
-      name: loc("Flavored Peanuts", "Maní saborizado"),
+      name: loc("Flavored Peanuts", "Maní saborizado", "Arachidi aromatizzate"),
       description: loc(
         "Flavored peanuts from Fresh Elements in five flavors: spicy, Japanese-style, lime & salt, salted, and caramelized with sesame. Packs can be produced in all sizes, including bulk for export.",
         "Maní saborizado Fresh Elements en cinco sabores: picante, estilo japonés, limón y sal, con sal, y caramelizado con ajonjolí. Se puede producir en todos los tamaños, incluido granel para exportación.",
+        "Arachidi aromatizzate Fresh Elements in cinque gusti: piccante, stile giapponese, lime e sale, salate e caramellate con sesamo. Possono essere prodotte in tutti i formati, compresa la rinfusa per l’esportazione.",
       ),
       image: "/products/fresh-elements/flavored-peanuts.jpg",
       details: [
-        loc("All pack sizes", "Todos los tamaños"),
-        loc("Bulk export", "Exportación a granel"),
-        loc("5 flavors", "5 sabores"),
+        loc("All pack sizes", "Todos los tamaños", "Tutti i formati"),
+        loc("Bulk export", "Exportación a granel", "Esportazione alla rinfusa"),
+        loc("5 flavors", "5 sabores", "5 gusti"),
       ],
       imageFit: "contain" as const,
     },
     {
       slug: "platanitos",
       line: "snacks",
-      name: loc("Platanitos", "Platanitos"),
+      name: loc("Platanitos", "Platanitos", "Platanitos"),
       description: loc(
         "Gluten-free plantain chips from Fresh Elements. Two flavors: Salt and Chile Limón (Spicy Lime), packed for retail snacking.",
         "Chips de plátano sin gluten de Fresh Elements. Dos sabores: Sal y Chile Limón, en empaque para snack de retail.",
+        "Chips di platano senza glutine di Fresh Elements. Due gusti: Sale e Chile Limón, in confezione per lo snacking da retail.",
       ),
       image: "/products/fresh-elements/platanitos.jpg",
       details: [
-        loc("Gluten free", "Sin gluten"),
-        loc("Salt & Chile Limón", "Sal y chile limón"),
-        loc("1 oz (28 g) serving", "Porción de 1 oz (28 g)"),
+        loc("Gluten free", "Sin gluten", "Senza glutine"),
+        loc("Salt & Chile Limón", "Sal y chile limón", "Sale e Chile Limón"),
+        loc("1 oz (28 g) serving", "Porción de 1 oz (28 g)", "Porzione da 1 oz (28 g)"),
       ],
       imageFit: "contain" as const,
     },
     {
       slug: "palm-oil-blend",
       line: "oils",
-      name: loc("Palm Oil Blend", "Mezcla de aceite de palma"),
+      name: loc("Palm Oil Blend", "Mezcla de aceite de palma", "Miscela di olio di palma"),
       description: loc(
         "Fresh Elements premium cooking oil blend made with 80% palm fruit oil. A natural source of vitamin E, ideal for frying. 900 mL bottle. We can also partner to bottle in specific markets.",
         "Mezcla de aceite de cocina premium Fresh Elements, elaborada con 80% de aceite de palma. Fuente natural de vitamina E, ideal para freír. Botella de 900 mL. También podemos asociarnos para embotellar en mercados específicos.",
+        "Miscela premium di olio da cucina Fresh Elements, elaborata con l’80% di olio di palma. Fonte naturale di vitamina E, ideale per la frittura. Bottiglia da 900 mL. Possiamo inoltre collaborare per l’imbottigliamento in mercati specifici.",
       ),
       image: "/products/fresh-elements/palm-oil-blend-900ml.jpg",
       details: [
-        loc("900 mL", "900 mL"),
-        loc("80% palm fruit oil", "80% aceite de palma"),
-        loc("Ideal for frying", "Ideal para freír"),
+        loc("900 mL", "900 mL", "900 mL"),
+        loc("80% palm fruit oil", "80% aceite de palma", "80% olio di palma"),
+        loc("Ideal for frying", "Ideal para freír", "Ideale per la frittura"),
       ],
       imageFit: "contain" as const,
     },
     {
       slug: "do-it-all-spread",
       line: "oils",
-      name: loc("Do-It-All Table & Cooking Spread", "Untable Do-It-All de mesa y cocina"),
+      name: loc("Do-It-All Table & Cooking Spread", "Untable Do-It-All de mesa y cocina", "Spalmabile Do-It-All da tavola e da cucina"),
       description: loc(
         "Fresh Elements Do-It-All table and cooking spread. 15.5 oz (440 g) tub, 44 servings.",
         "Untable Fresh Elements Do-It-All para mesa y cocina. Pote de 15.5 oz (440 g), 44 porciones.",
+        "Spalmabile Fresh Elements Do-It-All da tavola e da cucina. Vaschetta da 15.5 oz (440 g), 44 porzioni.",
       ),
       image: "/products/fresh-elements/do-it-all-spread-tub.jpg",
       details: [
-        loc("15.5 oz / 440 g", "15.5 oz / 440 g"),
-        loc("Table & cooking", "Mesa y cocina"),
-        loc("44 servings", "44 porciones"),
+        loc("15.5 oz / 440 g", "15.5 oz / 440 g", "15.5 oz / 440 g"),
+        loc("Table & cooking", "Mesa y cocina", "Tavola e cucina"),
+        loc("44 servings", "44 porciones", "44 porzioni"),
       ],
       imageFit: "contain" as const,
     },
     {
       slug: "margarine-traditional",
       line: "oils",
-      name: loc("Traditional Margarine Spread", "Margarina tradicional"),
+      name: loc("Traditional Margarine Spread", "Margarina tradicional", "Margarina tradizionale"),
       description: loc(
         "Fresh Elements traditional margarine spread in a 50 g stick. With vitamins A & D, zero cholesterol, for cooking and spreading.",
         "Margarina tradicional Fresh Elements en barra de 50 g. Con vitaminas A y D, cero colesterol, para cocinar y untar.",
+        "Margarina tradizionale Fresh Elements in stecco da 50 g. Con vitamine A e D, zero colesterolo, per cucinare e spalmare.",
       ),
       image: "/products/fresh-elements/margarine-traditional-50g.jpg",
       details: [
-        loc("50 g stick", "Barra de 50 g"),
-        loc("Vitamins A & D", "Vitaminas A y D"),
-        loc("Zero cholesterol", "Cero colesterol"),
+        loc("50 g stick", "Barra de 50 g", "Stecco da 50 g"),
+        loc("Vitamins A & D", "Vitaminas A y D", "Vitamine A e D"),
+        loc("Zero cholesterol", "Cero colesterol", "Zero colesterolo"),
       ],
       imageFit: "contain" as const,
     },
     {
       slug: "basmati-jasmine-rice",
       line: "rice",
-      name: loc("Basmati & Jasmine Rice", "Arroz basmati y jazmín"),
+      name: loc("Basmati & Jasmine Rice", "Arroz basmati y jazmín", "Riso basmati e jasmine"),
       description: loc(
         "Fresh Elements basmati and jasmine rice. Packed as a box of four 100 g bags, and in 1 kg bags.",
         "Arroz basmati y jazmín Fresh Elements. Empaque en caja de cuatro bolsas de 100 g, y bolsa de 1 kg.",
+        "Riso basmati e jasmine Fresh Elements. Confezionato in scatola da quattro sacchetti da 100 g e in sacchetti da 1 kg.",
       ),
       image: "/products/fresh-elements/basmati-jasmine-rice.jpg",
       details: [
-        loc("Basmati & jasmine", "Basmati y jazmín"),
-        loc("4 × 100 g box", "Caja de 4 × 100 g"),
-        loc("1 kg bag", "Bolsa de 1 kg"),
+        loc("Basmati & jasmine", "Basmati y jazmín", "Basmati e jasmine"),
+        loc("4 × 100 g box", "Caja de 4 × 100 g", "Confezione da 4 × 100 g"),
+        loc("1 kg bag", "Bolsa de 1 kg", "Sacchetto da 1 kg"),
       ],
       imageFit: "cover" as const,
     },
@@ -193,6 +203,7 @@ export const representedBrands: Brand[] = [
     note: loc(
       "Parent company. Facilities in Evansville, IN and Stone Mountain, GA.",
       "Empresa matriz. Plantas en Evansville, IN y Stone Mountain, GA.",
+      "Società madre. Stabilimenti a Evansville, IN e Stone Mountain, GA.",
     ),
     subBrands: [
       "Food Life Balanced",
@@ -203,58 +214,64 @@ export const representedBrands: Brand[] = [
     ],
     productLines: [
       {
-        label: loc("Shelf-stable prepared meals", "Comidas preparadas de larga duración"),
+        label: loc("Shelf-stable prepared meals", "Comidas preparadas de larga duración", "Piatti pronti a lunga conservazione"),
         detail: loc(
           "4-year shelf life (pouched entrées: chicken, beef, pasta, chili, mac & cheese varieties)",
           "Vida útil de 4 años (entradas en sobre: pollo, res, pasta, chili, macarrones con queso)",
+          "Durata di conservazione di 4 anni (piatti principali in busta: pollo, manzo, pasta, chili, varietà di maccheroni al formaggio)",
         ),
       },
       {
-        label: loc("Condensed soups", "Sopas condensadas"),
+        label: loc("Condensed soups", "Sopas condensadas", "Zuppe condensate"),
         detail: loc(
           "Chicken noodle, cream of mushroom, tomato, vegetable",
           "Pollo con fideos, crema de champiñones, tomate, verduras",
+          "Pollo con noodles, crema di funghi, pomodoro, verdure",
         ),
       },
       {
-        label: loc("Shelf-stable yogurt cups", "Yogur de larga duración"),
+        label: loc("Shelf-stable yogurt cups", "Yogur de larga duración", "Yogurt a lunga conservazione"),
         detail: loc(
           "Joy2 Yo-2-Go — no refrigeration needed until opened",
           "Joy2 Yo-2-Go — no requiere refrigeración hasta abrirse",
+          "Joy2 Yo-2-Go — non richiede refrigerazione fino all’apertura",
         ),
       },
       {
-        label: loc("Peanut butter pouches", "Sobres de mantequilla de maní"),
-        detail: loc("Joy2", "Joy2"),
+        label: loc("Peanut butter pouches", "Sobres de mantequilla de maní", "Buste di burro di arachidi"),
+        detail: loc("Joy2", "Joy2", "Joy2"),
       },
       {
-        label: loc("Military & humanitarian rations", "Raciones militares y humanitarias"),
+        label: loc("Military & humanitarian rations", "Raciones militares y humanitarias", "Razioni militari e umanitarie"),
         detail: loc(
           "MRE, HDR, First Strike, emergency water, Heat & Serve and A-Rations for U.S. and allied military and relief feeding",
           "MRE, HDR, First Strike, agua de emergencia, Heat & Serve y A-Rations para alimentación militar y de alivio de EE. UU. y aliados",
+          "MRE, HDR, First Strike, acqua di emergenza, Heat & Serve e A-Rations per l’alimentazione militare e di soccorso degli Stati Uniti e degli alleati",
         ),
       },
       {
-        label: loc("Self-heating emergency meal kits", "Kits de comida de emergencia auto-calentables"),
+        label: loc("Self-heating emergency meal kits", "Kits de comida de emergencia auto-calentables", "Kit pasto di emergenza autoriscaldanti"),
         detail: loc(
           "Ready Ration, APack — FEMA-compliant, entrée + sides + dessert + drink",
           "Ready Ration, APack — conformes a FEMA, entrada + acompañamientos + postre + bebida",
+          "Ready Ration, APack — conformi FEMA, piatto principale + contorni + dessert + bevanda",
         ),
       },
       {
-        label: loc("Dry pasta", "Pasta seca"),
+        label: loc("Dry pasta", "Pasta seca", "Pasta secca"),
         detail: loc(
           "Multiple shapes, whole grain option available",
           "Varios formatos, opción integral disponible",
+          "Vari formati, opzione integrale disponibile",
         ),
       },
     ],
     catalogHref: "/catalogs/food-life-balanced-2026.pdf",
-    catalogLabel: loc("View 2026 catalog", "Ver catálogo 2026"),
+    catalogLabel: loc("View 2026 catalog", "Ver catálogo 2026", "Consulta il catalogo 2026"),
     extraLinks: [
       {
         href: "/portfolio/ameriqual-military",
-        label: loc("Military & humanitarian rations", "Raciones militares y humanitarias"),
+        label: loc("Military & humanitarian rations", "Raciones militares y humanitarias", "Razioni militari e umanitarie"),
       },
     ],
     photos: [],
@@ -263,43 +280,70 @@ export const representedBrands: Brand[] = [
     slug: "star-grocery",
     name: "Star Grocery LLC",
     logo: "/brands/star-grocery.png",
+    note: loc(
+      "Ukrainian grocery manufacturer. La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto and Fitto.",
+      "Fabricante de abarrotes de Ucrania. La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto y Fitto.",
+      "Produttore grocery ucraino. La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto e Fitto.",
+    ),
+    subBrands: ["La Pasta", "Perfetto", "Hutorok", "Pansky", "Golden Grain", "Kitto", "Fitto"],
     productLines: [
       {
-        label: loc("Dry pasta", "Pasta seca"),
+        label: loc("Pasta & flour", "Pasta y harina", "Pasta e farina"),
         detail: loc(
-          "La Pasta — shapes including penne, spaghetti, tagliatelle, whole grain",
-          "La Pasta — formatos que incluyen penne, spaghetti, tagliatelle e integral",
+          "La Pasta, Perfetto, Hutorok, Pansky and Golden Grain — dry pasta, kids shapes, wheat and specialty flours",
+          "La Pasta, Perfetto, Hutorok, Pansky y Golden Grain — pasta seca, formatos infantiles, harinas de trigo y especiales",
+          "La Pasta, Perfetto, Hutorok, Pansky e Golden Grain — pasta secca, formati per bambini, farine di grano e speciali",
         ),
       },
       {
-        label: loc("Flours", "Harinas"),
+        label: loc("Rice, groats & pulses", "Arroz, cereales y legumbres", "Riso, cereali e legumi"),
         detail: loc(
-          "La Pasta — semolina, rice, chickpea and wheat flours",
-          "La Pasta — sémola, arroz, garbanzo y harinas de trigo",
+          "Hutorok, Pansky and Golden Grain — buckwheat, rice, lentils, couscous, bulgur and millet",
+          "Hutorok, Pansky y Golden Grain — trigo sarraceno, arroz, lentejas, cuscús, bulgur y mijo",
+          "Hutorok, Pansky e Golden Grain — grano saraceno, riso, lenticchie, couscous, bulgur e miglio",
         ),
       },
       {
-        label: loc("Rice, groats & pulses", "Arroz, cereales y legumbres"),
+        label: loc("Instant meals", "Comidas instantáneas", "Pasti istantanei"),
         detail: loc(
-          "Khutorok Panskyi — buckwheat, rice, lentils, couscous, bulgur",
-          "Khutorok Panskyi — trigo sarraceno, arroz, lentejas, cuscús, bulgur",
+          "Hutorok mashed potatoes and cereals; Fitto soups, cups, oatmeal and savory porridges",
+          "Puré y cereales Hutorok; sopas, vasos, avena y gachas Fitto",
+          "Purè e cereali Hutorok; zuppe, coppette, avena e porridge Fitto",
         ),
       },
       {
-        label: loc("Instant mashed potatoes", "Puré de papa instantáneo"),
-        detail: loc("Khutorok — flavored 30 g pouches", "Khutorok — sobres saborizados de 30 g"),
+        label: loc("Sauces", "Salsas", "Salse"),
+        detail: loc(
+          "Kitto soy, teriyaki, sweet chili and specialty sauces",
+          "Kitto soya, teriyaki, chile dulce y salsas especiales",
+          "Kitto soia, teriyaki, sweet chili e salse speciali",
+        ),
       },
       {
-        label: loc("Sauces", "Salsas"),
+        label: loc("Pantry", "Despensa", "Dispensa"),
         detail: loc(
-          "Kitto — soy, teriyaki, sweet chili, sweet and sour",
-          "Kitto — soya, teriyaki, chile dulce, agridulce",
+          "Hutorok salt, sugar, baking soda, canned meat, seasonings and spices",
+          "Sal, azúcar, bicarbonato, carnes enlatadas, sazonadores y especias Hutorok",
+          "Sale, zucchero, bicarbonato, carni in scatola, condimenti e spezie Hutorok",
         ),
       },
     ],
-    catalogHref: "/catalogs/star-grocery-2025.pdf",
-    catalogLabel: loc("View 2025 catalog", "Ver catálogo 2025"),
-    photos: [],
+    catalogHref: "/portfolio/star-grocery",
+    catalogLabel: loc("View product families", "Ver familias de producto", "Consulta le famiglie di prodotto"),
+    extraLinks: [
+      {
+        href: "/catalogs/star-grocery-2025.pdf",
+        label: loc("View 2025 catalog", "Ver catálogo 2025", "Consulta il catalogo 2025"),
+      },
+    ],
+    photos: [
+      "/products/star-grocery/families/la-pasta-family-collection-showcase.jpg",
+      "/products/star-grocery/families/hutorok-mashed-potato-family-spread.jpg",
+      "/products/star-grocery/families/kitto-soy-sauce-family-spread.jpg",
+      "/products/star-grocery/families/fitto-soup-family-freshly-served.jpg",
+      "/products/star-grocery/families/pansky-groats-and-rice-family.jpg",
+      "/products/star-grocery/families/golden-grain-pasta-family-showcase.jpg",
+    ],
   },
   {
     slug: "star-brands",
@@ -308,6 +352,7 @@ export const representedBrands: Brand[] = [
     note: loc(
       "Ukrainian snack manufacturer. Flint, Chipster’s, San Sanych, Crispy Cris, Hroom and Do Bochkovogo.",
       "Fabricante de snacks de Ucrania. Flint, Chipster’s, San Sanych, Crispy Cris, Hroom y Do Bochkovogo.",
+      "Produttore di snack ucraino. Flint, Chipster’s, San Sanych, Crispy Cris, Hroom e Do Bochkovogo.",
     ),
     subBrands: [
       "Flint",
@@ -319,43 +364,48 @@ export const representedBrands: Brand[] = [
     ],
     productLines: [
       {
-        label: loc("Flint croutons", "Crutones Flint"),
+        label: loc("Flint croutons", "Crutones Flint", "Crostini Flint"),
         detail: loc(
           "Wheat-rye croutons, baguette, Grenki rye toasts and Craft bars/chips",
           "Crutones de trigo-centeno, baguette, Grenki de centeno y barras/chips Craft",
+          "Crostini di frumento-segale, baguette, toast di segale Grenki e barrette/chips Craft",
         ),
       },
       {
-        label: loc("Potato chips", "Papas fritas"),
+        label: loc("Potato chips", "Papas fritas", "Patatine"),
         detail: loc(
           "Chipster’s classic, BBQ and Superwave; Hroom sliced chips",
           "Chipster’s clásicas, BBQ y Superwave; papas en rodaja Hroom",
+          "Chipster’s classiche, BBQ e Superwave; chips a fette Hroom",
         ),
       },
       {
-        label: loc("Seeds", "Semillas"),
+        label: loc("Seeds", "Semillas", "Semi"),
         detail: loc(
           "San Sanych roasted sunflower, striped, white, pumpkin and kernels",
           "San Sanych: girasol tostado, rayadas, blancas, calabaza y pepitas",
+          "San Sanych: girasole tostato, striati, bianchi, zucca e semi sgusciati",
         ),
       },
       {
-        label: loc("Corn snacks", "Snacks de maíz"),
+        label: loc("Corn snacks", "Snacks de maíz", "Snack di mais"),
         detail: loc(
           "Crispy Cris corn balls and rings — not available for export at the moment",
           "Crispy Cris: bolitas y aros de maíz — no disponible para exportación por el momento",
+          "Crispy Cris: palline e anelli di mais — al momento non disponibili per l’esportazione",
         ),
       },
       {
-        label: loc("Pub toasts", "Tostadas"),
+        label: loc("Pub toasts", "Tostadas", "Toast"),
         detail: loc(
           "Do Bochkovogo wavy and pencil toasts — rye-wheat and wheat",
           "Do Bochkovogo: tostadas onduladas y en palito — trigo-centeno y trigo",
+          "Do Bochkovogo: toast ondulati e a stecco — frumento-segale e frumento",
         ),
       },
     ],
     catalogHref: "/catalogs/star-brands-snacks-2024.pdf",
-    catalogLabel: loc("View 2024 snack catalog", "Ver catálogo de snacks 2024"),
+    catalogLabel: loc("View 2024 snack catalog", "Ver catálogo de snacks 2024", "Consulta il catalogo snack 2024"),
     photos: [],
   },
   {
@@ -365,46 +415,52 @@ export const representedBrands: Brand[] = [
     note: loc(
       "Colombian manufacturer in Jamundí, Valle del Cauca. Gluten-free quinoa grocery, breakfast and snacks.",
       "Fabricante colombiano en Jamundí, Valle del Cauca. Abarrotes, desayuno y snacks de quinua sin gluten.",
+      "Produttore colombiano a Jamundí, Valle del Cauca. Prodotti da dispensa, colazione e snack di quinoa senza glutine.",
     ),
     productLines: [
       {
-        label: loc("Quinoa grain & cooking mixes", "Quinua en grano y mezclas"),
+        label: loc("Quinoa grain & cooking mixes", "Quinua en grano y mezclas", "Quinoa in chicchi e miscele"),
         detail: loc(
           "Sweet white quinoa grain; Quinoarepa arepa/pupusa/gordita mix; waffle and pancake premix",
           "Quinua blanca dulce; mezcla Quinoarepa para arepa/pupusa/gordita; premix para waffles y pancakes",
+          "Quinoa bianca dolce; miscela Quinoarepa per arepa/pupusa/gordita; premix per waffle e pancake",
         ),
       },
       {
-        label: loc("Pasta", "Pasta"),
+        label: loc("Pasta", "Pasta", "Pasta"),
         detail: loc(
           "Spaghetti fortified with quinoa; high-protein fusilli and macaroni (24% protein)",
           "Espagueti fortificado con quinua; fusilli y macarrones de alta proteína (24% de proteína)",
+          "Spaghetti fortificati con quinoa; fusilli e maccheroni ad alto contenuto proteico (24% di proteine)",
         ),
       },
       {
-        label: loc("Breakfast cereals", "Cereales de desayuno"),
+        label: loc("Breakfast cereals", "Cereales de desayuno", "Cereali per la colazione"),
         detail: loc(
           "Cereal Puff, Müsli, Protein Loops and BabyQuinoa — with probiotics",
           "Cereal Puff, Müsli, Protein Loops y BabyQuinoa — con probióticos",
+          "Cereal Puff, Müsli, Protein Loops e BabyQuinoa — con probiotici",
         ),
       },
       {
-        label: loc("Plant beverages", "Bebidas vegetales"),
+        label: loc("Plant beverages", "Bebidas vegetales", "Bevande vegetali"),
         detail: loc(
           "SoyQuinoa instant soy milk with quinoa — natural and vanilla",
           "Leche de soya instantánea SoyQuinoa con quinua — natural y vainilla",
+          "Latte di soia istantaneo SoyQuinoa con quinoa — naturale e vaniglia",
         ),
       },
       {
-        label: loc("Snacks", "Snacks"),
+        label: loc("Snacks", "Snacks", "Snack"),
         detail: loc(
           "Cronchy Protein, quinoa toasts, sacha inchi toasts, rings, Quinoa Snacks, Quinoa Puff and Quinoa Chips",
           "Cronchy Protein, tostadas de quinua, tostaditas de sacha inchi, aros, Quinoa Snacks, Quinoa Puff y Quinoa Chips",
+          "Cronchy Protein, toast di quinoa, toast di sacha inchi, anelli, Quinoa Snacks, Quinoa Puff e Quinoa Chips",
         ),
       },
     ],
     catalogHref: "/catalogs/quinoa-club-portfolio.pdf",
-    catalogLabel: loc("View product portfolio", "Ver portafolio de productos"),
+    catalogLabel: loc("View product portfolio", "Ver portafolio de productos", "Consulta il portafoglio prodotti"),
     photos: [],
   },
   {
@@ -412,7 +468,7 @@ export const representedBrands: Brand[] = [
     name: "Tronix",
     logo: "/brands/tronix.png",
     catalogHref: undefined,
-    catalogLabel: loc("View full catalog", "Ver catálogo completo"),
+    catalogLabel: loc("View full catalog", "Ver catálogo completo", "Consulta il catalogo completo"),
     photos: [],
   },
   {
@@ -422,18 +478,20 @@ export const representedBrands: Brand[] = [
     note: loc(
       "Jamaican manufacturer. Lasco Food Drink is a fortified powdered beverage for the whole family.",
       "Fabricante de Jamaica. Lasco Food Drink es una bebida en polvo fortificada para toda la familia.",
+      "Produttore giamaicano. Lasco Food Drink è una bevanda in polvere fortificata per tutta la famiglia.",
     ),
     productLines: [
       {
-        label: loc("Food Drink", "Food Drink"),
+        label: loc("Food Drink", "Food Drink", "Food Drink"),
         detail: loc(
           "Fortified powdered food drink — vanilla and other flavors. Add water or milk.",
           "Bebida alimenticia en polvo fortificada — vainilla y otros sabores. Se mezcla con agua o leche.",
+          "Bevanda alimentare in polvere fortificata — vaniglia e altri gusti. Da miscelare con acqua o latte.",
         ),
       },
     ],
     catalogHref: undefined,
-    catalogLabel: loc("View full catalog", "Ver catálogo completo"),
+    catalogLabel: loc("View full catalog", "Ver catálogo completo", "Consulta il catalogo completo"),
     photos: [],
   },
   {
@@ -441,7 +499,7 @@ export const representedBrands: Brand[] = [
     name: "Camagüey",
     logo: "/brands/camaguey.png",
     catalogHref: undefined,
-    catalogLabel: loc("View full catalog", "Ver catálogo completo"),
+    catalogLabel: loc("View full catalog", "Ver catálogo completo", "Consulta il catalogo completo"),
     photos: [],
   },
   {

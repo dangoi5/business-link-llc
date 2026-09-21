@@ -1,11 +1,23 @@
-export const locales = ["en", "es"] as const;
+export const locales = ["en", "es", "it"] as const;
 
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en";
 
+export const localeOg: Record<Locale, string> = {
+  en: "en_US",
+  es: "es_ES",
+  it: "it_IT",
+};
+
+export const languageNativeNames: Record<Locale, string> = {
+  en: "English",
+  es: "Español",
+  it: "Italiano",
+};
+
 export function isLocale(value: string | undefined): value is Locale {
-  return value === "en" || value === "es";
+  return locales.includes(value as Locale);
 }
 
 export function getLocaleFromPathname(pathname: string): Locale {
@@ -35,8 +47,7 @@ export function localeAlternates(path = "/") {
   const suffix = path === "/" ? "" : path;
   return {
     languages: {
-      en: `/en${suffix}`,
-      es: `/es${suffix}`,
+      ...Object.fromEntries(locales.map((locale) => [locale, `/${locale}${suffix}`])),
       "x-default": `/en${suffix}`,
     },
   };
@@ -45,8 +56,14 @@ export function localeAlternates(path = "/") {
 export function preferredLocale(acceptLanguage: string | null): Locale {
   if (!acceptLanguage) return defaultLocale;
   const lowered = acceptLanguage.toLowerCase();
-  const esIndex = lowered.indexOf("es");
-  const enIndex = lowered.indexOf("en");
-  if (esIndex !== -1 && (enIndex === -1 || esIndex < enIndex)) return "es";
-  return defaultLocale;
+  let best: Locale = defaultLocale;
+  let bestIndex = Number.POSITIVE_INFINITY;
+  for (const locale of locales) {
+    const index = lowered.indexOf(locale);
+    if (index !== -1 && index < bestIndex) {
+      best = locale;
+      bestIndex = index;
+    }
+  }
+  return best;
 }

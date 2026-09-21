@@ -31,6 +31,8 @@ export default async function AmeriqualMilitaryPage({
   const locale: Locale = raw;
 
   const individual = ameriqualMilitaryRations.filter((item) => item.group === "individual");
+  const mre = individual.find((item) => item.slug === "mre");
+  const otherIndividual = individual.filter((item) => item.slug !== "mre");
   const group = ameriqualMilitaryRations.filter((item) => item.group === "group");
 
   return (
@@ -109,8 +111,37 @@ export default async function AmeriqualMilitaryPage({
               {t(locale, ui.ameriqualMilitary.individualBody)}
             </p>
           </Reveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
-            {individual.map((item, index) => (
+          {mre ? (
+            <Reveal className="mt-10">
+              <article className="rounded-2xl border border-line bg-white p-6 md:p-8">
+                <h3 className="text-xl font-bold text-ink md:text-2xl">{t(locale, mre.name)}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate md:text-base">{t(locale, mre.description)}</p>
+                {mre.whatIsIt ? (
+                  <>
+                    <p className="mt-6 text-xs font-bold tracking-wider text-orange uppercase">
+                      {t(locale, ui.ameriqualMilitary.whatIsIt)}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-slate md:text-base">{t(locale, mre.whatIsIt)}</p>
+                  </>
+                ) : null}
+                {mre.facts && mre.facts.length > 0 ? (
+                  <dl className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                    {mre.facts.map((fact) => (
+                      <div key={fact.label.en} className="rounded-xl bg-surface px-4 py-3">
+                        <dt className="text-[11px] font-semibold tracking-wide text-slate uppercase">
+                          {t(locale, fact.label)}
+                        </dt>
+                        <dd className="mt-1 text-sm font-semibold text-ink">{t(locale, fact.value)}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                ) : null}
+              </article>
+            </Reveal>
+          ) : null}
+
+          <div className="mt-5 grid gap-5 sm:grid-cols-2">
+            {otherIndividual.map((item, index) => (
               <Reveal key={item.slug} delay={index * 50}>
                 <article className="h-full rounded-2xl border border-line bg-white p-6">
                   <h3 className="text-lg font-bold text-ink">{t(locale, item.name)}</h3>

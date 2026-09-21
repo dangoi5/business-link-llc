@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
-import type { Locale } from "@/i18n/config";
 import type { Loc } from "@/i18n/t";
 import type { NutritionFacts } from "@/lib/content";
 
@@ -15,6 +16,7 @@ export type CatalogProduct = {
   imageFit?: "cover" | "contain";
   nutrition?: NutritionFacts;
   unavailableForExport?: boolean;
+  href?: string;
 };
 
 function NutritionBlock({
@@ -64,9 +66,13 @@ export function ProductGrid({
 }) {
   return (
     <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {products.map((product, index) => (
-        <Reveal key={product.slug} delay={index * 50}>
-          <article className="overflow-hidden rounded-2xl border border-line bg-white">
+      {products.map((product, index) => {
+        const card = (
+          <article
+            className={`overflow-hidden rounded-2xl border border-line bg-white ${
+              product.href ? "h-full transition hover:border-teal hover:shadow-lg hover:shadow-ink/5" : ""
+            }`}
+          >
             <div className="relative aspect-[4/3]">
               <Image
                 src={product.image}
@@ -99,8 +105,20 @@ export function ProductGrid({
               {product.nutrition ? <NutritionBlock nutrition={product.nutrition} locale={locale} /> : null}
             </div>
           </article>
-        </Reveal>
-      ))}
+        );
+
+        return (
+          <Reveal key={product.slug} delay={index * 50}>
+            {product.href ? (
+              <Link href={localizedHref(locale, product.href)} className="block h-full">
+                {card}
+              </Link>
+            ) : (
+              card
+            )}
+          </Reveal>
+        );
+      })}
     </div>
   );
 }

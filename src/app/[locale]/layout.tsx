@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HtmlLang } from "@/components/HtmlLang";
-import { isLocale, localeAlternates, locales, type Locale } from "@/i18n/config";
+import { isLocale, localeAlternates, localeOg, locales, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 
@@ -29,8 +29,8 @@ export async function generateMetadata({
       title: t(locale, ui.meta.openGraphTitle),
       description: t(locale, ui.meta.openGraphDescription),
       type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-      alternateLocale: locale === "es" ? "en_US" : "es_ES",
+      locale: localeOg[locale],
+      alternateLocale: locales.filter((item) => item !== locale).map((item) => localeOg[item]),
     },
     alternates: localeAlternates("/"),
   };

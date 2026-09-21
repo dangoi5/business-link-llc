@@ -2,9 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CompanyLogo } from "@/components/CompanyLogo";
-import { locales, localizedHref, switchLocalePath, type Locale } from "@/i18n/config";
+import {
+  languageNativeNames,
+  locales,
+  localizedHref,
+  switchLocalePath,
+  type Locale,
+} from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import { navLinks } from "@/lib/content";
@@ -32,6 +38,22 @@ function SpainFlag({ className }: { className?: string }) {
   );
 }
 
+function ItalyFlag({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 16 11" className={className} aria-hidden>
+      <rect width="5.34" height="11" fill="#009246" />
+      <rect x="5.33" width="5.34" height="11" fill="#fff" />
+      <rect x="10.66" width="5.34" height="11" fill="#ce2b37" />
+    </svg>
+  );
+}
+
+function LocaleFlag({ locale, className }: { locale: Locale; className?: string }) {
+  if (locale === "es") return <SpainFlag className={className} />;
+  if (locale === "it") return <ItalyFlag className={className} />;
+  return <UsFlag className={className} />;
+}
+
 const flagClass = "h-3.5 w-[1.2rem] shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/20";
 
 export function LanguageSwitcher({
@@ -42,43 +64,86 @@ export function LanguageSwitcher({
   solid: boolean;
 }) {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function onPointerDown(event: MouseEvent) {
+      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
+    }
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false);
+    }
+
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
 
   return (
-    <div
-      className={`inline-flex rounded-full p-0.5 text-[11px] font-bold tracking-wide ${
-        solid ? "border border-line bg-surface" : "border border-white/25 bg-black/25"
-      }`}
-      role="group"
-      aria-label={t(locale, ui.language.switchTo)}
-    >
-      {locales.map((item) => {
-        const selected = item === locale;
-        return (
-          <Link
-            key={item}
-            href={switchLocalePath(pathname, item)}
-            hrefLang={item}
-            aria-current={selected ? "true" : undefined}
-            aria-label={t(locale, ui.language[item])}
-            className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 uppercase transition ${
-              selected
-                ? solid
-                  ? "bg-teal text-white shadow-sm"
-                  : "bg-white text-ink shadow-sm"
-                : solid
-                  ? "text-slate hover:bg-white hover:text-ink"
-                  : "text-white/70 hover:bg-white/10 hover:text-white"
-            }`}
-          >
-            {item === "en" ? (
-              <UsFlag className={`${flagClass} ${selected ? "" : "opacity-70"}`} />
-            ) : (
-              <SpainFlag className={`${flagClass} ${selected ? "" : "opacity-70"}`} />
-            )}
-            {item}
-          </Link>
-        );
-      })}
+    <div ref={rootRef} className="relative shrink-0">
+      <button
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-label={t(locale, ui.language.switchTo)}
+        onClick={() => setOpen((value) => !value)}
+        className={`inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-[11px] font-bold uppercase tracking-wide ${
+          solid
+            ? "border border-line bg-surface text-ink"
+            : "border border-white/25 bg-black/25 text-white"
+        }`}
+      >
+        <LocaleFlag locale={locale} className={flagClass} />
+        {locale}
+        <svg
+          viewBox="0 0 12 12"
+          className={`h-2.5 w-2.5 shrink-0 transition ${open ? "rotate-180" : ""}`}
+          aria-hidden
+        >
+          <path d="M2.5 4.5 L6 8 L9.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      </button>
+
+      {open ? (
+        <div
+          role="menu"
+          className="absolute right-0 z-[60] mt-2 min-w-[11.5rem] overflow-hidden rounded-xl border border-line bg-white py-1 shadow-lg"
+        >
+          {locales.map((item) => {
+            const selected = item === locale;
+            return (
+              <Link
+                key={item}
+                role="menuitem"
+                href={switchLocalePath(pathname, item)}
+                hrefLang={item}
+                aria-current={selected ? "true" : undefined}
+                onClick={() => setOpen(false)}
+                className={`flex items-center gap-2.5 px-3 py-2 text-sm font-medium ${
+                  selected ? "bg-teal/10 text-teal" : "text-ink hover:bg-surface"
+                }`}
+              >
+                <LocaleFlag locale={item} className={flagClass} />
+                <span>{languageNativeNames[item]}</span>
+                <span className="ml-auto text-[11px] font-bold uppercase tracking-wide text-slate">
+                  {item}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -109,8 +174,12 @@ export function Header({ locale }: { locale: Locale }) {
         solid ? "border-b border-line bg-white/95 shadow-sm backdrop-blur" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
-        <Link href={homeHref} className="flex min-w-0 items-center" aria-label={t(locale, ui.common.homeAria)}>
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-3 px-4 sm:gap-4 sm:px-5 md:px-8">
+        <Link
+          href={homeHref}
+          className="flex min-w-0 flex-1 items-center overflow-hidden"
+          aria-label={t(locale, ui.common.homeAria)}
+        >
           <CompanyLogo
             variant="lockup"
             onDark={!solid}
@@ -155,7 +224,7 @@ export function Header({ locale }: { locale: Locale }) {
           </Link>
         </div>
 
-        <div className="flex shrink-0 items-center gap-3 md:hidden">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3 md:hidden">
           <LanguageSwitcher locale={locale} solid={solid} />
           <button
             type="button"
