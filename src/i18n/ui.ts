@@ -489,14 +489,14 @@ export const ui = {
     submit: loc("Send inquiry", "Enviar consulta", "Invia richiesta"),
     sending: loc("Sending…", "Enviando…", "Invio in corso…"),
     success: loc(
-      "Thank you. Your inquiry was sent. We will follow up by email.",
-      "Gracias. Su consulta fue enviada. Le responderemos por correo.",
-      "Grazie. La Sua richiesta è stata inviata. La ricontatteremo via e-mail.",
+      "Thank you. We have received your message and will get in touch with you soon.",
+      "Gracias. Hemos recibido su mensaje y nos pondremos en contacto con usted pronto.",
+      "Grazie. Abbiamo ricevuto il Suo messaggio e La contatteremo presto.",
     ),
     error: loc(
-      "The inquiry could not be sent. Please try again or email info@businesslinkgroup.com.",
-      "No se pudo enviar la consulta. Inténtelo de nuevo o escriba a info@businesslinkgroup.com.",
-      "Non è stato possibile inviare la richiesta. Riprovi o scriva a info@businesslinkgroup.com.",
+      "We could not send your message. Please try again or contact us directly by email.",
+      "No pudimos enviar su mensaje. Inténtelo nuevamente o contáctenos directamente por correo electrónico.",
+      "Non è stato possibile inviare il Suo messaggio. Riprovi oppure ci contatti direttamente via e-mail.",
     ),
   },
 } as const;

@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - `/portfolio/[slug]` — Products within a category
 - `/markets` — Market footprint & distribution models
 - `/partners` — Partner types & logo placeholders
-- `/contact` — Inquiry form (opens email client)
+- `/contact` — Inquiry form (sends email via Resend `/api/contact`)
 
 ## Customize
 

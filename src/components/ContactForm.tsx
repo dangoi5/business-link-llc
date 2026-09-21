@@ -1,13 +1,25 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useId, useState } from "react";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import type { Locale } from "@/i18n/config";
 
 const roleKeys = ["manufacturer", "buyer", "other"] as const;
 
+const MAX = {
+  name: 120,
+  email: 200,
+  organization: 160,
+  phone: 80,
+  product: 160,
+  destination: 160,
+  volume: 120,
+  message: 5000,
+} as const;
+
 export function ContactForm({ locale }: { locale: Locale }) {
+  const statusId = useId();
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [role, setRole] = useState<(typeof roleKeys)[number]>("manufacturer");
   const roleLabels = {
@@ -18,6 +30,8 @@ export function ContactForm({ locale }: { locale: Locale }) {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (status === "sending") return;
+
     const form = event.currentTarget;
     const data = new FormData(form);
     setStatus("sending");
@@ -54,7 +68,12 @@ export function ContactForm({ locale }: { locale: Locale }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative rounded-2xl border border-line bg-white p-6 shadow-sm md:p-8">
+    <form
+      onSubmit={handleSubmit}
+      noValidate={false}
+      className="relative rounded-2xl border border-line bg-white p-6 shadow-sm md:p-8"
+      aria-describedby={status !== "idle" ? statusId : undefined}
+    >
       <p className="text-sm font-semibold text-teal">{t(locale, ui.form.sendInquiry)}</p>
       <p className="mt-1 text-sm text-slate">{t(locale, ui.form.intro)}</p>
 
@@ -64,7 +83,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
         tabIndex={-1}
         autoComplete="off"
         aria-hidden="true"
-        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+        className="absolute -left-[9999px] h-px w-px overflow-hidden opacity-0"
       />
 
       <fieldset className="mt-6">
@@ -102,7 +121,11 @@ export function ContactForm({ locale }: { locale: Locale }) {
           <input
             required
             name="name"
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
+            autoComplete="name"
+            maxLength={MAX.name}
+            minLength={2}
+            disabled={status === "sending"}
+            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
           />
         </label>
         <label className="block text-sm">
@@ -111,7 +134,10 @@ export function ContactForm({ locale }: { locale: Locale }) {
             required
             type="email"
             name="email"
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
+            autoComplete="email"
+            maxLength={MAX.email}
+            disabled={status === "sending"}
+            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
           />
         </label>
       </div>
@@ -121,14 +147,21 @@ export function ContactForm({ locale }: { locale: Locale }) {
           <span className="font-medium text-ink">{t(locale, ui.form.organization)}</span>
           <input
             name="organization"
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
+            autoComplete="organization"
+            maxLength={MAX.organization}
+            disabled={status === "sending"}
+            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
           />
         </label>
         <label className="block text-sm">
           <span className="font-medium text-ink">{t(locale, ui.form.phone)}</span>
           <input
             name="phone"
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
+            type="tel"
+            autoComplete="tel"
+            maxLength={MAX.phone}
+            disabled={status === "sending"}
+            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
           />
         </label>
       </div>
@@ -138,21 +171,27 @@ export function ContactForm({ locale }: { locale: Locale }) {
           <span className="font-medium text-ink">{t(locale, ui.form.product)}</span>
           <input
             name="product"
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
+            maxLength={MAX.product}
+            disabled={status === "sending"}
+            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
           />
         </label>
         <label className="block text-sm">
           <span className="font-medium text-ink">{t(locale, ui.form.destination)}</span>
           <input
             name="destination"
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
+            maxLength={MAX.destination}
+            disabled={status === "sending"}
+            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
           />
         </label>
         <label className="block text-sm">
           <span className="font-medium text-ink">{t(locale, ui.form.volume)}</span>
           <input
             name="volume"
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
+            maxLength={MAX.volume}
+            disabled={status === "sending"}
+            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
           />
         </label>
       </div>
@@ -163,7 +202,10 @@ export function ContactForm({ locale }: { locale: Locale }) {
           required
           name="message"
           rows={5}
-          className="mt-1.5 w-full resize-y rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal"
+          minLength={10}
+          maxLength={MAX.message}
+          disabled={status === "sending"}
+          className="mt-1.5 w-full resize-y rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
           placeholder={t(locale, ui.form.placeholder)}
         />
       </label>
@@ -171,12 +213,13 @@ export function ContactForm({ locale }: { locale: Locale }) {
       <button
         type="submit"
         disabled={status === "sending"}
+        aria-busy={status === "sending"}
         className="mt-6 inline-flex rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-hover disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "sending" ? t(locale, ui.form.sending) : t(locale, ui.form.submit)}
       </button>
 
-      <div aria-live="polite">
+      <div id={statusId} aria-live="polite" aria-atomic="true" role="status">
         {status === "sent" ? (
           <p className="mt-3 text-sm font-medium text-teal">{t(locale, ui.form.success)}</p>
         ) : null}
