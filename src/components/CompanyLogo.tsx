@@ -6,6 +6,13 @@ const brandIcon = {
   height: 628,
 } as const;
 
+const lockup = {
+  src: "/branding/business-link-lockup.png",
+  onDark: "/branding/business-link-lockup-on-dark.png",
+  width: 993,
+  height: 177,
+} as const;
+
 const wordmark = {
   src: "/company/wordmark.png",
   onDark: "/company/wordmark-on-dark.png",
@@ -30,6 +37,28 @@ function BrandIcon({
       height={brandIcon.height}
       className={`h-full w-auto object-contain ${className}`.trim()}
       sizes="80px"
+      priority={priority}
+    />
+  );
+}
+
+function LockupImage({
+  onDark = false,
+  className = "",
+  priority = false,
+}: {
+  onDark?: boolean;
+  className?: string;
+  priority?: boolean;
+}) {
+  return (
+    <Image
+      src={onDark ? lockup.onDark : lockup.src}
+      alt="Business Link LLC"
+      width={lockup.width}
+      height={lockup.height}
+      className={`h-full w-auto object-contain object-left ${className}`.trim()}
+      sizes="(max-width: 640px) 200px, 280px"
       priority={priority}
     />
   );
@@ -70,12 +99,7 @@ export function CompanyLogo({
   sizes?: string;
 }) {
   if (variant === "lockup") {
-    return (
-      <span className={`inline-flex items-center gap-2 sm:gap-2.5 ${className}`.trim()}>
-        <BrandIcon decorative priority={priority} className="shrink-0" />
-        <WordmarkImage onDark={onDark} priority={priority} />
-      </span>
-    );
+    return <LockupImage onDark={onDark} className={className} priority={priority} />;
   }
 
   if (variant === "mark") {
