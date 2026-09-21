@@ -553,7 +553,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Craft-recipe Flint snacks in bar and bread-chip shapes. Flavors include kabanosa with mustard, garlic, and spicy jerky. 90 g packs.",
           "Snacks Flint de receta craft en forma de barra y chip de pan. Sabores: kabanosa con mostaza, ajo y cecina picante. Empaques de 90 g.",
         ),
-        image: "/products/star-brands/flint-craft.jpg",
+        image: "/products/star-brands/flint-craft-bars.png",
         details: [
           loc("Flint Craft", "Flint Craft"),
           loc("Star Brands", "Star Brands"),
@@ -568,7 +568,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Roasted sunflower seeds from San Sanych: classic, salted, premium white and striped, kernels and pumpkin seeds. Packs from 50 g to 285 g.",
           "Semillas de girasol tostadas San Sanych: clásicas, saladas, premium blancas y rayadas, pepitas y calabaza. Empaques de 50 g a 285 g.",
         ),
-        image: "/products/star-brands/san-sanych-seeds.jpg",
+        image: "/products/star-brands/san-sanych-seeds-xxl.png",
         details: [
           loc("San Sanych", "San Sanych"),
           loc("Star Brands", "Star Brands"),
@@ -583,7 +583,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Classic Chipster’s potato chips in sour cream and herbs, crab, bacon, cheese, grilled sausages, sour cream and onions, salt, jalapeño, cheddar BBQ and Texas steak. Packs from 25 g to 180 g.",
           "Papas clásicas Chipster’s: crema agria y hierbas, cangrejo, tocino, queso, salchichas a la parrilla, crema agria y cebolla, sal, jalapeño, cheddar BBQ y bistec Texas. Empaques de 25 g a 180 g.",
         ),
-        image: "/products/star-brands/chipsters-classic.jpg",
+        image: "/products/star-brands/chipsters-classic-sour-cream.png",
         details: [
           loc("Chipster’s", "Chipster’s"),
           loc("Star Brands", "Star Brands"),
@@ -598,7 +598,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Chipster’s BBQ chips (wings, grilled meat, cheese and onion) and wavy Superwave chips (mushroom cream sauce, sausages with mustard, spicy tomato, cheese sauce with onion). 110 g and 120 g packs.",
           "Papas Chipster’s BBQ (alitas, carne a la parrilla, queso y cebolla) y Superwave onduladas (champiñones en crema, salchichas con mostaza, tomate picante, salsa de queso con cebolla). Empaques de 110 g y 120 g.",
         ),
-        image: "/products/star-brands/chipsters-bbq.jpg",
+        image: "/products/star-brands/chipsters-bbq-wings.png",
         details: [
           loc("Chipster’s", "Chipster’s"),
           loc("Star Brands", "Star Brands"),
@@ -644,7 +644,7 @@ export const portfolioCategories: PortfolioCategory[] = [
           "Pub-style toasts in wavy rye-wheat, rye-wheat pencil and wheat pencil shapes. Flavors include garlic, spicy tomato, veal with adjika, sausages with mustard and horseradish. 90 g and 130 g packs.",
           "Tostadas estilo pub: trigo-centeno ondulado, palito de trigo-centeno y palito de trigo. Sabores: ajo, tomate picante, ternera con adjika, salchichas con mostaza y rábano picante. Empaques de 90 g y 130 g.",
         ),
-        image: "/products/star-brands/do-bochkovogo.jpg",
+        image: "/products/star-brands/do-bochkovogo-pub-grinki.png",
         details: [
           loc("Do Bochkovogo", "Do Bochkovogo"),
           loc("Star Brands", "Star Brands"),

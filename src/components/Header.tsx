@@ -32,7 +32,7 @@ function SpainFlag({ className }: { className?: string }) {
   );
 }
 
-const flagClass = "h-3.5 w-[1.15rem] shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/15";
+const flagClass = "h-3.5 w-[1.2rem] shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/20";
 
 export function LanguageSwitcher({
   locale,
@@ -45,34 +45,40 @@ export function LanguageSwitcher({
 
   return (
     <div
-      className={`flex items-center gap-1.5 text-[11px] font-bold tracking-wide ${
-        solid ? "text-slate" : "text-white/80"
+      className={`inline-flex rounded-full p-0.5 text-[11px] font-bold tracking-wide ${
+        solid ? "border border-line bg-surface" : "border border-white/25 bg-black/25"
       }`}
+      role="group"
       aria-label={t(locale, ui.language.switchTo)}
     >
-      {locales.map((item, index) => (
-        <span key={item} className="flex items-center gap-1.5">
-          {index > 0 ? <span className="opacity-40">|</span> : null}
+      {locales.map((item) => {
+        const selected = item === locale;
+        return (
           <Link
+            key={item}
             href={switchLocalePath(pathname, item)}
             hrefLang={item}
-            aria-current={item === locale ? "true" : undefined}
+            aria-current={selected ? "true" : undefined}
             aria-label={t(locale, ui.language[item])}
-            className={`inline-flex items-center gap-1.5 uppercase transition ${
-              item === locale
+            className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 uppercase transition ${
+              selected
                 ? solid
-                  ? "text-teal"
-                  : "text-white"
+                  ? "bg-teal text-white shadow-sm"
+                  : "bg-white text-ink shadow-sm"
                 : solid
-                  ? "hover:text-ink"
-                  : "hover:text-white"
+                  ? "text-slate hover:bg-white hover:text-ink"
+                  : "text-white/70 hover:bg-white/10 hover:text-white"
             }`}
           >
-            {item === "en" ? <UsFlag className={flagClass} /> : <SpainFlag className={flagClass} />}
+            {item === "en" ? (
+              <UsFlag className={`${flagClass} ${selected ? "" : "opacity-70"}`} />
+            ) : (
+              <SpainFlag className={`${flagClass} ${selected ? "" : "opacity-70"}`} />
+            )}
             {item}
           </Link>
-        </span>
-      ))}
+        );
+      })}
     </div>
   );
 }
