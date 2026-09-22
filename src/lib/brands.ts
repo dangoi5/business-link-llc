@@ -199,6 +199,12 @@ export const representedBrands: Brand[] = [
     slug: "fresh-elements",
     name: "Fresh Elements",
     logo: "/brands/fresh-elements-logo.png",
+    note: loc(
+      "Our own product line for retail, foodservice and international trade.",
+      "Nuestra línea de productos para retail, foodservice y comercio internacional.",
+      "La nostra linea di prodotti per retail, foodservice e commercio internazionale.",
+    ),
+    productLines: freshElementsBrand.productLines,
     catalogHref: "/portfolio/fresh-elements",
     catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
     photos: [],
@@ -511,7 +517,3 @@ export const representedBrands: Brand[] = [
     photos: [],
   },
 ];
-
-export const brandsWithProductLines: Brand[] = representedBrands.filter(
-  (brand) => (brand.productLines?.length ?? 0) > 0,
-);

@@ -316,10 +316,13 @@ export const ui = {
       "Produttori e marchi nel nostro portafoglio di distribuzione.",
     ),
     description: loc(
-      "A selected group of manufacturers and brands we represent as master distributor and exporter. Product line categories are listed below, with full catalogs linked where available.",
-      "Un grupo seleccionado de fabricantes y marcas que representamos como distribuidor maestro y exportador. Las líneas de producto se listan abajo, con catálogos completos cuando están disponibles.",
-      "Un gruppo selezionato di produttori e marchi che rappresentiamo come distributore master ed esportatore. Le linee di prodotto sono elencate di seguito, con cataloghi completi collegati ove disponibili.",
+      "Open a brand to see product lines, then follow the catalog or product links where available.",
+      "Abra una marca para ver las líneas de producto y consulte los catálogos o enlaces cuando estén disponibles.",
+      "Apri un marchio per vedere le linee di prodotto, poi consulta i cataloghi o i link ove disponibili.",
     ),
+    learnMore: loc("Learn more", "Ver más", "Scopri di più"),
+    showLess: loc("Show less", "Ver menos", "Mostra meno"),
+    viewProducts: loc("View products", "Ver productos", "Vedi prodotti"),
   },
   portfolioPage: {
     metaTitle: loc("Portfolio", "Portafolio", "Portafoglio"),
