@@ -137,22 +137,22 @@ export function BrandsWeRepresent({ locale }: { locale: Locale }) {
         ))}
       </div>
 
-      <div className="mt-14 grid gap-8">
+      <div className="mt-14 grid gap-8 md:grid-cols-2 md:gap-x-10 md:gap-y-12">
         {brandsWithProductLines.map((brand, index) => (
           <Reveal key={brand.slug} delay={index * 50}>
-            <article id={brand.slug} className="scroll-mt-28 border-t border-line pt-8">
+            <article id={brand.slug} className="scroll-mt-28 h-full border-t border-line pt-6">
               <p className="text-xs font-bold tracking-wider text-orange uppercase">
                 {t(locale, ui.common.manufacturer)}
               </p>
-              <h3 className="mt-2 text-2xl font-bold tracking-tight text-ink">{brand.name}</h3>
+              <h3 className="mt-2 text-xl font-bold tracking-tight text-ink md:text-2xl">{brand.name}</h3>
               {brand.note ? (
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
+                <p className="mt-2 text-sm leading-relaxed text-slate">
                   {t(locale, brand.note)}
                 </p>
               ) : null}
 
               {brand.subBrands && brand.subBrands.length > 0 ? (
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2">
                   {brand.subBrands.map((subBrand) => (
                     <span
                       key={subBrand}
@@ -165,7 +165,7 @@ export function BrandsWeRepresent({ locale }: { locale: Locale }) {
               ) : null}
 
               {brand.productLines && brand.productLines.length > 0 ? (
-                <ul className="mt-5 space-y-1.5">
+                <ul className="mt-4 space-y-1.5">
                   {brand.productLines.map((line) => (
                     <li key={line.label.en} className="text-sm leading-relaxed text-slate">
                       <span className="font-semibold text-ink">{t(locale, line.label)}</span>
@@ -177,7 +177,7 @@ export function BrandsWeRepresent({ locale }: { locale: Locale }) {
 
               <BrandPhotos brand={brand} />
               {brand.catalogHref || brand.extraLinks?.length ? (
-                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
+                <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
                   <BrandCatalogLink brand={brand} locale={locale} />
                   {brand.extraLinks?.map((link) => (
                     <CatalogAnchor

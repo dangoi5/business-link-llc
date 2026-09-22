@@ -40,7 +40,7 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
           <BrandsWeRepresent locale={locale} />
         </div>
 
-        <Reveal className="mb-10">
+        <Reveal className="mb-8">
           <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
             {t(locale, ui.portfolioPage.foodCategories)}
           </h2>
@@ -49,50 +49,45 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
           </p>
         </Reveal>
 
-        <div className="grid gap-8">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {portfolioCategories.map((category, index) => (
-            <Reveal key={category.slug}>
-              <article
+            <Reveal key={category.slug} delay={index * 40}>
+              <Link
+                href={localizedHref(locale, `/portfolio/${category.slug}`)}
                 id={category.slug}
-                className="scroll-mt-28 grid overflow-hidden rounded-2xl border border-line bg-white md:grid-cols-2"
+                className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-line bg-white transition hover:border-teal"
               >
-                <div className={`relative min-h-[240px] ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                <div className="relative aspect-[16/10] overflow-hidden bg-surface">
                   <Image
                     src={category.image}
                     alt={t(locale, category.title)}
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="flex flex-col justify-center p-8 md:p-10">
-                  <p className="text-xs font-bold tracking-wider text-orange uppercase">
-                    {t(locale, ui.portfolioPage.categoryPrefix)} {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h2 className="mt-2 text-2xl font-bold text-ink md:text-3xl">
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="text-lg font-bold tracking-tight text-ink">
                     {t(locale, category.title)}
-                  </h2>
-                  <p className="mt-4 text-base leading-relaxed text-slate">{t(locale, category.summary)}</p>
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  </h3>
+                  <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-slate">
+                    {t(locale, category.summary)}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
                     {category.channels.map((channel) => (
                       <span
                         key={channel.en}
-                        className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-slate"
+                        className="rounded-full bg-surface px-2.5 py-0.5 text-[11px] font-medium text-slate"
                       >
                         {t(locale, channel)}
                       </span>
                     ))}
                   </div>
-                  <div className="mt-7">
-                    <Link
-                      href={localizedHref(locale, `/portfolio/${category.slug}`)}
-                      className="inline-flex rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-hover"
-                    >
-                      {t(locale, ui.portfolioPage.viewProducts)}
-                    </Link>
-                  </div>
+                  <span className="mt-4 text-sm font-semibold text-teal transition group-hover:text-teal-deep">
+                    {t(locale, ui.portfolioPage.viewProducts)} →
+                  </span>
                 </div>
-              </article>
+              </Link>
             </Reveal>
           ))}
         </div>

@@ -352,7 +352,6 @@ export const ui = {
       "Veda tutti i prodotti Fresh Elements in un unico luogo: snack, oli, riso e condimenti man mano che vengono lanciati.",
     ),
     viewOwnBrandCatalog: loc("View catalog", "Ver catálogo", "Vedi catalogo"),
-    categoryPrefix: loc("Category", "Categoría", "Categoria"),
     viewProducts: loc("View products", "Ver productos", "Vedi prodotti"),
     lookingTitle: loc("Looking for a specific product range?", "¿Busca una línea de producto específica?", "Cerca una linea di prodotto specifica?"),
     lookingBody: loc(
