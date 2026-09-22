@@ -84,9 +84,6 @@ export default async function AmeriqualMilitaryPage({
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <p className="mx-auto mt-4 max-w-lg text-xs leading-relaxed text-slate">
-                {t(locale, ui.ameriqualMilitary.sealsCaption)}
-              </p>
             </div>
           </Reveal>
           <Reveal delay={80}>
@@ -275,6 +272,10 @@ export default async function AmeriqualMilitaryPage({
           </div>
         </div>
       </section>
+
+      <p className="mx-auto max-w-7xl px-5 pb-8 pt-2 text-[10px] leading-snug text-slate/55 md:px-8">
+        {t(locale, ui.ameriqualMilitary.sealsCaption)}
+      </p>
     </>
   );
 }

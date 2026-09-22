@@ -37,6 +37,11 @@ export const ui = {
       "Distributore master ed esportatore · Fresh Elements · Commercio internazionale di alimenti e bevande",
     ),
     rights: loc("All rights reserved.", "Todos los derechos reservados.", "Tutti i diritti riservati."),
+    localeNote: loc(
+      "Language may follow your location or browser; you can change it anytime in the menu.",
+      "El idioma puede seguir su ubicación o navegador; puede cambiarlo en cualquier momento en el menú.",
+      "La lingua può seguire la Sua posizione o il browser; può cambiarla in qualsiasi momento dal menu.",
+    ),
     regionsLine: loc(
       "Americas · Caribbean · Africa · Europe · Asia-Pacific",
       "Américas · Caribe · África · Europa · Asia-Pacífico",
@@ -72,15 +77,6 @@ export const ui = {
     heroLabel: loc("Legal", "Legal", "Legale"),
     heroTitle: loc("Terms of Use", "Términos de uso", "Termini di utilizzo"),
     updated: loc("Last updated: September 2026", "Última actualización: septiembre de 2026", "Ultimo aggiornamento: settembre 2026"),
-  },
-  cookieNotice: {
-    message: loc(
-      "We use a language preference cookie and may use your IP country to open the site in English, Spanish or Italian. No advertising trackers.",
-      "Usamos una cookie de preferencia de idioma y podemos usar el país de su IP para abrir el sitio en inglés, español o italiano. Sin rastreadores publicitarios.",
-      "Usiamo un cookie di preferenza linguistica e possiamo usare il Paese del Suo IP per aprire il sito in inglese, spagnolo o italiano. Nessun tracker pubblicitario.",
-    ),
-    accept: loc("Got it", "Entendido", "Ho capito"),
-    learnMore: loc("Privacy Policy", "Política de Privacidad", "Informativa sulla privacy"),
   },
   home: {
     heroLabel: loc("Master distributor & exporter", "Distribuidor maestro y exportador", "Distributore master ed esportatore"),

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { CookieNotice } from "@/components/CookieNotice";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HtmlLang } from "@/components/HtmlLang";
@@ -52,7 +51,6 @@ export default async function LocaleLayout({
       </Suspense>
       <main className="flex-1">{children}</main>
       <Footer locale={locale} />
-      <CookieNotice locale={locale} />
     </>
   );
 }

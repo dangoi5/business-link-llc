@@ -56,9 +56,12 @@ export function Footer({ locale }: { locale: Locale }) {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-4 text-xs text-white/45 md:flex-row md:items-center md:justify-between md:px-8">
-          <p>
-            © {new Date().getFullYear()} Business Link LLC. {t(locale, ui.common.rights)}
-          </p>
+          <div className="space-y-1">
+            <p>
+              © {new Date().getFullYear()} Business Link LLC. {t(locale, ui.common.rights)}
+            </p>
+            <p>{t(locale, ui.common.localeNote)}</p>
+          </div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <Link href={localizedHref(locale, "/privacy")} className="transition hover:text-white">
               {t(locale, ui.common.privacy)}
