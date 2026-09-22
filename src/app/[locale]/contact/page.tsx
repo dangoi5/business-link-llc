@@ -51,23 +51,6 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
             </li>
           </ul>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            <div className="rounded-xl border border-line p-4">
-              <p className="text-xs font-bold tracking-wide text-orange uppercase">
-                {t(locale, ui.contactPage.response)}
-              </p>
-              <p className="mt-1 text-sm font-semibold text-ink">
-                {t(locale, ui.contactPage.commercialFollowUp)}
-              </p>
-            </div>
-            <div className="rounded-xl border border-line p-4">
-              <p className="text-xs font-bold tracking-wide text-orange uppercase">
-                {t(locale, ui.contactPage.focus)}
-              </p>
-              <p className="mt-1 text-sm font-semibold text-ink">{t(locale, ui.contactPage.foodTrade)}</p>
-            </div>
-          </div>
-
           <div className="mt-8 rounded-2xl bg-ink p-6 text-white">
             <p className="text-sm font-medium text-white/60">{t(locale, ui.contactPage.email)}</p>
             <a

@@ -1,5 +1,6 @@
+import { geolocation } from "@vercel/functions";
 import { NextRequest, NextResponse } from "next/server";
-import { isLocale, localizedHref, preferredLocale } from "@/i18n/config";
+import { isLocale, localizedHref, resolveVisitorLocale } from "@/i18n/config";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -15,13 +16,25 @@ export function proxy(request: NextRequest) {
   const first = pathname.split("/")[1];
   if (isLocale(first)) return;
 
-  const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
-  const locale = isLocale(cookieLocale)
-    ? cookieLocale
-    : preferredLocale(request.headers.get("accept-language"));
+  const geo = geolocation(request);
+  const locale = resolveVisitorLocale({
+    cookieLocale: request.cookies.get("NEXT_LOCALE")?.value,
+    countryCode: geo.country ?? request.headers.get("x-vercel-ip-country"),
+    acceptLanguage: request.headers.get("accept-language"),
+  });
+
   const url = request.nextUrl.clone();
   url.pathname = localizedHref(locale, pathname);
-  return NextResponse.redirect(url);
+  const response = NextResponse.redirect(url);
+  // Persist geo/language choice so subsequent visits stay consistent
+  if (!request.cookies.get("NEXT_LOCALE")) {
+    response.cookies.set("NEXT_LOCALE", locale, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: "lax",
+    });
+  }
+  return response;
 }
 
 export const config = {

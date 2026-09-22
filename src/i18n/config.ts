@@ -16,8 +16,75 @@ export const languageNativeNames: Record<Locale, string> = {
   it: "Italiano",
 };
 
+/** ISO 3166-1 alpha-2 → site locale. Unlisted countries fall through to Accept-Language. */
+const spanishSpeakingCountries = new Set([
+  "AR",
+  "BO",
+  "CL",
+  "CO",
+  "CR",
+  "CU",
+  "DO",
+  "EC",
+  "ES",
+  "GQ",
+  "GT",
+  "HN",
+  "MX",
+  "NI",
+  "PA",
+  "PE",
+  "PR",
+  "PY",
+  "SV",
+  "UY",
+  "VE",
+]);
+
+const italianSpeakingCountries = new Set(["IT", "SM", "VA"]);
+
+const englishSpeakingCountries = new Set([
+  "US",
+  "GB",
+  "UK",
+  "CA",
+  "AU",
+  "NZ",
+  "IE",
+  "ZA",
+  "JM",
+  "TT",
+  "BS",
+  "BB",
+  "BZ",
+  "GY",
+  "SG",
+  "PH",
+  "HK",
+  "IN",
+  "NG",
+  "KE",
+  "GH",
+  "UG",
+  "TZ",
+  "ZW",
+  "BW",
+  "MT",
+  "CY",
+]);
+
 export function isLocale(value: string | undefined): value is Locale {
   return locales.includes(value as Locale);
+}
+
+export function localeFromCountry(countryCode: string | null | undefined): Locale | null {
+  if (!countryCode) return null;
+  const code = countryCode.trim().toUpperCase();
+  if (!code) return null;
+  if (spanishSpeakingCountries.has(code)) return "es";
+  if (italianSpeakingCountries.has(code)) return "it";
+  if (englishSpeakingCountries.has(code)) return "en";
+  return null;
 }
 
 export function getLocaleFromPathname(pathname: string): Locale {
@@ -66,4 +133,19 @@ export function preferredLocale(acceptLanguage: string | null): Locale {
     }
   }
   return best;
+}
+
+/**
+ * Resolve locale for first-time / unprefixed visits.
+ * Cookie (manual choice) → IP country → Accept-Language → English.
+ */
+export function resolveVisitorLocale(input: {
+  cookieLocale?: string | null;
+  countryCode?: string | null;
+  acceptLanguage?: string | null;
+}): Locale {
+  if (isLocale(input.cookieLocale ?? undefined)) {
+    return input.cookieLocale as Locale;
+  }
+  return localeFromCountry(input.countryCode) ?? preferredLocale(input.acceptLanguage ?? null);
 }
