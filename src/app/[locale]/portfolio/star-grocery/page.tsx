@@ -32,7 +32,7 @@ export default async function StarGroceryCatalogPage({
         label={t(locale, ui.starGrocery.heroLabel)}
         title={t(locale, ui.starGrocery.heroTitle)}
         description={t(locale, ui.starGrocery.heroDescription)}
-        logoSrc="/brands/star-grocery.png"
+        logoSrc="/brands/star-grocery-logo.png"
         logoAlt="Star Grocery LLC"
       />
 

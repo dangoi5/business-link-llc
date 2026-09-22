@@ -197,6 +197,14 @@ export function freshElementsProductsForLine(line: FreshElementsLineId) {
 
 export const representedBrands: Brand[] = [
   {
+    slug: "fresh-elements",
+    name: "Fresh Elements",
+    logo: "/brands/fresh-elements-logo.png",
+    catalogHref: "/portfolio/fresh-elements",
+    catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
+    photos: [],
+  },
+  {
     slug: "ameriqual",
     name: "AmeriQual Group, LLC",
     logo: "/brands/ameriqual-group.jpg",
@@ -279,7 +287,7 @@ export const representedBrands: Brand[] = [
   {
     slug: "star-grocery",
     name: "Star Grocery LLC",
-    logo: "/brands/star-grocery.png",
+    logo: "/brands/star-grocery-logo.png",
     note: loc(
       "Ukrainian grocery manufacturer. La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto and Fitto.",
       "Fabricante de abarrotes de Ucrania. La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto y Fitto.",
@@ -341,7 +349,7 @@ export const representedBrands: Brand[] = [
   {
     slug: "star-brands",
     name: "Star Brands",
-    logo: "/brands/star-brands.png",
+    logo: "/brands/star-brands-logo.png",
     note: loc(
       "Ukrainian snack manufacturer. Flint, Chipster’s, San Sanych, Crispy Cris, Hroom and Do Bochkovogo.",
       "Fabricante de snacks de Ucrania. Flint, Chipster’s, San Sanych, Crispy Cris, Hroom y Do Bochkovogo.",
@@ -404,7 +412,7 @@ export const representedBrands: Brand[] = [
   {
     slug: "quinoa-club",
     name: "Quinoa Club",
-    logo: "/brands/quinoa-club.png",
+    logo: "/brands/quinoa-club-logo.png",
     note: loc(
       "Colombian manufacturer in Jamundí, Valle del Cauca. Gluten-free quinoa grocery, breakfast and snacks.",
       "Fabricante colombiano en Jamundí, Valle del Cauca. Abarrotes, desayuno y snacks de quinua sin gluten.",
