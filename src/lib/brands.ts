@@ -25,7 +25,6 @@ export type Brand = {
   slug: string;
   name: string;
   logo?: string;
-  comingSoon?: boolean;
   note?: Loc;
   subBrands?: string[];
   productLines?: ProductLine[];
@@ -510,16 +509,6 @@ export const representedBrands: Brand[] = [
     catalogHref: undefined,
     catalogLabel: loc("View full catalog", "Ver catálogo completo", "Consulta il catalogo completo"),
     photos: [],
-  },
-  {
-    slug: "coming-soon-1",
-    name: "Coming soon",
-    comingSoon: true,
-  },
-  {
-    slug: "coming-soon-2",
-    name: "Coming soon",
-    comingSoon: true,
   },
 ];
 

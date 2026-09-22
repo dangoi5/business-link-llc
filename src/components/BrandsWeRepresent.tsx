@@ -44,20 +44,7 @@ function CatalogAnchor({
   );
 }
 
-function BrandLogoInner({ brand, locale }: { brand: Brand; locale: Locale }) {
-  if (brand.comingSoon) {
-    return (
-      <div className="relative flex h-28 items-center justify-center rounded-2xl border border-dashed border-line bg-surface/80 px-4 text-center opacity-55">
-        <span className="absolute top-2.5 right-2.5 rounded-full border border-line bg-white px-2 py-0.5 text-[10px] font-semibold tracking-[0.12em] text-slate uppercase">
-          {t(locale, ui.common.comingSoon)}
-        </span>
-        <p className="max-w-[9rem] text-sm font-semibold tracking-tight text-slate">
-          {t(locale, ui.common.brandToBeAnnounced)}
-        </p>
-      </div>
-    );
-  }
-
+function BrandLogoInner({ brand }: { brand: Brand }) {
   return (
     <div className="flex h-28 items-center justify-center rounded-2xl border border-line bg-white px-4">
       {brand.logo ? (
@@ -86,12 +73,12 @@ function BrandLogoCard({ brand, locale }: { brand: Brand; locale: Locale }) {
         aria-label={`${brand.name} ${t(locale, ui.common.catalogAria)}`}
         className="block"
       >
-        <BrandLogoInner brand={brand} locale={locale} />
+        <BrandLogoInner brand={brand} />
       </CatalogAnchor>
     );
   }
 
-  return <BrandLogoInner brand={brand} locale={locale} />;
+  return <BrandLogoInner brand={brand} />;
 }
 
 function BrandPhotos({ brand }: { brand: Brand }) {
@@ -142,7 +129,7 @@ export function BrandsWeRepresent({ locale }: { locale: Locale }) {
         />
       </Reveal>
 
-      <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
+      <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {representedBrands.map((brand, index) => (
           <Reveal key={brand.slug} delay={index * 40}>
             <BrandLogoCard brand={brand} locale={locale} />

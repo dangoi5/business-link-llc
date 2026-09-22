@@ -130,16 +130,10 @@ export default async function PortfolioCategoryPage({
         {category.products.length > 0 ? (
           <ProductGrid products={category.products} locale={locale} />
         ) : (
-          <div className="mt-8 rounded-2xl border border-dashed border-line bg-surface p-8 md:p-10">
-            <h3 className="text-lg font-bold text-ink">{t(locale, ui.categoryPage.comingSoonTitle)}</h3>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate">
-              {t(locale, ui.categoryPage.comingSoonBody)}
-            </p>
-            <div className="mt-6">
-              <PrimaryButton href={localizedHref(locale, "/contact")}>
-                {t(locale, ui.categoryPage.inquire)}
-              </PrimaryButton>
-            </div>
+          <div className="mt-8">
+            <PrimaryButton href={localizedHref(locale, "/contact")}>
+              {t(locale, ui.categoryPage.inquire)}
+            </PrimaryButton>
           </div>
         )}
 
