@@ -356,9 +356,9 @@ export const ui = {
     viewProducts: loc("View products", "Ver productos", "Vedi prodotti"),
     lookingTitle: loc("Looking for a specific product range?", "¿Busca una línea de producto específica?", "Cerca una linea di prodotto specifica?"),
     lookingBody: loc(
-      "Share your category, volume profile and target markets. We evaluate sourcing and distribution opportunities against our network and active routes to market.",
-      "Indique su categoría, perfil de volumen y mercados objetivo. Evaluamos oportunidades de abastecimiento y distribución con nuestra red y rutas activas.",
-      "Indichi la Sua categoria, il profilo di volume e i mercati obiettivo. Valutiamo opportunità di approvvigionamento e distribuzione rispetto alla nostra rete e alle rotte attive.",
+      "Share your category, volume and target markets. We evaluate sourcing and distribution opportunities against our network and active routes to market.",
+      "Indique su categoría, volumen y mercados objetivo. Evaluamos oportunidades de abastecimiento y distribución con nuestra red y rutas activas.",
+      "Indichi la Sua categoria, volume e mercati obiettivo. Valutiamo opportunità di approvvigionamento e distribuzione rispetto alla nostra rete e alle rotte attive.",
     ),
     discussPortfolio: loc("Discuss a portfolio opportunity →", "Hablemos de una oportunidad de portafolio →", "Parliamo di un'opportunità di portafoglio →"),
   },
