@@ -90,26 +90,16 @@ export default async function PortfolioCategoryPage({
             className="mt-10 block overflow-hidden rounded-2xl border border-line bg-white transition hover:shadow-lg hover:shadow-ink/5"
           >
             <div className="grid md:grid-cols-[minmax(0,14rem)_1fr]">
-              <div className="relative min-h-40 bg-ink">
-                <Image
-                  src="/ameriqual-military/us-flag-bg.jpg"
-                  alt=""
-                  fill
-                  className="object-cover opacity-80"
-                  sizes="(max-width: 768px) 100vw, 224px"
-                />
-                <div className="absolute inset-0 bg-ink/40" />
-                <div className="relative flex h-full items-center justify-center p-6">
-                  <div className="relative h-24 w-40">
-                    <Image
-                      src="/ameriqual-military/us-military-seals.png"
-                      alt=""
-                      fill
-                      unoptimized
-                      className="object-contain"
-                      sizes="160px"
-                    />
-                  </div>
+              <div className="relative flex min-h-40 items-center justify-center bg-white p-6 md:border-r md:border-line">
+                <div className="relative h-16 w-48">
+                  <Image
+                    src="/ameriqual-military/aqf-logo.jpg"
+                    alt="AmeriQual Foods"
+                    fill
+                    unoptimized
+                    className="object-contain"
+                    sizes="192px"
+                  />
                 </div>
               </div>
               <div className="p-6 md:p-8">

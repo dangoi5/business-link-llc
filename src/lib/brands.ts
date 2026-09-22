@@ -252,9 +252,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Military & humanitarian rations", "Raciones militares y humanitarias", "Razioni militari e umanitarie"),
         detail: loc(
-          "MRE, HDR, First Strike, emergency water, Heat & Serve and A-Rations for U.S. and allied military and relief feeding",
-          "MRE, HDR, First Strike, agua de emergencia, Heat & Serve y A-Rations para alimentación militar y de alivio de EE. UU. y aliados",
-          "MRE, HDR, First Strike, acqua di emergenza, Heat & Serve e A-Rations per l’alimentazione militare e di soccorso degli Stati Uniti e degli alleati",
+          "MRE, HDR, First Strike, emergency water, Heat & Serve and A-Rations — AmeriQual products for military and relief feeding, represented by Business Link for commercial export",
+          "MRE, HDR, First Strike, agua de emergencia, Heat & Serve y A-Rations — productos AmeriQual para alimentación militar y de alivio, representados por Business Link para exportación comercial",
+          "MRE, HDR, First Strike, acqua di emergenza, Heat & Serve e A-Rations — prodotti AmeriQual per l’alimentazione militare e di soccorso, rappresentati da Business Link per l’esportazione commerciale",
         ),
       },
       {

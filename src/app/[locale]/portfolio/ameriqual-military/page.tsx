@@ -73,15 +73,20 @@ export default async function AmeriqualMilitaryPage({
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <div className="relative mx-auto aspect-[5/3] w-full max-w-lg">
-              <Image
-                src={ameriqualMilitaryAssets.seals}
-                alt={t(locale, ui.ameriqualMilitary.sealsAlt)}
-                fill
-                unoptimized
-                className="object-contain"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            <div>
+              <div className="relative mx-auto aspect-[5/3] w-full max-w-lg">
+                <Image
+                  src={ameriqualMilitaryAssets.seals}
+                  alt={t(locale, ui.ameriqualMilitary.sealsAlt)}
+                  fill
+                  unoptimized
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <p className="mx-auto mt-4 max-w-lg text-xs leading-relaxed text-slate">
+                {t(locale, ui.ameriqualMilitary.sealsCaption)}
+              </p>
             </div>
           </Reveal>
           <Reveal delay={80}>
