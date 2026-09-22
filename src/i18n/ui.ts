@@ -185,11 +185,11 @@ export const ui = {
       "Nuestra presencia da acceso a conocimiento local y a recursos comerciales, de importación, distribución, almacenamiento y logística que se activan según los requisitos de cada oportunidad.",
       "La nostra presenza offre accesso a conoscenze di mercato locale e a risorse commerciali, di importazione, distribuzione, stoccaggio e logistica che possono essere attivate in base ai requisiti di ciascuna opportunità.",
     ),
-    mapLabel: loc("Active markets", "Mercados activos", "Mercati attivi"),
+    mapLabel: loc("Active & developing markets", "Mercados activos y en desarrollo", "Mercati attivi e in sviluppo"),
     mapAlt: loc(
-      "World map highlighting Business Link active markets",
-      "Mapa mundial con los mercados activos de Business Link",
-      "Mappa del mondo con i mercati attivi di Business Link",
+      "World map of Business Link active and developing markets",
+      "Mapa mundial de mercados activos y en desarrollo de Business Link",
+      "Mappa del mondo dei mercati attivi e in sviluppo di Business Link",
     ),
     inDevelopment: loc("Markets in development", "Mercados en desarrollo", "Mercati in sviluppo"),
     inDevelopmentBody: loc(

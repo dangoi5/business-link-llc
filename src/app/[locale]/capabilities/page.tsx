@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
-import { PageHero, SectionLabel } from "@/components/ui";
+import { PageHero } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
-import { buyerServices, capabilities, manufacturerServices, processSteps } from "@/lib/content";
+import { buyerServices, capabilities, manufacturerServices } from "@/lib/content";
 
 export async function generateMetadata({
   params,
@@ -47,28 +47,6 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
               </article>
             </Reveal>
           ))}
-        </div>
-      </section>
-
-      <section className="bg-surface py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal>
-            <SectionLabel>{t(locale, ui.capabilities.howWeWork)}</SectionLabel>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink md:text-4xl">
-              {t(locale, ui.capabilities.fromOpportunity)}
-            </h2>
-          </Reveal>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {processSteps.map((step) => (
-              <Reveal key={step.step}>
-                <div className="rounded-2xl border border-line bg-white p-5">
-                  <p className="text-xs font-bold text-orange">{step.step}</p>
-                  <h3 className="mt-2 font-bold text-ink">{t(locale, step.label)}</h3>
-                  <p className="mt-2 text-sm text-slate">{t(locale, step.description)}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

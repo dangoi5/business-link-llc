@@ -1,16 +1,19 @@
 import Image from "next/image";
 
+/** Gears mark — from squarelogo_onlygears */
 const brandIcon = {
-  src: "/branding/business-link-icon.png",
-  width: 996,
-  height: 628,
+  src: "/branding/square-logo-only-gears.png",
+  width: 937,
+  height: 647,
 } as const;
 
+/** Full lockup — gears_andbusinesslinktextfull (darker blue for light backgrounds) */
 const lockup = {
-  src: "/branding/business-link-lockup.png",
-  onDark: "/branding/business-link-lockup-hero.png",
-  width: 993,
-  height: 177,
+  src: "/branding/gears-and-business-link-text-full.png",
+  /** gearsandbusinesslinktextfull_lighterblue — for dark / hero backgrounds */
+  onDark: "/branding/gears-and-business-link-text-full-lighter-blue.png",
+  width: 988,
+  height: 202,
 } as const;
 
 const wordmark = {

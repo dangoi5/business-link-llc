@@ -577,25 +577,7 @@ export function getCategoryBySlug(slug: string) {
   return portfolioCategories.find((category) => category.slug === slug);
 }
 
-export const activeMarkets = [
-  { name: loc("United States", "Estados Unidos", "Stati Uniti"), region: "Americas" as const },
-  { name: loc("Jamaica", "Jamaica", "Giamaica"), region: "Caribbean" as const },
-  { name: loc("Dominican Republic", "República Dominicana", "Repubblica Dominicana"), region: "Caribbean" as const },
-  { name: loc("Colombia", "Colombia", "Colombia"), region: "Americas" as const },
-  { name: loc("Peru", "Perú", "Perù"), region: "Americas" as const },
-  { name: loc("Panama", "Panamá", "Panama"), region: "Americas" as const },
-  { name: loc("El Salvador", "El Salvador", "El Salvador"), region: "Americas" as const },
-  { name: loc("Guatemala", "Guatemala", "Guatemala"), region: "Americas" as const },
-  { name: loc("Ghana", "Ghana", "Ghana"), region: "Africa" as const },
-  { name: loc("Benin", "Benín", "Benin"), region: "Africa" as const },
-  { name: loc("Italy", "Italia", "Italia"), region: "Europe" as const },
-  { name: loc("Philippines", "Filipinas", "Filippine"), region: "Asia-Pacific" as const },
-];
-
-export const marketsInDevelopment = [
-  { name: loc("Venezuela", "Venezuela", "Venezuela"), region: "Americas" as const },
-  { name: loc("Gulf Region", "Región del Golfo", "Regione del Golfo"), region: "Middle East" as const },
-];
+export { activeMarkets, marketsInDevelopment } from "@/lib/markets";
 
 export const regions = [
   "Americas",
@@ -603,6 +585,7 @@ export const regions = [
   "Africa",
   "Europe",
   "Asia-Pacific",
+  "Middle East",
 ] as const;
 
 export const regionLabels: Record<(typeof regions)[number], Loc> = {
@@ -611,6 +594,7 @@ export const regionLabels: Record<(typeof regions)[number], Loc> = {
   Africa: loc("Africa", "África", "Africa"),
   Europe: loc("Europe", "Europa", "Europa"),
   "Asia-Pacific": loc("Asia-Pacific", "Asia-Pacífico", "Asia-Pacifico"),
+  "Middle East": loc("Middle East", "Medio Oriente", "Medio Oriente"),
 };
 
 export const regionCards = [

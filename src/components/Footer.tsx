@@ -16,7 +16,7 @@ export function Footer({ locale }: { locale: Locale }) {
             className="inline-block"
           >
             <span className="flex h-12 items-center">
-              <CompanyLogo variant="wordmark" onDark className="h-12" />
+              <CompanyLogo variant="lockup" onDark className="h-12" />
             </span>
           </Link>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/65">

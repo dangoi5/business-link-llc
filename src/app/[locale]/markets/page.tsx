@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MarketsMap } from "@/components/MarketsMap";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, SectionLabel } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
-import {
-  activeMarkets,
-  distributionPoints,
-  marketsInDevelopment,
-  regionLabels,
-  regions,
-} from "@/lib/content";
+import { distributionPoints, regionLabels, regions } from "@/lib/content";
+import { markets } from "@/lib/markets";
 
 export async function generateMetadata({
   params,
@@ -34,7 +29,7 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
 
   const byRegion = regions.map((region) => ({
     region,
-    markets: activeMarkets.filter((market) => market.region === region),
+    markets: markets.filter((market) => market.region === region),
   }));
 
   return (
@@ -52,31 +47,19 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
           </p>
         </Reveal>
 
-        <Reveal className="mt-12 md:mt-14">
-          <SectionLabel>{t(locale, ui.marketsPage.mapLabel)}</SectionLabel>
-          <figure className="mt-5 overflow-hidden rounded-2xl bg-ink">
-            <Image
-              src="/markets/active-markets-map.png"
-              alt={t(locale, ui.marketsPage.mapAlt)}
-              width={1024}
-              height={458}
-              quality={100}
-              className="h-auto w-full"
-              sizes="(max-width: 1280px) 100vw, 1200px"
-              priority
-            />
-          </figure>
+        <Reveal className="mt-10 md:mt-12">
+          <MarketsMap locale={locale} />
         </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {byRegion.map(({ region, markets }) =>
-            markets.length ? (
+          {byRegion.map(({ region, markets: regionMarkets }) =>
+            regionMarkets.length ? (
               <Reveal key={region}>
                 <div className="h-full rounded-2xl border border-line bg-white p-6">
                   <h2 className="text-lg font-bold text-teal">{t(locale, regionLabels[region])}</h2>
                   <ul className="mt-4 space-y-2">
-                    {markets.map((market) => (
-                      <li key={market.name.en} className="flex items-center gap-2 text-sm text-ink">
+                    {regionMarkets.map((market) => (
+                      <li key={market.id} className="flex items-center gap-2 text-sm text-ink">
                         <span className="h-1.5 w-1.5 rounded-full bg-orange" />
                         {t(locale, market.name)}
                       </li>
@@ -87,23 +70,6 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
             ) : null,
           )}
         </div>
-
-        <Reveal className="mt-12 rounded-2xl border border-dashed border-line bg-surface p-6 md:p-8">
-          <SectionLabel>{t(locale, ui.marketsPage.inDevelopment)}</SectionLabel>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate">
-            {t(locale, ui.marketsPage.inDevelopmentBody)}
-          </p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {marketsInDevelopment.map((market) => (
-              <span
-                key={market.name.en}
-                className="rounded-full bg-white px-4 py-2 text-sm font-medium text-ink border border-line"
-              >
-                {t(locale, market.name)}
-              </span>
-            ))}
-          </div>
-        </Reveal>
       </section>
 
       <section className="border-t border-line bg-ink py-16 text-white md:py-24">
