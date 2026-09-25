@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <body className="flex min-h-full flex-col bg-white text-ink" suppressHydrationWarning>
         {children}
+        <Analytics />
       </body>
     </html>
   );
