@@ -336,9 +336,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Pantry", "Despensa", "Dispensa"),
         detail: loc(
-          "Khutorok salt, sugar, baking soda, canned meat, seasonings and spices",
-          "Sal, azúcar, bicarbonato, carnes enlatadas, sazonadores y especias Khutorok",
-          "Sale, zucchero, bicarbonato, carni in scatola, condimenti e spezie Khutorok",
+          "Khutorok salt, sugar, baking soda, seasonings and spices",
+          "Sal, azúcar, bicarbonato, sazonadores y especias Khutorok",
+          "Sale, zucchero, bicarbonato, condimenti e spezie Khutorok",
         ),
       },
     ],

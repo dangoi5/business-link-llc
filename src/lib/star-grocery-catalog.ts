@@ -338,34 +338,6 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
     ],
   },
   {
-    slug: "hutorok-canned-meat-family-collection",
-    name: loc("Khutorok Canned Meat & Pâtés", "Carnes enlatadas y patés Khutorok", "Carni in scatola e paté Khutorok"),
-    description: loc(
-      "Khutorok canned meat and pâtés. Click through for each variety.",
-      "Carnes enlatadas y patés Khutorok. Entre para ver cada variedad.",
-      "Carni in scatola e paté Khutorok. Clicchi per ciascuna varietà.",
-    ),
-    cover: cover("hutorok-canned-meat-family-collection"),
-    brand: "Khutorok",
-    groups: [
-      {
-        id: "meat",
-        label: loc("Canned meat & pâté", "Carnes enlatadas y paté", "Carni in scatola e paté"),
-        products: [
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "01", "Khutorok Canned Meat", "Carne enlatada Khutorok", "Carne in scatola Khutorok"),
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "02", "Khutorok Lard", "Manteca Khutorok", "Strutto Khutorok"),
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "03", "Khutorok Liver Pâté", "Paté de hígado Khutorok", "Paté di fegato Khutorok"),
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "04", "Khutorok Meat Pâté", "Paté de carne Khutorok", "Paté di carne Khutorok"),
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "05", "Khutorok Liver Pâté", "Paté de hígado Khutorok", "Paté di fegato Khutorok"),
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "06", "Khutorok Poultry Pâté with Mushrooms", "Paté de ave con champiñones Khutorok", "Paté di pollame ai funghi Khutorok"),
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "07", "Khutorok Poultry Pâté with Pepper", "Paté de ave con pimiento Khutorok", "Paté di pollame al peperone Khutorok"),
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "08", "Khutorok Chicken Pâté", "Paté de pollo Khutorok", "Paté di pollo Khutorok"),
-          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "09", "Khutorok Poultry Pâté", "Paté de ave Khutorok", "Paté di pollame Khutorok"),
-        ],
-      },
-    ],
-  },
-  {
     slug: "hutorok-salt-family-collection",
     name: loc("Khutorok Salt", "Sales Khutorok", "Sali Khutorok"),
     description: loc(
@@ -769,3 +741,39 @@ export const starGroceryFamilyCovers: (CatalogProduct & { href: string })[] = st
     href: `/portfolio/star-grocery/${family.slug}`,
   }),
 );
+
+/**
+ * Temporarily unavailable product families kept in storage.
+ * Khutorok canned meats and pâtés are currently not available for export.
+ */
+export const unavailableStarGroceryFamilies: StarGroceryFamily[] = [
+  {
+    slug: "hutorok-canned-meat-family-collection",
+    name: loc("Khutorok Canned Meat & Pâtés", "Carnes enlatadas y patés Khutorok", "Carni in scatola e paté Khutorok"),
+    description: loc(
+      "Khutorok canned meat and pâtés. Click through for each variety.",
+      "Carnes enlatadas y patés Khutorok. Entre para ver cada variedad.",
+      "Carni in scatola e paté Khutorok. Clicchi per ciascuna varietà.",
+    ),
+    cover: cover("hutorok-canned-meat-family-collection"),
+    brand: "Khutorok",
+    groups: [
+      {
+        id: "meat",
+        label: loc("Canned meat & pâté", "Carnes enlatadas y paté", "Carni in scatola e paté"),
+        products: [
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "01", "Khutorok Canned Meat", "Carne enlatada Khutorok", "Carne in scatola Khutorok"),
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "02", "Khutorok Lard", "Manteca Khutorok", "Strutto Khutorok"),
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "03", "Khutorok Liver Pâté", "Paté de hígado Khutorok", "Paté di fegato Khutorok"),
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "04", "Khutorok Meat Pâté", "Paté de carne Khutorok", "Paté di carne Khutorok"),
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "05", "Khutorok Liver Pâté", "Paté de hígado Khutorok", "Paté di fegato Khutorok"),
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "06", "Khutorok Poultry Pâté with Mushrooms", "Paté de ave con champiñones Khutorok", "Paté di pollame ai funghi Khutorok"),
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "07", "Khutorok Poultry Pâté with Pepper", "Paté de ave con pimiento Khutorok", "Paté di pollame al peperone Khutorok"),
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "08", "Khutorok Chicken Pâté", "Paté de pollo Khutorok", "Paté di pollo Khutorok"),
+          item("hutorok-canned-meat-family-collection", "17_Khutorok_canned_meat", "09", "Khutorok Poultry Pâté", "Paté de ave Khutorok", "Paté di pollame Khutorok"),
+        ],
+      },
+    ],
+  },
+];
+
