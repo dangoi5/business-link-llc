@@ -10,6 +10,8 @@ import {
 } from "@/lib/quinoa-club-catalog";
 import { starGroceryFamilyCovers } from "@/lib/star-grocery-catalog";
 import { lascoGroceryProducts } from "@/lib/lasco-catalog";
+import { tronixSnackProducts } from "@/lib/tronix-catalog";
+
 
 export const company = {
   name: "Business Link LLC",
@@ -569,6 +571,7 @@ export const portfolioCategories: PortfolioCategory[] = [
       },
       ...quinoaClubSnackProducts,
       ...freshElementsBrand.products.filter((product) => product.line === "snacks"),
+      ...tronixSnackProducts,
     ],
   },
 ];

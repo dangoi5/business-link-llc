@@ -154,13 +154,14 @@ export const freshElementsBrand = {
       line: "oils",
       name: loc("Traditional Margarine Spread", "Margarina tradicional", "Margarina tradizionale"),
       description: loc(
-        "Fresh Elements traditional margarine spread in a 50 g stick. With vitamins A & D, zero cholesterol, for cooking and spreading.",
-        "Margarina tradicional Fresh Elements en barra de 50 g. Con vitaminas A y D, cero colesterol, para cocinar y untar.",
-        "Margarina tradizionale Fresh Elements in stecco da 50 g. Con vitamine A e D, zero colesterolo, per cucinare e spalmare.",
+        "Fresh Elements traditional margarine spread in 50 g and 150 g sticks. With vitamins A & D, zero cholesterol, for cooking and spreading.",
+        "Margarina tradicional Fresh Elements en barras de 50 g y 150 g. Con vitaminas A y D, cero colesterol, para cocinar y untar.",
+        "Margarina tradizionale Fresh Elements in stecchi da 50 g e 150 g. Con vitamine A e D, zero colesterolo, per cucinare e spalmare.",
       ),
-      image: "/products/fresh-elements/margarine-traditional-50g.jpg",
+      image: "/products/fresh-elements/margarine-traditional.jpg",
       details: [
         loc("50 g stick", "Barra de 50 g", "Stecco da 50 g"),
+        loc("150 g stick", "Barra de 150 g", "Stecco da 150 g"),
         loc("Vitamins A & D", "Vitaminas A y D", "Vitamine A e D"),
         loc("Zero cholesterol", "Cero colesterol", "Zero colesterolo"),
       ],
@@ -294,34 +295,34 @@ export const representedBrands: Brand[] = [
     name: "Star Grocery LLC",
     logo: "/brands/star-grocery-logo.png",
     note: loc(
-      "Ukrainian grocery manufacturer. La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto and Fitto.",
-      "Fabricante de abarrotes de Ucrania. La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto y Fitto.",
-      "Produttore grocery ucraino. La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto e Fitto.",
+      "Ukrainian grocery manufacturer. La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto and Fitto.",
+      "Fabricante de abarrotes de Ucrania. La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto y Fitto.",
+      "Produttore grocery ucraino. La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto e Fitto.",
     ),
-    subBrands: ["La Pasta", "Perfetto", "Hutorok", "Pansky", "Golden Grain", "Kitto", "Fitto"],
+    subBrands: ["La Pasta", "Perfetto", "Khutorok", "Pansky", "Golden Grain", "Kitto", "Fitto"],
     productLines: [
       {
         label: loc("Pasta & flour", "Pasta y harina", "Pasta e farina"),
         detail: loc(
-          "La Pasta, Perfetto, Hutorok, Pansky and Golden Grain — dry pasta, kids shapes, wheat and specialty flours",
-          "La Pasta, Perfetto, Hutorok, Pansky y Golden Grain — pasta seca, formatos infantiles, harinas de trigo y especiales",
-          "La Pasta, Perfetto, Hutorok, Pansky e Golden Grain — pasta secca, formati per bambini, farine di grano e speciali",
+          "La Pasta, Perfetto, Khutorok, Pansky and Golden Grain — dry pasta, kids shapes, wheat and specialty flours",
+          "La Pasta, Perfetto, Khutorok, Pansky y Golden Grain — pasta seca, formatos infantiles, harinas de trigo y especiales",
+          "La Pasta, Perfetto, Khutorok, Pansky e Golden Grain — pasta secca, formati per bambini, farine di grano e speciali",
         ),
       },
       {
         label: loc("Rice, groats & pulses", "Arroz, cereales y legumbres", "Riso, cereali e legumi"),
         detail: loc(
-          "Hutorok, Pansky and Golden Grain — buckwheat, rice, lentils, couscous, bulgur and millet",
-          "Hutorok, Pansky y Golden Grain — trigo sarraceno, arroz, lentejas, cuscús, bulgur y mijo",
-          "Hutorok, Pansky e Golden Grain — grano saraceno, riso, lenticchie, couscous, bulgur e miglio",
+          "Khutorok, Pansky and Golden Grain — buckwheat, rice, lentils, couscous, bulgur and millet",
+          "Khutorok, Pansky y Golden Grain — trigo sarraceno, arroz, lentejas, cuscús, bulgur y mijo",
+          "Khutorok, Pansky e Golden Grain — grano saraceno, riso, lenticchie, couscous, bulgur e miglio",
         ),
       },
       {
         label: loc("Instant meals", "Comidas instantáneas", "Pasti istantanei"),
         detail: loc(
-          "Hutorok mashed potatoes and cereals; Fitto soups, cups, oatmeal and savory porridges",
-          "Puré y cereales Hutorok; sopas, vasos, avena y gachas Fitto",
-          "Purè e cereali Hutorok; zuppe, coppette, avena e porridge Fitto",
+          "Khutorok mashed potatoes and cereals; Fitto soups, cups, oatmeal and savory porridges",
+          "Puré y cereales Khutorok; sopas, vasos, avena y gachas Fitto",
+          "Purè e cereali Khutorok; zuppe, coppette, avena e porridge Fitto",
         ),
       },
       {
@@ -335,9 +336,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Pantry", "Despensa", "Dispensa"),
         detail: loc(
-          "Hutorok salt, sugar, baking soda, canned meat, seasonings and spices",
-          "Sal, azúcar, bicarbonato, carnes enlatadas, sazonadores y especias Hutorok",
-          "Sale, zucchero, bicarbonato, carni in scatola, condimenti e spezie Hutorok",
+          "Khutorok salt, sugar, baking soda, canned meat, seasonings and spices",
+          "Sal, azúcar, bicarbonato, carnes enlatadas, sazonadores y especias Khutorok",
+          "Sale, zucchero, bicarbonato, carni in scatola, condimenti e spezie Khutorok",
         ),
       },
     ],
@@ -473,8 +474,32 @@ export const representedBrands: Brand[] = [
     slug: "tronix",
     name: "Tronix",
     logo: "/brands/tronix.png",
-    catalogHref: undefined,
-    catalogLabel: loc("View full catalog", "Ver catálogo completo", "Consulta il catalogo completo"),
+    note: loc(
+      "Central American extruded snack manufacturer. Torti Chips, Boliqueso, Cebollitas and Cheesitos.",
+      "Fabricante centroamericano de snacks extruidos. Torti Chips, Boliqueso, Cebollitas y Cheesitos.",
+      "Produttore centroamericano di snack estrusi. Torti Chips, Boliqueso, Cebollitas e Cheesitos.",
+    ),
+    subBrands: ["Torti Chips", "Boliqueso", "Cebollitas", "Cheesitos"],
+    productLines: [
+      {
+        label: loc("Torti Chips", "Torti Chips", "Torti Chips"),
+        detail: loc(
+          "Tortilla-style corn chips in 6 flavors: BBQ, Jalapeño, Limón, Chile Limón, Queso and Natural",
+          "Chips de maíz estilo tortilla en 6 sabores: BBQ, Jalapeño, Limón, Chile Limón, Queso y Natural",
+          "Chips di mais stile tortilla in 6 gusti: BBQ, Jalapeño, Limón, Chile Limón, Queso e Natural",
+        ),
+      },
+      {
+        label: loc("Extruded snacks", "Snacks extruidos", "Snack estrusi"),
+        detail: loc(
+          "Boliqueso corn cheese puffs, Cebollitas onion rings and Cheesitos cheese snacks",
+          "Boliqueso bolitas de queso, Cebollitas aros de cebolla y Cheesitos snacks de queso",
+          "Boliqueso palline al formaggio, Cebollitas anelli di cipolla e Cheesitos snack al formaggio",
+        ),
+      },
+    ],
+    catalogHref: "https://tronixsnacks.com/en/index.php/snacks/",
+    catalogLabel: loc("View snack catalog", "Ver catálogo de snacks", "Consulta il catalogo snack"),
     photos: [],
   },
   {

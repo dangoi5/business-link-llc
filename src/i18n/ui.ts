@@ -391,9 +391,9 @@ export const ui = {
   starGrocery: {
     metaTitle: loc("Star Grocery", "Star Grocery", "Star Grocery"),
     metaDescription: loc(
-      "Star Grocery product families from Business Link LLC: La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto and Fitto. Click a family to see individual flavors.",
-      "Familias de producto Star Grocery de Business Link LLC: La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto y Fitto. Abra una familia para ver sabores individuales.",
-      "Famiglie di prodotto Star Grocery di Business Link LLC: La Pasta, Perfetto, Hutorok, Pansky, Golden Grain, Kitto e Fitto. Apra una famiglia per vedere i gusti individuali.",
+      "Star Grocery product families from Business Link LLC: La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto and Fitto. Click a family to see individual flavors.",
+      "Familias de producto Star Grocery de Business Link LLC: La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto y Fitto. Abra una familia para ver sabores individuales.",
+      "Famiglie di prodotto Star Grocery di Business Link LLC: La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto e Fitto. Apra una famiglia per vedere i gusti individuali.",
     ),
     heroLabel: loc("Manufacturer", "Fabricante", "Produttore"),
     heroTitle: loc("Star Grocery product families.", "Familias de producto Star Grocery.", "Famiglie di prodotto Star Grocery."),
