@@ -410,7 +410,12 @@ export const ui = {
     backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
     backToFamilies: loc("← All Star Grocery families", "← Todas las familias Star Grocery", "← Tutte le famiglie Star Grocery"),
     flavors: loc("Flavors & pack shots", "Sabores y empaques", "Gusti e confezioni"),
-    viewPdf: loc("View catalog", "Ver catálogo", "Consulta il catalogo"),
+    viewPdf: loc("General catalog (PDF)", "Catálogo general (PDF)", "Catalogo generale (PDF)"),
+    viewNoodlesPdf: loc(
+      "Instant noodles catalog (PDF)",
+      "Catálogo de fideos instantáneos (PDF)",
+      "Catalogo noodle istantanei (PDF)",
+    ),
   },
   lasco: {
     metaTitle: loc("Lasco", "Lasco", "Lasco"),

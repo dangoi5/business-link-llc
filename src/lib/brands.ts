@@ -320,9 +320,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Instant meals", "Comidas instantáneas", "Pasti istantanei"),
         detail: loc(
-          "Khutorok mashed potatoes and cereals; Fitto soups, cups, oatmeal and savory porridges",
-          "Puré y cereales Khutorok; sopas, vasos, avena y gachas Fitto",
-          "Purè e cereali Khutorok; zuppe, coppette, avena e porridge Fitto",
+          "Khutorok mashed potatoes, cereals and instant noodles; Kitto instant egg noodles; Fitto soups, cups, oatmeal and savory porridges",
+          "Puré, cereales y fideos instantáneos Khutorok; fideos de huevo instantáneos Kitto; sopas, vasos, avena y gachas Fitto",
+          "Purè, cereali e noodles istantanei Khutorok; noodles all'uovo istantanei Kitto; zuppe, coppette, avena e porridge Fitto",
         ),
       },
       {
@@ -347,7 +347,15 @@ export const representedBrands: Brand[] = [
     extraLinks: [
       {
         href: "/catalogs/star-grocery-2025.pdf",
-        label: loc("View catalog", "Ver catálogo", "Consulta il catalogo"),
+        label: loc("General catalog (PDF)", "Catálogo general (PDF)", "Catalogo generale (PDF)"),
+      },
+      {
+        href: "/catalogs/star-grocery-instant-noodles.pdf",
+        label: loc(
+          "Instant noodles catalog (PDF)",
+          "Catálogo de fideos instantáneos (PDF)",
+          "Catalogo noodle istantanei (PDF)",
+        ),
       },
     ],
     photos: [],
