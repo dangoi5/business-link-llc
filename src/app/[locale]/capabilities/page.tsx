@@ -38,7 +38,7 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
           {capabilities.map((item, index) => (
             <Reveal key={item.slug} delay={index * 50}>
               <article className="h-full rounded-2xl border border-line bg-white p-7 md:p-8">
-                <p className="text-xs font-bold text-orange">{String(index + 1).padStart(2, "0")}</p>
+                <p className="text-xs font-bold text-gold-ink">{String(index + 1).padStart(2, "0")}</p>
                 <h2 className="mt-2 text-xl font-bold text-ink md:text-2xl">{t(locale, item.title)}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-slate md:text-base">
                   {t(locale, item.summary)}
@@ -58,7 +58,7 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
               <ul className="mt-5 space-y-4">
                 {manufacturerServices.map((s) => (
                   <li key={s.title.en}>
-                    <p className="font-semibold text-teal">{t(locale, s.title)}</p>
+                    <p className="font-semibold text-brand">{t(locale, s.title)}</p>
                     <p className="mt-1 text-sm text-slate">{t(locale, s.description)}</p>
                   </li>
                 ))}
@@ -71,7 +71,7 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
               <ul className="mt-5 space-y-4">
                 {buyerServices.map((s) => (
                   <li key={s.title.en}>
-                    <p className="font-semibold text-teal">{t(locale, s.title)}</p>
+                    <p className="font-semibold text-brand">{t(locale, s.title)}</p>
                     <p className="mt-1 text-sm text-slate">{t(locale, s.description)}</p>
                   </li>
                 ))}
@@ -82,7 +82,7 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
         <Reveal className="mt-10 text-center">
           <Link
             href={localizedHref(locale, "/contact")}
-            className="text-sm font-semibold text-orange hover:underline"
+            className="text-sm font-semibold text-gold-ink hover:underline"
           >
             {t(locale, ui.capabilities.talkOpportunity)}
           </Link>

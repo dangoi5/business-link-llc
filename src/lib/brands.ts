@@ -4,7 +4,7 @@ import { loc, type Loc } from "@/i18n/t";
  * Brand portfolio data for Business Link LLC.
  *
  * Fresh Elements is kept as a self-contained module so it can later move to
- * a dedicated site at freshelementsholdings.com without rewriting this page.
+ * a dedicated site without rewriting this page.
  *
  * Catalog / photo hooks:
  * - Set `catalogHref` to a hosted PDF URL to show “View full catalog”
@@ -45,7 +45,6 @@ export const freshElementsBrand = {
   ),
   ctaLabel: loc("View catalog", "Ver catálogo", "Consulta il catalogo"),
   ctaHref: "/portfolio/fresh-elements",
-  futureSite: "https://freshelementsholdings.com",
   logo: "/brands/fresh-elements-logo.png" as string | undefined,
   catalogHref: "/portfolio/fresh-elements",
   catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
@@ -141,7 +140,7 @@ export const freshElementsBrand = {
         "Untable Fresh Elements Do-It-All para mesa y cocina. Pote de 15.5 oz (440 g), 44 porciones.",
         "Spalmabile Fresh Elements Do-It-All da tavola e da cucina. Vaschetta da 15.5 oz (440 g), 44 porzioni.",
       ),
-      image: "/products/fresh-elements/do-it-all-spread-tub.jpg",
+      image: "/products/fresh-elements/do-it-all-spread-tub-v2.jpg",
       details: [
         loc("15.5 oz / 440 g", "15.5 oz / 440 g", "15.5 oz / 440 g"),
         loc("Table & cooking", "Mesa y cocina", "Tavola e cucina"),
@@ -420,7 +419,6 @@ export const representedBrands: Brand[] = [
       },
     ],
     catalogHref: "/catalogs/star-brands-snacks-2024.pdf",
-    catalogLabel: loc("View snack catalog", "Ver catálogo de snacks", "Consulta il catalogo snack"),
     photos: [],
   },
   {
@@ -506,8 +504,6 @@ export const representedBrands: Brand[] = [
         ),
       },
     ],
-    catalogHref: "https://tronixsnacks.com/en/index.php/snacks/",
-    catalogLabel: loc("View snack catalog", "Ver catálogo de snacks", "Consulta il catalogo snack"),
     photos: [],
   },
   {

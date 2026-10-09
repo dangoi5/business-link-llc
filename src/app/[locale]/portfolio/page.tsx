@@ -55,7 +55,7 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
               <Link
                 href={localizedHref(locale, `/portfolio/${category.slug}`)}
                 id={category.slug}
-                className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-line bg-white transition hover:border-teal"
+                className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-line bg-white transition hover:border-brand"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-surface">
                   <Image
@@ -83,7 +83,7 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
                       </span>
                     ))}
                   </div>
-                  <span className="mt-4 text-sm font-semibold text-teal transition group-hover:text-teal-deep">
+                  <span className="mt-4 text-sm font-semibold text-brand transition group-hover:text-brand-deep">
                     {t(locale, ui.portfolioPage.viewProducts)} →
                   </span>
                 </div>
@@ -92,14 +92,14 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
           ))}
         </div>
 
-        <Reveal className="mt-14 rounded-2xl bg-teal p-8 text-white md:p-10">
+        <Reveal className="mt-14 rounded-2xl bg-brand p-8 text-white md:p-10">
           <h3 className="text-2xl font-bold">{t(locale, ui.portfolioPage.lookingTitle)}</h3>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/75 md:text-base">
             {t(locale, ui.portfolioPage.lookingBody)}
           </p>
           <div className="mt-6">
             <TextLink href={localizedHref(locale, "/contact")}>
-              <span className="text-orange hover:underline">
+              <span className="text-gold hover:underline">
                 {t(locale, ui.portfolioPage.discussPortfolio)}
               </span>
             </TextLink>

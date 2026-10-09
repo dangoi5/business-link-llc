@@ -52,7 +52,7 @@ export default async function StarGroceryFamilyPage({
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/50" />
         </div>
         <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 md:px-8 md:pb-20 md:pt-12">
-          <p className="eyebrow text-orange">
+          <p className="eyebrow text-gold">
             <span>{family.brand}</span>
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">

@@ -70,7 +70,7 @@ export function ProductGrid({
           <article
             key={product.slug}
             className={`overflow-hidden rounded-2xl border border-line bg-white ${
-              product.href ? "h-full transition hover:border-teal hover:shadow-lg hover:shadow-ink/5" : ""
+              product.href ? "h-full transition hover:border-brand hover:shadow-lg hover:shadow-ink/5" : ""
             }`}
           >
             <div className="relative aspect-[4/3]">
@@ -85,7 +85,7 @@ export function ProductGrid({
             <div className="p-5">
               <h3 className="text-lg font-bold text-ink">{t(locale, product.name)}</h3>
               {product.unavailableForExport ? (
-                <p className="mt-2 inline-flex rounded-full bg-orange/10 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-orange uppercase">
+                <p className="mt-2 inline-flex rounded-full bg-gold/10 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-gold-ink uppercase">
                   {t(locale, ui.categoryPage.notAvailableForExport)}
                 </p>
               ) : null}

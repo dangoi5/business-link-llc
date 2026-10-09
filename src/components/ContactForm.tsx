@@ -18,10 +18,16 @@ const MAX = {
   message: 5000,
 } as const;
 
-export function ContactForm({ locale }: { locale: Locale }) {
+export function ContactForm({
+  locale,
+  defaultRole = "manufacturer",
+}: {
+  locale: Locale;
+  defaultRole?: (typeof roleKeys)[number];
+}) {
   const statusId = useId();
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
-  const [role, setRole] = useState<(typeof roleKeys)[number]>("manufacturer");
+  const [role, setRole] = useState<(typeof roleKeys)[number]>(defaultRole);
   const roleLabels = {
     manufacturer: t(locale, ui.form.manufacturer),
     buyer: t(locale, ui.form.buyer),
@@ -60,7 +66,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
       }
 
       form.reset();
-      setRole("manufacturer");
+      setRole(defaultRole);
       setStatus("sent");
     } catch {
       setStatus("error");
@@ -71,10 +77,10 @@ export function ContactForm({ locale }: { locale: Locale }) {
     <form
       onSubmit={handleSubmit}
       noValidate={false}
-      className="relative rounded-2xl border border-line bg-white p-6 shadow-sm md:p-8"
+      className="relative rounded-xl border border-line bg-white p-6 shadow-sm shadow-ink/5 md:p-8"
       aria-describedby={status !== "idle" ? statusId : undefined}
     >
-      <p className="text-sm font-semibold text-teal">{t(locale, ui.form.sendInquiry)}</p>
+      <p className="text-sm font-semibold text-brand">{t(locale, ui.form.sendInquiry)}</p>
       <p className="mt-1 text-sm text-slate">{t(locale, ui.form.intro)}</p>
 
       <input
@@ -94,10 +100,10 @@ export function ContactForm({ locale }: { locale: Locale }) {
             return (
               <label
                 key={option}
-                className={`cursor-pointer rounded-xl border px-3 py-3 text-center text-sm font-semibold transition ${
+                className={`cursor-pointer rounded-lg border px-3 py-3 text-center has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand/40 text-sm font-semibold transition ${
                   selected
-                    ? "border-teal bg-teal/10 text-teal"
-                    : "border-line text-slate hover:border-teal/40"
+                    ? "border-brand bg-brand/10 text-brand"
+                    : "border-line text-slate hover:border-brand/40"
                 }`}
               >
                 <input
@@ -125,7 +131,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
             maxLength={MAX.name}
             minLength={2}
             disabled={status === "sending"}
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           />
         </label>
         <label className="block text-sm">
@@ -137,7 +143,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
             autoComplete="email"
             maxLength={MAX.email}
             disabled={status === "sending"}
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           />
         </label>
       </div>
@@ -150,7 +156,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
             autoComplete="organization"
             maxLength={MAX.organization}
             disabled={status === "sending"}
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           />
         </label>
         <label className="block text-sm">
@@ -161,7 +167,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
             autoComplete="tel"
             maxLength={MAX.phone}
             disabled={status === "sending"}
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           />
         </label>
       </div>
@@ -173,7 +179,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
             name="product"
             maxLength={MAX.product}
             disabled={status === "sending"}
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           />
         </label>
         <label className="block text-sm">
@@ -182,7 +188,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
             name="destination"
             maxLength={MAX.destination}
             disabled={status === "sending"}
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           />
         </label>
         <label className="block text-sm">
@@ -191,7 +197,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
             name="volume"
             maxLength={MAX.volume}
             disabled={status === "sending"}
-            className="mt-1.5 w-full rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           />
         </label>
       </div>
@@ -205,7 +211,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
           minLength={10}
           maxLength={MAX.message}
           disabled={status === "sending"}
-          className="mt-1.5 w-full resize-y rounded-xl border border-line px-3 py-2.5 outline-none transition focus:border-teal disabled:opacity-70"
+          className="mt-1.5 w-full resize-y rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           placeholder={t(locale, ui.form.placeholder)}
         />
       </label>
@@ -214,17 +220,17 @@ export function ContactForm({ locale }: { locale: Locale }) {
         type="submit"
         disabled={status === "sending"}
         aria-busy={status === "sending"}
-        className="mt-6 inline-flex rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-hover disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-6 inline-flex rounded-lg bg-gold px-6 py-3 text-sm font-semibold text-ink transition duration-200 hover:bg-gold-hover active:translate-y-px disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "sending" ? t(locale, ui.form.sending) : t(locale, ui.form.submit)}
       </button>
 
       <div id={statusId} aria-live="polite" aria-atomic="true" role="status">
         {status === "sent" ? (
-          <p className="mt-3 text-sm font-medium text-teal">{t(locale, ui.form.success)}</p>
+          <p className="mt-3 text-sm font-medium text-brand">{t(locale, ui.form.success)}</p>
         ) : null}
         {status === "error" ? (
-          <p className="mt-3 text-sm font-medium text-orange">{t(locale, ui.form.error)}</p>
+          <p className="mt-3 text-sm font-medium text-red-700">{t(locale, ui.form.error)}</p>
         ) : null}
       </div>
     </form>

@@ -676,3 +676,43 @@ export const images = {
   markets: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1600&q=80",
   operations: "https://images.unsplash.com/photo-1605745341112-859df7b39370?auto=format&fit=crop&w=1400&q=80",
 };
+
+
+/** Real PDF catalogs in /public/catalogs. Sizes are the actual file sizes in MB. */
+export const catalogDocs = [
+  {
+    brand: "Star Grocery",
+    logo: "/brands/star-grocery-logo.png",
+    title: loc("General catalog 2025", "Catálogo general 2025", "Catalogo generale 2025"),
+    href: "/catalogs/star-grocery-2025.pdf",
+    sizeMb: 31.1,
+  },
+  {
+    brand: "Star Brands",
+    logo: "/brands/star-brands-logo.png",
+    title: loc("Snacks catalog 2024", "Catálogo de snacks 2024", "Catalogo snack 2024"),
+    href: "/catalogs/star-brands-snacks-2024.pdf",
+    sizeMb: 23,
+  },
+  {
+    brand: "Quinoa Club",
+    logo: "/brands/quinoa-club-logo.png",
+    title: loc("Product portfolio", "Portafolio de productos", "Portafoglio prodotti"),
+    href: "/catalogs/quinoa-club-portfolio.pdf",
+    sizeMb: 26.2,
+  },
+  {
+    brand: "AmeriQual",
+    logo: "/brands/ameriqual-group.jpg",
+    title: loc("Food Life balanced catalog 2026", "Catálogo Food Life balanced 2026", "Catalogo Food Life balanced 2026"),
+    href: "/catalogs/food-life-balanced-2026.pdf",
+    sizeMb: 8,
+  },
+  {
+    brand: "Star Grocery",
+    logo: "/brands/star-grocery-logo.png",
+    title: loc("Instant noodles", "Fideos instantáneos", "Noodles istantanei"),
+    href: "/catalogs/star-grocery-instant-noodles.pdf",
+    sizeMb: 2.2,
+  },
+];

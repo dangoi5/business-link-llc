@@ -1,39 +1,18 @@
-"use client";
+import type { ReactNode } from "react";
 
-import { useEffect, useRef, type ReactNode } from "react";
-
+/**
+ * Fades content in as it enters the viewport. Pure CSS (scroll-driven animation,
+ * see globals.css): no JS, and content simply stays visible in browsers that
+ * don't support it or when reduced motion is requested.
+ */
 export function Reveal({
   children,
   className = "",
-  delay = 0,
 }: {
   children: ReactNode;
   className?: string;
+  /** Kept for call-site compatibility; scroll-driven reveals can't be delayed. */
   delay?: number;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          node.classList.add("is-visible");
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" },
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div ref={ref} className={`reveal ${className}`} style={{ transitionDelay: `${delay}ms` }}>
-      {children}
-    </div>
-  );
+  return <div className={`reveal ${className}`.trim()}>{children}</div>;
 }

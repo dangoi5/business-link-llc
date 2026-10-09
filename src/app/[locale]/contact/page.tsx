@@ -20,8 +20,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function ContactPage({ params }: PageProps<"/[locale]/contact">) {
+export default async function ContactPage({ params, searchParams }: PageProps<"/[locale]/contact">) {
   const { locale: raw } = await params;
+  const { role } = await searchParams;
+  const defaultRole = (["manufacturer", "buyer", "other"] as const).find((key) => key === role) ?? "buyer";
   if (!isLocale(raw)) notFound();
   const locale: Locale = raw;
 
@@ -55,7 +57,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
             <p className="text-sm font-medium text-white/60">{t(locale, ui.contactPage.email)}</p>
             <a
               href={`mailto:${company.email}`}
-              className="mt-2 block text-lg font-semibold text-orange hover:underline"
+              className="mt-2 block text-lg font-semibold text-gold hover:underline"
             >
               {company.email}
             </a>
@@ -63,7 +65,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
         </Reveal>
 
         <Reveal delay={80}>
-          <ContactForm locale={locale} />
+          <ContactForm locale={locale} defaultRole={defaultRole} />
         </Reveal>
       </section>
     </>

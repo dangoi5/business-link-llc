@@ -49,7 +49,7 @@ export default async function StarGroceryCatalogPage({
               href="/catalogs/star-grocery-2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-teal transition hover:text-teal-deep"
+              className="text-sm font-semibold text-brand transition hover:text-brand-deep"
             >
               {t(locale, ui.starGrocery.viewPdf)} →
             </a>
@@ -57,7 +57,7 @@ export default async function StarGroceryCatalogPage({
               href="/catalogs/star-grocery-instant-noodles.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-teal transition hover:text-teal-deep"
+              className="text-sm font-semibold text-brand transition hover:text-brand-deep"
             >
               {t(locale, ui.starGrocery.viewNoodlesPdf)} →
             </a>

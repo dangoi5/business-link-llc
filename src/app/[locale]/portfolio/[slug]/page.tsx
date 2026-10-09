@@ -55,7 +55,7 @@ export default async function PortfolioCategoryPage({
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/55" />
         </div>
         <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 md:px-8 md:pb-20 md:pt-12">
-          <p className="eyebrow text-orange">
+          <p className="eyebrow text-gold">
             <span>{t(locale, ui.portfolioPage.heroLabel)}</span>
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">
@@ -103,14 +103,14 @@ export default async function PortfolioCategoryPage({
                 </div>
               </div>
               <div className="p-6 md:p-8">
-                <p className="text-xs font-bold tracking-wider text-orange uppercase">AmeriQual Foods</p>
+                <p className="text-xs font-bold tracking-wider text-gold-ink uppercase">AmeriQual Foods</p>
                 <h2 className="mt-2 text-xl font-bold text-ink md:text-2xl">
                   {t(locale, ui.ameriqualMilitary.bannerTitle)}
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
                   {t(locale, ui.ameriqualMilitary.bannerBody)}
                 </p>
-                <p className="mt-4 text-sm font-semibold text-teal">
+                <p className="mt-4 text-sm font-semibold text-brand">
                   {t(locale, ui.ameriqualMilitary.bannerCta)}
                 </p>
               </div>
@@ -144,7 +144,7 @@ export default async function PortfolioCategoryPage({
               <Link
                 key={item.slug}
                 href={localizedHref(locale, `/portfolio/${item.slug}`)}
-                className="rounded-full border border-line px-4 py-2 text-sm font-medium text-ink transition hover:border-teal hover:text-teal"
+                className="rounded-full border border-line px-4 py-2 text-sm font-medium text-ink transition hover:border-brand hover:text-brand"
               >
                 {t(locale, item.title)}
               </Link>

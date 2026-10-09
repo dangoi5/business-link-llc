@@ -131,7 +131,7 @@ export function LanguageSwitcher({
                 aria-current={selected ? "true" : undefined}
                 onClick={() => setOpen(false)}
                 className={`flex items-center gap-2.5 px-3 py-2 text-sm font-medium ${
-                  selected ? "bg-teal/10 text-teal" : "text-ink hover:bg-surface"
+                  selected ? "bg-brand/10 text-brand" : "text-ink hover:bg-surface"
                 }`}
               >
                 <LocaleFlag locale={item} className={flagClass} />
@@ -151,28 +151,17 @@ export function LanguageSwitcher({
 export function Header({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const homeHref = localizedHref(locale, "/");
-  const isHome = pathname === homeHref || pathname === `${homeHref}/`;
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  const solid = scrolled || open || !isHome;
+  const solid = true;
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        solid ? "border-b border-line bg-white/95 shadow-sm backdrop-blur" : "bg-transparent"
-      }`}
+      className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white"
     >
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-3 px-4 sm:gap-4 sm:px-5 md:px-8">
         <Link
@@ -198,10 +187,10 @@ export function Header({ locale }: { locale: Locale }) {
                 <Link
                   key={link.href}
                   href={href}
-                  className={`text-sm font-medium transition ${
+                  className={`text-sm font-medium transition-colors duration-200 ${
                     solid
                       ? active
-                        ? "text-teal"
+                        ? "text-brand"
                         : "text-slate hover:text-ink"
                       : active
                         ? "text-white"
@@ -218,7 +207,7 @@ export function Header({ locale }: { locale: Locale }) {
           <LanguageSwitcher locale={locale} solid={solid} />
           <Link
             href={localizedHref(locale, "/contact")}
-            className="rounded-full bg-orange px-4 py-2 text-xs font-semibold text-white transition hover:bg-orange-hover"
+            className="rounded-lg bg-gold px-4 py-2 text-xs font-semibold text-ink transition duration-200 hover:bg-gold-hover active:translate-y-px"
           >
             {t(locale, ui.common.getInTouch)}
           </Link>
@@ -257,7 +246,7 @@ export function Header({ locale }: { locale: Locale }) {
           <div className="mt-4">
             <Link
               href={localizedHref(locale, "/contact")}
-              className="block rounded-full bg-orange px-4 py-2.5 text-center text-sm font-semibold text-white"
+              className="block rounded-lg bg-gold px-4 py-2.5 text-center text-sm font-semibold text-ink"
             >
               {t(locale, ui.common.getInTouch)}
             </Link>

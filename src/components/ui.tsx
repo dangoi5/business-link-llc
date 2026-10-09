@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 export function SectionLabel({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
-    <p className={`eyebrow ${light ? "text-orange" : "text-teal"}`}>
+    <p className={`eyebrow ${light ? "text-gold" : "text-brand"}`}>
       <span>{children}</span>
     </p>
   );
@@ -25,7 +25,7 @@ export function SectionHeading({
     <div className="max-w-2xl">
       {label ? <SectionLabel light={light}>{label}</SectionLabel> : null}
       <h2
-        className={`mt-3 text-3xl font-bold tracking-tight md:text-4xl ${light ? "text-white" : "text-ink"}`}
+        className={`display mt-3 text-3xl md:text-[2.75rem] ${light ? "text-white" : "text-ink"}`}
       >
         {title}
       </h2>
@@ -40,7 +40,7 @@ export function SectionHeading({
 
 export function TextLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <Link href={href} className="text-sm font-semibold text-teal transition hover:text-teal-deep">
+    <Link href={href} className="text-sm font-semibold text-brand transition hover:text-brand-deep">
       {children}
     </Link>
   );
@@ -50,7 +50,7 @@ export function PrimaryButton({ href, children }: { href: string; children: Reac
   return (
     <Link
       href={href}
-      className="inline-flex items-center justify-center rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-hover"
+      className="inline-flex items-center justify-center rounded-lg bg-gold px-6 py-3 text-sm font-semibold text-ink transition duration-200 hover:bg-gold-hover active:translate-y-px"
     >
       {children}
     </Link>
@@ -69,10 +69,10 @@ export function SecondaryButton({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition ${
+      className={`inline-flex items-center justify-center rounded-lg border px-6 py-3 text-sm font-semibold transition ${
         light
           ? "border-white/40 text-white hover:border-white hover:bg-white/10"
-          : "border-line text-ink hover:border-teal/40 hover:bg-surface"
+          : "border-line text-ink hover:border-brand/40 hover:bg-surface"
       }`}
     >
       {children}
@@ -84,7 +84,7 @@ export function TealButton({ href, children }: { href: string; children: ReactNo
   return (
     <Link
       href={href}
-      className="inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-deep"
+      className="inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-deep"
     >
       {children}
     </Link>
@@ -108,10 +108,10 @@ export function PageHero({
     <section className="relative overflow-hidden bg-ink pt-28 pb-16 md:pt-36 md:pb-20">
       <div
         aria-hidden
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-60"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 20% 20%, rgba(11,110,117,0.45), transparent 45%), radial-gradient(circle at 80% 0%, rgba(224,107,44,0.2), transparent 40%)",
+            "radial-gradient(circle at 15% 10%, rgba(26,69,144,0.7), transparent 50%), radial-gradient(circle at 90% 0%, rgba(229,168,43,0.16), transparent 40%)",
         }}
       />
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
@@ -128,7 +128,7 @@ export function PageHero({
           </div>
         ) : null}
         <SectionLabel light>{label}</SectionLabel>
-        <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">
+        <h1 className="display mt-4 max-w-3xl text-4xl text-white md:text-6xl">
           {title}
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">{description}</p>

@@ -59,7 +59,7 @@ export default async function FreshElementsCatalogPage({
             return (
               <Reveal key={line.label.en}>
                 <section>
-                  <p className="text-xs font-bold tracking-wider text-orange uppercase">
+                  <p className="text-xs font-bold tracking-wider text-gold-ink uppercase">
                     {t(locale, ui.common.ownBrand)}
                   </p>
                   <h2 className="mt-2 text-2xl font-bold tracking-tight text-ink md:text-3xl">

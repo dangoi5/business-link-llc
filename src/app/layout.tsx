@@ -1,14 +1,25 @@
 import type { ReactNode } from "react";
-import { Montserrat } from "next/font/google";
+import type { Viewport } from "next";
+import { Bricolage_Grotesque, Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
+
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  axes: ["opsz"],
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  themeColor: "#0a1630",
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -16,9 +27,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       lang="en"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
-      className={`${montserrat.variable} h-full antialiased`}
+      className={`${geist.variable} ${bricolage.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white text-ink" suppressHydrationWarning>
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         {children}
         <Analytics />
       </body>

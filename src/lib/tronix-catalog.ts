@@ -3,7 +3,6 @@ import { loc } from "@/i18n/t";
 
 const brand = loc("Tronix", "Tronix", "Tronix");
 const extruded = loc("Extruded corn snack", "Snack de maíz extruido", "Snack di mais estruso");
-const tronixHref = "https://tronixsnacks.com/en/index.php/snacks/";
 
 export const tronixSnackProducts: CatalogProduct[] = [
   {
@@ -22,7 +21,6 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
   {
     slug: "tronix-torti-chips-jalapeno",
@@ -40,7 +38,6 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
   {
     slug: "tronix-torti-chips-limon",
@@ -58,7 +55,6 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
   {
     slug: "tronix-torti-chips-chile-limon",
@@ -76,7 +72,6 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
   {
     slug: "tronix-torti-chips-queso",
@@ -94,7 +89,6 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
   {
     slug: "tronix-torti-chips-natural",
@@ -112,7 +106,6 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
   {
     slug: "tronix-boliqueso",
@@ -130,7 +123,6 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
   {
     slug: "tronix-cebollitas",
@@ -147,7 +139,6 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
   {
     slug: "tronix-cheesitos",
@@ -164,6 +155,5 @@ export const tronixSnackProducts: CatalogProduct[] = [
       extruded,
     ],
     imageFit: "contain",
-    href: tronixHref,
   },
 ];

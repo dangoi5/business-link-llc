@@ -56,11 +56,11 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
             regionMarkets.length ? (
               <Reveal key={region}>
                 <div className="h-full rounded-2xl border border-line bg-white p-6">
-                  <h2 className="text-lg font-bold text-teal">{t(locale, regionLabels[region])}</h2>
+                  <h2 className="text-lg font-bold text-brand">{t(locale, regionLabels[region])}</h2>
                   <ul className="mt-4 space-y-2">
                     {regionMarkets.map((market) => (
                       <li key={market.id} className="flex items-center gap-2 text-sm text-ink">
-                        <span className="h-1.5 w-1.5 rounded-full bg-orange" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-gold" />
                         {t(locale, market.name)}
                       </li>
                     ))}
@@ -84,7 +84,7 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
             {distributionPoints.map((point) => (
               <Reveal key={point.title.en}>
                 <div className="rounded-2xl border border-white/15 bg-white/5 p-6">
-                  <h3 className="text-lg font-bold text-orange">{t(locale, point.title)}</h3>
+                  <h3 className="text-lg font-bold text-gold">{t(locale, point.title)}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-white/70">{t(locale, point.description)}</p>
                 </div>
               </Reveal>
@@ -93,7 +93,7 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
           <Reveal className="mt-10">
             <Link
               href={localizedHref(locale, "/contact")}
-              className="text-sm font-semibold text-orange hover:underline"
+              className="text-sm font-semibold text-gold hover:underline"
             >
               {t(locale, ui.marketsPage.discussMarket)}
             </Link>

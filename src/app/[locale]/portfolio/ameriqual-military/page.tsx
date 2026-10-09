@@ -120,7 +120,7 @@ export default async function AmeriqualMilitaryPage({
                 <p className="mt-3 text-sm leading-relaxed text-slate md:text-base">{t(locale, mre.description)}</p>
                 {mre.whatIsIt ? (
                   <>
-                    <p className="mt-6 text-xs font-bold tracking-wider text-orange uppercase">
+                    <p className="mt-6 text-xs font-bold tracking-wider text-gold-ink uppercase">
                       {t(locale, ui.ameriqualMilitary.whatIsIt)}
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-slate md:text-base">{t(locale, mre.whatIsIt)}</p>
@@ -140,7 +140,7 @@ export default async function AmeriqualMilitaryPage({
                 ) : null}
                 {mre.examples && mre.examples.length > 0 ? (
                   <div className="mt-8">
-                    <p className="text-xs font-bold tracking-wider text-orange uppercase">
+                    <p className="text-xs font-bold tracking-wider text-gold-ink uppercase">
                       {t(locale, ui.ameriqualMilitary.menuExamples)}
                     </p>
                     <div className="mt-4 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">

@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
+/*
+ * Palette is drawn from the Business Link logo: deep navy, signal blue, gold.
+ * Gold is only used as a fill (with navy text) or on dark backgrounds.
+ * On light backgrounds use `gold-ink`, which passes WCAG AA for body text.
+ */
 :root {
-  --ink: #07111f;
-  --ink-soft: #132033;
-  --slate: #5b6777;
-  --line: #e4e8ee;
-  --surface: #f4f6f8;
+  --ink: #0a1630;
+  --ink-soft: #12254a;
+  --slate: #4a5670;
+  --line: #dde3ee;
+  --surface: #f4f6fa;
   --white: #ffffff;
-  --teal: #0b6e75;
-  --teal-deep: #08555b;
-  --orange: #e06b2c;
-  --orange-hover: #c85a21;
+  --brand: #1a4590;
+  --brand-deep: #123470;
+  --gold: #e5a82b;
+  --gold-hover: #f1bb4a;
+  --gold-ink: #8a5a00;
   --background: var(--white);
   --foreground: var(--ink);
 }
@@ -24,11 +30,16 @@
   --color-line: var(--line);
   --color-surface: var(--surface);
   --color-white: var(--white);
-  --color-teal: var(--teal);
-  --color-teal-deep: var(--teal-deep);
-  --color-orange: var(--orange);
-  --color-orange-hover: var(--orange-hover);
-  --font-sans: var(--font-montserrat);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-gold-ink: var(--gold-ink);
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --z-header: 50;
+  --z-menu: 60;
+  --z-skip: 100;
 }
 
 * {
@@ -37,19 +48,45 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-family: var(--font-geist), system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 ::selection {
-  background: color-mix(in oklab, var(--teal) 28%, white);
+  background: color-mix(in oklab, var(--gold) 45%, white);
   color: var(--ink);
+}
+
+/* Display face for headlines: a characterful grotesque with an optical-size axis. */
+.display {
+  font-family: var(--font-bricolage), system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.numeral {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .eyebrow {
@@ -66,31 +103,65 @@ body {
   content: "";
   width: 1.75rem;
   height: 2px;
-  background: var(--orange);
+  background: var(--gold);
   flex-shrink: 0;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+/* Visible keyboard focus everywhere; mouse clicks stay clean. */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
-.reveal.is-visible {
-  opacity: 1;
+.on-light :focus-visible,
+main :focus-visible {
+  outline-color: var(--brand);
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: var(--z-skip);
+  transform: translateY(-200%);
+  border-radius: 0.5rem;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
   transform: translateY(0);
+}
+
+/* Scroll reveal: CSS-only, progressive enhancement. */
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
   }
 }

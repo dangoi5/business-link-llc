@@ -1,304 +1,320 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { MarketsMap } from "@/components/MarketsMap";
 import { Reveal } from "@/components/Reveal";
-import {
-  PrimaryButton,
-  SecondaryButton,
-  SectionHeading,
-  SectionLabel,
-  TextLink,
-} from "@/components/ui";
+import { PrimaryButton, SectionHeading, TextLink } from "@/components/ui";
 import { isLocale, localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
+import { representedBrands } from "@/lib/brands";
 import {
   activeMarkets,
   buyerServices,
+  catalogDocs,
   company,
-  heroHighlights,
   images,
   manufacturerServices,
-  ownBrand,
   portfolioCategories,
   regionCards,
   regionLabels,
 } from "@/lib/content";
-import { notFound } from "next/navigation";
+
+const packshots = {
+  oil: "/products/fresh-elements/palm-oil-blend.jpg",
+  chips: "/products/fresh-elements/platanitos.jpg",
+  spread: "/products/fresh-elements/do-it-all-spread-v2.jpg",
+};
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale: raw } = await params;
   if (!isLocale(raw)) notFound();
   const locale: Locale = raw;
 
+  const contactHref = localizedHref(locale, "/contact");
+  const logos = representedBrands.filter((brand) => brand.logo);
+
+  const audiences = [
+    {
+      id: "buyers",
+      kicker: ui.home.forBuyers,
+      title: ui.home.sourceSupply,
+      items: buyerServices,
+      cta: ui.common.getInTouch,
+      href: `${contactHref}?role=buyer`,
+    },
+    {
+      id: "manufacturers",
+      kicker: ui.home.forManufacturers,
+      title: ui.home.expandMarkets,
+      items: manufacturerServices,
+      cta: ui.home.heroSupplier,
+      href: `${contactHref}?role=manufacturer`,
+    },
+  ];
+
   return (
     <>
-      <section className="relative min-h-[92svh] overflow-hidden bg-ink">
-        <Image
-          src={images.hero}
-          alt={t(locale, ui.home.heroAlt)}
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
-
-        <div className="relative mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-end px-5 pb-28 pt-32 md:justify-center md:px-8 md:pb-36">
-          <SectionLabel light>{t(locale, ui.home.heroLabel)}</SectionLabel>
-          <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
-            {t(locale, ui.home.heroTitle1)}
-            <br />
-            {t(locale, ui.home.heroTitle2)}
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-            {t(locale, ui.home.heroBody)}
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <PrimaryButton href={localizedHref(locale, "/portfolio")}>
-              {t(locale, ui.home.requestPortfolio)}
-            </PrimaryButton>
-            <SecondaryButton href={localizedHref(locale, "/contact")} light>
-              {t(locale, ui.home.letsWork)}
-            </SecondaryButton>
+      <section className="bg-white pt-[4.5rem]">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:px-8 lg:min-h-[calc(100dvh-4.5rem)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-16">
+          <div>
+            <h1 className="display max-w-[16ch] text-[2.6rem] text-ink sm:text-6xl xl:text-7xl">
+              {t(locale, ui.home.heroTitle)}
+            </h1>
+            <p className="mt-6 max-w-[48ch] text-base leading-relaxed text-slate md:text-lg">
+              {t(locale, ui.home.heroBody)}
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <PrimaryButton href={`${contactHref}?role=buyer`}>{t(locale, ui.common.getInTouch)}</PrimaryButton>
+              <Link
+                href={`${contactHref}?role=manufacturer`}
+                className="text-sm font-semibold text-ink underline decoration-gold decoration-2 underline-offset-[6px] transition-colors duration-200 hover:text-brand"
+              >
+                {t(locale, ui.home.heroSupplier)}
+              </Link>
+            </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-3">
-            <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 backdrop-blur-sm">
-              <p className="text-2xl font-bold text-white">{activeMarkets.length}+</p>
-              <p className="mt-1 text-xs font-medium tracking-wide text-white/70 uppercase">
-                {t(locale, ui.home.activeMarkets)}
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 backdrop-blur-sm">
-              <p className="text-2xl font-bold text-white">{portfolioCategories.length}</p>
-              <p className="mt-1 text-xs font-medium tracking-wide text-white/70 uppercase">
-                {t(locale, ui.home.productCategories)}
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 backdrop-blur-sm">
-              <p className="text-2xl font-bold text-white">5</p>
-              <p className="mt-1 text-xs font-medium tracking-wide text-white/70 uppercase">
-                {t(locale, ui.home.worldRegions)}
-              </p>
-            </div>
+          <div className="relative aspect-[5/6] overflow-hidden rounded-xl bg-ink sm:aspect-[4/3] lg:aspect-[4/5]">
+            <Image
+              src={images.hero}
+              alt={t(locale, ui.home.heroAlt)}
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+            />
           </div>
         </div>
       </section>
 
-      <section className="relative z-10 -mt-14 px-5 md:-mt-16 md:px-8">
-        <div className="mx-auto grid max-w-7xl overflow-hidden rounded-2xl border border-line bg-white shadow-xl shadow-ink/10 md:grid-cols-3">
-          {heroHighlights.map((item) => (
-            <div
-              key={item.title.en}
-              className="border-b border-line p-6 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 md:p-8"
-            >
-              <h3 className="text-base font-bold text-teal">{t(locale, item.title)}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate">{t(locale, item.description)}</p>
-            </div>
-          ))}
+      <section aria-label={t(locale, ui.home.brandsHeading)} className="border-y border-line bg-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 md:px-8 lg:flex-row lg:items-center lg:gap-12">
+          <p className="shrink-0 text-sm font-semibold text-ink">{t(locale, ui.home.brandsHeading)}</p>
+          <ul className="grid flex-1 grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
+            {logos.map((brand) => (
+              <li key={brand.slug} className="flex h-10 items-center justify-center">
+                <Image
+                  src={brand.logo as string}
+                  alt={brand.name}
+                  width={160}
+                  height={64}
+                  className="h-full w-auto max-w-full object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <Reveal>
-            <SectionLabel>{t(locale, ui.home.whoWeAre)}</SectionLabel>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink md:text-4xl">
-              {t(locale, ui.home.whoTitle)}
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-slate md:text-lg">
-              {t(locale, company.description)}
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-slate">{t(locale, company.role)}</p>
-            <p className="mt-4 text-base leading-relaxed text-slate">
-              {t(locale, ui.home.whoAlongside)}{" "}
-              <Link href={localizedHref(locale, "/portfolio/fresh-elements")} className="font-semibold text-ink underline decoration-orange/60 underline-offset-4 hover:text-teal">
-                {ownBrand.name}
-              </Link>
-              {t(locale, ui.home.whoAlongsideAfter)}
-            </p>
-            <div className="mt-8">
-              <TextLink href={localizedHref(locale, "/capabilities")}>
-                {t(locale, ui.home.learnCapabilities)}
-              </TextLink>
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <Reveal className="lg:sticky lg:top-28 lg:self-start">
+            <SectionHeading
+              title={t(locale, ui.home.portfolioTitle)}
+              description={t(locale, ui.home.portfolioDescription)}
+            />
+            <div className="mt-6">
+              <TextLink href={localizedHref(locale, "/portfolio")}>{t(locale, ui.home.explorePortfolio)}</TextLink>
             </div>
           </Reveal>
-          <Reveal delay={100}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image
-                src={images.about}
-                alt={t(locale, ui.home.aboutAlt)}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </Reveal>
+
+          <ul className="divide-y divide-line border-y border-line">
+            {portfolioCategories.map((category) => (
+              <li key={category.slug}>
+                <Link
+                  href={localizedHref(locale, `/portfolio/${category.slug}`)}
+                  className="group grid grid-cols-[5.5rem_1fr_auto] items-center gap-5 py-5 transition-colors duration-200 hover:bg-surface sm:grid-cols-[7rem_1fr_auto] sm:gap-7 sm:px-3"
+                >
+                  <span className="relative block aspect-[4/3] overflow-hidden rounded-lg bg-surface">
+                    <Image
+                      src={category.image}
+                      alt=""
+                      fill
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                      sizes="112px"
+                    />
+                  </span>
+                  <span>
+                    <span className="display block text-xl text-ink md:text-2xl">{t(locale, category.title)}</span>
+                    <span className="mt-1 line-clamp-2 block max-w-[52ch] text-sm leading-relaxed text-slate">
+                      {t(locale, category.summary)}
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden
+                    className="text-xl text-slate transition duration-200 group-hover:translate-x-1 group-hover:text-ink"
+                  >
+                    →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <section className="bg-surface py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <Reveal>
-            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <SectionHeading
-                label={t(locale, ui.home.portfolioLabel)}
-                title={t(locale, ui.home.portfolioTitle)}
-                description={t(locale, ui.home.portfolioDescription)}
-              />
-              <TextLink href={localizedHref(locale, "/portfolio")}>
-                {t(locale, ui.home.explorePortfolio)}
-              </TextLink>
+            <div className="grid h-[28rem] grid-cols-7 grid-rows-2 gap-3 sm:h-[36rem] md:gap-4">
+              <div className="relative col-span-3 row-span-2 overflow-hidden rounded-xl bg-white">
+                <Image
+                  src={packshots.oil}
+                  alt="Fresh Elements Palm Oil Blend, 900 ml bottle"
+                  fill
+                  className="object-contain p-1 mix-blend-multiply scale-[1.65]"
+                  sizes="(max-width: 1024px) 45vw, 28vw"
+                />
+              </div>
+              <div className="relative col-span-4 overflow-hidden rounded-xl bg-white">
+                <Image
+                  src={packshots.chips}
+                  alt="Fresh Elements Platanitos plantain chips, salt and chile limón"
+                  fill
+                  className="object-contain p-2 mix-blend-multiply"
+                  sizes="(max-width: 1024px) 60vw, 33vw"
+                />
+              </div>
+              <div className="relative col-span-4 overflow-hidden rounded-xl bg-white">
+                <Image
+                  src={packshots.spread}
+                  alt="Fresh Elements Do-It-All table and cooking spread"
+                  fill
+                  className="object-contain p-2 mix-blend-multiply"
+                  sizes="(max-width: 1024px) 60vw, 33vw"
+                />
+              </div>
             </div>
           </Reveal>
-
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {portfolioCategories.map((category, index) => (
-              <Reveal key={category.slug} delay={index * 60}>
-                <article className="group overflow-hidden rounded-2xl border border-line bg-white transition hover:shadow-lg hover:shadow-ink/5">
-                  <Link href={localizedHref(locale, `/portfolio/${category.slug}`)} className="block">
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <Image
-                        src={category.image}
-                        alt={t(locale, category.title)}
-                        fill
-                        className="object-cover transition duration-500 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
-                    </div>
-                    <div className="p-5">
-                      <h3 className="text-lg font-bold text-ink group-hover:text-teal">
-                        {t(locale, category.title)}
-                      </h3>
-                      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate">
-                        {t(locale, category.summary)}
-                      </p>
-                    </div>
-                  </Link>
-                  <div className="border-t border-line px-5 py-4">
-                    <Link
-                      href={localizedHref(locale, `/portfolio/${category.slug}`)}
-                      className="text-sm font-semibold text-orange transition hover:text-orange-hover"
-                    >
-                      {t(locale, ui.home.viewProducts)}
-                    </Link>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden py-20 md:py-28">
-        <Image src={images.markets} alt="" fill className="object-cover" sizes="100vw" />
-        <div className="absolute inset-0 bg-ink/85" />
-        <div className="relative mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal>
-            <SectionHeading
-              light
-              label={t(locale, ui.home.marketsLabel)}
-              title={t(locale, ui.home.marketsTitle)}
-              description={t(locale, ui.home.marketsDescription)}
-            />
-          </Reveal>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {regionCards.map((card) => (
-              <Reveal key={card.region}>
-                <div className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
-                  <h3 className="font-bold text-white">{t(locale, regionLabels[card.region])}</h3>
-                  <p className="mt-2 text-sm text-white/65">{t(locale, card.detail)}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal className="mt-8">
-            <Link
-              href={localizedHref(locale, "/markets")}
-              className="text-sm font-semibold text-orange hover:underline"
-            >
-              {t(locale, ui.home.viewFootprint)}
-            </Link>
+          <Reveal delay={80}>
+            <h2 className="display text-3xl text-ink md:text-5xl">{t(locale, ui.home.freshTitle)}</h2>
+            <p className="mt-6 max-w-[52ch] text-base leading-relaxed text-slate md:text-lg">
+              {t(locale, ui.home.freshBody)}
+            </p>
+            <div className="mt-8">
+              <PrimaryButton href={localizedHref(locale, "/portfolio/fresh-elements")}>
+                {t(locale, ui.home.freshCta)}
+              </PrimaryButton>
+            </div>
           </Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <Reveal>
-          <SectionHeading
-            label={t(locale, ui.home.gatewayLabel)}
-            title={t(locale, ui.home.gatewayTitle)}
-            description={t(locale, ui.home.gatewayDescription)}
-          />
+          <h2 className="display max-w-[22ch] text-3xl text-ink md:text-5xl">
+            {t(locale, ui.home.footprintTitle)
+              .replace("{n}", String(activeMarkets.length))
+              .replace("{r}", String(new Set(activeMarkets.map((market) => market.region)).size))}
+          </h2>
         </Reveal>
-
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <Reveal>
-            <div className="h-full rounded-2xl border border-line bg-white p-8">
-              <p className="text-sm font-bold text-orange">{t(locale, ui.home.forManufacturers)}</p>
-              <h3 className="mt-2 text-2xl font-bold text-ink">{t(locale, ui.home.expandMarkets)}</h3>
-              <ul className="mt-6 space-y-5">
-                {manufacturerServices.map((service) => (
-                  <li key={service.title.en}>
-                    <p className="font-semibold text-ink">{t(locale, service.title)}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-slate">
-                      {t(locale, service.description)}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8">
-                <PrimaryButton href={localizedHref(locale, "/contact")}>
-                  {t(locale, ui.common.contactUs)}
-                </PrimaryButton>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={80}>
-            <div className="h-full rounded-2xl border border-line bg-teal p-8 text-white">
-              <p className="text-sm font-bold text-orange">{t(locale, ui.home.forBuyers)}</p>
-              <h3 className="mt-2 text-2xl font-bold">{t(locale, ui.home.sourceSupply)}</h3>
-              <ul className="mt-6 space-y-5">
-                {buyerServices.map((service) => (
-                  <li key={service.title.en}>
-                    <p className="font-semibold">{t(locale, service.title)}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-white/75">
-                      {t(locale, service.description)}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8">
-                <Link
-                  href={localizedHref(locale, "/contact")}
-                  className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-teal transition hover:bg-white/90"
-                >
-                  {t(locale, ui.common.contactUs)}
-                </Link>
-              </div>
-            </div>
-          </Reveal>
+        <div className="mt-10">
+          <MarketsMap locale={locale} variant="light" />
+        </div>
+        <ul className="mt-10 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-5">
+          {regionCards.map((card) => (
+            <li key={card.region} className="border-t border-ink pt-4">
+              <p className="display text-xl text-ink">{t(locale, regionLabels[card.region])}</p>
+              <p className="mt-1 text-sm leading-relaxed text-slate">{t(locale, card.detail)}</p>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-8">
+          <TextLink href={localizedHref(locale, "/markets")}>{t(locale, ui.home.viewFootprint)}</TextLink>
         </div>
       </section>
 
-      <section className="bg-ink py-16 md:py-20">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 md:flex-row md:items-center md:justify-between md:px-8">
-          <div className="max-w-xl">
-            <SectionLabel light>{t(locale, ui.home.letsWork)}</SectionLabel>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
-              {t(locale, ui.home.ctaTitle)}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/70">{t(locale, ui.home.ctaBody)}</p>
+      <section className="border-t border-line bg-surface py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <SectionHeading title={t(locale, ui.home.gatewayTitle)} description={t(locale, ui.home.gatewayDescription)} />
+          </Reveal>
+          <div className="mt-14 grid gap-14 lg:grid-cols-2 lg:gap-0">
+            {audiences.map((audience, index) => (
+              <Reveal
+                key={audience.id}
+                delay={index * 80}
+                className={index === 0 ? "lg:border-r lg:border-line lg:pr-14" : "lg:pl-14"}
+              >
+                <div id={audience.id} className="scroll-mt-28">
+                  <p className="text-sm font-semibold text-gold-ink">{t(locale, audience.kicker)}</p>
+                  <h3 className="display mt-2 text-3xl text-ink">{t(locale, audience.title)}</h3>
+                  <dl className="mt-8 space-y-6">
+                    {audience.items.map((service) => (
+                      <div key={service.title.en}>
+                        <dt className="font-semibold text-ink">{t(locale, service.title)}</dt>
+                        <dd className="mt-1 max-w-[56ch] text-sm leading-relaxed text-slate">
+                          {t(locale, service.description)}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <div className="mt-9">
+                    {index === 0 ? (
+                      <PrimaryButton href={audience.href}>{t(locale, audience.cta)}</PrimaryButton>
+                    ) : (
+                      <Link
+                        href={audience.href}
+                        className="inline-flex rounded-lg border border-ink px-6 py-3 text-sm font-semibold text-ink transition duration-200 hover:bg-ink hover:text-white active:translate-y-px"
+                      >
+                        {t(locale, audience.cta)}
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
-          <div className="flex flex-wrap gap-3">
-            <PrimaryButton href={localizedHref(locale, "/contact")}>
-              {t(locale, ui.common.getInTouch)}
-            </PrimaryButton>
-            <SecondaryButton href={localizedHref(locale, "/portfolio")} light>
-              {t(locale, ui.home.viewPortfolio)}
-            </SecondaryButton>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <Reveal>
+          <SectionHeading title={t(locale, ui.home.catalogsTitle)} description={t(locale, ui.home.catalogsBody)} />
+        </Reveal>
+        <ul className="mt-12 divide-y divide-line border-y border-line">
+          {catalogDocs.map((doc) => (
+            <li key={doc.href}>
+              <a
+                href={doc.href}
+                download
+                className="group grid grid-cols-[6rem_1fr_auto] items-center gap-4 py-5 transition-colors duration-200 hover:bg-surface sm:grid-cols-[9rem_1fr_6rem_auto] sm:gap-8 sm:px-3"
+              >
+                <span className="relative block h-9">
+                  <Image
+                    src={doc.logo}
+                    alt={doc.brand}
+                    fill
+                    className="object-contain object-left"
+                    sizes="144px"
+                  />
+                </span>
+                <span className="font-semibold text-ink">{t(locale, doc.title)}</span>
+                <span className="numeral hidden text-sm text-slate sm:block">{doc.sizeMb.toFixed(1)} MB</span>
+                <span className="text-sm font-semibold text-brand transition-colors duration-200 group-hover:text-ink">
+                  {t(locale, ui.home.download)}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="border-t border-line bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <h2 className="display max-w-[14ch] text-5xl text-ink sm:text-7xl lg:text-8xl">
+            {t(locale, ui.home.ctaTitleNew)}
+          </h2>
+          <p className="mt-8 max-w-[52ch] text-base leading-relaxed text-slate md:text-lg">{t(locale, ui.home.ctaBody)}</p>
+          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <PrimaryButton href={`${contactHref}?role=buyer`}>{t(locale, ui.common.getInTouch)}</PrimaryButton>
+            <a
+              href={`mailto:${company.email}`}
+              className="text-sm font-semibold text-ink underline decoration-gold decoration-2 underline-offset-[6px] transition-colors duration-200 hover:text-brand"
+            >
+              {company.email}
+            </a>
           </div>
         </div>
       </section>

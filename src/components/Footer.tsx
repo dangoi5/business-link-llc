@@ -24,7 +24,7 @@ export function Footer({ locale }: { locale: Locale }) {
           </p>
           <Link
             href={localizedHref(locale, "/contact")}
-            className="mt-6 inline-flex rounded-full bg-orange px-4 py-2 text-xs font-semibold text-white transition hover:bg-orange-hover"
+            className="mt-6 inline-flex rounded-lg bg-gold px-4 py-2 text-xs font-semibold text-ink transition duration-200 hover:bg-gold-hover active:translate-y-px"
           >
             {t(locale, ui.common.getInTouch)}
           </Link>
@@ -46,7 +46,7 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
         <div>
           <p className="text-sm font-semibold text-white">{t(locale, ui.common.contact)}</p>
-          <a href={`mailto:${company.email}`} className="mt-4 block text-sm text-orange hover:underline">
+          <a href={`mailto:${company.email}`} className="mt-4 block text-sm text-gold hover:underline">
             {company.email}
           </a>
           <p className="mt-3 text-sm leading-relaxed text-white/65">

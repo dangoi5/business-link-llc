@@ -69,7 +69,7 @@ function BrandLinks({ brand, locale }: { brand: Brand; locale: Locale }) {
         <CatalogAnchor
           href={brand.catalogHref}
           locale={locale}
-          className="inline-flex text-sm font-semibold text-teal transition hover:text-teal-deep"
+          className="inline-flex text-sm font-semibold text-brand transition hover:text-brand-deep"
         >
           {t(locale, brand.catalogLabel ?? ui.common.viewFullCatalog)} →
         </CatalogAnchor>
@@ -79,7 +79,7 @@ function BrandLinks({ brand, locale }: { brand: Brand; locale: Locale }) {
           key={link.href}
           href={link.href}
           locale={locale}
-          className="inline-flex text-sm font-semibold text-teal transition hover:text-teal-deep"
+          className="inline-flex text-sm font-semibold text-brand transition hover:text-brand-deep"
         >
           {t(locale, link.label)} →
         </CatalogAnchor>
@@ -151,13 +151,13 @@ function BrandCard({ brand, locale }: { brand: Brand; locale: Locale }) {
   return (
     <article
       id={brand.slug}
-      className="scroll-mt-28 overflow-hidden rounded-2xl border border-line bg-white has-[details[open]]:border-teal/40"
+      className="scroll-mt-28 overflow-hidden rounded-2xl border border-line bg-white has-[details[open]]:border-brand/40"
     >
       <div className="flex gap-3 p-3 sm:gap-4 sm:p-4">
         <BrandLogo brand={brand} />
         <div className="min-w-0 flex-1 space-y-2.5">
           <div>
-            <p className="text-[10px] font-bold tracking-wider text-orange uppercase">{roleLabel}</p>
+            <p className="text-[10px] font-bold tracking-wider text-gold-ink uppercase">{roleLabel}</p>
             <h3 className="mt-0.5 text-base font-bold tracking-tight text-ink sm:text-lg">{brand.name}</h3>
             {brand.productLines?.length ? (
               <p className="mt-1 line-clamp-1 text-xs text-slate sm:text-sm">
@@ -176,7 +176,7 @@ function BrandCard({ brand, locale }: { brand: Brand; locale: Locale }) {
 
       {expandable ? (
         <details className="group">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 border-t border-line px-4 py-2.5 text-sm font-semibold text-teal transition hover:bg-surface/80 sm:px-5 [&::-webkit-details-marker]:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 border-t border-line px-4 py-2.5 text-sm font-semibold text-brand transition hover:bg-surface/80 sm:px-5 [&::-webkit-details-marker]:hidden">
             <span className="group-open:hidden">{t(locale, ui.brands.learnMore)}</span>
             <span className="hidden group-open:inline">{t(locale, ui.brands.showLess)}</span>
             <span aria-hidden className="inline-block text-xs transition group-open:rotate-180">
