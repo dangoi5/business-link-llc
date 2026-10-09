@@ -24,7 +24,7 @@ export const ui = {
     switchTo: loc("Language", "Idioma", "Lingua"),
   },
   common: {
-    getInTouch: loc("Request a quote", "Solicitar cotización", "Richiedi un preventivo"),
+    getInTouch: loc("Contact us", "Contáctenos", "Contattaci"),
     contactUs: loc("Contact us", "Contáctenos", "Contattaci"),
     homeAria: loc("Business Link LLC home", "Inicio de Business Link LLC", "Home di Business Link LLC"),
     openMenu: loc("Open menu", "Abrir menú", "Apri menu"),
