@@ -99,7 +99,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   alt={brand.name}
                   width={160}
                   height={64}
-                  className="h-full w-auto max-w-full object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                  className="h-full w-auto max-w-full object-contain"
                 />
               </li>
             ))}
