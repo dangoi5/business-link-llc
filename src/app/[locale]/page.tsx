@@ -11,7 +11,6 @@ import { representedBrands } from "@/lib/brands";
 import {
   activeMarkets,
   buyerServices,
-  catalogDocs,
   company,
   images,
   manufacturerServices,
@@ -267,38 +266,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
-        <Reveal>
-          <SectionHeading title={t(locale, ui.home.catalogsTitle)} description={t(locale, ui.home.catalogsBody)} />
-        </Reveal>
-        <ul className="mt-12 divide-y divide-line border-y border-line">
-          {catalogDocs.map((doc) => (
-            <li key={doc.href}>
-              <a
-                href={doc.href}
-                download
-                className="group grid grid-cols-[6rem_1fr_auto] items-center gap-4 py-5 transition-colors duration-200 hover:bg-surface sm:grid-cols-[9rem_1fr_6rem_auto] sm:gap-8 sm:px-3"
-              >
-                <span className="relative block h-9">
-                  <Image
-                    src={doc.logo}
-                    alt={doc.brand}
-                    fill
-                    className="object-contain object-left"
-                    sizes="144px"
-                  />
-                </span>
-                <span className="font-semibold text-ink">{t(locale, doc.title)}</span>
-                <span className="numeral hidden text-sm text-slate sm:block">{doc.sizeMb.toFixed(1)} MB</span>
-                <span className="text-sm font-semibold text-brand transition-colors duration-200 group-hover:text-ink">
-                  {t(locale, ui.home.download)}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="border-t border-line bg-white py-20 md:py-28">
