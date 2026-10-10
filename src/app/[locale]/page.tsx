@@ -125,12 +125,12 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   href={localizedHref(locale, `/portfolio/${category.slug}`)}
                   className="group grid grid-cols-[5.5rem_1fr_auto] items-center gap-5 py-5 transition-colors duration-200 hover:bg-surface sm:grid-cols-[7rem_1fr_auto] sm:gap-7 sm:px-3"
                 >
-                  <span className="relative block aspect-[4/3] overflow-hidden rounded-lg bg-surface">
+                  <span className="relative block aspect-square overflow-hidden rounded-lg bg-surface">
                     <Image
                       src={category.image}
                       alt=""
                       fill
-                      className="object-cover transition duration-500 group-hover:scale-105"
+                      className="object-contain"
                       sizes="112px"
                     />
                   </span>

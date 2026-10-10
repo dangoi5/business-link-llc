@@ -389,6 +389,7 @@ export const ui = {
     discussPortfolio: loc("Discuss a portfolio opportunity →", "Hablemos de una oportunidad de portafolio →", "Parliamo di un'opportunità di portafoglio →"),
   },
   categoryPage: {
+    viewAllProducts: loc("View all products", "Ver todos los productos", "Vedi tutti i prodotti"),
     allCategories: loc("← All categories", "← Todas las categorías", "← Tutte le categorie"),
     products: loc("Products", "Productos", "Prodotti"),
     productsIntro: loc(

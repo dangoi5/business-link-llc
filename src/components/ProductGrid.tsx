@@ -1,3 +1,5 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import Image from "next/image";
 import Link from "next/link";
 import { localizedHref, type Locale } from "@/i18n/config";
@@ -56,33 +58,47 @@ function NutritionBlock({
   );
 }
 
-export function ProductGrid({
+async function productImageSrc(src: string): Promise<string> {
+  if (!src.startsWith("/products/")) return src;
+  try {
+    const file = await fs.stat(path.join(process.cwd(), "public", src));
+    return `${src}?v=${Math.trunc(file.mtimeMs)}`;
+  } catch {
+    return src;
+  }
+}
+
+export async function ProductGrid({
   products,
   locale,
 }: {
   products: CatalogProduct[];
   locale: Locale;
 }) {
+  const imageSources = await Promise.all(products.map((product) => productImageSrc(product.image)));
+
   return (
     <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {products.map((product) => {
+      {products.map((product, index) => {
         const card = (
           <article
             key={product.slug}
             className={`overflow-hidden rounded-2xl border border-line bg-white ${
-              product.href ? "h-full transition hover:border-brand hover:shadow-lg hover:shadow-ink/5" : ""
+              product.href
+                ? "group flex h-full flex-col transition hover:border-brand hover:shadow-lg hover:shadow-ink/5"
+                : ""
             }`}
           >
-            <div className="relative aspect-[4/3]">
+            <div className="relative aspect-square overflow-hidden bg-[#f7f4ee]">
               <Image
-                src={product.image}
+                src={imageSources[index]}
                 alt={t(locale, product.name)}
                 fill
-                className={product.imageFit === "contain" ? "object-contain bg-[#f7f4ee]" : "object-cover"}
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
-            <div className="p-5">
+            <div className={`p-5 ${product.href ? "flex flex-1 flex-col" : ""}`}>
               <h3 className="text-lg font-bold text-ink">{t(locale, product.name)}</h3>
               {product.unavailableForExport ? (
                 <p className="mt-2 inline-flex rounded-full bg-gold/10 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-gold-ink uppercase">
@@ -103,6 +119,14 @@ export function ProductGrid({
                 </div>
               ) : null}
               {product.nutrition ? <NutritionBlock nutrition={product.nutrition} locale={locale} /> : null}
+              {product.href ? (
+                <span className="mt-auto pt-5">
+                  <span className="inline-flex items-center gap-2 rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white transition group-hover:bg-brand-deep">
+                    {t(locale, ui.categoryPage.viewAllProducts)}
+                    <span aria-hidden className="transition group-hover:translate-x-0.5">→</span>
+                  </span>
+                </span>
+              ) : null}
             </div>
           </article>
         );

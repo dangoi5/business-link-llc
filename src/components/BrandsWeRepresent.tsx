@@ -124,13 +124,13 @@ function BrandDetails({ brand, locale }: { brand: Brand; locale: Locale }) {
           {brand.photos.map((src, index) => (
             <div
               key={`${brand.slug}-photo-${index}`}
-              className="relative aspect-[4/3] overflow-hidden rounded-lg border border-line"
+              className="relative aspect-square overflow-hidden rounded-lg border border-line bg-surface"
             >
               <Image
                 src={src}
                 alt={`${brand.name} ${index + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 50vw, 180px"
               />
             </div>

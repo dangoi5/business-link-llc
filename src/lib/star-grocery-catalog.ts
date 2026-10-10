@@ -612,6 +612,83 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
     ],
   },
   {
+    slug: "khutorok-instant-noodles",
+    name: loc("Khutorok Instant Noodles", "Fideos instantáneos Khutorok", "Noodles istantanei Khutorok"),
+    description: loc(
+      "Khutorok instant vermicelli in 60 g and 90 g bags, 80 g cups and 90 g trays. Open the family for every flavor.",
+      "Fideos instantáneos Khutorok en bolsas de 60 g y 90 g, vasos de 80 g y bandejas de 90 g. Entre para ver cada sabor.",
+      "Vermicelli istantanei Khutorok in buste da 60 g e 90 g, coppette da 80 g e vaschette da 90 g. Clicchi per ogni gusto.",
+    ),
+    cover: cover("khutorok-instant-noodles"),
+    brand: "Khutorok",
+    groups: [
+      {
+        id: "bags-60g",
+        label: loc("Bags, 60 g", "Bolsas, 60 g", "Buste, 60 g"),
+        products: [
+          item("khutorok-instant-noodles", "30_khutorok_instant_noodles_bag_60g", "01", "Khutorok Instant Noodles, Cheese & Herbs 60 g", "Fideos instantáneos Khutorok, queso y hierbas 60 g", "Noodles istantanei Khutorok, formaggio ed erbe 60 g"),
+          item("khutorok-instant-noodles", "30_khutorok_instant_noodles_bag_60g", "02", "Khutorok Instant Noodles, Duck 60 g", "Fideos instantáneos Khutorok, pato 60 g", "Noodles istantanei Khutorok, anatra 60 g"),
+          item("khutorok-instant-noodles", "30_khutorok_instant_noodles_bag_60g", "03", "Khutorok Instant Noodles, Beef 60 g", "Fideos instantáneos Khutorok, res 60 g", "Noodles istantanei Khutorok, manzo 60 g"),
+          item("khutorok-instant-noodles", "30_khutorok_instant_noodles_bag_60g", "04", "Khutorok Instant Noodles, Mushroom 60 g", "Fideos instantáneos Khutorok, champiñones 60 g", "Noodles istantanei Khutorok, funghi 60 g"),
+          item("khutorok-instant-noodles", "30_khutorok_instant_noodles_bag_60g", "05", "Khutorok Instant Noodles, Vegetables 60 g", "Fideos instantáneos Khutorok, verduras 60 g", "Noodles istantanei Khutorok, verdure 60 g"),
+          item("khutorok-instant-noodles", "30_khutorok_instant_noodles_bag_60g", "06", "Khutorok Instant Noodles, Chicken (Non-Spicy) 60 g", "Fideos instantáneos Khutorok, pollo (no picante) 60 g", "Noodles istantanei Khutorok, pollo (non piccante) 60 g"),
+          item("khutorok-instant-noodles", "30_khutorok_instant_noodles_bag_60g", "07", "Khutorok Instant Noodles, Shrimp 60 g", "Fideos instantáneos Khutorok, camarón 60 g", "Noodles istantanei Khutorok, gambero 60 g"),
+          item("khutorok-instant-noodles", "30_khutorok_instant_noodles_bag_60g", "08", "Khutorok Instant Noodles, Chicken (Spicy) 60 g", "Fideos instantáneos Khutorok, pollo (picante) 60 g", "Noodles istantanei Khutorok, pollo (piccante) 60 g"),
+        ],
+      },
+      {
+        id: "cups-80g",
+        label: loc("Cups, 80 g", "Vasos, 80 g", "Coppette, 80 g"),
+        products: [
+          item("khutorok-instant-noodles", "31_khutorok_instant_noodles_cup_80g", "01", "Khutorok Instant Noodles Cup, Homemade Chicken Broth 80 g", "Vaso de fideos Khutorok, caldo de pollo casero 80 g", "Coppetta di noodles Khutorok, brodo di pollo casalingo 80 g"),
+          item("khutorok-instant-noodles", "31_khutorok_instant_noodles_cup_80g", "02", "Khutorok Instant Noodles Cup, Mushroom Soup 80 g", "Vaso de fideos Khutorok, sopa de champiñones 80 g", "Coppetta di noodles Khutorok, zuppa di funghi 80 g"),
+          item("khutorok-instant-noodles", "31_khutorok_instant_noodles_cup_80g", "03", "Khutorok Instant Noodles Cup, Goulash 80 g", "Vaso de fideos Khutorok, goulash 80 g", "Coppetta di noodles Khutorok, gulasch 80 g"),
+        ],
+      },
+      {
+        id: "trays-90g",
+        label: loc("Trays, 90 g", "Bandejas, 90 g", "Vaschette, 90 g"),
+        products: [
+          item("khutorok-instant-noodles", "32_khutorok_instant_noodles_tray_90g", "01", "Khutorok Instant Noodles Tray, Homemade Chicken Broth 90 g", "Bandeja de fideos Khutorok, caldo de pollo casero 90 g", "Vaschetta di noodles Khutorok, brodo di pollo casalingo 90 g"),
+          item("khutorok-instant-noodles", "32_khutorok_instant_noodles_tray_90g", "02", "Khutorok Instant Noodles Tray, Mushroom Soup 90 g", "Bandeja de fideos Khutorok, sopa de champiñones 90 g", "Vaschetta di noodles Khutorok, zuppa di funghi 90 g"),
+          item("khutorok-instant-noodles", "32_khutorok_instant_noodles_tray_90g", "03", "Khutorok Instant Noodles Tray, Goulash 90 g", "Bandeja de fideos Khutorok, goulash 90 g", "Vaschetta di noodles Khutorok, gulasch 90 g"),
+        ],
+      },
+      {
+        id: "bags-90g",
+        label: loc("Bags, 90 g", "Bolsas, 90 g", "Buste, 90 g"),
+        products: [
+          item("khutorok-instant-noodles", "33_khutorok_instant_noodles_bag_90g", "01", "Khutorok Instant Noodles, Meat with Vegetables & Herbs 90 g", "Fideos instantáneos Khutorok, carne con verduras y hierbas 90 g", "Noodles istantanei Khutorok, carne con verdure ed erbe 90 g"),
+          item("khutorok-instant-noodles", "33_khutorok_instant_noodles_bag_90g", "02", "Khutorok Instant Noodles, Spicy Chicken with Vegetables & Herbs 90 g", "Fideos instantáneos Khutorok, pollo picante con verduras y hierbas 90 g", "Noodles istantanei Khutorok, pollo piccante con verdure ed erbe 90 g"),
+          item("khutorok-instant-noodles", "33_khutorok_instant_noodles_bag_90g", "03", "Khutorok Instant Noodles, Chicken with Vegetables & Herbs 90 g", "Fideos instantáneos Khutorok, pollo con verduras y hierbas 90 g", "Noodles istantanei Khutorok, pollo con verdure ed erbe 90 g"),
+          item("khutorok-instant-noodles", "33_khutorok_instant_noodles_bag_90g", "04", "Khutorok Instant Noodles, Dried Mushrooms, Onions & Herbs 90 g", "Fideos instantáneos Khutorok, hongos secos, cebolla y hierbas 90 g", "Noodles istantanei Khutorok, funghi secchi, cipolla ed erbe 90 g"),
+        ],
+      },
+    ],
+  },
+  {
+    slug: "kitto-instant-egg-noodles",
+    name: loc("Kitto Instant Egg Noodles", "Fideos de huevo instantáneos Kitto", "Noodles all'uovo istantanei Kitto"),
+    description: loc(
+      "Kitto instant egg noodles in 130 g trays, each with its own sauce. Open the family for every flavor.",
+      "Fideos de huevo instantáneos Kitto en bandejas de 130 g, cada uno con su salsa. Entre para ver cada sabor.",
+      "Noodles all'uovo istantanei Kitto in vaschette da 130 g, ciascuno con la propria salsa. Clicchi per ogni gusto.",
+    ),
+    cover: cover("kitto-instant-egg-noodles"),
+    brand: "Kitto",
+    groups: [
+      {
+        id: "egg-noodles",
+        label: loc("Egg noodle trays, 130 g", "Bandejas de fideos de huevo, 130 g", "Vaschette di noodles all'uovo, 130 g"),
+        products: [
+          item("kitto-instant-egg-noodles", "34_kitto_instant_egg_noodles_130g", "01", "Kitto Egg Noodles, Mushroom with Sweet Chili Sauce 130 g", "Fideos de huevo Kitto, champiñones con salsa Sweet Chili 130 g", "Noodles all'uovo Kitto, funghi con salsa Sweet Chili 130 g"),
+          item("kitto-instant-egg-noodles", "34_kitto_instant_egg_noodles_130g", "02", "Kitto Egg Noodles, Spicy Chicken with Tomato Spicy Sauce 130 g", "Fideos de huevo Kitto, pollo picante con salsa Tomato Spicy 130 g", "Noodles all'uovo Kitto, pollo piccante con salsa Tomato Spicy 130 g"),
+          item("kitto-instant-egg-noodles", "34_kitto_instant_egg_noodles_130g", "03", "Kitto Egg Noodles, Meat with Tomato Yaki Sauce 130 g", "Fideos de huevo Kitto, carne con salsa Tomato Yaki 130 g", "Noodles all'uovo Kitto, carne con salsa Tomato Yaki 130 g"),
+        ],
+      },
+    ],
+  },
+  {
     slug: "kitto-soy-sauce-family-spread",
     name: loc("Kitto Soy & Asian Sauces", "Salsas de soya y asiáticas Kitto", "Salse di soia e asiatiche Kitto"),
     description: loc(

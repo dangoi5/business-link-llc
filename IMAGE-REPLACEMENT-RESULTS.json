@@ -1,0 +1,992 @@
+[
+  {
+    "target": "public/products/ameriqual/bbq-sauce-with-beef.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-63d24e8c-ed00-4121-a3e9-ce20558a607b.png",
+    "prompt": "Full bowl of beef in barbecue sauce on warm travertine podium; original meal reference and Star Grocery style reference.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 489002,
+    "sha256": "e86ce7cf2c057ea80562faf9c95f06f30c7be9ca110f389fca8051917a63c0ca"
+  },
+  {
+    "target": "public/products/ameriqual/bbq-white-chicken.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-372eef36-3bb2-4542-b9dc-d4001ac1730a.png",
+    "prompt": "Use case: compositing. Restage image 1 as a square 1500x1500 premium catalog photo of pulled barbecue white chicken sandwich on a bun with potato chips. Image 2 is only a style reference. Preserve the meal type and ingredients of image 1. Show the whole plate or bowl, centered and filling 75% of the frame width, on a low warm beige travertine podium, with soft natural window light and subtle shadows, beige plaster background, sparse appropriate ingredient props at far edges. Crisp appetizing real food detail. Remove all source badges, borders and text. No lettering, no invented packaging, no watermark, no cropped dish.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 484945,
+    "sha256": "584890e67422e1c32c703e0b2272a537bc82a510881dc5a1423fa5abb634ee81"
+  },
+  {
+    "target": "public/products/ameriqual/buffalo-chicken.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-65696c34-0ac7-45e1-a740-c554ba300fb8.png",
+    "prompt": "Use case: compositing. Restage image 1 as a square 1500x1500 premium catalog photo of two buffalo chicken sliders with potato chips. Image 2 is only a style reference. Preserve the meal type and ingredients of image 1. Show the whole plate or bowl, centered and filling 75% of the frame width, on a low warm beige travertine podium, with soft natural window light and subtle shadows, beige plaster background, sparse appropriate ingredient props at far edges. Crisp appetizing real food detail. Remove all source badges, borders and text. No lettering, no invented packaging, no watermark, no cropped dish.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 549425,
+    "sha256": "102f0e1980617f4e78b25261a3b7e691c3fcd4e98b519f0b1c51bc4105fa33ea"
+  },
+  {
+    "target": "public/products/ameriqual/cheesy-mac.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-d74af3f3-60e4-4d3f-a0da-2ac60fb41b58.png",
+    "prompt": "Use case: compositing. Restage image 1 as a square 1500x1500 premium catalog photo of elbow macaroni in creamy orange cheese sauce in a bowl. Image 2 is only a style reference. Preserve the meal type and ingredients of image 1. Show the whole plate or bowl, centered and filling 75% of the frame width, on a low warm beige travertine podium, with soft natural window light and subtle shadows, beige plaster background, sparse appropriate ingredient props at far edges. Crisp appetizing real food detail. Remove all source badges, borders and text. No lettering, no invented packaging, no watermark, no cropped dish.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 506454,
+    "sha256": "e7d72cc272dc34a01122f81b35478ead625b9df67f51848b1d42af3f29b294de"
+  },
+  {
+    "target": "public/products/ameriqual/chicken-noodle-soup.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-08fc3c34-2e05-4cee-b54f-f0e72df45bcc.png",
+    "prompt": "Use case: compositing. Restage image 1 as a square 1500x1500 premium catalog photo of chicken noodle soup with golden broth and short thin noodles in a bowl. Image 2 is only a style reference. Preserve the meal type and ingredients of image 1. Show the whole plate or bowl, centered and filling 75% of the frame width, on a low warm beige travertine podium, with soft natural window light and subtle shadows, beige plaster background, sparse appropriate ingredient props at far edges. Crisp appetizing real food detail. Remove all source badges, borders and text. No lettering, no invented packaging, no watermark, no cropped dish.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 509847,
+    "sha256": "6caac5592f8c2a028c0d78c17a9805fd1561d62e96030a801a5a28c9745925cb"
+  },
+  {
+    "target": "public/products/ameriqual/chicken-salad.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-9508d640-6ea8-47cd-845f-6cdc38b98e69.png",
+    "prompt": "Use case: compositing. Restage image 1 as a square 1500x1500 premium catalog photo of chicken salad on four crackers with celery sticks and a small dipping bowl. Image 2 is only a style reference. Preserve the meal type and ingredients of image 1. Show the whole plate or bowl, centered and filling 75% of the frame width, on a low warm beige travertine podium, with soft natural window light and subtle shadows, beige plaster background, sparse appropriate ingredient props at far edges. Crisp appetizing real food detail. Remove all source badges, borders and text. No lettering, no invented packaging, no watermark, no cropped dish.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 470637,
+    "sha256": "146d61857406101c09f5a366d9dcef01cefdcee5b92088dc0dba4a15d52b9ca5"
+  },
+  {
+    "target": "public/products/ameriqual/chicken-sausage-quinoa.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-00a47539-e0f0-45ec-a4d2-2e5f7c6bf4f5.png",
+    "prompt": "Use case: compositing. Restage image 1 as a square 1500x1500 premium catalog photo of chicken sausage and quinoa with peas, corn and red pepper in a shallow bowl. Image 2 is only a style reference. Preserve the meal type and ingredients of image 1. Show the whole plate or bowl, centered and filling 75% of the frame width, on a low warm beige travertine podium, with soft natural window light and subtle shadows, beige plaster background, sparse appropriate ingredient props at far edges. Crisp appetizing real food detail. Remove all source badges, borders and text. No lettering, no invented packaging, no watermark, no cropped dish.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 645118,
+    "sha256": "b8678199178aab90b602c4311ec2ab07bffc726748ee28a139f0bf215ce60cbb"
+  },
+  {
+    "target": "public/products/ameriqual/chili-with-bean.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-2674ab99-394b-4165-b42e-112f217ce69b.png",
+    "prompt": "Use case: compositing. Image 1 is the food target, image 2 is only the photography style reference. Restage bean chili with a little shredded cheddar on top preserving image 1's meal type and ingredients. One square 1500x1500 catalog photograph, whole dark ceramic bowl visible, centered, filling 75% of the frame width, on warm beige travertine podium with soft window light and shadows. Beige plaster background, minimal appropriate ingredients kept at the edges. Realistic appetizing textures, sharp focus. Remove source text and badges; no lettering, labels, watermark, cropped dish or packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 521466,
+    "sha256": "165558cf638aa09f5f9555c0834b49fa38b900a5d0ef919f874ef21bfb4d7cfc"
+  },
+  {
+    "target": "public/products/ameriqual/cream-of-mushroom.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-1a19ce77-9e8b-4b35-af65-a5b843862d24.png",
+    "prompt": "Use case: compositing. Image 1 is the food target, image 2 is only the photography style reference. Restage cream of mushroom soup with parsley and mushroom pieces preserving image 1's meal type and ingredients. One square 1500x1500 catalog photograph, whole dark ceramic bowl visible, centered, filling 75% of the frame width, on warm beige travertine podium with soft window light and shadows. Beige plaster background, minimal appropriate ingredients kept at the edges. Realistic appetizing textures, sharp focus. Remove source text and badges; no lettering, labels, watermark, cropped dish or packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 521842,
+    "sha256": "aa63911b5acdbebe9584de92e3935c2cb6d21b2ff373f2c048bf1796ba351415"
+  },
+  {
+    "target": "public/products/ameriqual/hearty-beef-stew.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-b6bbf196-93f7-4e16-b46d-deaba08d7c9f.png",
+    "prompt": "Use case: compositing. Image 1 is the food target, image 2 is only the photography style reference. Restage hearty beef stew with diced potatoes and carrots preserving image 1's meal type and ingredients. One square 1500x1500 catalog photograph, whole dark ceramic bowl visible, centered, filling 75% of the frame width, on warm beige travertine podium with soft window light and shadows. Beige plaster background, minimal appropriate ingredients kept at the edges. Realistic appetizing textures, sharp focus. Remove source text and badges; no lettering, labels, watermark, cropped dish or packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 583449,
+    "sha256": "a08a8bc1625b02407000636425cc70a4f5c9d843459d5e1276de109bed5646b8"
+  },
+  {
+    "target": "public/products/ameriqual/hot-chili.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-7b6cacf4-1b94-4d7c-b155-08576fa1d782.png",
+    "prompt": "Use case: compositing. Image 1 is the food target, image 2 is only the photography style reference. Restage hot chili with red and green pepper rings and a little shredded cheese preserving image 1's meal type and ingredients. One square 1500x1500 catalog photograph, whole dark ceramic bowl visible, centered, filling 75% of the frame width, on warm beige travertine podium with soft window light and shadows. Beige plaster background, minimal appropriate ingredients kept at the edges. Realistic appetizing textures, sharp focus. Remove source text and badges; no lettering, labels, watermark, cropped dish or packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 600622,
+    "sha256": "50a5f3ff6e674b8d37065d610e9d4c935109fbe8f794574930f991dba294fdd7"
+  },
+  {
+    "target": "public/products/ameriqual/marinara-mac.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-be86074d-fc31-460b-b562-51d2d4ef2e1f.png",
+    "prompt": "Use case: compositing. Image 1 is the food target, image 2 is only the photography style reference. Restage elbow macaroni in red marinara tomato sauce with basil preserving image 1's meal type and ingredients. One square 1500x1500 catalog photograph, whole dark ceramic bowl visible, centered, filling 75% of the frame width, on warm beige travertine podium with soft window light and shadows. Beige plaster background, minimal appropriate ingredients kept at the edges. Realistic appetizing textures, sharp focus. Remove source text and badges; no lettering, labels, watermark, cropped dish or packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 613124,
+    "sha256": "2e9d1bd57efd3053637d1399b3c385d202717a9057254c389f9e8089beb0db14"
+  },
+  {
+    "target": "public/products/ameriqual/hearty-beef-stew-7oz.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-b6bbf196-93f7-4e16-b46d-deaba08d7c9f.png",
+    "prompt": "Use case: compositing. Image 1 is the food target, image 2 is only the photography style reference. Restage hearty beef stew with diced potatoes and carrots preserving image 1's meal type and ingredients. One square 1500x1500 catalog photograph, whole dark ceramic bowl visible, centered, filling 75% of the frame width, on warm beige travertine podium with soft window light and shadows. Beige plaster background, minimal appropriate ingredients kept at the edges. Realistic appetizing textures, sharp focus. Remove source text and badges; no lettering, labels, watermark, cropped dish or packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 583449,
+    "sha256": "a08a8bc1625b02407000636425cc70a4f5c9d843459d5e1276de109bed5646b8"
+  },
+  {
+    "target": "public/products/ameriqual/southwestern-chicken-rice.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-5ddc6ff2-83e4-4ea1-b852-7878f8263e26.png",
+    "prompt": "Use case: compositing. Image 1 is the meal target (southwestern chicken and rice with beans, corn and diced carrots), image 2 is only a background/style reference. Preserve the original meal identity, ingredients and serving suggestion. Restage in a whole ceramic bowl, centered, 75% of frame width on a low warm beige travertine podium. Square 1500x1500 premium food photograph. Soft window light, gentle natural shadows, beige plaster background, very few appropriate ingredient props at far edges. Crisp real appetizing food texture. Remove all original badge graphics, borders and lettering. No text, no watermark, no cropped dish, no invented product packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 593744,
+    "sha256": "a83d6f730c52ebd4eb160580f9e7206df092b47bd202db9a3ad89c319c07cdb2"
+  },
+  {
+    "target": "public/products/ameriqual/spaghetti-meat-sauce.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-4ad2b7c6-b65a-4a64-b5d5-bb909eebd5fc.png",
+    "prompt": "Use case: compositing. Image 1 is the meal target (spaghetti in tomato and ground meat sauce), image 2 is only a background/style reference. Preserve the original meal identity, ingredients and serving suggestion. Restage in a whole ceramic bowl, centered, 75% of frame width on a low warm beige travertine podium. Square 1500x1500 premium food photograph. Soft window light, gentle natural shadows, beige plaster background, very few appropriate ingredient props at far edges. Crisp real appetizing food texture. Remove all original badge graphics, borders and lettering. No text, no watermark, no cropped dish, no invented product packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 600691,
+    "sha256": "44190fe2f863f6a2fb33d395af2a84d2fab349dcf4249e2338894b73c5418543"
+  },
+  {
+    "target": "public/products/ameriqual/spaghetti-tomato-sauce.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-b2385476-8945-4da7-8800-d7886760196d.png",
+    "prompt": "Use case: compositing. Image 1 is the meal target (spaghetti in smooth red tomato sauce), image 2 is only a background/style reference. Preserve the original meal identity, ingredients and serving suggestion. Restage in a whole ceramic bowl, centered, 75% of frame width on a low warm beige travertine podium. Square 1500x1500 premium food photograph. Soft window light, gentle natural shadows, beige plaster background, very few appropriate ingredient props at far edges. Crisp real appetizing food texture. Remove all original badge graphics, borders and lettering. No text, no watermark, no cropped dish, no invented product packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 509493,
+    "sha256": "b6bdefea1186f7aac47f5fea98d59fdad378ae31d0aad887ee2bebcba2e98488"
+  },
+  {
+    "target": "public/products/ameriqual/tomato-soup.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-482a289a-44a3-4d85-877b-88668b90bd50.png",
+    "prompt": "Use case: compositing. Image 1 is the meal target (smooth red tomato soup with basil), image 2 is only a background/style reference. Preserve the original meal identity, ingredients and serving suggestion. Restage in a whole ceramic bowl, centered, 75% of frame width on a low warm beige travertine podium. Square 1500x1500 premium food photograph. Soft window light, gentle natural shadows, beige plaster background, very few appropriate ingredient props at far edges. Crisp real appetizing food texture. Remove all original badge graphics, borders and lettering. No text, no watermark, no cropped dish, no invented product packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 514193,
+    "sha256": "ee3c1054d32026e03a4b9d0f68b0b3bdaf0b123f33bd0daf6a478db39f3cda27"
+  },
+  {
+    "target": "public/products/ameriqual/vegetable-soup.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-eca92c90-8a68-4df2-9280-a8bc5bea5cf4.png",
+    "prompt": "Use case: compositing. Image 1 is the meal target (vegetable soup with elbow pasta, corn, peas, carrots and beans in tomato broth), image 2 is only a background/style reference. Preserve the original meal identity, ingredients and serving suggestion. Restage in a whole ceramic bowl, centered, 75% of frame width on a low warm beige travertine podium. Square 1500x1500 premium food photograph. Soft window light, gentle natural shadows, beige plaster background, very few appropriate ingredient props at far edges. Crisp real appetizing food texture. Remove all original badge graphics, borders and lettering. No text, no watermark, no cropped dish, no invented product packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 558086,
+    "sha256": "1f5cc49224d7c86dfead9216b50fc3cfbcb631bc1a816391a139e39e6f6288fd"
+  },
+  {
+    "target": "public/products/ameriqual/white-chicken-chili.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-673a148c-c526-4801-a69b-dea4b8878b6b.png",
+    "prompt": "Use case: compositing. Image 1 is the meal target (white chicken chili with chicken chunks and bell pepper, garnished with cilantro), image 2 is only a background/style reference. Preserve the original meal identity, ingredients and serving suggestion. Restage in a whole ceramic bowl, centered, 75% of frame width on a low warm beige travertine podium. Square 1500x1500 premium food photograph. Soft window light, gentle natural shadows, beige plaster background, very few appropriate ingredient props at far edges. Crisp real appetizing food texture. Remove all original badge graphics, borders and lettering. No text, no watermark, no cropped dish, no invented product packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 612536,
+    "sha256": "9c768daac259cd9e3ca545cdb0662e54d3cfa8e07c5a1295df1d298ae44c983d"
+  },
+  {
+    "target": "public/products/ameriqual/white-chicken.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-b4b31bd3-a7e9-4508-960c-2240a9b0b0ec.png",
+    "prompt": "Use case: compositing. Image 1 is the meal target (flaked white chicken served over leafy greens with cucumber and cherry tomatoes), image 2 is only a background/style reference. Preserve the original meal identity, ingredients and serving suggestion. Restage in a whole ceramic bowl, centered, 75% of frame width on a low warm beige travertine podium. Square 1500x1500 premium food photograph. Soft window light, gentle natural shadows, beige plaster background, very few appropriate ingredient props at far edges. Crisp real appetizing food texture. Remove all original badge graphics, borders and lettering. No text, no watermark, no cropped dish, no invented product packaging.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 529091,
+    "sha256": "ace163224774714b06989bab776a4b7ad7065fa1ba8eb95c6bb38a44ba823f7f"
+  },
+  {
+    "target": "public/products/ameriqual/mediterranean-chicken-orzo.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-479beb7b-e5c1-44bb-a1a9-7129b3c46c36.png",
+    "prompt": "Restage original meal on warm beige travertine podium with complete bowl, natural window light, square composition; remove source badges and text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 576557,
+    "sha256": "bf90f8d036fea864e0154a6d69c9b6e94e7ca45d07a6470aef09cdffcf725c78"
+  },
+  {
+    "target": "public/products/ameriqual/pasta-garden-vegetables.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-bfafcf97-05f0-4a88-8d49-a5cf8b52f680.png",
+    "prompt": "Restage original meal on warm beige travertine podium with complete bowl, natural window light, square composition; remove source badges and text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 576233,
+    "sha256": "088b26a0073257f063925900339e80e857c6ba9c674d635f2dd7ef924341c98f"
+  },
+  {
+    "target": "public/products/ameriqual/pasta-meat-sauce.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-bc59ac2a-69e2-4a30-b810-ab420d17acbe.png",
+    "prompt": "Restage original meal on warm beige travertine podium with complete bowl, natural window light, square composition; remove source badges and text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 560157,
+    "sha256": "7389aeb7ffda85cc0e01e095963bb57ecf2a714e64835bbf906831d0daf5f441"
+  },
+  {
+    "target": "public/products/ameriqual/pizza-mac.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-6463ef33-1e0d-4983-94fe-d148def2edda.png",
+    "prompt": "Restage original meal on warm beige travertine podium with complete bowl, natural window light, square composition; remove source badges and text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 566650,
+    "sha256": "dce34655cf94b4329f100b710d0a8aa3a75549dcb4f748f928d1761187e5f329"
+  },
+  {
+    "target": "public/products/ameriqual/pollo-asado.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-3c8b49c1-89af-425f-bb5f-d735e3a44a5f.png",
+    "prompt": "Restage original meal on warm beige travertine podium with complete bowl, natural window light, square composition; remove source badges and text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 508746,
+    "sha256": "dd368a09922a127013004d611825b84a34098343ca7414e656a4220279f76534"
+  },
+  {
+    "target": "public/products/ameriqual/ring-o-roni.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-c1b85c26-80ae-4645-ac35-b01fd98aa9d6.png",
+    "prompt": "Restage original meal on warm beige travertine podium with complete bowl, natural window light, square composition; remove source badges and text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 487437,
+    "sha256": "d338ec5060d0a35a95d5e7088dd6f91b0ff3b0ba421ca2f42a88c6d068ef4f31"
+  },
+  {
+    "target": "public/products/ameriqual/rustic-beef-stew.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-48cad119-c61d-400f-acdc-3b167584c9ea.png",
+    "prompt": "Restage original meal on warm beige travertine podium with complete bowl, natural window light, square composition; remove source badges and text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 563491,
+    "sha256": "11d7d34cbdc78d4a9954cd07acd6818aeb19a9f0f23e130a401c4c935a962857"
+  },
+  {
+    "target": "public/products/ameriqual/savory-breakfast-hash.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-ee2c1616-bcde-466b-abbf-f18df3946ea1.png",
+    "prompt": "Restage original meal on warm beige travertine podium with complete bowl, natural window light, square composition; remove source badges and text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 571157,
+    "sha256": "9b7a0f1c4e93c29a81fc02beeac5c994046a9f0949acd6906ceb44962a6f9200"
+  },
+  {
+    "target": "public/products/star-brands/flint-craft-bars.png",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-1d0c96fa-5367-4a46-b82c-9a6bbb8f0cdb.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target flint-craft-bars.png; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "png",
+    "bytes": 4380719,
+    "sha256": "de0ebebf64fd7589634a7227db078ee545048ab1fc288b81542b26f547de79d2"
+  },
+  {
+    "target": "public/products/star-brands/flint-baguette.png",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-5d9dd147-b4e9-488b-8872-c7d29ad68c7b.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target flint-baguette.png; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "png",
+    "bytes": 4654109,
+    "sha256": "8e5dfc48d936d87d13698be1fb3d545d6cd6bba48843b3b27015fe09bc331c12"
+  },
+  {
+    "target": "public/products/star-brands/flint-grenki.png",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-843c65d8-d508-45c0-bc0b-e139add3db25.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target flint-grenki.png; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "png",
+    "bytes": 4854947,
+    "sha256": "fceebd732d7209a606875c2877f2d0819f910bd895143c19c42690d33e5b5246"
+  },
+  {
+    "target": "public/products/star-brands/flint-wheat-rye-croutons.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-735bb20f-d237-4c3a-b573-1aa4aac571c2.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target flint-wheat-rye-croutons.jpg; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 541683,
+    "sha256": "0631cc39f9fb845ba515abb17e23cd9d7b012644f9e5e580ed3e6aa8e15f0caa"
+  },
+  {
+    "target": "public/products/star-brands/hroom-chips.png",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-4bcb971b-5f58-4668-b224-c9b5b7cb8a00.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target hroom-chips.png; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "png",
+    "bytes": 4654200,
+    "sha256": "ec215e87472028f24019b5f64bbb0c6dedd5bcf5e55961956fc8b2c8b2fe07fe"
+  },
+  {
+    "target": "public/products/star-brands/san-sanych-seeds-xxl.png",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-2c65e969-65ce-4188-a93f-81d043e6c515.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target san-sanych-seeds-xxl.png; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "png",
+    "bytes": 4895284,
+    "sha256": "e280aa66b1285a8c38488df59defc6f709b53e3cedeb2ffe4a9f31160d09e78f"
+  },
+  {
+    "target": "public/products/star-brands/chipsters-classic-sour-cream.png",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-440e1a5e-2e49-4eef-893c-66e853907289.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target chipsters-classic-sour-cream.png; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "png",
+    "bytes": 4272992,
+    "sha256": "99119e370afd7eb765c6ba35fcadca5d2791f9c42fc85eb4297f19304b7c984e"
+  },
+  {
+    "target": "public/products/star-brands/chipsters-bbq-wings.png",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-5b8be177-3f39-444c-80ac-0df77f55144a.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target chipsters-bbq-wings.png; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "png",
+    "bytes": 4338621,
+    "sha256": "6d9e1106f45ffd0b3385ffd9fba887c39b397938a332f0ad76c33292888d1432"
+  },
+  {
+    "target": "public/products/star-brands/do-bochkovogo-pub-grinki.png",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-f4892ad4-9eee-4aef-b65d-3d1dcb5a230e.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target do-bochkovogo-pub-grinki.png; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "png",
+    "bytes": 4500551,
+    "sha256": "ab21de83f41d4e934d19bbfcdf1584002a0d58fbf86189c6c7b552d0fe4f786a"
+  },
+  {
+    "target": "public/products/star-brands/crispy-cris.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-54de096a-1309-4a65-864b-db674a5dd01b.png",
+    "prompt": "Use case: compositing. Image 1 is the product edit target crispy-cris.jpg; image 2 is ONLY the warm beige travertine photography style reference. Replace the black, transparent or white background and reframe image 1 into one square 1500x1500 catalog product photograph. Preserve the ORIGINAL packaging artwork, logo, all label text including Cyrillic, colors, shape and proportions exactly. Do not redesign, invent, correct, translate, or redraw any text. The whole original product pack visible, upright and centered on a low warm beige travertine podium, filling 78% of frame height; if wide carton use 80% frame width. Soft window light, subtle realistic grounding shadow, warm plaster background, a few appropriate original ingredient props far at edges. No other product packages, no badge overlays, no captions, no watermark, no cropping, no black sidebars.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 455928,
+    "sha256": "351e7d3de4a832e6d7c4e8cdfb97082d320e586c91e03c8a62e494e7e3f7161f"
+  },
+  {
+    "target": "public/products/fresh-elements/flavored-peanuts.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-79350dbd-49e8-40c2-9a41-72869fd77c39.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage five original peanut packs arranged as a compact 3-back 2-front group with each whole pack and label visible, group filling 80% of square width on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 573368,
+    "sha256": "93da802a8464d1bed62e370a39ae8df1f636ea44c131c56894cec20e5d62b300"
+  },
+  {
+    "target": "public/products/fresh-elements/platanitos.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-42708d72-2bb8-4c4e-87bc-4b2ec2b88783.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage both original Platanitos packs upright side by side, whole packs and labels visible, filling 75% of square height on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 522390,
+    "sha256": "0df773a63799aa5f14ec3a98b354900d7e58ef39bc2b1ddce56f496534678777"
+  },
+  {
+    "target": "public/products/fresh-elements/margarine-traditional.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-46e15c82-115b-4d5f-b989-eb39cdebf5d4.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage one original margarine wrapper resting on the podium, preserve long rectangular shape and all original label artwork, fill 80% square width on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 436952,
+    "sha256": "763c22d9544571970aa7d8efc4f6ca3c3263da00a0456dda70bab9dacc200f92"
+  },
+  {
+    "target": "public/products/fresh-elements/do-it-all-spread-tub-v2.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-b66c1dda-587e-4aa6-95a6-c4ae65ea6e27.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage one original Do-It-All spread tub, lid and whole tub visible, preserve all original label artwork, fill 80% frame width on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 407137,
+    "sha256": "f36de4b1b46904199d1b788d041878950d55809c5067911d0dc2fcfd533ed227"
+  },
+  {
+    "target": "public/products/fresh-elements/palm-oil-blend-900ml.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-43d27c38-8e32-4a8d-90a2-67b76b63b73b.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage one original palm oil bottle upright, whole cap and bottle visible, fill 80% frame height on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 424658,
+    "sha256": "793b96131039a45527facb99c6924415333a791d7551d6979a769db018b8dc7c"
+  },
+  {
+    "target": "public/products/fresh-elements/basmati-jasmine-rice.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-49e94c60-721b-49b8-aa7a-e5adaebc9833.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage one full shallow bowl of long-grain basmati and jasmine rice, with sparse rice grains at the edges; no invented packaging or logos because source has no package on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 430482,
+    "sha256": "afa78b4ec033fff2c562ff471da1745c080c177a39db4a40c4ea279dd0caf771"
+  },
+  {
+    "target": "public/products/fresh-elements/margarine-traditional-50g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-46e15c82-115b-4d5f-b989-eb39cdebf5d4.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage one original margarine wrapper resting on the podium, preserve long rectangular shape and all original label artwork, fill 80% square width on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 436952,
+    "sha256": "763c22d9544571970aa7d8efc4f6ca3c3263da00a0456dda70bab9dacc200f92"
+  },
+  {
+    "target": "public/products/fresh-elements/do-it-all-spread-v2.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-b66c1dda-587e-4aa6-95a6-c4ae65ea6e27.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage one original Do-It-All spread tub, lid and whole tub visible, preserve all original label artwork, fill 80% frame width on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 407137,
+    "sha256": "f36de4b1b46904199d1b788d041878950d55809c5067911d0dc2fcfd533ed227"
+  },
+  {
+    "target": "public/products/fresh-elements/palm-oil-blend.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-43d27c38-8e32-4a8d-90a2-67b76b63b73b.png",
+    "prompt": "Use case: compositing. Image 1 is edit target, image 2 ONLY the warm stone photography reference. Restage one original palm oil bottle upright, whole cap and bottle visible, fill 80% frame height on low beige travertine podium with soft window light, natural shadows, warm plaster backdrop and a few appropriate ingredient props kept far at edges. One square 1500x1500 premium catalog photograph, centered and large, no cropping, no collage, no borders. Preserve the exact original packaging artwork, logos, text, colors and product proportions; do not invent, redraw or translate labels. No extra packages, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 424658,
+    "sha256": "793b96131039a45527facb99c6924415333a791d7551d6979a769db018b8dc7c"
+  },
+  {
+    "target": "public/products/ameriqual/apack-ready-meal.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-b59202e8-30bd-496b-82f8-6a6b84b83aab.png",
+    "prompt": "Restage A-PACK original box and two pouches on travertine podium preserving labels.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 546070,
+    "sha256": "e20d460fb64d406b215e26589ef273b37bba7a206b259d790814cd68180586f6"
+  },
+  {
+    "target": "public/products/ameriqual/elbows-pasta.jpg",
+    "source": "C:/Users/diego/.codex/generated_images/01a12371-754d-7861-8523-417a3629d277/exec-2233e1f6-3018-440d-ad5b-67e6738d7bd8.png",
+    "prompt": "Restage original Food Life Balanced purple ELBOWS box on travertine podium preserving labels.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 361605,
+    "sha256": "92bd4053c4f393dc6541a4f5113512094580c4219f490a77fa167a6fffc98f2c"
+  },
+  {
+    "target": "public/products/lasco/lasco-almond-120g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-44fddd1e-572c-4cd3-9dbc-d2b9aeb2de55.png",
+    "prompt": "Use case: compositing. Image 1 is the Lasco product edit target lasco-almond-120g.jpg, image 2 is only the warm stone photography backdrop/style reference. Replace white background with warm beige plaster and low travertine podium. Keep the original packaging artwork, LASCO logo, all printed words, flavor text, sugar claims, weight text, colors and pack proportions EXACTLY AS SOURCE. Do not invent, redraw, translate or correct any label text. One whole original pouch upright and centered filling 78% of frame height, square 1500x1500 catalog photograph. Soft natural window light and shadows, sparse flavor ingredient props at far edges, sharp and clean without grey halo. No cropped pack, no extra packages, no caption, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 471935,
+    "sha256": "b7fae2f24aca276b91ae76794c636caa8b62ef186f42671b0c1e1c04aef9b87f"
+  },
+  {
+    "target": "public/products/lasco/lasco-almond-50-sachet.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-66fef07d-f4dd-441b-8675-b8a4074e9302.png",
+    "prompt": "Use case: compositing. Image 1 is the Lasco product edit target lasco-almond-50-sachet.jpg, image 2 is only the warm stone photography backdrop/style reference. Replace white background with warm beige plaster and low travertine podium. Keep the original packaging artwork, LASCO logo, all printed words, flavor text, sugar claims, weight text, colors and pack proportions EXACTLY AS SOURCE. Do not invent, redraw, translate or correct any label text. One whole original pouch upright and centered filling 78% of frame height, square 1500x1500 catalog photograph. Soft natural window light and shadows, sparse flavor ingredient props at far edges, sharp and clean without grey halo. No cropped pack, no extra packages, no caption, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 464592,
+    "sha256": "b4092ca16f88724f52cbcab3c8470483954fb26aa2e8e918ccb76f64c4feafeb"
+  },
+  {
+    "target": "public/products/lasco/lasco-carrot-120g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-7a7563df-eec0-4039-b6ed-cffbed1cdf91.png",
+    "prompt": "Use case: compositing. Image 1 is the Lasco product edit target lasco-carrot-120g.jpg, image 2 is only the warm stone photography backdrop/style reference. Replace white background with warm beige plaster and low travertine podium. Keep the original packaging artwork, LASCO logo, all printed words, flavor text, sugar claims, weight text, colors and pack proportions EXACTLY AS SOURCE. Do not invent, redraw, translate or correct any label text. One whole original pouch upright and centered filling 78% of frame height, square 1500x1500 catalog photograph. Soft natural window light and shadows, sparse flavor ingredient props at far edges, sharp and clean without grey halo. No cropped pack, no extra packages, no caption, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 447592,
+    "sha256": "5ee7e4c4999332eb1e8575f89af9a6d3d953e34b208863783e9068700f602aa0"
+  },
+  {
+    "target": "public/products/lasco/lasco-cherryberry-120g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-c0aa1b5b-e0a4-4fe2-b5bb-610fc750abc5.png",
+    "prompt": "Use case: compositing. Image 1 is the Lasco product edit target lasco-cherryberry-120g.jpg, image 2 is only the warm stone photography backdrop/style reference. Replace white background with warm beige plaster and low travertine podium. Keep the original packaging artwork, LASCO logo, all printed words, flavor text, sugar claims, weight text, colors and pack proportions EXACTLY AS SOURCE. Do not invent, redraw, translate or correct any label text. One whole original pouch upright and centered filling 78% of frame height, square 1500x1500 catalog photograph. Soft natural window light and shadows, sparse flavor ingredient props at far edges, sharp and clean without grey halo. No cropped pack, no extra packages, no caption, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 426134,
+    "sha256": "0dfd88f10470c8a85825cd31007ff2da361b2623cbb8357cb8f64f63d52c2974"
+  },
+  {
+    "target": "public/products/lasco/lasco-chocolate-120g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-1fb974b0-db6c-49b8-8a11-a2a4e377429b.png",
+    "prompt": "Use case: compositing. Image 1 is the Lasco product edit target lasco-chocolate-120g.jpg, image 2 is only the warm stone photography backdrop/style reference. Replace white background with warm beige plaster and low travertine podium. Keep the original packaging artwork, LASCO logo, all printed words, flavor text, sugar claims, weight text, colors and pack proportions EXACTLY AS SOURCE. Do not invent, redraw, translate or correct any label text. One whole original pouch upright and centered filling 78% of frame height, square 1500x1500 catalog photograph. Soft natural window light and shadows, sparse flavor ingredient props at far edges, sharp and clean without grey halo. No cropped pack, no extra packages, no caption, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 465108,
+    "sha256": "3213b35e80bfd392f2d9d7db35a1690a20b087ad6cebb7d02f96a0209f80fe0e"
+  },
+  {
+    "target": "public/products/lasco/lasco-creamy-malt-50-less-sugar.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-4ee6cd84-0b60-47c7-96d5-6aeb32e2f1fb.png",
+    "prompt": "Use case: compositing. Image 1 is the Lasco product edit target lasco-creamy-malt-50-less-sugar.jpg, image 2 is only the warm stone photography backdrop/style reference. Replace white background with warm beige plaster and low travertine podium. Keep the original packaging artwork, LASCO logo, all printed words, flavor text, sugar claims, weight text, colors and pack proportions EXACTLY AS SOURCE. Do not invent, redraw, translate or correct any label text. One whole original pouch upright and centered filling 78% of frame height, square 1500x1500 catalog photograph. Soft natural window light and shadows, sparse flavor ingredient props at far edges, sharp and clean without grey halo. No cropped pack, no extra packages, no caption, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 498499,
+    "sha256": "71f269fd801ab39bf261da626310fdcde852bda98536afc88c052e57d5059f0a"
+  },
+  {
+    "target": "public/products/lasco/lasco-peanut-punch-120g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-9d346c0a-8ccf-4ef5-931b-c34c7a436038.png",
+    "prompt": "Use case: compositing. Image 1 is the Lasco product edit target lasco-peanut-punch-120g.jpg, image 2 is only the warm stone photography backdrop/style reference. Replace white background with warm beige plaster and low travertine podium. Keep the original packaging artwork, LASCO logo, all printed words, flavor text, sugar claims, weight text, colors and pack proportions EXACTLY AS SOURCE. Do not invent, redraw, translate or correct any label text. One whole original pouch upright and centered filling 78% of frame height, square 1500x1500 catalog photograph. Soft natural window light and shadows, sparse flavor ingredient props at far edges, sharp and clean without grey halo. No cropped pack, no extra packages, no caption, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 481949,
+    "sha256": "db88368aab7e66d1823ad815968d5ea6df9e43a062799325a6e5e4f00ec8ce3d"
+  },
+  {
+    "target": "public/products/lasco/lasco-pineapple-orange-120g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-9d14b52d-3181-467d-9130-ff282ababc61.png",
+    "prompt": "Use case: compositing. Image 1 is the Lasco product edit target lasco-pineapple-orange-120g.jpg, image 2 is only the warm stone photography backdrop/style reference. Replace white background with warm beige plaster and low travertine podium. Keep the original packaging artwork, LASCO logo, all printed words, flavor text, sugar claims, weight text, colors and pack proportions EXACTLY AS SOURCE. Do not invent, redraw, translate or correct any label text. One whole original pouch upright and centered filling 78% of frame height, square 1500x1500 catalog photograph. Soft natural window light and shadows, sparse flavor ingredient props at far edges, sharp and clean without grey halo. No cropped pack, no extra packages, no caption, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 428459,
+    "sha256": "d3eb2666c1146dc9603b5ae549178542c52fdf5051647ad3d74803cabf905421"
+  },
+  {
+    "target": "public/products/lasco/instant-chocolate-mix-cans-6oz-12oz-20oz.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-a021763f-f25e-4f53-a898-6be6cfad502e.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target instant-chocolate-mix-cans-6oz-12oz-20oz.jpg, image 2 is ONLY warm stone photography style reference. Restage the three original cans as a tidy compact triangular group with all labels and lids visible on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 512007,
+    "sha256": "0a048091d7d773d7765b3465d7d626ca50456dd319d962b44d1782e8316ccba6"
+  },
+  {
+    "target": "public/products/lasco/lasco-caramel-instant-chocolate-display-box.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-17cc5a00-8920-481f-accc-1b01d245528b.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target lasco-caramel-instant-chocolate-display-box.jpg, image 2 is ONLY warm stone photography style reference. Restage one whole original box or pouch on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 466672,
+    "sha256": "ab8703304a044c7d102d92ebecdedee47e09de92225f7c6ffb275187155293a2"
+  },
+  {
+    "target": "public/products/lasco/lasco-instant-chocolate-mix-french-vanilla-display-box.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-e74410cc-0e82-41a6-8bdf-6ecd9283fe24.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target lasco-instant-chocolate-mix-french-vanilla-display-box.jpg, image 2 is ONLY warm stone photography style reference. Restage one whole original box or pouch on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 494591,
+    "sha256": "e2ca537d9ac527ee61c4be79202455c985f06a09bb1f0e7a5680c0d1909a7d39"
+  },
+  {
+    "target": "public/products/lasco/lasco-instant-chocolate-mix-mint-1oz.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-480a8ab9-d16c-4b71-bbd0-d86328721944.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target lasco-instant-chocolate-mix-mint-1oz.jpg, image 2 is ONLY warm stone photography style reference. Restage one whole original box or pouch on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 461307,
+    "sha256": "67a68b1c1542484ebae3ee1659bed1290e32f6be3e7ccfae7b992358b48946eb"
+  },
+  {
+    "target": "public/products/lasco/lasco-instant-chocolate-mix-nutmeg-display-box.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-6ca5b7b7-dfa4-43d4-be91-08e715929068.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target lasco-instant-chocolate-mix-nutmeg-display-box.jpg, image 2 is ONLY warm stone photography style reference. Restage one whole original box or pouch on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 501556,
+    "sha256": "a9bc04dcc790e751e66ed92c5d71ac96bfb401450aef1bfd150bab1b1a86405a"
+  },
+  {
+    "target": "public/products/lasco/lasco-marshmallow-instant-chocolate-display-box.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-a6357092-ac9a-45b2-a87b-a28325543313.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target lasco-marshmallow-instant-chocolate-display-box.jpg, image 2 is ONLY warm stone photography style reference. Restage one whole original box or pouch on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 488550,
+    "sha256": "66b15db99f7a02009f9b01ed8e543c702e8b38baba6158927e188ba55cf90a56"
+  },
+  {
+    "target": "public/products/lasco/lasco-strawberry-120g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-3abe9918-cbef-4890-96a3-26c58d6d300f.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target lasco-strawberry-120g.jpg, image 2 is ONLY warm stone photography style reference. Restage one whole original box or pouch on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 461830,
+    "sha256": "a8d900028ba9fcd3cad7953d68b7b7ca1d110361cb22c04a42932a3a1467080b"
+  },
+  {
+    "target": "public/products/lasco/lasco-vanilla-120g.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-e57bff21-f05a-4ae1-8275-4239eb7b962b.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target lasco-vanilla-120g.jpg, image 2 is ONLY warm stone photography style reference. Restage one whole original box or pouch on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 420901,
+    "sha256": "4eb8c4d51cfe518cb42633a8c6e40a1233a5c4ebe3f1cc4a9361a4343c77b75b"
+  },
+  {
+    "target": "public/products/lasco/lasco-vanilla-50-sachet.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-45a13038-aa4f-4ae7-85b8-a646b37cd518.png",
+    "prompt": "Use case: compositing. Image 1 is Lasco product edit target lasco-vanilla-50-sachet.jpg, image 2 is ONLY warm stone photography style reference. Restage one whole original box or pouch on a low warm beige travertine podium. Whole product centered filling about 78% square frame height, 1500x1500 catalog photograph. Keep original packaging artwork, LASCO logo, all printed text, flavor, weight, colors and proportions EXACTLY as in source; do not invent, translate or redraw labels. Soft window light, subtle grounding shadows, warm beige plaster backdrop, a few matching flavor ingredients at far edges. No crops, no duplicate products beyond original can group, no watermark, no added text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 441892,
+    "sha256": "20121a83fcf35cbfdee49010128169eb4ac6e3d8ee56fd3a509bc285d6c00c05"
+  },
+  {
+    "target": "public/products/ameriqual/joy2-peanut-butter.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-9c61c8a1-de58-403f-8b4a-09dca7a8c094.png",
+    "prompt": "Use case: compositing. Make a square 1500x1500 premium food photo of the two whole peanut-butter toast slices with banana from image 1, centered on a complete ceramic plate filling 75% frame width on warm travertine podium. Image 2 style only. Soft window light, beige plaster, peanuts at far edge. Remove all overlaid source lettering and logos. No product packaging or text.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 567880,
+    "sha256": "3393a85394d1ab7e866d7cc4a0dbc7574ba42929f6c54166d10efdb82f10e676"
+  },
+  {
+    "target": "public/products/ameriqual/joy2-yogurt-mixed-berry.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-c115c148-1abf-46a0-b65f-1f3c3cf606cb.png",
+    "prompt": "Use case: compositing. Restage the original Joy2 Go yogurt cup, showing the whole cup and foil lid from image 1, on a low warm travertine podium. Image 2 style only. Entire product centered, filling about 78% square frame height. Preserve original label logos, text, colors and artwork exactly, no invented or redrawn words. Complete all cup and pouch edges, no crop. Square 1500x1500 catalog photograph, soft window light, beige plaster, sparse flavor ingredients far at edges. No collage, captions or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 499210,
+    "sha256": "fa83a94d96bc5a5d663ac1461f89e43d4438444823336ee1c407b7e64f454dc9"
+  },
+  {
+    "target": "public/products/ameriqual/joy2-yogurt-strawberry.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-0682ec43-04c5-41cf-a30b-96e297190bc8.png",
+    "prompt": "Use case: compositing. Restage the original Joy2 Go yogurt cup, showing the whole cup and foil lid from image 1, on a low warm travertine podium. Image 2 style only. Entire product centered, filling about 78% square frame height. Preserve original label logos, text, colors and artwork exactly, no invented or redrawn words. Complete all cup and pouch edges, no crop. Square 1500x1500 catalog photograph, soft window light, beige plaster, sparse flavor ingredients far at edges. No collage, captions or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 498957,
+    "sha256": "1f294a7037b61b2ec0c7c71073dea540e194a01dae751daddc0400326f8aae17"
+  },
+  {
+    "target": "public/products/ameriqual/joy2-yogurt-vanilla.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-35fe857e-2811-480a-b14f-b6105c1e4e00.png",
+    "prompt": "Use case: compositing. Restage the original Joy2 Go yogurt cup, showing the whole cup and foil lid from image 1, on a low warm travertine podium. Image 2 style only. Entire product centered, filling about 78% square frame height. Preserve original label logos, text, colors and artwork exactly, no invented or redrawn words. Complete all cup and pouch edges, no crop. Square 1500x1500 catalog photograph, soft window light, beige plaster, sparse flavor ingredients far at edges. No collage, captions or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 486115,
+    "sha256": "f7d572925072eca04a2c1178fe558ceb5b9ca4818d80b0f6a04c5340b9fbe625"
+  },
+  {
+    "target": "public/products/ameriqual/ready-ration.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-3bbac46f-f68b-4a14-9058-a2e0b44d9b0a.png",
+    "prompt": "Use case: compositing. Restage the original Ready Ration retort pouch group as a tidy compact arrangement of whole bags with the original colors and printed labels from image 1, on a low warm travertine podium. Image 2 style only. Entire product centered, filling about 78% square frame height. Preserve original label logos, text, colors and artwork exactly, no invented or redrawn words. Complete all cup and pouch edges, no crop. Square 1500x1500 catalog photograph, soft window light, beige plaster, sparse no food props. No collage, captions or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 379828,
+    "sha256": "84ac2b0ef5e9603113ba08778fea414c73ca106a1d8f2c204461630310246edd"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/fitto-soup-family-freshly-served/28_fitto_instant_oatmeal/product_07.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-03b467cc-9a09-4bbf-8c67-72c31e9c799c.png",
+    "prompt": "Use case: precise-object-edit. Edit only the stray floating black text at the top of this Fitto oatmeal photo (it reads 'ice cream 40 g'). Remove those letters and the rectangular pale patch immediately behind them, filling naturally with the original warm beige plaster background. Preserve the entire original product package, logo, printed text, podium, food props, shadows and framing exactly unchanged. No new text. Square 1500x1500 output.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 396006,
+    "sha256": "e183f7c9eaf82518ce35e931c437f23fcc75261243ba2e53c33699d7afa0a921"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/hutorok-pasta-family-showcase/08_hutorok_pasta_800g/product_10.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-fea9da71-ce6a-48a3-9a75-35822dc8b4dc.png",
+    "prompt": "Use case: compositing. Restage the one original long pasta pack in image 1 as a close, square 1500x1500 product photograph in the SAME warm travertine podium, beige plaster and soft window light style. Preserve original packaging proportions, artwork, logo, Cyrillic and Italian label text and colors EXACTLY; no redrawing or inventing lettering. Reduce the empty sides: place the whole original long thin pack face-up at a graceful diagonal across a shallow stone podium, camera above at a slight angle so front label is readable, pack extending across about 80% of the frame diagonal and taking most of the composition. Whole pack including both sealed ends visible with generous small margins. A few matching loose pasta strands and basil only at edges. No floating product, no oversized empty podium, no extra packages, no crop, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 652775,
+    "sha256": "d22463e054812b97536af2c7c5af893e7f85023cd00f1fa1b397353545c90c48"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/hutorok-pasta-family-showcase/08_hutorok_pasta_800g/product_11.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-7440f3e7-d5d7-4d47-86ec-012754defa28.png",
+    "prompt": "Use case: compositing. Restage the one original long pasta pack in image 1 as a close, square 1500x1500 product photograph in the SAME warm travertine podium, beige plaster and soft window light style. Preserve original packaging proportions, artwork, logo, Cyrillic and Italian label text and colors EXACTLY; no redrawing or inventing lettering. Reduce the empty sides: place the whole original long thin pack face-up at a graceful diagonal across a shallow stone podium, camera above at a slight angle so front label is readable, pack extending across about 80% of the frame diagonal and taking most of the composition. Whole pack including both sealed ends visible with generous small margins. A few matching loose pasta strands and basil only at edges. No floating product, no oversized empty podium, no extra packages, no crop, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 629178,
+    "sha256": "96249198575f11d91e61b37691a7be2dcd83776184d732729faaa87289e3c85e"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/perfetto-pasta-family-hero/04_perfetto_premium_pasta/product_01.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-8234cf1a-591d-48f7-b31f-ad83577297b5.png",
+    "prompt": "Use case: compositing. Restage the one original long pasta pack in image 1 as a close, square 1500x1500 product photograph in the SAME warm travertine podium, beige plaster and soft window light style. Preserve original packaging proportions, artwork, logo, Cyrillic and Italian label text and colors EXACTLY; no redrawing or inventing lettering. Reduce the empty sides: place the whole original long thin pack face-up at a graceful diagonal across a shallow stone podium, camera above at a slight angle so front label is readable, pack extending across about 80% of the frame diagonal and taking most of the composition. Whole pack including both sealed ends visible with generous small margins. A few matching loose pasta strands and basil only at edges. No floating product, no oversized empty podium, no extra packages, no crop, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 644775,
+    "sha256": "8d4749ee491e464c063f49b6195f54df0d883bf7d08d1b5b3d942c01f0b0038d"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/perfetto-pasta-family-hero/04_perfetto_premium_pasta/product_04.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-fc4d083e-c721-4af2-ab17-789b2945df02.png",
+    "prompt": "Use case: compositing. Restage the one original long pasta pack in image 1 as a close, square 1500x1500 product photograph in the SAME warm travertine podium, beige plaster and soft window light style. Preserve original packaging proportions, artwork, logo, Cyrillic and Italian label text and colors EXACTLY; no redrawing or inventing lettering. Reduce the empty sides: place the whole original long thin pack face-up at a graceful diagonal across a shallow stone podium, camera above at a slight angle so front label is readable, pack extending across about 80% of the frame diagonal and taking most of the composition. Whole pack including both sealed ends visible with generous small margins. A few matching loose pasta strands and basil only at edges. No floating product, no oversized empty podium, no extra packages, no crop, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 673527,
+    "sha256": "b97af6eebdad750e1aee884ddce21e0447effba8096f829ec869903c64134789"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/la-pasta-family-collection-showcase/02_la_pasta_pasta_products/product_03.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-c55d42ab-689a-439b-8c92-fe69e0929e92.png",
+    "prompt": "Use case: compositing. Restage the one original long pasta pack in image 1 as a close, square 1500x1500 product photograph in the SAME warm travertine podium, beige plaster and soft window light style. Preserve original packaging proportions, artwork, logo, Cyrillic and Italian label text and colors EXACTLY; no redrawing or inventing lettering. Reduce the empty sides: place the whole original long thin pack face-up at a graceful diagonal across a shallow stone podium, camera above at a slight angle so front label is readable, pack extending across about 80% of the frame diagonal and taking most of the composition. Whole pack including both sealed ends visible with generous small margins. A few matching loose pasta strands and basil only at edges. No floating product, no oversized empty podium, no extra packages, no crop, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 669747,
+    "sha256": "c647feeba541750c42068142de81a66c19bf874b88c987da7f288aaf498205a9"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/la-pasta-family-collection-showcase/02_la_pasta_pasta_products/product_08.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-890e715f-375b-40af-9d7f-3b2ce226ea81.png",
+    "prompt": "Use case: compositing. Restage the one original long pasta pack in image 1 as a close, square 1500x1500 product photograph in the SAME warm travertine podium, beige plaster and soft window light style. Preserve original packaging proportions, artwork, logo, Cyrillic and Italian label text and colors EXACTLY; no redrawing or inventing lettering. Reduce the empty sides: place the whole original long thin pack face-up at a graceful diagonal across a shallow stone podium, camera above at a slight angle so front label is readable, pack extending across about 80% of the frame diagonal and taking most of the composition. Whole pack including both sealed ends visible with generous small margins. A few matching loose pasta strands and basil only at edges. No floating product, no oversized empty podium, no extra packages, no crop, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 646366,
+    "sha256": "345b69b4bac4f61ce6f33f2abf1f096453212da27491c4ac7e90b6089e9e4efb"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/la-pasta-family-collection-showcase/02_la_pasta_pasta_products/product_09.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-cba8d414-926e-4522-94b5-db5a8a0ce78a.png",
+    "prompt": "Use case: compositing. Restage the one original long pasta pack in image 1 as a close, square 1500x1500 product photograph in the SAME warm travertine podium, beige plaster and soft window light style. Preserve original packaging proportions, artwork, logo, Cyrillic and Italian label text and colors EXACTLY; no redrawing or inventing lettering. Reduce the empty sides: place the whole original long thin pack face-up at a graceful diagonal across a shallow stone podium, camera above at a slight angle so front label is readable, pack extending across about 80% of the frame diagonal and taking most of the composition. Whole pack including both sealed ends visible with generous small margins. A few matching loose pasta strands and basil only at edges. No floating product, no oversized empty podium, no extra packages, no crop, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 676388,
+    "sha256": "d368aae1ab5c57286c56dca10276de867d955c155b7779fbeb0e69016412b3a9"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_01.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-745542ce-149b-4bef-b63f-28e273b7e336.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 319340,
+    "sha256": "b64dcb4ff86bfe54976b9a8a167b9a785f99c309b80f7f9615d64ddd65695878"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_02.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-a2651255-fb60-49af-8183-b4b6e7f550f6.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 316864,
+    "sha256": "e9deeb1ae2290279cca5d6a7ee30c8703c12bd6c950d2546c8d13fa5ac0efcae"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_03.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-c5bbe5cf-5c61-4595-87d0-3a67321fb72d.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 285004,
+    "sha256": "ce2db5e49acdde91994ec3e3982b975015450965b94af041977a0bd0b3d5287e"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_04.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-8aedfde9-2c8f-47de-b139-e41e75458053.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 288161,
+    "sha256": "d8a364cebe9469105804c426ef3634fdd716ec14901d8aa70ef00bfc4885be5b"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_05.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-2f2b2046-5867-498f-a969-0cee24edae2c.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 297606,
+    "sha256": "04ccfc036367ba2aef974230914f11f044761ab6840a6eabc1cb842fe3a22a64"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_06.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-fc66e043-1763-4672-b07b-f90e95d3de05.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 313879,
+    "sha256": "c4c4c22c0bdffa9f25920ea3763026a1f269fe3a066dadf036526b99cc94d2f8"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_07.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-97c961a1-b390-475e-8000-73f6ced8d2c1.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 332387,
+    "sha256": "66b167ac1367021b7b00b9da4b2633fbd807f69116307015fc4b69edc756f48b"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_08.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-a728c5a3-14ea-440f-b13a-c3640c8e4ef3.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 330666,
+    "sha256": "82f6c8c763c52a050333ec0eee20429e7a605163f301ff93a8f10ae02348463e"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_09.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-e1563eff-8b6e-42e2-96e8-2c6fdedb025e.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 338210,
+    "sha256": "04793baa5e4d89232c8a07701f98e030c750297b10414406d8d1e6aff1094e7d"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-soy-sauce-family-spread/24_kitto_soy_sauces/product_10.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-5e336c48-b80f-43c5-89dd-bb61875110d0.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 319453,
+    "sha256": "ccee122a50f24ece2bf685441979904aebd8e2cc219adb07c1c84eed16f27c6a"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-specialty-sauces-elegant-trio/25_kitto_specialty_sauces/product_01.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-48c26cfb-8433-45ea-9922-c4c5a19c77cf.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 297249,
+    "sha256": "68a19b5e99cff487673def8cee0d1721e2f25278683389b7db850f460145c186"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-specialty-sauces-elegant-trio/25_kitto_specialty_sauces/product_02.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-682e903d-afb5-4a94-995b-69a1f5b372d1.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 320385,
+    "sha256": "f14459ee856ebb4d42f7b4769abea5b2f60fda4b9f0d5ca342852b9dae990bd5"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/kitto-specialty-sauces-elegant-trio/25_kitto_specialty_sauces/product_03.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-c168db1c-da7f-4dbc-89c5-eb6c009ef713.png",
+    "prompt": "Use case: compositing. Edit this Kitto bottle catalog photo to show the ORIGINAL whole bottle significantly larger and closer, occupying 84% of the square frame height, with a shallow small warm beige travertine base near the bottom, closer crop of BACKGROUND only, much less empty plaster on both sides. Original bottle proportions and every packaging feature invariant: exact cap, bottle shape, liquid color, logo, food illustration, all original Cyrillic label text and colors. Do not invent, redraw, translate or correct labels. Whole cap and bottle base visible, centered, natural grounding shadow, soft window light, original warm plaster/travertine style. Sparse appropriate original props at far corners only, remove excess props if needed. 1500x1500 square premium catalog photograph. No cropping product, no duplicate bottles, no added text or watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 321407,
+    "sha256": "253025a5c1e0658f3d0d7337fe42a098abebc0f78c0559c3cc1b40052d0ebdf5"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/hutorok-flour-family-styled-for-baking/07_hutorok_flour/product_03.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-1025ef20-52f3-490f-bcb8-977b02b37afc.png",
+    "prompt": "Use case: compositing. Restage original Hutorok baking-mix boxes from the image much larger, centered, whole pack visible, filling 75-80% square frame height, grounded on a shallow warm beige travertine podium. Show ONE original box because the two boxes in the original are duplicate views of the same product. Preserve original packaging proportions, artwork, logo, colors and ALL original Cyrillic label text exactly. No redrawing or inventing labels. Warm beige plaster, soft window light, subtle natural shadows, sparse appropriate baking ingredients at edges. No empty huge podium, no floating box, no cropped product, no added text. Square 1500x1500 premium catalog photograph.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 586445,
+    "sha256": "13a9d914b23997e6937cbbd4034426c177b5909cd840751bb718d1c3c56459e9"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/hutorok-flour-family-styled-for-baking/07_hutorok_flour/product_04.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-a510de94-7fbe-4ac4-911a-dd902036d153.png",
+    "prompt": "Use case: compositing. Restage original Hutorok baking-mix boxes from the image much larger, centered, whole pack visible, filling 75-80% square frame height, grounded on a shallow warm beige travertine podium. Show ONE original box because the two boxes in the original are duplicate views of the same product. Preserve original packaging proportions, artwork, logo, colors and ALL original Cyrillic label text exactly. No redrawing or inventing labels. Warm beige plaster, soft window light, subtle natural shadows, sparse appropriate baking ingredients at edges. No empty huge podium, no floating box, no cropped product, no added text. Square 1500x1500 premium catalog photograph.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 579856,
+    "sha256": "4e14c9ebcb5760b45b991eb97f7ed7e1a97891c50ec480f57016b19d77ddb4e3"
+  },
+  {
+    "target": "public/products/star-grocery/flavors/hutorok-sugar-and-baking-soda-showcase/12_hutorok_sugar_and_soda/product_03.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-aa3ec947-a3b3-493b-99b5-1a89cba2c33b.png",
+    "prompt": "Use case: compositing. Restage original Hutorok sugar cube box from the image much larger, centered, whole pack visible, filling 75-80% square frame height, grounded on a shallow warm beige travertine podium.  Preserve original packaging proportions, artwork, logo, colors and ALL original Cyrillic label text exactly. No redrawing or inventing labels. Warm beige plaster, soft window light, subtle natural shadows, sparse appropriate baking ingredients at edges. No empty huge podium, no floating box, no cropped product, no added text. Square 1500x1500 premium catalog photograph.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 470608,
+    "sha256": "c2655189346ae5f8ba6563b0714fb7e6677a5c061ca143d5505aa2d6b5f4c4bc"
+  },
+  {
+    "target": "public/categories/foodservice-institutional.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-11c55149-fcac-41fb-8699-2674f78f2a43.png",
+    "prompt": "Use case: compositing. Replace the grey blurry rack scene in image 1 with a sharp premium foodservice category photograph: two whole black compartmented prepared-meal trays in a tidy staggered arrangement on warm beige stone surface, one with tomato pasta and corn and another with rice, chicken and vegetables. Food clearly visible and appetizing. Image 2 is only warm stone natural window-lit style reference. Square 1500x1500, main food group fills 75% frame, soft shadows, minimal professional food preparation context at edges. No rack dominating image, no people, no packaging lettering or logos, no clock, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 628263,
+    "sha256": "ce4f72573fa8ae9ff2ca70687e80a87638b07dd084ee889fc386e8e29e92ebd6"
+  },
+  {
+    "target": "public/categories/shelf-stable-foods.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-450a477e-3c30-4188-86e3-37e7d05e2059.png",
+    "prompt": "Use case: compositing. Replace the confusing clock pantry scene in image 1 with a food-focused square 1500x1500 premium shelf-stable foods category photograph in image 2's warm stone and window-lit style. Tidy compact arrangement of clear sealed jars and whole plain unbranded retort pouches and unlabeled cans, showing pasta, rice, beans, lentils and oats prominently, on warm beige travertine tiers. Group fills 75% frame, beige plaster background, warm natural light, subtle shadows, sparse grain props at edges. No clock, no floating text, no invented brand labels, no people, no watermark.",
+    "width": 1500,
+    "height": 1500,
+    "format": "jpeg",
+    "bytes": 633097,
+    "sha256": "4d2a5d4318f270f8bf5e8e16452da60b931ebe2706a733925b026f1761c7d6a1"
+  },
+  {
+    "target": "public/products/star-grocery/families/kitto-instant-egg-noodles.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-48788654-4192-42b9-a775-853bcac118ab.png",
+    "prompt": "Use case: compositing. Image 1 is the broken family-cover edit target. Images 2 onwards are the exact individual whole product pack references and warm stone photography style. Replace the collage with ONE coherent square 1254x1254 family hero photograph. Show all THREE original Kitto trays together: MUSHROOMS orange, CHICKEN yellow, MEAT red. Arrange side by side at staggered depth, no overlap of logos or flavor words. Every whole pack including all edges visible, preserve original proportions, logos, label text in English and Cyrillic and artwork exactly; no invented, cropped, translated or redrawn words. Group fills about 80% square width and 65% height. Single shared low warm beige travertine podium and beige plaster backdrop, soft window light and shadows, sparse relevant ingredients at far edges. No grid panels, no collage seams, no cropped products, no captions, no watermark.",
+    "width": 1254,
+    "height": 1254,
+    "format": "jpeg",
+    "bytes": 469334,
+    "sha256": "2850b8edc33c4530e3df154e3fda6410cf9de673c4c955b5cee50cd1fedee0db"
+  },
+  {
+    "target": "public/products/star-grocery/families/khutorok-instant-noodles.jpg",
+    "source": "C:\\Users\\diego\\.codex\\generated_images\\01a12371-754d-7861-8523-417a3629d277\\exec-da41d59a-38f8-4ae1-b8a4-f83d791eb2a7.png",
+    "prompt": "Use case: compositing. Image 1 is the broken family-cover edit target. Images 2 onwards are the exact individual whole product pack references and warm stone photography style. Replace the collage with ONE coherent square 1254x1254 family hero photograph. Show all FOUR original Hutorok products together: cheese 60g blue pouch, chicken 80g blue cup, chicken 90g blue tray, meat 90g blue pouch. Arrange one compact staggered group, taller bags behind and cup/tray in front, no overlap of logos. Every whole pack including all edges visible, preserve original proportions, logos, label text in English and Cyrillic and artwork exactly; no invented, cropped, translated or redrawn words. Group fills about 80% square width and 65% height. Single shared low warm beige travertine podium and beige plaster backdrop, soft window light and shadows, sparse relevant ingredients at far edges. No grid panels, no collage seams, no cropped products, no captions, no watermark.",
+    "width": 1254,
+    "height": 1254,
+    "format": "jpeg",
+    "bytes": 502061,
+    "sha256": "c3ff7fb2cb06cb5fc88eeaf07800653c2be9e9801e06642230d38911f8e61945"
+  }
+]

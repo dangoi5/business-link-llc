@@ -57,12 +57,12 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
                 id={category.slug}
                 className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-line bg-white transition hover:border-brand"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-surface">
+                <div className="relative aspect-square overflow-hidden bg-surface">
                   <Image
                     src={category.image}
                     alt={t(locale, category.title)}
                     fill
-                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                    className="object-contain"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
