@@ -336,7 +336,7 @@ export const portfolioCategories: PortfolioCategory[] = [
       loc("Distribution", "Distribución", "Distribuzione"),
       loc("Institutional", "Institucional", "Istituzionale"),
     ],
-    image: "/categories/shelf-stable-foods.jpg",
+    image: "/categories/shelf-stable-foods-clock.jpg",
     products: ameriqualShelfStableProducts,
   },
   {
@@ -698,7 +698,7 @@ export const catalogDocs = [
     brand: "Quinoa Club",
     logo: "/brands/quinoa-club-logo.png",
     title: loc("Product portfolio", "Portafolio de productos", "Portafoglio prodotti"),
-    href: "/catalogs/quinoa-club-portfolio.pdf",
+    href: "/catalogs/quinoa-club-portfolio-en.pdf",
     sizeMb: 26.2,
   },
   {

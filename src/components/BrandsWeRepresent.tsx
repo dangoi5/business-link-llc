@@ -62,12 +62,13 @@ function BrandLogo({ brand }: { brand: Brand }) {
 
 function BrandLinks({ brand, locale }: { brand: Brand; locale: Locale }) {
   if (!brand.catalogHref && !brand.extraLinks?.length) return null;
+  const catalogHref = locale === "es" && brand.catalogHrefEs ? brand.catalogHrefEs : brand.catalogHref;
 
   return (
     <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-      {brand.catalogHref ? (
+      {catalogHref ? (
         <CatalogAnchor
-          href={brand.catalogHref}
+          href={catalogHref}
           locale={locale}
           className="inline-flex text-sm font-semibold text-brand transition hover:text-brand-deep"
         >

@@ -29,6 +29,8 @@ export type Brand = {
   subBrands?: string[];
   productLines?: ProductLine[];
   catalogHref?: string;
+  /** Spanish-language PDF, used instead of `catalogHref` on the /es site. */
+  catalogHrefEs?: string;
   catalogLabel?: Loc;
   extraLinks?: { href: string; label: Loc }[];
   photos?: string[];
@@ -472,7 +474,8 @@ export const representedBrands: Brand[] = [
         ),
       },
     ],
-    catalogHref: "/catalogs/quinoa-club-portfolio.pdf",
+    catalogHref: "/catalogs/quinoa-club-portfolio-en.pdf",
+    catalogHrefEs: "/catalogs/quinoa-club-portfolio-es.pdf",
     catalogLabel: loc("View product portfolio", "Ver portafolio de productos", "Consulta il portafoglio prodotti"),
     photos: [],
   },
@@ -504,6 +507,8 @@ export const representedBrands: Brand[] = [
         ),
       },
     ],
+    catalogHref: "/catalogs/tronix-product-catalog-2026.pdf",
+    catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
     photos: [],
   },
   {

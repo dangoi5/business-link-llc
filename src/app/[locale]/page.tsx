@@ -130,7 +130,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                       src={category.image}
                       alt=""
                       fill
-                      className="object-contain"
+                      className="object-cover"
                       sizes="112px"
                     />
                   </span>
@@ -162,7 +162,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   src={packshots.oil}
                   alt="Fresh Elements Palm Oil Blend, 900 ml bottle"
                   fill
-                  className="object-contain p-1 mix-blend-multiply scale-[1.65]"
+                  className="object-cover"
                   sizes="(max-width: 1024px) 45vw, 28vw"
                 />
               </div>
@@ -171,7 +171,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   src={packshots.chips}
                   alt="Fresh Elements Platanitos plantain chips, salt and chile limón"
                   fill
-                  className="object-contain p-2 mix-blend-multiply"
+                  className="object-cover"
                   sizes="(max-width: 1024px) 60vw, 33vw"
                 />
               </div>
@@ -180,7 +180,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   src={packshots.spread}
                   alt="Fresh Elements Do-It-All table and cooking spread"
                   fill
-                  className="object-contain p-2 mix-blend-multiply"
+                  className="object-cover"
                   sizes="(max-width: 1024px) 60vw, 33vw"
                 />
               </div>
