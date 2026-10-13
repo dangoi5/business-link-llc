@@ -4,6 +4,7 @@ import { FormEvent, useId, useState } from "react";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import type { Locale } from "@/i18n/config";
+import { PhoneField } from "@/components/PhoneField";
 
 const roleKeys = ["manufacturer", "buyer", "other"] as const;
 
@@ -26,6 +27,7 @@ export function ContactForm({
   defaultRole?: (typeof roleKeys)[number];
 }) {
   const statusId = useId();
+  const [phoneKey, setPhoneKey] = useState(0);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [role, setRole] = useState<(typeof roleKeys)[number]>(defaultRole);
   const roleLabels = {
@@ -66,6 +68,7 @@ export function ContactForm({
       }
 
       form.reset();
+      setPhoneKey((key) => key + 1);
       setRole(defaultRole);
       setStatus("sent");
     } catch {
@@ -159,17 +162,11 @@ export function ContactForm({
             className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
           />
         </label>
-        <label className="block text-sm">
-          <span className="font-medium text-ink">{t(locale, ui.form.phone)}</span>
-          <input
-            name="phone"
-            type="tel"
-            autoComplete="tel"
-            maxLength={MAX.phone}
-            disabled={status === "sending"}
-            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"
-          />
-        </label>
+        <PhoneField
+          key={phoneKey}
+          locale={locale}
+          disabled={status === "sending"}
+        />
       </div>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
