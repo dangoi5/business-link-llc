@@ -11,6 +11,7 @@ import {
 import { starGroceryFamilyCovers } from "@/lib/star-grocery-catalog";
 import { lascoGroceryProducts } from "@/lib/lasco-catalog";
 import { tronixSnackProducts } from "@/lib/tronix-catalog";
+import { starKistProducts } from "@/lib/starkist-catalog";
 
 
 export const company = {
@@ -322,6 +323,75 @@ export type PortfolioCategory = {
   products: PortfolioProduct[];
 };
 
+export type SupplyBuyer = { name: Loc; description: Loc };
+
+export const supplyBuyers: SupplyBuyer[] = [
+  {
+    name: loc("Supermarkets & retail chains", "Supermercados y cadenas minoristas", "Supermercati e catene retail"),
+    description: loc(
+      "Shelf-ready and private-label programs for grocery and convenience.",
+      "Programas listos para estantería y marca privada para abarrotes y conveniencia.",
+      "Programmi pronti a scaffale e private label per grocery e convenience.",
+    ),
+  },
+  {
+    name: loc("Distributors & wholesalers", "Distribuidores y mayoristas", "Distributori e grossisti"),
+    description: loc(
+      "Master, national and regional distributors who move volume into their own markets.",
+      "Distribuidores maestros, nacionales y regionales que mueven volumen en sus mercados.",
+      "Distributori master, nazionali e regionali che muovono volumi nei propri mercati.",
+    ),
+  },
+  {
+    name: loc("Governments & public programs", "Gobiernos y programas públicos", "Governi e programmi pubblici"),
+    description: loc(
+      "Ministries, defense, emergency-response and humanitarian feeding programs.",
+      "Ministerios, defensa, respuesta a emergencias y programas de alimentación humanitaria.",
+      "Ministeri, difesa, protezione civile e programmi di alimentazione umanitaria.",
+    ),
+  },
+  {
+    name: loc("Airlines & travel", "Aerolíneas y viajes", "Compagnie aeree e viaggi"),
+    description: loc(
+      "In-flight catering, galley and onboard retail suppliers.",
+      "Catering a bordo, cocinas de aeronave y venta a bordo.",
+      "Catering di bordo, galley e vendita a bordo.",
+    ),
+  },
+  {
+    name: loc("Hotels, resorts & cruise lines", "Hoteles, resorts y cruceros", "Hotel, resort e crociere"),
+    description: loc(
+      "Hospitality groups buying for kitchens, buffets, minibars and room service.",
+      "Grupos hoteleros que compran para cocinas, buffets, minibares y servicio a la habitación.",
+      "Gruppi alberghieri che acquistano per cucine, buffet, minibar e room service.",
+    ),
+  },
+  {
+    name: loc("Theme parks & venues", "Parques temáticos y recintos", "Parchi a tema e venue"),
+    description: loc(
+      "Concessions, stadiums, attractions and event operators.",
+      "Concesiones, estadios, atracciones y operadores de eventos.",
+      "Concessioni, stadi, attrazioni e operatori di eventi.",
+    ),
+  },
+  {
+    name: loc("Caterers & institutions", "Catering e instituciones", "Catering e istituzioni"),
+    description: loc(
+      "Contract caterers, hospitals, schools, corporate and remote-site feeding.",
+      "Caterers por contrato, hospitales, escuelas, empresas y alimentación en sitios remotos.",
+      "Catering a contratto, ospedali, scuole, aziende e ristorazione in siti remoti.",
+    ),
+  },
+  {
+    name: loc("Food manufacturers", "Fabricantes de alimentos", "Produttori alimentari"),
+    description: loc(
+      "Industrial buyers sourcing oils, ingredients and bulk formats.",
+      "Compradores industriales de aceites, ingredientes y formatos a granel.",
+      "Acquirenti industriali di oli, ingredienti e formati sfusi.",
+    ),
+  },
+];
+
 export const portfolioCategories: PortfolioCategory[] = [
   {
     slug: "shelf-stable-foods",
@@ -337,7 +407,7 @@ export const portfolioCategories: PortfolioCategory[] = [
       loc("Institutional", "Institucional", "Istituzionale"),
     ],
     image: "/categories/shelf-stable-foods-clock.jpg",
-    products: ameriqualShelfStableProducts,
+    products: [...ameriqualShelfStableProducts, ...starKistProducts],
   },
   {
     slug: "oils-fats",
@@ -356,17 +426,22 @@ export const portfolioCategories: PortfolioCategory[] = [
     products: freshElementsBrand.products.filter((product) => product.line === "oils"),
   },
   {
-    slug: "foodservice-institutional",
-    title: loc("Foodservice & Institutional", "Foodservice e institucional", "Foodservice e istituzionale"),
+    slug: "commercial-institutional-supply",
+    title: loc(
+      "Commercial & Institutional Supply",
+      "Suministro comercial e institucional",
+      "Fornitura commerciale e istituzionale",
+    ),
     summary: loc(
-      "Products and supply solutions for foodservice, hospitality, catering, institutional feeding and other high-volume applications.",
-      "Productos y soluciones de suministro para foodservice, hospitalidad, catering, alimentación institucional y otras aplicaciones de alto volumen.",
-      "Prodotti e soluzioni di fornitura per foodservice, hospitality, catering, ristorazione istituzionale e altre applicazioni ad alto volume.",
+      "Our full range, supplied in volume to supermarkets, distributors, governments, airlines, hotels, theme parks and other commercial and institutional buyers.",
+      "Toda nuestra gama, suministrada en volumen a supermercados, distribuidores, gobiernos, aerolíneas, hoteles, parques temáticos y otros compradores comerciales e institucionales.",
+      "L’intera gamma, fornita in volume a supermercati, distributori, governi, compagnie aeree, hotel, parchi a tema e altri acquirenti commerciali e istituzionali.",
     ),
     channels: [
-      loc("Hospitality", "Hospitalidad", "Ospitalità"),
-      loc("Catering", "Catering", "Catering"),
-      loc("Institutional", "Institucional", "Istituzionale"),
+      loc("Supermarkets", "Supermercados", "Supermercati"),
+      loc("Distributors", "Distribuidores", "Distributori"),
+      loc("Government", "Gobierno", "Enti pubblici"),
+      loc("Airlines & hotels", "Aerolíneas y hoteles", "Compagnie aeree e hotel"),
     ],
     image: "/categories/foodservice-institutional.jpg",
     products: ameriqualFoodserviceProducts,

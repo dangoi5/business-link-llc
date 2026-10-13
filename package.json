@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "brain:sync": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sync-brain.mjs"
   },
   "dependencies": {
     "@svg-maps/world": "^2.0.0",

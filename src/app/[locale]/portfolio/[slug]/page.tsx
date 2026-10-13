@@ -7,7 +7,7 @@ import { PrimaryButton, TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, locales, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
-import { getCategoryBySlug, portfolioCategories } from "@/lib/content";
+import { getCategoryBySlug, portfolioCategories, supplyBuyers } from "@/lib/content";
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -39,6 +39,7 @@ export default async function PortfolioCategoryPage({
   if (!category) notFound();
 
   const otherCategories = portfolioCategories.filter((item) => item.slug !== category.slug);
+  const isSupplyPage = slug === "commercial-institutional-supply";
 
   return (
     <>
@@ -84,7 +85,33 @@ export default async function PortfolioCategoryPage({
           </TextLink>
         </div>
 
-        {slug === "foodservice-institutional" ? (
+        {isSupplyPage ? (
+          <div className="mt-10">
+            <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+              {t(locale, ui.categoryPage.buyersTitle)}
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
+              {t(locale, ui.categoryPage.buyersIntro)}
+            </p>
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {supplyBuyers.map((buyer) => (
+                <li key={buyer.name.en} className="rounded-2xl border border-line bg-white p-5">
+                  <h3 className="text-base font-bold text-ink">{t(locale, buyer.name)}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    {t(locale, buyer.description)}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6">
+              <PrimaryButton href={localizedHref(locale, "/contact")}>
+                {t(locale, ui.categoryPage.buyersCta)}
+              </PrimaryButton>
+            </div>
+          </div>
+        ) : null}
+
+        {isSupplyPage ? (
           <Link
             href={localizedHref(locale, "/portfolio/ameriqual-military")}
             className="mt-10 block overflow-hidden rounded-2xl border border-line bg-white transition hover:shadow-lg hover:shadow-ink/5"
@@ -120,10 +147,10 @@ export default async function PortfolioCategoryPage({
 
         <div className="mt-10">
           <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
-            {t(locale, ui.categoryPage.products)}
+            {t(locale, isSupplyPage ? ui.categoryPage.featuredProductsTitle : ui.categoryPage.products)}
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
-            {t(locale, ui.categoryPage.productsIntro)}
+            {t(locale, isSupplyPage ? ui.categoryPage.featuredProductsIntro : ui.categoryPage.productsIntro)}
           </p>
         </div>
 

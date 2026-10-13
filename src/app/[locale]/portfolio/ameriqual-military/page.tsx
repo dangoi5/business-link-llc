@@ -241,7 +241,7 @@ export default async function AmeriqualMilitaryPage({
                 {t(locale, ui.ameriqualMilitary.commercialBody)}
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-4">
-                <TextLink href={localizedHref(locale, "/portfolio/foodservice-institutional")}>
+                <TextLink href={localizedHref(locale, "/portfolio/commercial-institutional-supply")}>
                   {t(locale, ui.ameriqualMilitary.viewFoodservice)}
                 </TextLink>
                 <PrimaryButton href={localizedHref(locale, "/contact")}>

@@ -22,6 +22,11 @@ const nextConfig: NextConfig = {
       { source: "/en/partners", destination: "/en/portfolio", permanent: true },
       { source: "/es/partners", destination: "/es/portfolio", permanent: true },
       { source: "/it/partners", destination: "/it/portfolio", permanent: true },
+      {
+        source: "/:locale(en|es|it)/portfolio/foodservice-institutional",
+        destination: "/:locale/portfolio/commercial-institutional-supply",
+        permanent: true,
+      },
     ];
   },
   async headers() {

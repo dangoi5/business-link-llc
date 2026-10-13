@@ -91,11 +91,32 @@ export const freshElementsBrand = {
         "Maní saborizado Fresh Elements en cinco sabores: picante, estilo japonés, limón y sal, con sal, y caramelizado con ajonjolí. Se puede producir en todos los tamaños, incluido granel para exportación.",
         "Arachidi aromatizzate Fresh Elements in cinque gusti: piccante, stile giapponese, lime e sale, salate e caramellate con sesamo. Possono essere prodotte in tutti i formati, compresa la rinfusa per l’esportazione.",
       ),
-      image: "/products/fresh-elements/flavored-peanuts.jpg",
+      image: "/products/fresh-elements/flavored-peanuts.webp",
       details: [
         loc("All pack sizes", "Todos los tamaños", "Tutti i formati"),
         loc("Bulk export", "Exportación a granel", "Esportazione alla rinfusa"),
         loc("5 flavors", "5 sabores", "5 gusti"),
+      ],
+      imageFit: "contain" as const,
+    },
+    {
+      slug: "salted-peanuts-15kg",
+      line: "snacks",
+      name: loc(
+        "Salted Peanuts — Foodservice 15 kg",
+        "Maní salado — Foodservice 15 kg",
+        "Arachidi salate — Foodservice 15 kg",
+      ),
+      description: loc(
+        "Fresh Elements salted peanuts in a 15 kg vacuum-packed bag, built for foodservice and bulk buyers.",
+        "Maní salado Fresh Elements en bolsa de 15 kg empacada al vacío, pensada para foodservice y compradores a granel.",
+        "Arachidi salate Fresh Elements in sacco da 15 kg confezionato sottovuoto, pensato per il foodservice e per gli acquirenti all’ingrosso.",
+      ),
+      image: "/products/fresh-elements/salted-peanuts-15kg.webp",
+      details: [
+        loc("Vacuum packed", "Empacado al vacío", "Confezionato sottovuoto"),
+        loc("15 kg bag", "Bolsa de 15 kg", "Sacco da 15 kg"),
+        loc("Foodservice", "Foodservice", "Foodservice"),
       ],
       imageFit: "contain" as const,
     },
@@ -108,7 +129,7 @@ export const freshElementsBrand = {
         "Chips de plátano sin gluten de Fresh Elements. Dos sabores: Sal y Chile Limón, en empaque para snack de retail.",
         "Chips di platano senza glutine di Fresh Elements. Due gusti: Sale e Chile Limón, in confezione per lo snacking da retail.",
       ),
-      image: "/products/fresh-elements/platanitos.jpg",
+      image: "/products/fresh-elements/platanitos.webp",
       details: [
         loc("Gluten free", "Sin gluten", "Senza glutine"),
         loc("Salt & Chile Limón", "Sal y chile limón", "Sale e Chile Limón"),
@@ -125,7 +146,7 @@ export const freshElementsBrand = {
         "Mezcla de aceite de cocina premium Fresh Elements, elaborada con 80% de aceite de palma. Fuente natural de vitamina E, ideal para freír. Botella de 900 mL. También podemos asociarnos para embotellar en mercados específicos.",
         "Miscela premium di olio da cucina Fresh Elements, elaborata con l’80% di olio di palma. Fonte naturale di vitamina E, ideale per la frittura. Bottiglia da 900 mL. Possiamo inoltre collaborare per l’imbottigliamento in mercati specifici.",
       ),
-      image: "/products/fresh-elements/palm-oil-blend-900ml.jpg",
+      image: "/products/fresh-elements/palm-oil-blend-900ml.webp",
       details: [
         loc("900 mL", "900 mL", "900 mL"),
         loc("80% palm fruit oil", "80% aceite de palma", "80% olio di palma"),
@@ -142,7 +163,7 @@ export const freshElementsBrand = {
         "Untable Fresh Elements Do-It-All para mesa y cocina. Pote de 15.5 oz (440 g), 44 porciones.",
         "Spalmabile Fresh Elements Do-It-All da tavola e da cucina. Vaschetta da 15.5 oz (440 g), 44 porzioni.",
       ),
-      image: "/products/fresh-elements/do-it-all-spread-tub-v2.jpg",
+      image: "/products/fresh-elements/do-it-all-spread-tub-v2.webp",
       details: [
         loc("15.5 oz / 440 g", "15.5 oz / 440 g", "15.5 oz / 440 g"),
         loc("Table & cooking", "Mesa y cocina", "Tavola e cucina"),
@@ -159,7 +180,7 @@ export const freshElementsBrand = {
         "Margarina tradicional Fresh Elements en barras de 50 g y 150 g. Con vitaminas A y D, cero colesterol, para cocinar y untar.",
         "Margarina tradizionale Fresh Elements in stecchi da 50 g e 150 g. Con vitamine A e D, zero colesterolo, per cucinare e spalmare.",
       ),
-      image: "/products/fresh-elements/margarine-traditional.jpg",
+      image: "/products/fresh-elements/margarine-traditional.webp",
       details: [
         loc("50 g stick", "Barra de 50 g", "Stecco da 50 g"),
         loc("150 g stick", "Barra de 150 g", "Stecco da 150 g"),
@@ -539,6 +560,46 @@ export const representedBrands: Brand[] = [
       },
     ],
     catalogHref: "/portfolio/lasco",
+    catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
+    photos: [],
+  },
+  {
+    slug: "starkist",
+    name: "StarKist",
+    logo: "/brands/starkist-logo.jpg",
+    note: loc(
+      "Wild-caught tuna and salmon in cans and single-serve pouches. Classic cans, Tuna Creations flavored pouches and StarKist Selects specialty cans.",
+      "Atún y salmón de pesca silvestre en latas y sobres individuales. Latas clásicas, sobres saborizados Tuna Creations y latas especiales StarKist Selects.",
+      "Tonno e salmone pescati in natura in lattine e buste monodose. Lattine classiche, buste aromatizzate Tuna Creations e lattine speciali StarKist Selects.",
+    ),
+    subBrands: ["StarKist Classics", "Tuna Creations", "StarKist Selects"],
+    productLines: [
+      {
+        label: loc("Classic cans — 5 oz", "Latas clásicas — 5 oz", "Lattine classiche — 5 oz"),
+        detail: loc(
+          "Chunk Light, Chunk White Albacore and Solid White Albacore tuna in water or oil, including 25% less sodium options",
+          "Atún Chunk Light, Chunk White Albacore y Solid White Albacore en agua o aceite, con opciones con 25% menos sodio",
+          "Tonno Chunk Light, Chunk White Albacore e Solid White Albacore in acqua o olio, con opzioni con il 25% di sodio in meno",
+        ),
+      },
+      {
+        label: loc("Single-serve pouches — 2.6 oz", "Sobres individuales — 2,6 oz", "Buste monodose — 2,6 oz"),
+        detail: loc(
+          "Classic light tuna in water or sunflower oil, plus Tuna Creations in Jalapeño, Lemon Pepper, Herb & Garlic, Sweet & Spicy, Hickory Smoke and Honey BBQ",
+          "Atún light clásico en agua o aceite de girasol, más Tuna Creations en Jalapeño, Limón y pimienta, Hierbas y ajo, Dulce y picante, Hickory y BBQ con miel",
+          "Tonno light classico in acqua o olio di girasole, più Tuna Creations nei gusti Jalapeño, Limone e pepe, Erbe e aglio, Dolce e piccante, Hickory e BBQ al miele",
+        ),
+      },
+      {
+        label: loc("StarKist Selects", "StarKist Selects", "StarKist Selects"),
+        detail: loc(
+          "Wild-caught, hand-selected yellowfin and albacore in extra virgin olive oil (including four flavored options) or water, plus pink salmon",
+          "Aleta amarilla y albacore de pesca silvestre y selección manual en aceite de oliva extra virgen (con cuatro opciones saborizadas) o agua, más salmón rosado",
+          "Pinna gialla e albacore pescati in natura e selezionati a mano in olio extra vergine di oliva (con quattro opzioni aromatizzate) o acqua, più salmone rosa",
+        ),
+      },
+    ],
+    catalogHref: "/portfolio/starkist",
     catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
     photos: [],
   },

@@ -20,6 +20,9 @@
 # production
 /build
 
+# private Obsidian vault (pricing, contacts) - repo is public
+/brain/
+
 # misc
 .DS_Store
 *.pem
