@@ -479,7 +479,7 @@ export const representedBrands: Brand[] = [
         ),
       },
       {
-        label: loc("Plant beverages", "Bebidas vegetales", "Bevande vegetali"),
+        label: loc("Instant soy mix", "Mezcla de soya instantánea", "Mix di soia istantaneo"),
         detail: loc(
           "SoyQuinoa instant soy milk with quinoa — natural and vanilla",
           "Leche de soya instantánea SoyQuinoa con quinua — natural y vainilla",

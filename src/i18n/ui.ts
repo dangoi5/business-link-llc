@@ -9,15 +9,15 @@ export const ui = {
     ),
     titleTemplate: loc("%s | Business Link LLC", "%s | Business Link LLC", "%s | Business Link LLC"),
     description: loc(
-      "Business Link LLC is a master distributor and exporter of food and beverage products, with our own Fresh Elements line, serving manufacturers, brands and buyers worldwide.",
-      "Business Link LLC es un distribuidor maestro y exportador de alimentos y bebidas, con nuestra línea Fresh Elements, al servicio de fabricantes, marcas y compradores en todo el mundo.",
-      "Business Link LLC è un distributore master ed esportatore di prodotti alimentari e bevande, con la nostra linea Fresh Elements, al servizio di produttori, marchi e acquirenti in tutto il mondo.",
+      "Business Link LLC is a master distributor and exporter of food products, with our own Fresh Elements line, serving manufacturers, brands and buyers worldwide.",
+      "Business Link LLC es un distribuidor maestro y exportador de alimentos, con nuestra línea Fresh Elements, al servicio de fabricantes, marcas y compradores en todo el mundo.",
+      "Business Link LLC è un distributore master ed esportatore di prodotti alimentari, con la nostra linea Fresh Elements, al servizio di produttori, marchi e acquirenti in tutto il mondo.",
     ),
     openGraphTitle: loc("Business Link LLC", "Business Link LLC", "Business Link LLC"),
     openGraphDescription: loc(
-      "Master distributor and exporter of food & beverage products. Own brand: Fresh Elements.",
-      "Distribuidor maestro y exportador de alimentos y bebidas. Marca propia: Fresh Elements.",
-      "Distributore master ed esportatore di prodotti alimentari e bevande. Marchio proprio: Fresh Elements.",
+      "Master distributor and exporter of food products. Own brand: Fresh Elements.",
+      "Distribuidor maestro y exportador de alimentos. Marca propia: Fresh Elements.",
+      "Distributore master ed esportatore di prodotti alimentari. Marchio proprio: Fresh Elements.",
     ),
   },
   language: {
@@ -32,9 +32,9 @@ export const ui = {
     explore: loc("Explore", "Explorar", "Esplora"),
     contact: loc("Contact", "Contacto", "Contatti"),
     footerBlurb: loc(
-      "Master distributor & exporter · Fresh Elements · International food & beverage trade",
-      "Distribuidor maestro y exportador · Fresh Elements · Comercio internacional de alimentos y bebidas",
-      "Distributore master ed esportatore · Fresh Elements · Commercio internazionale di alimenti e bevande",
+      "Master distributor & exporter · Fresh Elements · International food trade",
+      "Distribuidor maestro y exportador · Fresh Elements · Comercio internacional de alimentos",
+      "Distributore master ed esportatore · Fresh Elements · Commercio internazionale di alimenti",
     ),
     rights: loc("All rights reserved.", "Todos los derechos reservados.", "Tutti i diritti riservati."),
     localeNote: loc(
@@ -78,9 +78,9 @@ export const ui = {
   },
   home: {
     heroTitle: loc(
-      "Food and beverage, exported and distributed worldwide.",
-      "Alimentos y bebidas, exportados y distribuidos en todo el mundo.",
-      "Alimenti e bevande, esportati e distribuiti in tutto il mondo.",
+      "Food, exported and distributed worldwide.",
+      "Alimentos, exportados y distribuidos en todo el mundo.",
+      "Alimenti, esportati e distribuiti in tutto il mondo.",
     ),
     heroBody: loc(
       "We connect manufacturers with importers, distributors and foodservice buyers, and we sell our own line, Fresh Elements.",
@@ -466,8 +466,8 @@ export const ui = {
     heroTitle: loc("Lasco Food Drink & chocolate.", "Lasco Food Drink y chocolate.", "Lasco Food Drink e cioccolato."),
     heroDescription: loc(
       "Fortified powdered food drinks in multiple flavors, plus instant chocolate drink mixes.",
-      "Bebidas alimenticias en polvo fortificadas en varios sabores, más mezclas de chocolate instantáneo.",
-      "Bevande alimentari in polvere fortificate in più gusti, più miscele di cioccolato istantaneo.",
+      "Alimentos en polvo fortificados en varios sabores, más mezclas de chocolate instantáneo.",
+      "Alimenti in polvere fortificati in più gusti, più miscele di cioccolato istantaneo.",
     ),
     intro: loc(
       "Lasco is a Jamaican manufacturer we represent as master distributor and exporter. Browse Food Drink flavors and instant chocolate mixes below.",
@@ -558,7 +558,7 @@ export const ui = {
     response: loc("Response", "Respuesta", "Risposta"),
     commercialFollowUp: loc("Commercial follow-up", "Seguimiento comercial", "Follow-up commerciale"),
     focus: loc("Focus", "Enfoque", "Focus"),
-    foodTrade: loc("Food & beverage trade", "Comercio de alimentos y bebidas", "Commercio di alimenti e bevande"),
+    foodTrade: loc("Food trade", "Comercio de alimentos", "Commercio di alimenti"),
     email: loc("Email", "Correo", "Email"),
   },
   form: {

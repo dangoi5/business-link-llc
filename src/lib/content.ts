@@ -27,9 +27,9 @@ export const company = {
     "Distributore master · Esportatore · Marchio proprio",
   ),
   description: loc(
-    "Business Link LLC is a master distributor and exporter of food and beverage products. We develop and execute commercial opportunities across international markets—working with manufacturers, brands, distributors and strategic partners to establish sustainable routes to market and long-term business.",
-    "Business Link LLC es un distribuidor maestro y exportador de alimentos y bebidas. Desarrollamos y ejecutamos oportunidades comerciales en mercados internacionales, trabajando con fabricantes, marcas, distribuidores y socios estratégicos para establecer rutas de mercado sostenibles y negocios de largo plazo.",
-    "Business Link LLC è un distributore master ed esportatore di prodotti alimentari e bevande. Sviluppiamo ed eseguiamo opportunità commerciali sui mercati internazionali, collaborando con produttori, marchi, distributori e partner strategici per stabilire canali di mercato sostenibili e rapporti commerciali di lungo periodo.",
+    "Business Link LLC is a master distributor and exporter of food products. We develop and execute commercial opportunities across international markets—working with manufacturers, brands, distributors and strategic partners to establish sustainable routes to market and long-term business.",
+    "Business Link LLC es un distribuidor maestro y exportador de alimentos. Desarrollamos y ejecutamos oportunidades comerciales en mercados internacionales, trabajando con fabricantes, marcas, distribuidores y socios estratégicos para establecer rutas de mercado sostenibles y negocios de largo plazo.",
+    "Business Link LLC è un distributore master ed esportatore di prodotti alimentari. Sviluppiamo ed eseguiamo opportunità commerciali sui mercati internazionali, collaborando con produttori, marchi, distributori e partner strategici per stabilire canali di mercato sostenibili e rapporti commerciali di lungo periodo.",
   ),
   role: loc(
     "As a master distributor and exporter, we manage international supply, distribution structures and commercial relationships across our active markets.",
@@ -60,17 +60,17 @@ export const heroHighlights = [
   {
     title: loc("Master Distributor & Exporter", "Distribuidor maestro y exportador", "Distributore master ed esportatore"),
     description: loc(
-      "We export and distribute food & beverage products across international markets.",
-      "Exportamos y distribuimos alimentos y bebidas en mercados internacionales.",
-      "Esportiamo e distribuiamo prodotti alimentari e bevande sui mercati internazionali.",
+      "We export and distribute food products across international markets.",
+      "Exportamos y distribuimos alimentos en mercados internacionales.",
+      "Esportiamo e distribuiamo prodotti alimentari sui mercati internazionali.",
     ),
   },
   {
     title: loc("Import / Export & Market Development", "Importación / exportación y desarrollo de mercados", "Import / export e sviluppo dei mercati"),
     description: loc(
-      "International commercial operations across food & beverage—with routes to market, partners and sustainable distribution.",
-      "Operaciones comerciales internacionales de alimentos y bebidas, con rutas de mercado, socios y distribución sostenible.",
-      "Operazioni commerciali internazionali nel settore alimentare e delle bevande, con canali di mercato, partner e distribuzione sostenibile.",
+      "International commercial operations across food—with routes to market, partners and sustainable distribution.",
+      "Operaciones comerciales internacionales de alimentos, con rutas de mercado, socios y distribución sostenible.",
+      "Operazioni commerciali internazionali nel settore alimentare, con canali di mercato, partner e distribuzione sostenibile.",
     ),
   },
   {

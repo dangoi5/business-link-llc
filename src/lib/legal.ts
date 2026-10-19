@@ -10,9 +10,9 @@ export const privacySections: LegalSection[] = [
     title: loc("Who we are", "Quiénes somos", "Chi siamo"),
     body: [
       loc(
-        "Business Link LLC (“Business Link,” “we,” “us”) is a master distributor and exporter of food and beverage products. This Privacy Policy explains how we handle information when you use businesslinkgroup.com and related pages (the “Site”).",
-        "Business Link LLC (“Business Link”, “nosotros”) es un distribuidor maestro y exportador de alimentos y bebidas. Esta Política de Privacidad explica cómo tratamos la información cuando usa businesslinkgroup.com y páginas relacionadas (el “Sitio”).",
-        "Business Link LLC (“Business Link”, “noi”) è un distributore master ed esportatore di prodotti alimentari e bevande. La presente Informativa sulla privacy spiega come trattiamo le informazioni quando utilizza businesslinkgroup.com e le pagine correlate (il “Sito”).",
+        "Business Link LLC (“Business Link,” “we,” “us”) is a master distributor and exporter of food products. This Privacy Policy explains how we handle information when you use businesslinkgroup.com and related pages (the “Site”).",
+        "Business Link LLC (“Business Link”, “nosotros”) es un distribuidor maestro y exportador de alimentos. Esta Política de Privacidad explica cómo tratamos la información cuando usa businesslinkgroup.com y páginas relacionadas (el “Sitio”).",
+        "Business Link LLC (“Business Link”, “noi”) è un distributore master ed esportatore di prodotti alimentari. La presente Informativa sulla privacy spiega come trattiamo le informazioni quando utilizza businesslinkgroup.com e le pagine correlate (il “Sito”).",
       ),
     ],
   },
@@ -88,9 +88,9 @@ export const termsSections: LegalSection[] = [
     title: loc("About this site", "Sobre este sitio", "Informazioni sul sito"),
     body: [
       loc(
-        "This Site is operated by Business Link LLC to present our role as a master distributor and exporter of food and beverage products, including brands we represent (such as AmeriQual Foods) and our own Fresh Elements line. Content is for general business information.",
-        "Este Sitio es operado por Business Link LLC para presentar nuestro rol como distribuidor maestro y exportador de alimentos y bebidas, incluidas marcas que representamos (como AmeriQual Foods) y nuestra línea Fresh Elements. El contenido es información comercial general.",
-        "Questo Sito è gestito da Business Link LLC per presentare il nostro ruolo di distributore master ed esportatore di prodotti alimentari e bevande, inclusi i marchi che rappresentiamo (come AmeriQual Foods) e la nostra linea Fresh Elements. I contenuti sono informazioni commerciali generali.",
+        "This Site is operated by Business Link LLC to present our role as a master distributor and exporter of food products, including brands we represent (such as AmeriQual Foods) and our own Fresh Elements line. Content is for general business information.",
+        "Este Sitio es operado por Business Link LLC para presentar nuestro rol como distribuidor maestro y exportador de alimentos, incluidas marcas que representamos (como AmeriQual Foods) y nuestra línea Fresh Elements. El contenido es información comercial general.",
+        "Questo Sito è gestito da Business Link LLC per presentare il nostro ruolo di distributore master ed esportatore di prodotti alimentari, inclusi i marchi che rappresentiamo (come AmeriQual Foods) e la nostra linea Fresh Elements. I contenuti sono informazioni commerciali generali.",
       ),
     ],
   },
