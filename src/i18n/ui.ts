@@ -189,6 +189,87 @@ export const ui = {
     ),
     viewPortfolio: loc("View portfolio", "Ver portafolio", "Vedi portafoglio"),
   },
+  about: {
+    metaTitle: loc("About Us", "Nosotros", "Chi siamo"),
+    metaDescription: loc(
+      "The story behind Business Link: a family business built on relationships, values and more than 35 years of international experience.",
+      "La historia de Business Link: una empresa familiar construida sobre relaciones, valores y más de 35 años de experiencia internacional.",
+      "La storia di Business Link: un'azienda di famiglia fondata su relazioni, valori e oltre 35 anni di esperienza internazionale.",
+    ),
+    heroLabel: loc("Our Story", "Nuestra historia", "La nostra storia"),
+    heroTitle: loc(
+      "Built on Relationships. Guided by Values. Inspired by Generations.",
+      "Construidos sobre relaciones. Guiados por valores. Inspirados por generaciones.",
+      "Costruiti sulle relazioni. Guidati dai valori. Ispirati dalle generazioni.",
+    ),
+    heroDescription: loc(
+      "A family business and international platform connecting companies, brands, products and opportunities.",
+      "Una empresa familiar y plataforma internacional que conecta empresas, marcas, productos y oportunidades.",
+      "Un'azienda di famiglia e piattaforma internazionale che collega aziende, marchi, prodotti e opportunità.",
+    ),
+    roots: [
+      loc(
+        "Business Link's roots extend beyond the company itself. A family heritage in specialty foods and agroindustrial businesses helped shape an entrepreneurial mindset that evolved through more than 35 years of international business experience.",
+        "Las raíces de Business Link van más allá de la empresa misma. Una herencia familiar en alimentos especializados y negocios agroindustriales ayudó a forjar una mentalidad emprendedora que evolucionó a lo largo de más de 35 años de experiencia empresarial internacional.",
+        "Le radici di Business Link vanno oltre l'azienda stessa. Un'eredità familiare nei prodotti alimentari speciali e nelle attività agroindustriali ha contribuito a plasmare una mentalità imprenditoriale maturata in oltre 35 anni di esperienza internazionale.",
+      ),
+      loc(
+        "From working with companies such as Coca-Cola to leading a distribution business in Colombia, that journey expanded across industries and continents, building relationships shaped by shared experiences, trust, and mutual respect.",
+        "Desde trabajar con empresas como Coca-Cola hasta dirigir un negocio de distribución en Colombia, ese camino se extendió a través de industrias y continentes, construyendo relaciones basadas en experiencias compartidas, confianza y respeto mutuo.",
+        "Dalla collaborazione con aziende come Coca-Cola alla guida di un'attività di distribuzione in Colombia, quel percorso si è esteso tra settori e continenti, costruendo relazioni fondate su esperienze condivise, fiducia e rispetto reciproco.",
+      ),
+    ],
+    story: [
+      loc(
+        "Established in 2008, Business Link has taken on a new dimension over the past five years, evolving into an international business platform connecting companies, brands, products, and opportunities. Its rapid growth reflects the strength of relationships cultivated over decades and a commitment to transparency in the way we conduct business.",
+        "Establecida en 2008, Business Link ha adquirido una nueva dimensión en los últimos cinco años, convirtiéndose en una plataforma de negocios internacional que conecta empresas, marcas, productos y oportunidades. Su rápido crecimiento refleja la solidez de relaciones cultivadas durante décadas y un compromiso con la transparencia en la forma de hacer negocios.",
+        "Fondata nel 2008, Business Link ha assunto una nuova dimensione negli ultimi cinque anni, evolvendosi in una piattaforma commerciale internazionale che collega aziende, marchi, prodotti e opportunità. La sua rapida crescita riflette la solidità di relazioni coltivate nel corso di decenni e un impegno per la trasparenza nel modo in cui facciamo business.",
+      ),
+      loc(
+        "We believe that behind every company are people, and behind many products are stories worth sharing. Our portfolio reflects not only commercial opportunities but also the entrepreneurial spirit, traditions, and ambitions of those behind the brands.",
+        "Creemos que detrás de cada empresa hay personas, y detrás de muchos productos hay historias que vale la pena compartir. Nuestro portafolio refleja no solo oportunidades comerciales, sino también el espíritu emprendedor, las tradiciones y las ambiciones de quienes están detrás de las marcas.",
+        "Crediamo che dietro ogni azienda ci siano persone e dietro molti prodotti storie che meritano di essere condivise. Il nostro portafoglio riflette non solo opportunità commerciali, ma anche lo spirito imprenditoriale, le tradizioni e le ambizioni di chi sta dietro ai marchi.",
+      ),
+      loc(
+        "As a family business, Business Link represents a vision extending beyond any single industry or generation. Our aspiration is to build a platform that continues to evolve, creating opportunities and relationships that future generations can strengthen and carry forward.",
+        "Como empresa familiar, Business Link representa una visión que va más allá de cualquier industria o generación. Nuestra aspiración es construir una plataforma que siga evolucionando, creando oportunidades y relaciones que las futuras generaciones puedan fortalecer y continuar.",
+        "In quanto azienda di famiglia, Business Link rappresenta una visione che va oltre qualsiasi singolo settore o generazione. La nostra aspirazione è costruire una piattaforma in continua evoluzione, creando opportunità e relazioni che le generazioni future possano rafforzare e portare avanti.",
+      ),
+    ],
+    founderAlt: loc("Portrait of Business Link founder José Paternostro", "Retrato del fundador de Business Link, José Paternostro", "Ritratto del fondatore di Business Link, José Paternostro"),
+    founderRole: loc("Founder, Business Link", "Fundador, Business Link", "Fondatore, Business Link"),
+    missionTitle: loc("Our Mission", "Nuestra misión", "La nostra missione"),
+    mission: [
+      loc(
+        "To connect businesses, brands, and markets through an international platform built on experience and lasting relationships.",
+        "Conectar negocios, marcas y mercados a través de una plataforma internacional construida sobre la experiencia y relaciones duraderas.",
+        "Connettere imprese, marchi e mercati attraverso una piattaforma internazionale fondata sull'esperienza e su relazioni durature.",
+      ),
+      loc(
+        "We develop commercial opportunities, expand distribution, and bring together companies whose capabilities and ambitions complement one another.",
+        "Desarrollamos oportunidades comerciales, ampliamos la distribución y reunimos a empresas cuyas capacidades y ambiciones se complementan.",
+        "Sviluppiamo opportunità commerciali, ampliamo la distribuzione e riuniamo aziende le cui capacità e ambizioni si completano a vicenda.",
+      ),
+    ],
+    visionTitle: loc("Our Vision", "Nuestra visión", "La nostra visione"),
+    vision: [
+      loc(
+        "To build an international business platform that continues to evolve across industries, markets, and generations.",
+        "Construir una plataforma de negocios internacional que siga evolucionando a través de industrias, mercados y generaciones.",
+        "Costruire una piattaforma commerciale internazionale in continua evoluzione tra settori, mercati e generazioni.",
+      ),
+      loc(
+        "A family legacy strengthened by the relationships we cultivate, the opportunities we create, and the people and businesses that become part of our journey.",
+        "Un legado familiar fortalecido por las relaciones que cultivamos, las oportunidades que creamos y las personas y empresas que se suman a nuestro camino.",
+        "Un'eredità familiare rafforzata dalle relazioni che coltiviamo, dalle opportunità che creiamo e dalle persone e dalle aziende che diventano parte del nostro percorso.",
+      ),
+    ],
+    quote: loc(
+      "Our heritage shaped our beginnings. Experience strengthened our character. Relationships built our foundation. Future generations inspire our vision.",
+      "Nuestra herencia dio forma a nuestros comienzos. La experiencia fortaleció nuestro carácter. Las relaciones construyeron nuestra base. Las futuras generaciones inspiran nuestra visión.",
+      "La nostra eredità ha plasmato i nostri inizi. L'esperienza ha rafforzato il nostro carattere. Le relazioni hanno costruito le nostre fondamenta. Le generazioni future ispirano la nostra visione.",
+    ),
+  },
   capabilities: {
     metaTitle: loc("Capabilities", "Capacidades", "Competenze"),
     metaDescription: loc(
