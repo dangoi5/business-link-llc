@@ -49,7 +49,7 @@ export const ownBrand = {
 };
 
 export const navLinks = [
-  { href: "/about", label: loc("About", "Nosotros", "Chi siamo") },
+  { href: "/about", label: loc("About Us", "Nosotros", "Chi siamo") },
   { href: "/capabilities", label: loc("Capabilities", "Capacidades", "Capacità") },
   { href: "/portfolio", label: loc("Portfolio", "Portafolio", "Portafoglio") },
   { href: "/portfolio/fresh-elements", label: loc("Fresh Elements", "Fresh Elements", "Fresh Elements") },
