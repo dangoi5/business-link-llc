@@ -317,50 +317,58 @@ export const representedBrands: Brand[] = [
     name: "Star Grocery LLC",
     logo: "/brands/star-grocery-logo.png",
     note: loc(
-      "Ukrainian grocery manufacturer. La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto and Fitto.",
-      "Fabricante de abarrotes de Ucrania. La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto y Fitto.",
-      "Produttore grocery ucraino. La Pasta, Perfetto, Khutorok, Pansky, Golden Grain, Kitto e Fitto.",
+      "Ukrainian grocery manufacturer. Khutorok, Pansky, The Banka, La Pasta, Perfetto and Kitto.",
+      "Fabricante de abarrotes de Ucrania. Khutorok, Pansky, The Banka, La Pasta, Perfetto y Kitto.",
+      "Produttore grocery ucraino. Khutorok, Pansky, The Banka, La Pasta, Perfetto e Kitto.",
     ),
-    subBrands: ["La Pasta", "Perfetto", "Khutorok", "Pansky", "Golden Grain", "Kitto", "Fitto"],
+    subBrands: ["Khutorok", "Pansky", "The Banka", "La Pasta", "Perfetto", "Kitto"],
     productLines: [
       {
         label: loc("Pasta & flour", "Pasta y harina", "Pasta e farina"),
         detail: loc(
-          "La Pasta, Perfetto, Khutorok, Pansky and Golden Grain — dry pasta, kids shapes, wheat and specialty flours",
-          "La Pasta, Perfetto, Khutorok, Pansky y Golden Grain — pasta seca, formatos infantiles, harinas de trigo y especiales",
-          "La Pasta, Perfetto, Khutorok, Pansky e Golden Grain — pasta secca, formati per bambini, farine di grano e speciali",
+          "Khutorok, Pansky, La Pasta and Perfetto — dry pasta, wheat, corn, rye, semola, rice and chickpea flours",
+          "Khutorok, Pansky, La Pasta y Perfetto — pasta seca, harinas de trigo, maíz, centeno, sémola, arroz y garbanzo",
+          "Khutorok, Pansky, La Pasta e Perfetto — pasta secca, farine di grano, mais, segale, semola, riso e ceci",
         ),
       },
       {
-        label: loc("Rice, groats & pulses", "Arroz, cereales y legumbres", "Riso, cereali e legumi"),
+        label: loc("Groats & pulses", "Cereales y legumbres", "Cereali e legumi"),
         detail: loc(
-          "Khutorok, Pansky and Golden Grain — buckwheat, rice, lentils, couscous, bulgur and millet",
-          "Khutorok, Pansky y Golden Grain — trigo sarraceno, arroz, lentejas, cuscús, bulgur y mijo",
-          "Khutorok, Pansky e Golden Grain — grano saraceno, riso, lenticchie, couscous, bulgur e miglio",
+          "Khutorok and Pansky — buckwheat, millet, barley, wheat, corn, semolina, split peas, bulgur and couscous",
+          "Khutorok y Pansky — trigo sarraceno, mijo, cebada, trigo, maíz, sémola, chícharo partido, bulgur y cuscús",
+          "Khutorok e Pansky — grano saraceno, miglio, orzo, grano, mais, semolino, piselli spezzati, bulgur e couscous",
         ),
       },
       {
-        label: loc("Instant meals", "Comidas instantáneas", "Pasti istantanei"),
+        label: loc("Instant noodles", "Fideos instantáneos", "Noodles istantanei"),
         detail: loc(
-          "Khutorok mashed potatoes, cereals and instant noodles; Kitto instant egg noodles; Fitto soups, cups, oatmeal and savory porridges",
-          "Puré, cereales y fideos instantáneos Khutorok; fideos de huevo instantáneos Kitto; sopas, vasos, avena y gachas Fitto",
-          "Purè, cereali e noodles istantanei Khutorok; noodles all'uovo istantanei Kitto; zuppe, coppette, avena e porridge Fitto",
+          "Khutorok instant noodles in bags, cups and trays; Kitto instant egg noodles",
+          "Fideos instantáneos Khutorok en bolsas, vasos y bandejas; fideos de huevo instantáneos Kitto",
+          "Noodles istantanei Khutorok in buste, coppette e vaschette; noodles all'uovo istantanei Kitto",
+        ),
+      },
+      {
+        label: loc("Canned vegetables & preserves", "Verduras en conserva", "Conserve vegetali"),
+        detail: loc(
+          "Khutorok and The Banka — pickles, hot peppers, beans, tomato paste, lecho, salads and jams",
+          "Khutorok y The Banka — encurtidos, chiles, frijoles, pasta de tomate, lecho, ensaladas y mermeladas",
+          "Khutorok e The Banka — sottaceti, peperoncini, fagioli, concentrato di pomodoro, lecsó, insalate e confetture",
+        ),
+      },
+      {
+        label: loc("Juices", "Jugos", "Succhi"),
+        detail: loc(
+          "Khutorok and The Banka — tomato and fruit juices, nectars and birch sap",
+          "Khutorok y The Banka — jugos de tomate y frutas, néctares y savia de abedul",
+          "Khutorok e The Banka — succhi di pomodoro e frutta, nettari e linfa di betulla",
         ),
       },
       {
         label: loc("Sauces", "Salsas", "Salse"),
         detail: loc(
-          "Kitto soy, teriyaki, sweet chili and specialty sauces",
-          "Kitto soya, teriyaki, chile dulce y salsas especiales",
-          "Kitto soia, teriyaki, sweet chili e salse speciali",
-        ),
-      },
-      {
-        label: loc("Pantry", "Despensa", "Dispensa"),
-        detail: loc(
-          "Khutorok salt, sugar, baking soda, seasonings and spices",
-          "Sal, azúcar, bicarbonato, sazonadores y especias Khutorok",
-          "Sale, zucchero, bicarbonato, condimenti e spezie Khutorok",
+          "Kitto soy, teriyaki, unagi, sweet chili and specialty sauces",
+          "Kitto soya, teriyaki, unagi, chile dulce y salsas especiales",
+          "Kitto soia, teriyaki, unagi, sweet chili e salse speciali",
         ),
       },
     ],
@@ -368,16 +376,8 @@ export const representedBrands: Brand[] = [
     catalogLabel: loc("View product families", "Ver familias de producto", "Consulta le famiglie di prodotto"),
     extraLinks: [
       {
-        href: "/catalogs/star-grocery-2025.pdf",
+        href: "/catalogs/star-grocery-2026.pdf",
         label: loc("General catalog (PDF)", "Catálogo general (PDF)", "Catalogo generale (PDF)"),
-      },
-      {
-        href: "/catalogs/star-grocery-instant-noodles.pdf",
-        label: loc(
-          "Instant noodles catalog (PDF)",
-          "Catálogo de fideos instantáneos (PDF)",
-          "Catalogo noodle istantanei (PDF)",
-        ),
       },
     ],
     photos: [],

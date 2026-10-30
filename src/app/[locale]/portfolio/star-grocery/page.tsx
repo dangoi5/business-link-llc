@@ -46,20 +46,12 @@ export default async function StarGroceryCatalogPage({
               {t(locale, ui.starGrocery.backToPortfolio)}
             </TextLink>
             <a
-              href="/catalogs/star-grocery-2025.pdf"
+              href="/catalogs/star-grocery-2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold text-brand transition hover:text-brand-deep"
             >
               {t(locale, ui.starGrocery.viewPdf)} →
-            </a>
-            <a
-              href="/catalogs/star-grocery-instant-noodles.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-brand transition hover:text-brand-deep"
-            >
-              {t(locale, ui.starGrocery.viewNoodlesPdf)} →
             </a>
           </div>
         </div>

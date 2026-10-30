@@ -759,9 +759,9 @@ export const catalogDocs = [
   {
     brand: "Star Grocery",
     logo: "/brands/star-grocery-logo.png",
-    title: loc("General catalog 2025", "Catálogo general 2025", "Catalogo generale 2025"),
-    href: "/catalogs/star-grocery-2025.pdf",
-    sizeMb: 31.1,
+    title: loc("General catalog 2026", "Catálogo general 2026", "Catalogo generale 2026"),
+    href: "/catalogs/star-grocery-2026.pdf",
+    sizeMb: 8.8,
   },
   {
     brand: "Star Brands",
@@ -783,12 +783,5 @@ export const catalogDocs = [
     title: loc("Food Life balanced catalog 2026", "Catálogo Food Life balanced 2026", "Catalogo Food Life balanced 2026"),
     href: "/catalogs/food-life-balanced-2026.pdf",
     sizeMb: 8,
-  },
-  {
-    brand: "Star Grocery",
-    logo: "/brands/star-grocery-logo.png",
-    title: loc("Instant noodles", "Fideos instantáneos", "Noodles istantanei"),
-    href: "/catalogs/star-grocery-instant-noodles.pdf",
-    sizeMb: 2.2,
   },
 ];
