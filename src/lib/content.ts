@@ -517,6 +517,22 @@ export const portfolioCategories: PortfolioCategory[] = [
         imageFit: "contain",
       },
       {
+        slug: "flint-ua-food",
+        name: loc("Flint UA FOOD Croutons", "Crutones Flint UA FOOD", "Crostini Flint UA FOOD"),
+        description: loc(
+          "Flint’s patriotic UA FOOD line with Ukrainian-cuisine flavors: mushroom pan and roll from the oven (pork shank). 100 g packs.",
+          "La línea patriótica UA FOOD de Flint con sabores de la cocina ucraniana: sartén de champiñones y rollo al horno (codillo de cerdo). Empaques de 100 g.",
+          "La linea patriottica UA FOOD di Flint con gusti della cucina ucraina: padella ai funghi e rollè al forno (stinco di maiale). Confezioni da 100 g.",
+        ),
+        image: "/products/star-brands/flint-ua-food.jpg",
+        details: [
+          loc("Flint UA FOOD", "Flint UA FOOD", "Flint UA FOOD"),
+          loc("Star Brands", "Star Brands", "Star Brands"),
+          loc("100 g", "100 g", "100 g"),
+        ],
+        imageFit: "contain",
+      },
+      {
         slug: "flint-grenki",
         name: loc("Flint Grenki Rye Croutons", "Grenki Flint de centeno", "Grenki Flint di segale"),
         description: loc(
@@ -549,71 +565,6 @@ export const portfolioCategories: PortfolioCategory[] = [
         imageFit: "contain",
       },
       {
-        slug: "san-sanych-seeds",
-        name: loc("San Sanych Roasted Seeds", "Semillas tostadas San Sanych", "Semi tostati San Sanych"),
-        description: loc(
-          "Roasted sunflower seeds from San Sanych: classic, salted, premium white and striped, kernels and pumpkin seeds. Packs from 50 g to 285 g.",
-          "Semillas de girasol tostadas San Sanych: clásicas, saladas, premium blancas y rayadas, pepitas y calabaza. Empaques de 50 g a 285 g.",
-          "Semi di girasole tostati San Sanych: classici, salati, premium bianchi e striati, semi sgusciati e semi di zucca. Confezioni da 50 g a 285 g.",
-        ),
-        image: "/products/star-brands/san-sanych-seeds-xxl.png",
-        details: [
-          loc("San Sanych", "San Sanych", "San Sanych"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("50–285 g", "50–285 g", "50–285 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "chipsters-classic",
-        name: loc("Chipster’s Classic Potato Chips", "Papas clásicas Chipster’s", "Patatine classiche Chipster’s"),
-        description: loc(
-          "Classic Chipster’s potato chips in sour cream and herbs, crab, bacon, cheese, grilled sausages, sour cream and onions, salt, jalapeño, cheddar BBQ and Texas steak. Packs from 25 g to 180 g.",
-          "Papas clásicas Chipster’s: crema agria y hierbas, cangrejo, tocino, queso, salchichas a la parrilla, crema agria y cebolla, sal, jalapeño, cheddar BBQ y bistec Texas. Empaques de 25 g a 180 g.",
-          "Patatine classiche Chipster’s: panna acida e erbe, granchio, bacon, formaggio, salsicce alla griglia, panna acida e cipolla, sale, jalapeño, cheddar BBQ e bistecca Texas. Confezioni da 25 g a 180 g.",
-        ),
-        image: "/products/star-brands/chipsters-classic-sour-cream.png",
-        details: [
-          loc("Chipster’s", "Chipster’s", "Chipster’s"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("25–180 g", "25–180 g", "25–180 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "chipsters-bbq-superwave",
-        name: loc("Chipster’s BBQ & Superwave", "Chipster’s BBQ y Superwave", "Chipster’s BBQ e Superwave"),
-        description: loc(
-          "Chipster’s BBQ chips (wings, grilled meat, cheese and onion) and wavy Superwave chips (mushroom cream sauce, sausages with mustard, spicy tomato, cheese sauce with onion). 110 g and 120 g packs.",
-          "Papas Chipster’s BBQ (alitas, carne a la parrilla, queso y cebolla) y Superwave onduladas (champiñones en crema, salchichas con mostaza, tomate picante, salsa de queso con cebolla). Empaques de 110 g y 120 g.",
-          "Patatine Chipster’s BBQ (ali, carne alla griglia, formaggio e cipolla) e Superwave ondulate (funghi in crema, salsicce con senape, pomodoro piccante, salsa al formaggio con cipolla). Confezioni da 110 g e 120 g.",
-        ),
-        image: "/products/star-brands/chipsters-bbq-wings.png",
-        details: [
-          loc("Chipster’s", "Chipster’s", "Chipster’s"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("110 / 120 g", "110 / 120 g", "110 / 120 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "crispy-cris",
-        name: loc("Crispy Cris Corn Snacks", "Snacks de maíz Crispy Cris", "Snack di mais Crispy Cris"),
-        description: loc(
-          "Unfried corn balls and rings from Crispy Cris: cheese balls, sour cream and greens rings, and bacon balls. 55 g packs. Not available for export at the moment.",
-          "Bolitas y aros de maíz sin freír de Crispy Cris: bolitas de queso, aros de crema agria y verdes, y bolitas de tocino. Empaques de 55 g. No disponible para exportación por el momento.",
-          "Palline e anelli di mais non fritti Crispy Cris: palline al formaggio, anelli panna acida e verdure, e palline al bacon. Confezioni da 55 g. Al momento non disponibili per l’export.",
-        ),
-        image: "/products/star-brands/crispy-cris.jpg",
-        details: [
-          loc("Crispy Cris", "Crispy Cris", "Crispy Cris"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("55 g", "55 g", "55 g"),
-        ],
-        imageFit: "contain",
-        unavailableForExport: true,
-      },
-      {
         slug: "hroom-chips",
         name: loc("Hroom Sliced Potato Chips", "Papas en rodaja Hroom", "Patatine in fetta Hroom"),
         description: loc(
@@ -630,18 +581,18 @@ export const portfolioCategories: PortfolioCategory[] = [
         imageFit: "contain",
       },
       {
-        slug: "do-bochkovogo",
-        name: loc("Do Bochkovogo Pub Toasts", "Tostadas Do Bochkovogo", "Crostini Do Bochkovogo"),
+        slug: "chupa-chups-popcorn",
+        name: loc("Chupa Chups Popcorn", "Palomitas Chupa Chups", "Popcorn Chupa Chups"),
         description: loc(
-          "Pub-style toasts in wavy rye-wheat, rye-wheat pencil and wheat pencil shapes. Flavors include garlic, spicy tomato, veal with adjika, sausages with mustard and horseradish. 90 g and 130 g packs.",
-          "Tostadas estilo pub: trigo-centeno ondulado, palito de trigo-centeno y palito de trigo. Sabores: ajo, tomate picante, ternera con adjika, salchichas con mostaza y rábano picante. Empaques de 90 g y 130 g.",
-          "Crostini stile pub: frumento-segale ondulato, stick frumento-segale e stick di frumento. Gusti: aglio, pomodoro piccante, vitello con adjika, salsicce con senape e rafano. Confezioni da 90 g e 130 g.",
+          "Round popcorn glazed with Chupa Chups lollipop flavors: apple, strawberry, cola and caramel. Fun-size (90 g; caramel 110 g) and classic-size 135 g bags.",
+          "Palomitas redondas glaseadas con sabores de paleta Chupa Chups: manzana, fresa, cola y caramelo. Bolsas tamaño fun (90 g; caramelo 110 g) y clásico de 135 g.",
+          "Popcorn rotondi glassati ai gusti dei lecca-lecca Chupa Chups: mela, fragola, cola e caramello. Buste formato fun (90 g; caramello 110 g) e classico da 135 g.",
         ),
-        image: "/products/star-brands/do-bochkovogo-pub-grinki.png",
+        image: "/products/chupa-chups/chupa-chups-popcorn.jpg",
         details: [
-          loc("Do Bochkovogo", "Do Bochkovogo", "Do Bochkovogo"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("90 / 130 g", "90 / 130 g", "90 / 130 g"),
+          loc("Chupa Chups", "Chupa Chups", "Chupa Chups"),
+          loc("CRNCH Popcorn", "CRNCH Popcorn", "CRNCH Popcorn"),
+          loc("90–135 g", "90–135 g", "90–135 g"),
         ],
         imageFit: "contain",
       },
@@ -766,9 +717,9 @@ export const catalogDocs = [
   {
     brand: "Star Brands",
     logo: "/brands/star-brands-logo.png",
-    title: loc("Snacks catalog 2024", "Catálogo de snacks 2024", "Catalogo snack 2024"),
-    href: "/catalogs/star-brands-snacks-2024.pdf",
-    sizeMb: 23,
+    title: loc("Flint & Hroom snacks catalog", "Catálogo de snacks Flint y Hroom", "Catalogo snack Flint e Hroom"),
+    href: "/catalogs/star-brands-snacks-flint-hroom.pdf",
+    sizeMb: 9.2,
   },
   {
     brand: "Quinoa Club",

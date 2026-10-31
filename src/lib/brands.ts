@@ -387,61 +387,30 @@ export const representedBrands: Brand[] = [
     name: "Star Brands",
     logo: "/brands/star-brands-logo.png",
     note: loc(
-      "Ukrainian snack manufacturer. Flint, Chipster’s, San Sanych, Crispy Cris, Hroom and Do Bochkovogo.",
-      "Fabricante de snacks de Ucrania. Flint, Chipster’s, San Sanych, Crispy Cris, Hroom y Do Bochkovogo.",
-      "Produttore di snack ucraino. Flint, Chipster’s, San Sanych, Crispy Cris, Hroom e Do Bochkovogo.",
+      "Ukrainian snack manufacturer. Flint and Hroom.",
+      "Fabricante de snacks de Ucrania. Flint y Hroom.",
+      "Produttore di snack ucraino. Flint e Hroom.",
     ),
-    subBrands: [
-      "Flint",
-      "Chipster’s",
-      "San Sanych",
-      "Crispy Cris",
-      "Hroom",
-      "Do Bochkovogo",
-    ],
+    subBrands: ["Flint", "Hroom"],
     productLines: [
       {
         label: loc("Flint croutons", "Crutones Flint", "Crostini Flint"),
         detail: loc(
-          "Wheat-rye croutons, baguette, Grenki rye toasts and Craft bars/chips",
-          "Crutones de trigo-centeno, baguette, Grenki de centeno y barras/chips Craft",
-          "Crostini di frumento-segale, baguette, toast di segale Grenki e barrette/chips Craft",
+          "Wheat-rye croutons, baguette, UA FOOD, Grenki rye toasts and Craft bars/chips",
+          "Crutones de trigo-centeno, baguette, UA FOOD, Grenki de centeno y barras/chips Craft",
+          "Crostini di frumento-segale, baguette, UA FOOD, toast di segale Grenki e barrette/chips Craft",
         ),
       },
       {
         label: loc("Potato chips", "Papas fritas", "Patatine"),
         detail: loc(
-          "Chipster’s classic, BBQ and Superwave; Hroom sliced chips",
-          "Chipster’s clásicas, BBQ y Superwave; papas en rodaja Hroom",
-          "Chipster’s classiche, BBQ e Superwave; chips a fette Hroom",
-        ),
-      },
-      {
-        label: loc("Seeds", "Semillas", "Semi"),
-        detail: loc(
-          "San Sanych roasted sunflower, striped, white, pumpkin and kernels",
-          "San Sanych: girasol tostado, rayadas, blancas, calabaza y pepitas",
-          "San Sanych: girasole tostato, striati, bianchi, zucca e semi sgusciati",
-        ),
-      },
-      {
-        label: loc("Corn snacks", "Snacks de maíz", "Snack di mais"),
-        detail: loc(
-          "Crispy Cris corn balls and rings — not available for export at the moment",
-          "Crispy Cris: bolitas y aros de maíz — no disponible para exportación por el momento",
-          "Crispy Cris: palline e anelli di mais — al momento non disponibili per l’esportazione",
-        ),
-      },
-      {
-        label: loc("Pub toasts", "Tostadas", "Toast"),
-        detail: loc(
-          "Do Bochkovogo wavy and pencil toasts — rye-wheat and wheat",
-          "Do Bochkovogo: tostadas onduladas y en palito — trigo-centeno y trigo",
-          "Do Bochkovogo: toast ondulati e a stecco — frumento-segale e frumento",
+          "Hroom sliced potato chips, 50 g and 100 g XXL",
+          "Papas en rodaja Hroom, 50 g y 100 g XXL",
+          "Chips a fette Hroom, 50 g e 100 g XXL",
         ),
       },
     ],
-    catalogHref: "/catalogs/star-brands-snacks-2024.pdf",
+    catalogHref: "/catalogs/star-brands-snacks-flint-hroom.pdf",
     photos: [],
   },
   {
