@@ -96,6 +96,14 @@ function BrandDetails({ brand, locale }: { brand: Brand; locale: Locale }) {
         <p className="text-sm leading-relaxed text-slate">{t(locale, brand.note)}</p>
       ) : null}
 
+      {brand.highlights && brand.highlights.length > 0 ? (
+        <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-slate marker:text-gold">
+          {brand.highlights.map((item) => (
+            <li key={item.en}>{t(locale, item)}</li>
+          ))}
+        </ul>
+      ) : null}
+
       {brand.subBrands && brand.subBrands.length > 0 ? (
         <div className="flex flex-wrap gap-1.5">
           {brand.subBrands.map((subBrand) => (

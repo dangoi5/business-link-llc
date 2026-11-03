@@ -448,9 +448,9 @@ export const ui = {
       "Categorie alimentari per la distribuzione internazionale.",
     ),
     heroDescription: loc(
-      "As a master distributor and exporter, Business Link supplies partner brands and our own Fresh Elements line across retail, foodservice, food industry and international trade.",
-      "Como distribuidor maestro y exportador, Business Link abastece marcas asociadas y nuestra línea Fresh Elements en retail, foodservice, industria alimentaria y comercio internacional.",
-      "Come distributore master ed esportatore, Business Link fornisce marchi partner e la nostra linea Fresh Elements in retail, foodservice, industria alimentare e commercio internazionale.",
+      "As a master distributor and exporter, Business Link supplies partner brands and our own Fresh Elements line across retail, foodservice, food industry and international trade. Every product is chosen for quality and a competitive price-to-value ratio.",
+      "Como distribuidor maestro y exportador, Business Link abastece marcas asociadas y nuestra línea Fresh Elements en retail, foodservice, industria alimentaria y comercio internacional. Cada producto se elige por su calidad y una relación precio-valor competitiva.",
+      "Come distributore master ed esportatore, Business Link fornisce marchi partner e la nostra linea Fresh Elements in retail, foodservice, industria alimentare e commercio internazionale. Ogni prodotto è scelto per qualità e un rapporto qualità-prezzo competitivo.",
     ),
     foodCategories: loc("Food categories", "Categorías de alimentos", "Categorie alimentari"),
     foodCategoriesBody: loc(
@@ -566,17 +566,79 @@ export const ui = {
       "Pasta di grano duro Akhan Makarna dalla Turchia — lunga, corta, da brodo e formati speciali — da Business Link LLC.",
     ),
     heroLabel: loc("Manufacturer", "Fabricante", "Produttore"),
-    heroTitle: loc("Akhan Makarna pasta.", "Pasta Akhan Makarna.", "Pasta Akhan Makarna."),
+    heroTitle: loc(
+      "Pasta from the homeland of durum wheat.",
+      "Pasta de la cuna del trigo duro.",
+      "Pasta dalla terra d’origine del grano duro.",
+    ),
     heroDescription: loc(
-      "Durum wheat pasta in long, short and tubular, soup and specialty shapes. 500 g packs.",
-      "Pasta de trigo duro en formatos largos, cortos y tubulares, para sopa y especiales. Empaques de 500 g.",
-      "Pasta di grano duro in formati lunghi, corti e tubolari, da brodo e speciali. Confezioni da 500 g.",
+      "Akhan Makarna: 100% durum wheat pasta from Mesopotamia, made on brand-new robotic lines. 21 shapes, 500 g packs, built for the shelf.",
+      "Akhan Makarna: pasta de 100% trigo duro de Mesopotamia, elaborada en líneas robotizadas de última generación. 21 formatos en empaques de 500 g, pensados para el anaquel.",
+      "Akhan Makarna: pasta di 100% grano duro della Mesopotamia, prodotta su nuovissime linee robotizzate. 21 formati in confezioni da 500 g, pensati per lo scaffale.",
     ),
     intro: loc(
-      "Akhan Makarna is a Turkish pasta manufacturer from Adana that makes its pasta from 100% Anatolian durum wheat. We represent Akhan as master distributor and exporter.",
-      "Akhan Makarna es un fabricante de pasta de Adana, Turquía, que elabora su pasta con 100% trigo duro de Anatolia. Representamos a Akhan como distribuidor maestro y exportador.",
-      "Akhan Makarna è un pastificio di Adana, in Turchia, che produce la sua pasta con 100% grano duro anatolico. Rappresentiamo Akhan come distributore master ed esportatore.",
+      "Business Link is working with Akhan to bring its pasta to the Americas. Akhan grows from a family of Turkish millers who have worked with wheat since the late 1990s, and now makes pasta in Mardin — in Mesopotamia, the land many consider the birthplace of durum wheat.",
+      "Business Link trabaja con Akhan para traer su pasta a las Américas. Akhan nace de una familia de molineros turcos que trabaja el trigo desde finales de los años noventa, y hoy elabora pasta en Mardin, en Mesopotamia, la tierra que muchos consideran la cuna del trigo duro.",
+      "Business Link lavora con Akhan per portare la sua pasta nelle Americhe. Akhan nasce da una famiglia di mugnai turchi che lavora il grano dalla fine degli anni Novanta e oggi produce pasta a Mardin, in Mesopotamia, la terra che molti considerano la culla del grano duro.",
     ),
+    whyLabel: loc("Why Akhan", "Por qué Akhan", "Perché Akhan"),
+    whyTitle: loc(
+      "A pasta with a story, and the numbers to back it.",
+      "Una pasta con historia, y con los números que la respaldan.",
+      "Una pasta con una storia, e i numeri per sostenerla.",
+    ),
+    highlights: [
+      {
+        title: loc("Born where durum began", "Nace donde nació el trigo duro", "Nasce dove è nato il grano duro"),
+        body: loc(
+          "Made in Mardin, in upper Mesopotamia, from 100% durum wheat. Durum gives pasta its golden color and the firm, al dente bite shoppers come back for.",
+          "Elaborada en Mardin, en la alta Mesopotamia, con 100% trigo duro. El trigo duro da a la pasta su color dorado y la textura firme y al dente que hace volver al consumidor.",
+          "Prodotta a Mardin, nell’alta Mesopotamia, con 100% grano duro. Il grano duro dà alla pasta il colore dorato e la consistenza soda e al dente che fa tornare il cliente.",
+        ),
+      },
+      {
+        title: loc("Millers first", "Primero, molineros", "Prima di tutto, mugnai"),
+        body: loc(
+          "Akhan Un has milled wheat since 2005 and ranks among Turkey’s top 10 flour producers. That know-how now goes into every pack of pasta.",
+          "Akhan Un muele trigo desde 2005 y está entre los 10 principales productores de harina de Turquía. Ese conocimiento está hoy en cada empaque de pasta.",
+          "Akhan Un macina grano dal 2005 ed è tra i 10 maggiori produttori di farina della Turchia. Quel sapere oggi è in ogni confezione di pasta.",
+        ),
+      },
+      {
+        title: loc("Brand-new, hands-free plant", "Planta nueva, sin contacto humano", "Stabilimento nuovo, senza contatto umano"),
+        body: loc(
+          "The Mardin plant opened in January 2026 with four robotic lines and Swiss and Italian equipment. Industry 4.0 production with no hand contact, up to 360 tons of pasta a day.",
+          "La planta de Mardin abrió en enero de 2026 con cuatro líneas robotizadas y equipos suizos e italianos. Producción Industria 4.0 sin contacto humano, hasta 360 toneladas de pasta al día.",
+          "Lo stabilimento di Mardin è stato inaugurato a gennaio 2026 con quattro linee robotizzate e impianti svizzeri e italiani. Produzione Industria 4.0 senza contatto umano, fino a 360 tonnellate di pasta al giorno.",
+        ),
+      },
+      {
+        title: loc("Volume you can count on", "Volumen con el que puede contar", "Volumi su cui contare"),
+        body: loc(
+          "A BRC-certified group listed on Borsa Istanbul since February 2026, close to the Mersin and İskenderun ports. The capacity and logistics to keep containers moving.",
+          "Un grupo con certificación BRC que cotiza en la Bolsa de Estambul desde febrero de 2026, cerca de los puertos de Mersin e İskenderun. La capacidad y la logística para mantener los contenedores en movimiento.",
+          "Un gruppo certificato BRC e quotato alla Borsa di Istanbul da febbraio 2026, vicino ai porti di Mersin e İskenderun. La capacità e la logistica per far viaggiare i container.",
+        ),
+      },
+    ],
+    americasTitle: loc(
+      "Bringing Akhan to the Americas",
+      "Llevando Akhan a las Américas",
+      "Portiamo Akhan nelle Americhe",
+    ),
+    americasBody: [
+      loc(
+        "We chose Akhan for its history, its quality and its price. It is a full range of durum wheat pasta — from spaghetti to soup shapes — that competes on the shelf with the big names while leaving room for a healthy margin.",
+        "Elegimos Akhan por su historia, su calidad y su precio. Es una línea completa de pasta de trigo duro, del espagueti a las pastas para sopa, que compite en el anaquel con las grandes marcas y deja espacio para un buen margen.",
+        "Abbiamo scelto Akhan per la sua storia, la sua qualità e il suo prezzo. È una gamma completa di pasta di grano duro, dagli spaghetti ai formati da brodo, che compete a scaffale con i grandi nomi lasciando spazio a un buon margine.",
+      ),
+      loc(
+        "For importers, distributors and retailers across the Americas, that means a premium-looking product at a competitive price-to-quality ratio, backed by a manufacturer with the capacity to grow with you.",
+        "Para importadores, distribuidores y minoristas de las Américas, esto significa un producto de imagen premium con una relación precio-calidad competitiva, respaldado por un fabricante con la capacidad de crecer con usted.",
+        "Per importatori, distributori e retailer delle Americhe significa un prodotto dall’aspetto premium con un rapporto qualità-prezzo competitivo, sostenuto da un produttore in grado di crescere con voi.",
+      ),
+    ],
+    rangeTitle: loc("The range", "La línea", "La gamma"),
     backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
   },
   chupaChups: {
@@ -594,9 +656,9 @@ export const ui = {
       "Popcorn rotondi glassati in quattro gusti dei lecca-lecca Chupa Chups: mela, fragola, cola e caramello.",
     ),
     intro: loc(
-      "Chupa Chups Popcorn is made by CRNCH Popcorn Concepts in the Netherlands. Each flavor comes in a fun-size bag (90 g; caramel 110 g) and a classic 135 g bag.",
-      "Las palomitas Chupa Chups las elabora CRNCH Popcorn Concepts en los Países Bajos. Cada sabor viene en bolsa fun (90 g; caramelo 110 g) y bolsa clásica de 135 g.",
-      "I popcorn Chupa Chups sono prodotti da CRNCH Popcorn Concepts nei Paesi Bassi. Ogni gusto è disponibile in busta fun (90 g; caramello 110 g) e in busta classica da 135 g.",
+      "Chupa Chups Popcorn is made by CRNCH Popcorn Concepts in the Netherlands. Each flavor comes in a 30 g snack bag, a fun-size bag (90 g; caramel 110 g) and a classic 135 g bag.",
+      "Las palomitas Chupa Chups las elabora CRNCH Popcorn Concepts en los Países Bajos. Cada sabor viene en bolsa snack de 30 g, bolsa fun (90 g; caramelo 110 g) y bolsa clásica de 135 g.",
+      "I popcorn Chupa Chups sono prodotti da CRNCH Popcorn Concepts nei Paesi Bassi. Ogni gusto è disponibile in busta snack da 30 g, in busta fun (90 g; caramello 110 g) e in busta classica da 135 g.",
     ),
     backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
   },

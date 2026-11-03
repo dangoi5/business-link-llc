@@ -26,6 +26,8 @@ export type Brand = {
   name: string;
   logo?: string;
   note?: Loc;
+  /** Short selling points shown as a bullet list under the note. */
+  highlights?: Loc[];
   subBrands?: string[];
   productLines?: ProductLine[];
   catalogHref?: string;
@@ -518,10 +520,32 @@ export const representedBrands: Brand[] = [
     name: "Akhan Makarna",
     logo: "/brands/akhan-logo.png",
     note: loc(
-      "Turkish pasta manufacturer in Adana. Pasta made from 100% Anatolian durum wheat on fully automated lines.",
-      "Fabricante de pasta de Adana, Turquía. Pasta de 100% trigo duro de Anatolia en líneas totalmente automatizadas.",
-      "Pastificio di Adana, Turchia. Pasta di 100% grano duro anatolico su linee completamente automatizzate.",
+      "Turkish durum wheat pasta from Mardin, in Mesopotamia — the land many consider the birthplace of durum wheat. Business Link is working with Akhan to bring it to the Americas for its history, quality and price.",
+      "Pasta turca de trigo duro de Mardin, en Mesopotamia, la tierra que muchos consideran la cuna del trigo duro. Business Link trabaja con Akhan para traerla a las Américas por su historia, calidad y precio.",
+      "Pasta turca di grano duro da Mardin, in Mesopotamia, la terra che molti considerano la culla del grano duro. Business Link lavora con Akhan per portarla nelle Americhe per la sua storia, qualità e prezzo.",
     ),
+    highlights: [
+      loc(
+        "Made by Akhan Un, a family of millers since 2005 and one of Turkey’s top 10 flour producers",
+        "Elaborada por Akhan Un, familia de molineros desde 2005 y uno de los 10 principales productores de harina de Turquía",
+        "Prodotta da Akhan Un, famiglia di mugnai dal 2005 e tra i 10 maggiori produttori di farina della Turchia",
+      ),
+      loc(
+        "Brand-new Mardin plant (January 2026): four robotic lines, Swiss and Italian equipment, hands-free production",
+        "Planta nueva en Mardin (enero de 2026): cuatro líneas robotizadas, equipos suizos e italianos, producción sin contacto humano",
+        "Nuovo stabilimento a Mardin (gennaio 2026): quattro linee robotizzate, impianti svizzeri e italiani, produzione senza contatto umano",
+      ),
+      loc(
+        "Up to 360 tons of pasta a day, BRC-certified, close to the Mersin and İskenderun ports",
+        "Hasta 360 toneladas de pasta al día, certificación BRC, cerca de los puertos de Mersin e İskenderun",
+        "Fino a 360 tonnellate di pasta al giorno, certificazione BRC, vicino ai porti di Mersin e İskenderun",
+      ),
+      loc(
+        "Premium look on the shelf at a competitive price-to-quality ratio",
+        "Imagen premium en el anaquel con una relación precio-calidad competitiva",
+        "Aspetto premium a scaffale con un rapporto qualità-prezzo competitivo",
+      ),
+    ],
     productLines: [
       {
         label: loc("Long pasta", "Pasta larga", "Pasta lunga"),
@@ -565,9 +589,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Glazed popcorn", "Palomitas glaseadas", "Popcorn glassati"),
         detail: loc(
-          "Apple, strawberry, cola and caramel — fun-size 90–110 g and classic 135 g bags",
-          "Manzana, fresa, cola y caramelo — bolsas fun de 90–110 g y clásicas de 135 g",
-          "Mela, fragola, cola e caramello — buste fun da 90–110 g e classiche da 135 g",
+          "Apple, strawberry, cola and caramel — snack-size 30 g, fun-size 90–110 g and classic 135 g bags",
+          "Manzana, fresa, cola y caramelo — bolsas snack de 30 g, fun de 90–110 g y clásicas de 135 g",
+          "Mela, fragola, cola e caramello — buste snack da 30 g, fun da 90–110 g e classiche da 135 g",
         ),
       },
     ],
