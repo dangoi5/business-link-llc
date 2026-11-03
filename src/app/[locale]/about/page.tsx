@@ -35,10 +35,27 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
 
       <section className="mx-auto max-w-3xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>
-          <div className="space-y-5 text-base leading-relaxed text-slate md:text-lg">
-            {a.roots.map((p) => (
-              <p key={p.en}>{t(locale, p)}</p>
-            ))}
+          <div className="flow-root">
+            <figure className="mx-auto mb-8 w-56 text-center sm:float-right sm:mb-4 sm:ml-8 sm:w-60 md:ml-10 md:w-64">
+              <Image
+                src="/company/jose-paternostro.jpg"
+                alt={t(locale, a.founderAlt)}
+                width={1087}
+                height={1446}
+                priority
+                sizes="(min-width: 768px) 256px, 240px"
+                className="h-auto w-full rounded-xl shadow-lg ring-1 ring-line"
+              />
+              <figcaption className="mt-3">
+                <p className="text-sm font-bold text-ink">José Paternostro</p>
+                <p className="mt-0.5 text-xs text-slate">{t(locale, a.founderRole)}</p>
+              </figcaption>
+            </figure>
+            <div className="space-y-5 text-base leading-relaxed text-slate md:text-lg">
+              {a.roots.map((p) => (
+                <p key={p.en}>{t(locale, p)}</p>
+              ))}
+            </div>
           </div>
         </Reveal>
 
@@ -48,23 +65,6 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
               <p key={p.en}>{t(locale, p)}</p>
             ))}
           </div>
-        </Reveal>
-
-        <Reveal className="mt-12">
-          <figure className="mx-auto w-40 text-center md:ml-auto md:mr-0 md:w-44">
-            <Image
-              src="/company/jose-paternostro.jpg"
-              alt={t(locale, a.founderAlt)}
-              width={1087}
-              height={1446}
-              sizes="176px"
-              className="h-auto w-full rounded-md shadow-md"
-            />
-            <figcaption className="mt-3">
-              <p className="text-sm font-bold text-ink">José Paternostro</p>
-              <p className="mt-0.5 text-xs text-slate">{t(locale, a.founderRole)}</p>
-            </figcaption>
-          </figure>
         </Reveal>
       </section>
 
