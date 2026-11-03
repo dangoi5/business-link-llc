@@ -521,19 +521,19 @@ export const representedBrands: Brand[] = [
     logo: "/brands/akhan-logo.png",
     note: loc(
       "Turkish durum wheat pasta from Mardin, in Mesopotamia — the land many consider the birthplace of durum wheat. Business Link is working with Akhan to bring it to the Americas for its history, quality and price.",
-      "Pasta turca de trigo duro de Mardin, en Mesopotamia, la tierra que muchos consideran la cuna del trigo duro. Business Link trabaja con Akhan para traerla a las Américas por su historia, calidad y precio.",
-      "Pasta turca di grano duro da Mardin, in Mesopotamia, la terra che molti considerano la culla del grano duro. Business Link lavora con Akhan per portarla nelle Americhe per la sua storia, qualità e prezzo.",
+      "Pasta turca elaborada en Mardin, en Mesopotamia, la tierra que muchos consideran la cuna del trigo duro. Business Link trabaja con Akhan para traerla a las Américas por su historia, calidad y precio.",
+      "Pasta turca prodotta a Mardin, in Mesopotamia, la terra che molti considerano la culla del grano duro. Business Link lavora con Akhan per portarla nelle Americhe per la sua storia, qualità e prezzo.",
     ),
     highlights: [
       loc(
-        "Made by Akhan Un, a family of millers since 2005 and one of Turkey’s top 10 flour producers",
-        "Elaborada por Akhan Un, familia de molineros desde 2005 y uno de los 10 principales productores de harina de Turquía",
-        "Prodotta da Akhan Un, famiglia di mugnai dal 2005 e tra i 10 maggiori produttori di farina della Turchia",
+        "Made by Akhan, a wheat miller with tradition, producing flour since 2005 and one of Turkey’s top 10 flour producers",
+        "Elaborada por Akhan, un molinero de trigo con tradición, que produce harina desde 2005 y es uno de los 10 principales productores de harina de Turquía",
+        "Prodotta da Akhan, azienda molitoria di tradizione che produce farina dal 2005 ed è tra le 10 maggiori della Turchia",
       ),
       loc(
         "Brand-new Mardin plant (January 2026): four robotic lines, Swiss and Italian equipment, hands-free production",
-        "Planta nueva en Mardin (enero de 2026): cuatro líneas robotizadas, equipos suizos e italianos, producción sin contacto humano",
-        "Nuovo stabilimento a Mardin (gennaio 2026): quattro linee robotizzate, impianti svizzeri e italiani, produzione senza contatto umano",
+        "Planta nueva en Mardin (enero de 2026): cuatro líneas robotizadas, equipos suizos e italianos, producción sin contacto manual",
+        "Nuovo stabilimento a Mardin (gennaio 2026): quattro linee robotizzate, impianti svizzeri e italiani, produzione senza contatto manuale",
       ),
       loc(
         "Up to 360 tons of pasta a day, BRC-certified, close to the Mersin and İskenderun ports",
@@ -542,7 +542,7 @@ export const representedBrands: Brand[] = [
       ),
       loc(
         "Premium look on the shelf at a competitive price-to-quality ratio",
-        "Imagen premium en el anaquel con una relación precio-calidad competitiva",
+        "Imagen premium en la góndola con una relación precio-calidad competitiva",
         "Aspetto premium a scaffale con un rapporto qualità-prezzo competitivo",
       ),
     ],
@@ -567,7 +567,7 @@ export const representedBrands: Brand[] = [
         label: loc("Soup pasta & specialty shapes", "Pasta para sopa y formas especiales", "Pastina da brodo e formati speciali"),
         detail: loc(
           "Ditalini, vermicelli, orzo, acini di pepe, couscous, tripolini and farfalle",
-          "Ditalini, fideo, orzo, acini di pepe, cuscús, tripolini y farfalle",
+          "Ditalini, fideo (vermicelli), orzo, acini di pepe, cuscús, tripolini y farfalle",
           "Ditalini, vermicelli, orzo, acini di pepe, couscous, tripolini e farfalle",
         ),
       },
