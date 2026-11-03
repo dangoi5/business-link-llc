@@ -65,9 +65,21 @@ export default async function StarGroceryFamilyPage({
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
-        <TextLink href={localizedHref(locale, "/portfolio/star-grocery")}>
-          {t(locale, ui.starGrocery.backToFamilies)}
-        </TextLink>
+        <div className="flex flex-wrap gap-x-5 gap-y-2">
+          <TextLink href={localizedHref(locale, "/portfolio/star-grocery")}>
+            {t(locale, ui.starGrocery.backToFamilies)}
+          </TextLink>
+          {family.catalogHref ? (
+            <a
+              href={family.catalogHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-brand transition hover:text-brand-deep"
+            >
+              {t(locale, ui.starGrocery.familyPdf)} →
+            </a>
+          ) : null}
+        </div>
 
         {family.groups.map((group) => (
           <div key={group.id} className="mt-10">

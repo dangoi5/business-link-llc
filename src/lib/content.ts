@@ -8,8 +8,10 @@ import {
   quinoaClubGroceryProducts,
   quinoaClubSnackProducts,
 } from "@/lib/quinoa-club-catalog";
-import { starGroceryFamilyCovers } from "@/lib/star-grocery-catalog";
+import { starGroceryFamilyCovers, starGrocerySnackProducts } from "@/lib/star-grocery-catalog";
 import { lascoGroceryProducts } from "@/lib/lasco-catalog";
+import { akhanProducts } from "@/lib/akhan-catalog";
+import { chupaChupsProducts } from "@/lib/chupa-chups-catalog";
 import { tronixSnackProducts } from "@/lib/tronix-catalog";
 import { starKistProducts } from "@/lib/starkist-catalog";
 
@@ -463,10 +465,11 @@ export const portfolioCategories: PortfolioCategory[] = [
     image:
       "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1200&q=80",
     products: [
-      ...starGroceryFamilyCovers,
+      ...starGroceryFamilyCovers.filter((family) => family.slug !== "flint-hroom-snacks"),
       ...quinoaClubGroceryProducts,
       ...freshElementsBrand.products.filter((product) => product.line === "rice"),
       ...lascoGroceryProducts,
+      ...akhanProducts,
     ],
   },
   {
@@ -482,120 +485,10 @@ export const portfolioCategories: PortfolioCategory[] = [
       loc("Snacking", "Snacking", "Snacking"),
       loc("Foodservice", "Foodservice", "Foodservice"),
     ],
-    image: "/products/star-brands/flint-wheat-rye-croutons.jpg",
+    image: "/products/star-grocery/snacks/flint-wheat-rye-croutons.jpg",
     products: [
-      {
-        slug: "flint-croutons",
-        name: loc("Flint Wheat-Rye Croutons", "Crutones Flint de trigo-centeno", "Crostini Flint di frumento-segale"),
-        description: loc(
-          "Flint wheat-rye croutons from Star Brands. Flavors include bacon, sour cream and greens, crab, jellied meat with horseradish, red caviar, cheese, kebab and hunting sausages. Packs from 35 g to 150 g.",
-          "Crutones Flint de trigo-centeno de Star Brands. Sabores: tocino, crema agria y verdes, cangrejo, gelatina con rábano picante, caviar rojo, queso, kebab y salchichas de caza. Empaques de 35 g a 150 g.",
-          "Crostini Flint di frumento-segale di Star Brands. Gusti: bacon, panna acida e verdure, granchio, gelatina con rafano, caviale rosso, formaggio, kebab e salsicce da caccia. Confezioni da 35 g a 150 g.",
-        ),
-        image: "/products/star-brands/flint-wheat-rye-croutons.jpg",
-        details: [
-          loc("Flint", "Flint", "Flint"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("35–150 g", "35–150 g", "35–150 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "flint-baguette",
-        name: loc("Flint Baguette", "Flint Baguette", "Flint Baguette"),
-        description: loc(
-          "Round wheat baguette snacks from Flint. Flavors include lobster, spicy pork, creamy sauce with herbs, French cheese, mushroom in creamy sauce, and cream and onions. 60 g, 100 g and 150 g packs.",
-          "Snacks de baguette de trigo Flint. Sabores: langosta, cerdo picante, salsa cremosa con hierbas, queso francés, champiñones en salsa cremosa, y crema y cebolla. Empaques de 60 g, 100 g y 150 g.",
-          "Snack di baguette di frumento Flint. Gusti: aragosta, maiale piccante, salsa cremosa alle erbe, formaggio francese, funghi in salsa cremosa, e panna e cipolla. Confezioni da 60 g, 100 g e 150 g.",
-        ),
-        image: "/products/star-brands/flint-baguette.png",
-        details: [
-          loc("Flint", "Flint", "Flint"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("60 / 100 / 150 g", "60 / 100 / 150 g", "60 / 100 / 150 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "flint-ua-food",
-        name: loc("Flint UA FOOD Croutons", "Crutones Flint UA FOOD", "Crostini Flint UA FOOD"),
-        description: loc(
-          "Flint’s patriotic UA FOOD line with Ukrainian-cuisine flavors: mushroom pan and roll from the oven (pork shank). 100 g packs.",
-          "La línea patriótica UA FOOD de Flint con sabores de la cocina ucraniana: sartén de champiñones y rollo al horno (codillo de cerdo). Empaques de 100 g.",
-          "La linea patriottica UA FOOD di Flint con gusti della cucina ucraina: padella ai funghi e rollè al forno (stinco di maiale). Confezioni da 100 g.",
-        ),
-        image: "/products/star-brands/flint-ua-food.jpg",
-        details: [
-          loc("Flint UA FOOD", "Flint UA FOOD", "Flint UA FOOD"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("100 g", "100 g", "100 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "flint-grenki",
-        name: loc("Flint Grenki Rye Croutons", "Grenki Flint de centeno", "Grenki Flint di segale"),
-        description: loc(
-          "True rye toasts roasted with bar-snack flavors: Bavarian sausages, garlic, bacon and horseradish, spicy tomato, and veal with adjika. 65 g, 70 g and 100 g packs.",
-          "Tostadas de centeno con sabores de bar: salchichas bávaras, ajo, tocino y rábano picante, tomate picante y ternera con adjika. Empaques de 65 g, 70 g y 100 g.",
-          "Crostini di segale con gusti da bar: salsicce bavaresi, aglio, bacon e rafano, pomodoro piccante e vitello con adjika. Confezioni da 65 g, 70 g e 100 g.",
-        ),
-        image: "/products/star-brands/flint-grenki.png",
-        details: [
-          loc("Flint Grenki", "Flint Grenki", "Flint Grenki"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("65–100 g", "65–100 g", "65–100 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "flint-craft",
-        name: loc("Flint Craft Bars & Bread Chips", "Flint Craft barras y chips de pan", "Flint Craft barrette e chips di pane"),
-        description: loc(
-          "Craft-recipe Flint snacks in bar and bread-chip shapes. Flavors include kabanosa with mustard, garlic, and spicy jerky. 90 g packs.",
-          "Snacks Flint de receta craft en forma de barra y chip de pan. Sabores: kabanosa con mostaza, ajo y cecina picante. Empaques de 90 g.",
-          "Snack Flint di ricetta craft in forma di barretta e chip di pane. Gusti: kabanosa con senape, aglio e jerky piccante. Confezioni da 90 g.",
-        ),
-        image: "/products/star-brands/flint-craft-bars.png",
-        details: [
-          loc("Flint Craft", "Flint Craft", "Flint Craft"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("90 g", "90 g", "90 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "hroom-chips",
-        name: loc("Hroom Sliced Potato Chips", "Papas en rodaja Hroom", "Patatine in fetta Hroom"),
-        description: loc(
-          "Thin sliced Hroom potato chips in crab, bacon, cheese, kebab, sour cream with herbs, cheese and onion, grilled meat and paprika. 50 g and 100 g packs.",
-          "Papas Hroom en rodaja fina: cangrejo, tocino, queso, kebab, crema agria con hierbas, queso y cebolla, carne a la parrilla y paprika. Empaques de 50 g y 100 g.",
-          "Patatine Hroom in fetta sottile: granchio, bacon, formaggio, kebab, panna acida con erbe, formaggio e cipolla, carne alla griglia e paprika. Confezioni da 50 g e 100 g.",
-        ),
-        image: "/products/star-brands/hroom-chips.png",
-        details: [
-          loc("Hroom", "Hroom", "Hroom"),
-          loc("Star Brands", "Star Brands", "Star Brands"),
-          loc("50 / 100 g", "50 / 100 g", "50 / 100 g"),
-        ],
-        imageFit: "contain",
-      },
-      {
-        slug: "chupa-chups-popcorn",
-        name: loc("Chupa Chups Popcorn", "Palomitas Chupa Chups", "Popcorn Chupa Chups"),
-        description: loc(
-          "Round popcorn glazed with Chupa Chups lollipop flavors: apple, strawberry, cola and caramel. Fun-size (90 g; caramel 110 g) and classic-size 135 g bags.",
-          "Palomitas redondas glaseadas con sabores de paleta Chupa Chups: manzana, fresa, cola y caramelo. Bolsas tamaño fun (90 g; caramelo 110 g) y clásico de 135 g.",
-          "Popcorn rotondi glassati ai gusti dei lecca-lecca Chupa Chups: mela, fragola, cola e caramello. Buste formato fun (90 g; caramello 110 g) e classico da 135 g.",
-        ),
-        image: "/products/chupa-chups/chupa-chups-popcorn.jpg",
-        details: [
-          loc("Chupa Chups", "Chupa Chups", "Chupa Chups"),
-          loc("CRNCH Popcorn", "CRNCH Popcorn", "CRNCH Popcorn"),
-          loc("90–135 g", "90–135 g", "90–135 g"),
-        ],
-        imageFit: "contain",
-      },
+      ...starGrocerySnackProducts,
+      ...chupaChupsProducts,
       ...quinoaClubSnackProducts,
       ...freshElementsBrand.products.filter((product) => product.line === "snacks"),
       ...tronixSnackProducts,
@@ -715,10 +608,10 @@ export const catalogDocs = [
     sizeMb: 8.8,
   },
   {
-    brand: "Star Brands",
-    logo: "/brands/star-brands-logo.png",
+    brand: "Star Grocery",
+    logo: "/brands/star-grocery-logo.png",
     title: loc("Flint & Hroom snacks catalog", "Catálogo de snacks Flint y Hroom", "Catalogo snack Flint e Hroom"),
-    href: "/catalogs/star-brands-snacks-flint-hroom.pdf",
+    href: "/catalogs/star-grocery-snacks-flint-hroom.pdf",
     sizeMb: 9.2,
   },
   {

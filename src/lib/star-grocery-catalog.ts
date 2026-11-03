@@ -14,6 +14,8 @@ export type StarGroceryFamily = {
   cover: string;
   brand: string;
   groups: StarGroceryGroup[];
+  /** Family-specific PDF, shown on the family page next to the back link. */
+  catalogHref?: string;
 };
 
 const flavorNote = loc(
@@ -39,6 +41,111 @@ function item(family: string, folder: string, n: string, en: string, es: string,
     imageFit: "contain",
   };
 }
+
+const flintSnackProducts: CatalogProduct[] = [
+  {
+    slug: "flint-croutons",
+    name: loc("Flint Wheat-Rye Croutons", "Crutones Flint de trigo-centeno", "Crostini Flint di frumento-segale"),
+    description: loc(
+      "Flint wheat-rye croutons. Flavors include bacon, sour cream and greens, crab, jellied meat with horseradish, red caviar, cheese, kebab and hunting sausages. Packs from 35 g to 150 g.",
+      "Crutones Flint de trigo-centeno. Sabores: tocino, crema agria y verdes, cangrejo, gelatina con rábano picante, caviar rojo, queso, kebab y salchichas de caza. Empaques de 35 g a 150 g.",
+      "Crostini Flint di frumento-segale. Gusti: bacon, panna acida e verdure, granchio, gelatina con rafano, caviale rosso, formaggio, kebab e salsicce da caccia. Confezioni da 35 g a 150 g.",
+    ),
+    image: "/products/star-grocery/snacks/flint-wheat-rye-croutons.jpg",
+    details: [
+      loc("Flint", "Flint", "Flint"),
+      loc("Star Grocery", "Star Grocery", "Star Grocery"),
+      loc("35–150 g", "35–150 g", "35–150 g"),
+    ],
+    imageFit: "contain",
+  },
+  {
+    slug: "flint-baguette",
+    name: loc("Flint Baguette", "Flint Baguette", "Flint Baguette"),
+    description: loc(
+      "Round wheat baguette snacks from Flint. Flavors include lobster, spicy pork, creamy sauce with herbs, French cheese, mushroom in creamy sauce, and cream and onions. 60 g, 100 g and 150 g packs.",
+      "Snacks de baguette de trigo Flint. Sabores: langosta, cerdo picante, salsa cremosa con hierbas, queso francés, champiñones en salsa cremosa, y crema y cebolla. Empaques de 60 g, 100 g y 150 g.",
+      "Snack di baguette di frumento Flint. Gusti: aragosta, maiale piccante, salsa cremosa alle erbe, formaggio francese, funghi in salsa cremosa, e panna e cipolla. Confezioni da 60 g, 100 g e 150 g.",
+    ),
+    image: "/products/star-grocery/snacks/flint-baguette.png",
+    details: [
+      loc("Flint", "Flint", "Flint"),
+      loc("Star Grocery", "Star Grocery", "Star Grocery"),
+      loc("60 / 100 / 150 g", "60 / 100 / 150 g", "60 / 100 / 150 g"),
+    ],
+    imageFit: "contain",
+  },
+  {
+    slug: "flint-ua-food",
+    name: loc("Flint UA FOOD Croutons", "Crutones Flint UA FOOD", "Crostini Flint UA FOOD"),
+    description: loc(
+      "Flint’s patriotic UA FOOD line with Ukrainian-cuisine flavors: mushroom pan and roll from the oven (pork shank). 100 g packs.",
+      "La línea patriótica UA FOOD de Flint con sabores de la cocina ucraniana: sartén de champiñones y rollo al horno (codillo de cerdo). Empaques de 100 g.",
+      "La linea patriottica UA FOOD di Flint con gusti della cucina ucraina: padella ai funghi e rollè al forno (stinco di maiale). Confezioni da 100 g.",
+    ),
+    image: "/products/star-grocery/snacks/flint-ua-food.jpg",
+    details: [
+      loc("Flint UA FOOD", "Flint UA FOOD", "Flint UA FOOD"),
+      loc("Star Grocery", "Star Grocery", "Star Grocery"),
+      loc("100 g", "100 g", "100 g"),
+    ],
+    imageFit: "contain",
+  },
+  {
+    slug: "flint-grenki",
+    name: loc("Flint Grenki Rye Croutons", "Grenki Flint de centeno", "Grenki Flint di segale"),
+    description: loc(
+      "True rye toasts roasted with bar-snack flavors: Bavarian sausages, garlic, bacon and horseradish, spicy tomato, and veal with adjika. 65 g, 70 g and 100 g packs.",
+      "Tostadas de centeno con sabores de bar: salchichas bávaras, ajo, tocino y rábano picante, tomate picante y ternera con adjika. Empaques de 65 g, 70 g y 100 g.",
+      "Crostini di segale con gusti da bar: salsicce bavaresi, aglio, bacon e rafano, pomodoro piccante e vitello con adjika. Confezioni da 65 g, 70 g e 100 g.",
+    ),
+    image: "/products/star-grocery/snacks/flint-grenki.png",
+    details: [
+      loc("Flint Grenki", "Flint Grenki", "Flint Grenki"),
+      loc("Star Grocery", "Star Grocery", "Star Grocery"),
+      loc("65–100 g", "65–100 g", "65–100 g"),
+    ],
+    imageFit: "contain",
+  },
+  {
+    slug: "flint-craft",
+    name: loc("Flint Craft Bars & Bread Chips", "Flint Craft barras y chips de pan", "Flint Craft barrette e chips di pane"),
+    description: loc(
+      "Craft-recipe Flint snacks in bar and bread-chip shapes. Flavors include kabanosa with mustard, garlic, and spicy jerky. 90 g packs.",
+      "Snacks Flint de receta craft en forma de barra y chip de pan. Sabores: kabanosa con mostaza, ajo y cecina picante. Empaques de 90 g.",
+      "Snack Flint di ricetta craft in forma di barretta e chip di pane. Gusti: kabanosa con senape, aglio e jerky piccante. Confezioni da 90 g.",
+    ),
+    image: "/products/star-grocery/snacks/flint-craft-bars.png",
+    details: [
+      loc("Flint Craft", "Flint Craft", "Flint Craft"),
+      loc("Star Grocery", "Star Grocery", "Star Grocery"),
+      loc("90 g", "90 g", "90 g"),
+    ],
+    imageFit: "contain",
+  },
+];
+
+const hroomSnackProducts: CatalogProduct[] = [
+  {
+    slug: "hroom-chips",
+    name: loc("Hroom Sliced Potato Chips", "Papas en rodaja Hroom", "Patatine in fetta Hroom"),
+    description: loc(
+      "Thin sliced Hroom potato chips in crab, bacon, cheese, kebab, sour cream with herbs, cheese and onion, grilled meat and paprika. 50 g and 100 g packs.",
+      "Papas Hroom en rodaja fina: cangrejo, tocino, queso, kebab, crema agria con hierbas, queso y cebolla, carne a la parrilla y paprika. Empaques de 50 g y 100 g.",
+      "Patatine Hroom in fetta sottile: granchio, bacon, formaggio, kebab, panna acida con erbe, formaggio e cipolla, carne alla griglia e paprika. Confezioni da 50 g e 100 g.",
+    ),
+    image: "/products/star-grocery/snacks/hroom-chips.png",
+    details: [
+      loc("Hroom", "Hroom", "Hroom"),
+      loc("Star Grocery", "Star Grocery", "Star Grocery"),
+      loc("50 / 100 g", "50 / 100 g", "50 / 100 g"),
+    ],
+    imageFit: "contain",
+  },
+];
+
+/** Flint and Hroom snacks, also listed individually in the Snacks & Nuts category. */
+export const starGrocerySnackProducts = [...flintSnackProducts, ...hroomSnackProducts];
 
 export const starGroceryFamilies: StarGroceryFamily[] = [
   {
@@ -567,6 +674,30 @@ export const starGroceryFamilies: StarGroceryFamily[] = [
         ],
       },
     ],
+  },
+  {
+    slug: "flint-hroom-snacks",
+    name: loc("Flint & Hroom Snacks", "Snacks Flint y Hroom", "Snack Flint e Hroom"),
+    description: loc(
+      "Flint wheat-rye croutons, baguette snacks, UA FOOD, Grenki rye toasts and Craft bars, plus Hroom sliced potato chips.",
+      "Crutones Flint de trigo-centeno, snacks de baguette, UA FOOD, Grenki de centeno y barras Craft, más papas en rodaja Hroom.",
+      "Crostini Flint di frumento-segale, snack di baguette, UA FOOD, toast di segale Grenki e barrette Craft, più patatine in fetta Hroom.",
+    ),
+    cover: "/products/star-grocery/snacks/flint-wheat-rye-croutons.jpg",
+    brand: "Flint · Hroom",
+    groups: [
+      {
+        id: "flint",
+        label: loc("Flint croutons & snacks", "Crutones y snacks Flint", "Crostini e snack Flint"),
+        products: flintSnackProducts,
+      },
+      {
+        id: "hroom",
+        label: loc("Hroom potato chips", "Papas fritas Hroom", "Patatine Hroom"),
+        products: hroomSnackProducts,
+      },
+    ],
+    catalogHref: "/catalogs/star-grocery-snacks-flint-hroom.pdf",
   },
 ];
 

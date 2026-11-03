@@ -52,7 +52,7 @@ export const ui = {
     viewFullCatalog: loc("View full catalog", "Ver catálogo completo", "Vedi catalogo completo"),
     catalogAria: loc("catalog", "catálogo", "catalogo"),
     privacy: loc("Privacy", "Privacidad", "Privacy"),
-    terms: loc("Terms", "Términos", "Termini"),
+    terms: loc("Terms of Use", "Términos de uso", "Termini di utilizzo"),
   },
   privacyPage: {
     metaTitle: loc("Privacy Policy", "Política de Privacidad", "Informativa sulla privacy"),
@@ -74,7 +74,12 @@ export const ui = {
     ),
     heroLabel: loc("Legal", "Legal", "Legale"),
     heroTitle: loc("Terms of Use", "Términos de uso", "Termini di utilizzo"),
-    updated: loc("Last updated: September 2026", "Última actualización: septiembre de 2026", "Ultimo aggiornamento: settembre 2026"),
+    heading: loc(
+      "Website Terms of Use and Legal Notices",
+      "Términos de uso del sitio web y avisos legales",
+      "Termini di utilizzo del sito web e note legali",
+    ),
+    updated: loc("Last updated: November 2026", "Última actualización: noviembre de 2026", "Ultimo aggiornamento: novembre 2026"),
   },
   home: {
     heroTitle: loc(
@@ -522,14 +527,15 @@ export const ui = {
       "Apra una famiglia per vedere gusti e confezioni individuali.",
     ),
     intro: loc(
-      "Star Grocery is a grocery manufacturer we represent as master distributor and exporter. Each cover is a product family; click through to the individual SKUs.",
-      "Star Grocery es un fabricante de abarrotes que representamos como distribuidor maestro y exportador. Cada portada es una familia de producto; entre para ver los SKU individuales.",
-      "Star Grocery è un produttore grocery che rappresentiamo come distributore master ed esportatore. Ogni copertina è una famiglia di prodotto; clicchi per gli SKU individuali.",
+      "Star Grocery is a grocery and snack manufacturer we represent as master distributor and exporter. Each cover is a product family; click through to the individual SKUs.",
+      "Star Grocery es un fabricante de abarrotes y snacks que representamos como distribuidor maestro y exportador. Cada portada es una familia de producto; entre para ver los SKU individuales.",
+      "Star Grocery è un produttore grocery e snack che rappresentiamo come distributore master ed esportatore. Ogni copertina è una famiglia di prodotto; clicchi per gli SKU individuali.",
     ),
     backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
     backToFamilies: loc("← All Star Grocery families", "← Todas las familias Star Grocery", "← Tutte le famiglie Star Grocery"),
     flavors: loc("Flavors & pack shots", "Sabores y empaques", "Gusti e confezioni"),
     viewPdf: loc("General catalog (PDF)", "Catálogo general (PDF)", "Catalogo generale (PDF)"),
+    familyPdf: loc("Family catalog (PDF)", "Catálogo de la familia (PDF)", "Catalogo della famiglia (PDF)"),
   },
   lasco: {
     metaTitle: loc("Lasco", "Lasco", "Lasco"),
@@ -549,6 +555,48 @@ export const ui = {
       "Lasco is a Jamaican manufacturer we represent as master distributor and exporter. Browse Food Drink flavors and instant chocolate mixes below.",
       "Lasco es un fabricante de Jamaica que representamos como distribuidor maestro y exportador. Vea los sabores de Food Drink y las mezclas de chocolate abajo.",
       "Lasco è un produttore giamaicano che rappresentiamo come distributore master ed esportatore. Consulti i gusti Food Drink e le miscele di cioccolato di seguito.",
+    ),
+    backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
+  },
+  akhan: {
+    metaTitle: loc("Akhan Makarna pasta", "Pasta Akhan Makarna", "Pasta Akhan Makarna"),
+    metaDescription: loc(
+      "Akhan Makarna durum wheat pasta from Turkey — long, short, soup and specialty shapes — from Business Link LLC.",
+      "Pasta de trigo duro Akhan Makarna de Turquía — larga, corta, para sopa y formas especiales — de Business Link LLC.",
+      "Pasta di grano duro Akhan Makarna dalla Turchia — lunga, corta, da brodo e formati speciali — da Business Link LLC.",
+    ),
+    heroLabel: loc("Manufacturer", "Fabricante", "Produttore"),
+    heroTitle: loc("Akhan Makarna pasta.", "Pasta Akhan Makarna.", "Pasta Akhan Makarna."),
+    heroDescription: loc(
+      "Durum wheat pasta in long, short and tubular, soup and specialty shapes. 500 g packs.",
+      "Pasta de trigo duro en formatos largos, cortos y tubulares, para sopa y especiales. Empaques de 500 g.",
+      "Pasta di grano duro in formati lunghi, corti e tubolari, da brodo e speciali. Confezioni da 500 g.",
+    ),
+    intro: loc(
+      "Akhan Makarna is a Turkish pasta manufacturer from Adana that makes its pasta from 100% Anatolian durum wheat. We represent Akhan as master distributor and exporter.",
+      "Akhan Makarna es un fabricante de pasta de Adana, Turquía, que elabora su pasta con 100% trigo duro de Anatolia. Representamos a Akhan como distribuidor maestro y exportador.",
+      "Akhan Makarna è un pastificio di Adana, in Turchia, che produce la sua pasta con 100% grano duro anatolico. Rappresentiamo Akhan come distributore master ed esportatore.",
+    ),
+    backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
+  },
+  chupaChups: {
+    metaTitle: loc("Chupa Chups Popcorn", "Palomitas Chupa Chups", "Popcorn Chupa Chups"),
+    metaDescription: loc(
+      "Chupa Chups Popcorn in apple, strawberry, cola and caramel flavors from Business Link LLC.",
+      "Palomitas Chupa Chups sabor manzana, fresa, cola y caramelo de Business Link LLC.",
+      "Popcorn Chupa Chups ai gusti mela, fragola, cola e caramello da Business Link LLC.",
+    ),
+    heroLabel: loc("Manufacturer", "Fabricante", "Produttore"),
+    heroTitle: loc("Chupa Chups Popcorn.", "Palomitas Chupa Chups.", "Popcorn Chupa Chups."),
+    heroDescription: loc(
+      "Round popcorn glazed in four Chupa Chups lollipop flavors: apple, strawberry, cola and caramel.",
+      "Palomitas redondas glaseadas en cuatro sabores de paleta Chupa Chups: manzana, fresa, cola y caramelo.",
+      "Popcorn rotondi glassati in quattro gusti dei lecca-lecca Chupa Chups: mela, fragola, cola e caramello.",
+    ),
+    intro: loc(
+      "Chupa Chups Popcorn is made by CRNCH Popcorn Concepts in the Netherlands. Each flavor comes in a fun-size bag (90 g; caramel 110 g) and a classic 135 g bag.",
+      "Las palomitas Chupa Chups las elabora CRNCH Popcorn Concepts en los Países Bajos. Cada sabor viene en bolsa fun (90 g; caramelo 110 g) y bolsa clásica de 135 g.",
+      "I popcorn Chupa Chups sono prodotti da CRNCH Popcorn Concepts nei Paesi Bassi. Ogni gusto è disponibile in busta fun (90 g; caramello 110 g) e in busta classica da 135 g.",
     ),
     backToPortfolio: loc("← Back to portfolio", "← Volver al portafolio", "← Torna al portafoglio"),
   },

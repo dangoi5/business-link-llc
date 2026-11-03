@@ -83,64 +83,136 @@ export const privacySections: LegalSection[] = [
   },
 ];
 
+export const termsIntro = loc(
+  "By visiting and using this website (businesslinkgroup.com, the “Site”), operated by Business Link LLC (“Business Link,” “we,” “us”), you are deemed to have accepted the terms below. If you do not accept these terms, please do not use the Site.",
+  "Al visitar y usar este sitio web (businesslinkgroup.com, el “Sitio”), operado por Business Link LLC (“Business Link”, “nosotros”), se considera que usted acepta los términos siguientes. Si no los acepta, le rogamos que no utilice el Sitio.",
+  "Visitando e utilizzando questo sito web (businesslinkgroup.com, il “Sito”), gestito da Business Link LLC (“Business Link”, “noi”), si considera che Lei abbia accettato i termini seguenti. Se non li accetta, La preghiamo di non utilizzare il Sito.",
+);
+
 export const termsSections: LegalSection[] = [
   {
-    title: loc("About this site", "Sobre este sitio", "Informazioni sul sito"),
+    title: loc(
+      "Intellectual and Industrial Property Rights",
+      "Derechos de propiedad intelectual e industrial",
+      "Diritti di proprietà intellettuale e industriale",
+    ),
     body: [
       loc(
-        "This Site is operated by Business Link LLC to present our role as a master distributor and exporter of food products, including brands we represent (such as AmeriQual Foods) and our own Fresh Elements line. Content is for general business information.",
-        "Este Sitio es operado por Business Link LLC para presentar nuestro rol como distribuidor maestro y exportador de alimentos, incluidas marcas que representamos (como AmeriQual Foods) y nuestra línea Fresh Elements. El contenido es información comercial general.",
-        "Questo Sito è gestito da Business Link LLC per presentare il nostro ruolo di distributore master ed esportatore di prodotti alimentari, inclusi i marchi che rappresentiamo (come AmeriQual Foods) e la nostra linea Fresh Elements. I contenuti sono informazioni commerciali generali.",
+        "The intellectual property rights in the visual designs, the Business Link name and logo, texts, layout, software and other original materials on this Site belong to Business Link LLC or are used under license. They may not be copied, reproduced, distributed or used for commercial purposes without our prior written permission.",
+        "Los derechos de propiedad intelectual sobre los diseños visuales, el nombre y el logotipo de Business Link, los textos, la maquetación, el software y demás materiales originales de este Sitio pertenecen a Business Link LLC o se usan bajo licencia. No pueden copiarse, reproducirse, distribuirse ni usarse con fines comerciales sin nuestro permiso previo por escrito.",
+        "I diritti di proprietà intellettuale su design visivi, nome e logo Business Link, testi, layout, software e altri materiali originali di questo Sito appartengono a Business Link LLC o sono usati su licenza. Non possono essere copiati, riprodotti, distribuiti o usati a fini commerciali senza il nostro previo consenso scritto.",
+      ),
+      loc(
+        "Third-party brand names, logos, seals, product photographs and catalogues shown on the Site belong to their respective owners and are displayed to identify the products we distribute.",
+        "Los nombres de marca, logotipos, sellos, fotografías de producto y catálogos de terceros que aparecen en el Sitio pertenecen a sus respectivos titulares y se muestran para identificar los productos que distribuimos.",
+        "Nomi di marchi, loghi, sigilli, fotografie di prodotto e cataloghi di terzi presenti sul Sito appartengono ai rispettivi titolari e sono mostrati per identificare i prodotti che distribuiamo.",
       ),
     ],
   },
   {
-    title: loc("No offer or warranty", "Sin oferta ni garantía", "Nessuna offerta o garanzia"),
+    title: loc("Principles of Site Use", "Principios de uso del Sitio", "Principi di utilizzo del Sito"),
     body: [
       loc(
-        "Nothing on the Site is a binding offer, quotation or contract. Product availability, specifications, certifications and export eligibility depend on destination, regulations and manufacturer terms. Information may change without notice. The Site is provided “as is” without warranties of any kind to the fullest extent permitted by law.",
-        "Nada en el Sitio constituye una oferta vinculante, cotización o contrato. La disponibilidad, especificaciones, certificaciones y elegibilidad de exportación dependen del destino, la normativa y los términos del fabricante. La información puede cambiar sin aviso. El Sitio se ofrece “tal cual”, sin garantías de ningún tipo en la máxima medida permitida por la ley.",
-        "Nulla sul Sito costituisce un’offerta vincolante, un preventivo o un contratto. Disponibilità, specifiche, certificazioni ed esportabilità dipendono dalla destinazione, dalle norme e dai termini del produttore. Le informazioni possono cambiare senza preavviso. Il Sito è fornito “così com’è”, senza garanzie di alcun tipo nella misura massima consentita dalla legge.",
+        "Users must comply with the law and applicable regulations when using the Site. Any attempt to threaten the security of the Site, impair the operation of the Site or its servers, gain unauthorized access, or extract its content by automated means is prohibited. The contact form may not be used to send spam, unlawful content or false information.",
+        "Los usuarios deben cumplir la ley y la normativa aplicable al usar el Sitio. Se prohíbe cualquier intento de amenazar la seguridad del Sitio, perjudicar el funcionamiento del Sitio o de sus servidores, obtener acceso no autorizado o extraer su contenido por medios automatizados. El formulario de contacto no puede usarse para enviar spam, contenido ilícito ni información falsa.",
+        "Gli utenti devono rispettare la legge e le norme applicabili nell’uso del Sito. È vietato qualsiasi tentativo di minacciare la sicurezza del Sito, comprometterne il funzionamento o quello dei suoi server, ottenere accessi non autorizzati o estrarne i contenuti con mezzi automatizzati. Il modulo di contatto non può essere usato per inviare spam, contenuti illeciti o informazioni false.",
       ),
     ],
   },
   {
-    title: loc("Brand representation", "Representación de marcas", "Rappresentanza di marchi"),
+    title: loc(
+      "Accuracy of Information and Limitation of Liability",
+      "Exactitud de la información y limitación de responsabilidad",
+      "Accuratezza delle informazioni e limitazione di responsabilità",
+    ),
     body: [
       loc(
-        "Where we describe manufacturers we represent, statements about their products, programs or certifications refer to those manufacturers (for example, AmeriQual Foods). Business Link commercially distributes and exports those products as master distributor; we are not the U.S. Government and do not claim government endorsement.",
-        "Cuando describimos fabricantes que representamos, las afirmaciones sobre sus productos, programas o certificaciones se refieren a esos fabricantes (por ejemplo, AmeriQual Foods). Business Link distribuye y exporta esos productos comercialmente como distribuidor maestro; no somos el Gobierno de EE. UU. ni reclamamos su respaldo.",
-        "Quando descriviamo i produttori che rappresentiamo, le affermazioni su prodotti, programmi o certificazioni si riferiscono a quei produttori (ad esempio AmeriQual Foods). Business Link distribuisce ed esporta commercialmente tali prodotti come distributore master; non siamo il Governo degli Stati Uniti e non rivendichiamo alcuna approvazione governativa.",
+        "Business Link makes every effort to keep the information on the Site accurate and up to date. However, product availability, specifications, packaging, certifications and export eligibility depend on the destination market, regulations and manufacturer terms, and may change without notice. The Site is provided “as is,” without warranties of any kind, to the fullest extent permitted by law.",
+        "Business Link hace todo lo posible para que la información del Sitio sea exacta y esté actualizada. Sin embargo, la disponibilidad, especificaciones, empaques, certificaciones y elegibilidad de exportación de los productos dependen del mercado de destino, la normativa y los términos del fabricante, y pueden cambiar sin aviso. El Sitio se ofrece “tal cual”, sin garantías de ningún tipo, en la máxima medida permitida por la ley.",
+        "Business Link si impegna a mantenere le informazioni del Sito accurate e aggiornate. Tuttavia, disponibilità, specifiche, confezioni, certificazioni ed esportabilità dei prodotti dipendono dal mercato di destinazione, dalle norme e dai termini del produttore, e possono cambiare senza preavviso. Il Sito è fornito “così com’è”, senza garanzie di alcun tipo, nella misura massima consentita dalla legge.",
+      ),
+      loc(
+        "Business Link cannot be held liable for any direct or indirect damage arising from typographical errors, technical faults, interruptions or delays in updating the Site, or from decisions made in reliance on its content.",
+        "Business Link no será responsable de ningún daño directo o indirecto derivado de errores tipográficos, fallos técnicos, interrupciones o retrasos en la actualización del Sitio, ni de decisiones tomadas con base en su contenido.",
+        "Business Link non può essere ritenuta responsabile per danni diretti o indiretti derivanti da errori tipografici, guasti tecnici, interruzioni o ritardi nell’aggiornamento del Sito, né da decisioni prese sulla base dei suoi contenuti.",
       ),
     ],
   },
   {
-    title: loc("Inquiries", "Consultas", "Richieste"),
+    title: loc("No Offer; Inquiries", "Sin oferta; consultas", "Nessuna offerta; richieste"),
     body: [
       loc(
-        "Submitting the contact form does not create a supply agreement. We evaluate opportunities and respond at our discretion.",
-        "Enviar el formulario de contacto no crea un acuerdo de suministro. Evaluamos oportunidades y respondemos a nuestra discreción.",
-        "L’invio del modulo di contatto non crea un accordo di fornitura. Valutiamo le opportunità e rispondiamo a nostra discrezione.",
+        "Nothing on the Site is a binding offer, quotation or contract. Submitting the contact form does not create a supply or distribution agreement; any sale is governed solely by a separate written agreement. We evaluate opportunities and respond at our discretion.",
+        "Nada en el Sitio constituye una oferta vinculante, cotización o contrato. Enviar el formulario de contacto no crea un acuerdo de suministro o distribución; cualquier venta se rige únicamente por un acuerdo escrito independiente. Evaluamos las oportunidades y respondemos a nuestra discreción.",
+        "Nulla sul Sito costituisce un’offerta vincolante, un preventivo o un contratto. L’invio del modulo di contatto non crea un accordo di fornitura o distribuzione; ogni vendita è regolata esclusivamente da un accordo scritto separato. Valutiamo le opportunità e rispondiamo a nostra discrezione.",
       ),
     ],
   },
   {
-    title: loc("Intellectual property", "Propiedad intelectual", "Proprietà intellettuale"),
+    title: loc("Brands We Represent", "Marcas que representamos", "Marchi che rappresentiamo"),
     body: [
       loc(
-        "Site text, layout and Business Link branding are owned by Business Link LLC or used under license. Third-party logos, seals and product marks belong to their respective owners.",
-        "El texto, el diseño y la marca Business Link del Sitio son propiedad de Business Link LLC o se usan bajo licencia. Los logos, sellos y marcas de producto de terceros pertenecen a sus respectivos titulares.",
-        "Testi, layout e marchio Business Link del Sito appartengono a Business Link LLC o sono usati su licenza. Loghi, sigilli e marchi di prodotto di terzi appartengono ai rispettivi titolari.",
+        "Where the Site describes manufacturers we represent, statements about their products, programs or certifications refer to those manufacturers (for example, AmeriQual Foods). Business Link commercially distributes and exports those products as master distributor; we are not the U.S. Government and do not claim government endorsement.",
+        "Cuando el Sitio describe fabricantes que representamos, las afirmaciones sobre sus productos, programas o certificaciones se refieren a esos fabricantes (por ejemplo, AmeriQual Foods). Business Link distribuye y exporta esos productos comercialmente como distribuidor maestro; no somos el Gobierno de EE. UU. ni reclamamos su respaldo.",
+        "Quando il Sito descrive i produttori che rappresentiamo, le affermazioni su prodotti, programmi o certificazioni si riferiscono a quei produttori (ad esempio AmeriQual Foods). Business Link distribuisce ed esporta commercialmente tali prodotti come distributore master; non siamo il Governo degli Stati Uniti e non rivendichiamo alcuna approvazione governativa.",
       ),
     ],
   },
   {
-    title: loc("Governing law", "Ley aplicable", "Legge applicabile"),
+    title: loc(
+      "External Links (Third-Party Links)",
+      "Enlaces externos (enlaces de terceros)",
+      "Link esterni (link di terzi)",
+    ),
     body: [
       loc(
-        "These terms are governed by the laws of the State of Florida, USA, without regard to conflict-of-law rules, unless mandatory local law provides otherwise.",
-        "Estos términos se rigen por las leyes del Estado de Florida, EE. UU., sin perjuicio de normas de conflicto de leyes, salvo que la ley local imperativa disponga otra cosa.",
-        "I presenti termini sono regolati dalle leggi dello Stato della Florida, USA, fatte salve le norme sui conflitti di legge, salvo diversa disposizione di legge locale imperativa.",
+        "The Site may contain links to third-party websites, such as manufacturer sites. Business Link is not responsible for the content, privacy policies or security practices of these external sites.",
+        "El Sitio puede contener enlaces a sitios web de terceros, como los de los fabricantes. Business Link no es responsable del contenido, las políticas de privacidad ni las prácticas de seguridad de esos sitios externos.",
+        "Il Sito può contenere link a siti web di terzi, come quelli dei produttori. Business Link non è responsabile dei contenuti, delle informative sulla privacy o delle pratiche di sicurezza di tali siti esterni.",
+      ),
+    ],
+  },
+  {
+    title: loc("Privacy", "Privacidad", "Privacy"),
+    body: [
+      loc(
+        "Information you send us through the Site is handled as described in our Privacy Policy.",
+        "La información que nos envía a través del Sitio se trata según lo descrito en nuestra Política de Privacidad.",
+        "Le informazioni che ci invia tramite il Sito sono trattate come descritto nella nostra Informativa sulla privacy.",
+      ),
+    ],
+  },
+  {
+    title: loc("Right to Make Changes", "Derecho a realizar cambios", "Diritto di apportare modifiche"),
+    body: [
+      loc(
+        "Business Link reserves the right to change, update or withdraw these terms of use and the content and services offered on the Site at any time, without prior notice. Continued use of the Site after a change means you accept the updated terms.",
+        "Business Link se reserva el derecho de modificar, actualizar o retirar estos términos de uso y el contenido y los servicios ofrecidos en el Sitio en cualquier momento, sin previo aviso. El uso continuado del Sitio tras un cambio implica la aceptación de los términos actualizados.",
+        "Business Link si riserva il diritto di modificare, aggiornare o ritirare i presenti termini di utilizzo e i contenuti e servizi offerti sul Sito in qualsiasi momento, senza preavviso. L’uso continuato del Sito dopo una modifica comporta l’accettazione dei termini aggiornati.",
+      ),
+    ],
+  },
+  {
+    title: loc(
+      "Governing Law and Competent Courts",
+      "Ley aplicable y tribunales competentes",
+      "Legge applicabile e foro competente",
+    ),
+    body: [
+      loc(
+        "These terms are governed by the laws of the State of Florida, USA, without regard to conflict-of-law rules, unless mandatory local law provides otherwise. The state and federal courts located in Florida shall have jurisdiction over any dispute arising from these terms of use.",
+        "Estos términos se rigen por las leyes del Estado de Florida, EE. UU., sin perjuicio de las normas de conflicto de leyes, salvo que la ley local imperativa disponga otra cosa. Los tribunales estatales y federales con sede en Florida serán competentes para cualquier controversia derivada de estos términos de uso.",
+        "I presenti termini sono regolati dalle leggi dello Stato della Florida, USA, fatte salve le norme sui conflitti di legge, salvo diversa disposizione di legge locale imperativa. I tribunali statali e federali con sede in Florida saranno competenti per qualsiasi controversia derivante dai presenti termini di utilizzo.",
+      ),
+    ],
+  },
+  {
+    title: loc("Contact", "Contacto", "Contatti"),
+    body: [
+      loc(
+        "Questions about these terms: info@businesslinkgroup.com.",
+        "Preguntas sobre estos términos: info@businesslinkgroup.com.",
+        "Domande su questi termini: info@businesslinkgroup.com.",
       ),
     ],
   },

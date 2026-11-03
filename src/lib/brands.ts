@@ -317,11 +317,11 @@ export const representedBrands: Brand[] = [
     name: "Star Grocery LLC",
     logo: "/brands/star-grocery-logo.png",
     note: loc(
-      "Ukrainian grocery manufacturer. Khutorok, Pansky, The Banka, La Pasta, Perfetto and Kitto.",
-      "Fabricante de abarrotes de Ucrania. Khutorok, Pansky, The Banka, La Pasta, Perfetto y Kitto.",
-      "Produttore grocery ucraino. Khutorok, Pansky, The Banka, La Pasta, Perfetto e Kitto.",
+      "Ukrainian grocery and snack manufacturer. Khutorok, Pansky, The Banka, La Pasta, Perfetto, Kitto, Flint and Hroom.",
+      "Fabricante de abarrotes y snacks de Ucrania. Khutorok, Pansky, The Banka, La Pasta, Perfetto, Kitto, Flint y Hroom.",
+      "Produttore grocery e snack ucraino. Khutorok, Pansky, The Banka, La Pasta, Perfetto, Kitto, Flint e Hroom.",
     ),
-    subBrands: ["Khutorok", "Pansky", "The Banka", "La Pasta", "Perfetto", "Kitto"],
+    subBrands: ["Khutorok", "Pansky", "The Banka", "La Pasta", "Perfetto", "Kitto", "Flint", "Hroom"],
     productLines: [
       {
         label: loc("Pasta & flour", "Pasta y harina", "Pasta e farina"),
@@ -371,6 +371,14 @@ export const representedBrands: Brand[] = [
           "Kitto soia, teriyaki, unagi, sweet chili e salse speciali",
         ),
       },
+      {
+        label: loc("Snacks", "Snacks", "Snack"),
+        detail: loc(
+          "Flint wheat-rye croutons, baguette, UA FOOD, Grenki rye toasts and Craft bars; Hroom sliced potato chips",
+          "Crutones Flint de trigo-centeno, baguette, UA FOOD, Grenki de centeno y barras Craft; papas en rodaja Hroom",
+          "Crostini Flint di frumento-segale, baguette, UA FOOD, toast di segale Grenki e barrette Craft; patatine in fetta Hroom",
+        ),
+      },
     ],
     catalogHref: "/portfolio/star-grocery",
     catalogLabel: loc("View product families", "Ver familias de producto", "Consulta le famiglie di prodotto"),
@@ -379,38 +387,11 @@ export const representedBrands: Brand[] = [
         href: "/catalogs/star-grocery-2026.pdf",
         label: loc("General catalog (PDF)", "Catálogo general (PDF)", "Catalogo generale (PDF)"),
       },
-    ],
-    photos: [],
-  },
-  {
-    slug: "star-brands",
-    name: "Star Brands",
-    logo: "/brands/star-brands-logo.png",
-    note: loc(
-      "Ukrainian snack manufacturer. Flint and Hroom.",
-      "Fabricante de snacks de Ucrania. Flint y Hroom.",
-      "Produttore di snack ucraino. Flint e Hroom.",
-    ),
-    subBrands: ["Flint", "Hroom"],
-    productLines: [
       {
-        label: loc("Flint croutons", "Crutones Flint", "Crostini Flint"),
-        detail: loc(
-          "Wheat-rye croutons, baguette, UA FOOD, Grenki rye toasts and Craft bars/chips",
-          "Crutones de trigo-centeno, baguette, UA FOOD, Grenki de centeno y barras/chips Craft",
-          "Crostini di frumento-segale, baguette, UA FOOD, toast di segale Grenki e barrette/chips Craft",
-        ),
-      },
-      {
-        label: loc("Potato chips", "Papas fritas", "Patatine"),
-        detail: loc(
-          "Hroom sliced potato chips, 50 g and 100 g XXL",
-          "Papas en rodaja Hroom, 50 g y 100 g XXL",
-          "Chips a fette Hroom, 50 g e 100 g XXL",
-        ),
+        href: "/catalogs/star-grocery-snacks-flint-hroom.pdf",
+        label: loc("Snacks catalog (PDF)", "Catálogo de snacks (PDF)", "Catalogo snack (PDF)"),
       },
     ],
-    catalogHref: "/catalogs/star-brands-snacks-flint-hroom.pdf",
     photos: [],
   },
   {
@@ -529,6 +510,68 @@ export const representedBrands: Brand[] = [
       },
     ],
     catalogHref: "/portfolio/lasco",
+    catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
+    photos: [],
+  },
+  {
+    slug: "akhan",
+    name: "Akhan Makarna",
+    logo: "/brands/akhan-logo.png",
+    note: loc(
+      "Turkish pasta manufacturer in Adana. Pasta made from 100% Anatolian durum wheat on fully automated lines.",
+      "Fabricante de pasta de Adana, Turquía. Pasta de 100% trigo duro de Anatolia en líneas totalmente automatizadas.",
+      "Pastificio di Adana, Turchia. Pasta di 100% grano duro anatolico su linee completamente automatizzate.",
+    ),
+    productLines: [
+      {
+        label: loc("Long pasta", "Pasta larga", "Pasta lunga"),
+        detail: loc(
+          "Spaghetti, spaghettini, fettuccine, linguine and bucatini",
+          "Espagueti, spaghettini, fettuccine, linguine y bucatini",
+          "Spaghetti, spaghettini, fettuccine, linguine e bucatini",
+        ),
+      },
+      {
+        label: loc("Short & tubular pasta", "Pasta corta y tubular", "Pasta corta e tubolare"),
+        detail: loc(
+          "Fusilli, penne rigate, pennine, rigatoni, rotini, sedani, sedanini and elbows",
+          "Fusilli, penne rigate, pennine, rigatoni, rotini, sedani, sedanini y codos",
+          "Fusilli, penne rigate, pennette, rigatoni, rotini, sedani, sedanini e chifferi",
+        ),
+      },
+      {
+        label: loc("Soup pasta & specialty shapes", "Pasta para sopa y formas especiales", "Pastina da brodo e formati speciali"),
+        detail: loc(
+          "Ditalini, vermicelli, orzo, acini di pepe, couscous, tripolini and farfalle",
+          "Ditalini, fideo, orzo, acini di pepe, cuscús, tripolini y farfalle",
+          "Ditalini, vermicelli, orzo, acini di pepe, couscous, tripolini e farfalle",
+        ),
+      },
+    ],
+    catalogHref: "/portfolio/akhan",
+    catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
+    photos: [],
+  },
+  {
+    slug: "chupa-chups",
+    name: "Chupa Chups Popcorn",
+    logo: "/brands/chupa-chups-logo.png",
+    note: loc(
+      "Chupa Chups Popcorn by CRNCH Popcorn Concepts (Netherlands). Round popcorn glazed in Chupa Chups lollipop flavors.",
+      "Palomitas Chupa Chups de CRNCH Popcorn Concepts (Países Bajos). Palomitas redondas glaseadas con sabores de paleta Chupa Chups.",
+      "Popcorn Chupa Chups di CRNCH Popcorn Concepts (Paesi Bassi). Popcorn rotondi glassati ai gusti dei lecca-lecca Chupa Chups.",
+    ),
+    productLines: [
+      {
+        label: loc("Glazed popcorn", "Palomitas glaseadas", "Popcorn glassati"),
+        detail: loc(
+          "Apple, strawberry, cola and caramel — fun-size 90–110 g and classic 135 g bags",
+          "Manzana, fresa, cola y caramelo — bolsas fun de 90–110 g y clásicas de 135 g",
+          "Mela, fragola, cola e caramello — buste fun da 90–110 g e classiche da 135 g",
+        ),
+      },
+    ],
+    catalogHref: "/portfolio/chupa-chups",
     catalogLabel: loc("View product catalog", "Ver catálogo de productos", "Consulta il catalogo prodotti"),
     photos: [],
   },
