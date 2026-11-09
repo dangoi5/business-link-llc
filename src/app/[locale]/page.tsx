@@ -213,10 +213,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           <MarketsMap locale={locale} variant="light" />
         </div>
         <ul className="mt-10 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-5">
-          {regionCards.map((card) => (
-            <li key={card.region} className="border-t border-ink pt-4">
-              <p className="display text-xl text-ink">{t(locale, regionLabels[card.region])}</p>
-              <p className="mt-1 text-sm leading-relaxed text-slate">{t(locale, card.detail)}</p>
+          {regionCards.map((region) => (
+            <li key={region} className="border-t border-ink pt-4">
+              <p className="display text-3xl text-ink lg:text-2xl xl:text-3xl">{t(locale, regionLabels[region])}</p>
             </li>
           ))}
         </ul>

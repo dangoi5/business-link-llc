@@ -521,47 +521,12 @@ export const regionLabels: Record<(typeof regions)[number], Loc> = {
 };
 
 export const regionCards = [
-  {
-    region: "Americas" as const,
-    detail: loc(
-      "Commercial relationships and distribution partners.",
-      "Relaciones comerciales y socios de distribución.",
-      "Relazioni commerciali e partner di distribuzione.",
-    ),
-  },
-  {
-    region: "Caribbean" as const,
-    detail: loc(
-      "Import, wholesale and retail market access.",
-      "Acceso a importación, mayoreo y retail.",
-      "Accesso a importazione, ingrosso e retail.",
-    ),
-  },
-  {
-    region: "Africa" as const,
-    detail: loc(
-      "Market development and supply opportunities.",
-      "Desarrollo de mercados y oportunidades de suministro.",
-      "Sviluppo dei mercati e opportunità di fornitura.",
-    ),
-  },
-  {
-    region: "Europe" as const,
-    detail: loc(
-      "Sourcing and international trade gateway.",
-      "Abastecimiento y puerta de comercio internacional.",
-      "Sourcing e porta del commercio internazionale.",
-    ),
-  },
-  {
-    region: "Asia-Pacific" as const,
-    detail: loc(
-      "Manufacturing links and buyer networks.",
-      "Vínculos de manufactura y redes de compradores.",
-      "Collegamenti produttivi e reti di acquirenti.",
-    ),
-  },
-];
+  "Americas",
+  "Caribbean",
+  "Africa",
+  "Europe",
+  "Asia-Pacific",
+] as const;
 
 export const distributionPoints = [
   {

@@ -260,11 +260,11 @@ export const representedBrands: Brand[] = [
     ],
     productLines: [
       {
-        label: loc("Shelf-stable prepared meals", "Comidas preparadas de larga duración", "Piatti pronti a lunga conservazione"),
+        label: loc("Shelf-stable fully cooked meals", "Comidas de larga duración totalmente cocidas", "Piatti completamente cotti a lunga conservazione"),
         detail: loc(
-          "4-year shelf life (pouched entrées: chicken, beef, pasta, chili, mac & cheese varieties)",
-          "Vida útil de 4 años (entradas en sobre: pollo, res, pasta, chili, macarrones con queso)",
-          "Durata di conservazione di 4 anni (piatti principali in busta: pollo, manzo, pasta, chili, varietà di maccheroni al formaggio)",
+          "4-year shelf life ready-to-heat and enjoy entrees in a variety of pouch sizes including chicken, beef, pasta, chili, stews, and macaroni & cheese and ethnic varieties.",
+          "Vida útil de 4 años: platos principales listos para calentar y disfrutar, en variedad de tamaños de sobre, incluidos pollo, res, pasta, chili, estofados, macarrones con queso y variedades étnicas.",
+          "Durata di conservazione di 4 anni: piatti principali pronti da riscaldare e gustare, in buste di vari formati, tra cui pollo, manzo, pasta, chili, stufati, maccheroni al formaggio e varietà etniche.",
         ),
       },
       {
