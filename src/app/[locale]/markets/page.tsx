@@ -35,7 +35,7 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
         description={t(locale, ui.marketsPage.heroDescription)}
       />
 
-      <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+      <section className="mx-auto max-w-7xl px-5 pt-10 pb-16 md:px-8 md:pt-14 md:pb-24">
         <Reveal>
           <p className="max-w-3xl text-base leading-relaxed text-slate md:text-lg">
             {t(locale, ui.marketsPage.intro)}
@@ -51,7 +51,7 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
         </Reveal>
       </section>
 
-      <section className="border-t border-line bg-ink py-16 text-white md:py-24">
+      <section className="border-t border-line bg-brand-deep py-16 text-white md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionLabel light>{t(locale, ui.marketsPage.distribution)}</SectionLabel>

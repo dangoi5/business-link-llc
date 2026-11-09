@@ -37,7 +37,7 @@ export default async function AmeriqualMilitaryPage({
 
   return (
     <>
-      <section className="relative overflow-hidden bg-ink pt-28 pb-16 md:pt-36 md:pb-20">
+      <section className="relative overflow-hidden bg-ink pt-24 pb-10 md:pt-28 md:pb-12">
         <Image
           src={ameriqualMilitaryAssets.flag}
           alt=""

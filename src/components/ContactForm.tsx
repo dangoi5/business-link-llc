@@ -97,13 +97,13 @@ export function ContactForm({
 
       <fieldset className="mt-6">
         <legend className="text-sm font-medium text-ink">{t(locale, ui.form.iAmA)}</legend>
-        <div className="mt-2 grid grid-cols-3 gap-2">
+        <div className="mt-2 flex flex-wrap gap-2">
           {roleKeys.map((option) => {
             const selected = role === option;
             return (
               <label
                 key={option}
-                className={`cursor-pointer rounded-lg border px-3 py-3 text-center has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand/40 text-sm font-semibold transition ${
+                className={`flex-1 cursor-pointer rounded-lg border px-3 py-3 text-center has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand/40 text-sm font-semibold transition ${
                   selected
                     ? "border-brand bg-brand/10 text-brand"
                     : "border-line text-slate hover:border-brand/40"
@@ -124,7 +124,7 @@ export function ContactForm({
         </div>
       </fieldset>
 
-      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         <label className="block text-sm">
           <span className="font-medium text-ink">{t(locale, ui.form.name)}</span>
           <input
@@ -151,7 +151,7 @@ export function ContactForm({
         </label>
       </div>
 
-      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         <label className="block text-sm">
           <span className="font-medium text-ink">{t(locale, ui.form.organization)}</span>
           <input
@@ -169,7 +169,7 @@ export function ContactForm({
         />
       </div>
 
-      <div className="mt-4 grid gap-4 sm:grid-cols-3">
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
         <label className="block text-sm">
           <span className="font-medium text-ink">{t(locale, ui.form.product)}</span>
           <input

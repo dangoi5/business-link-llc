@@ -707,17 +707,10 @@ export const ui = {
     heroLabel: loc("Own brand", "Marca propia", "Marchio proprio"),
     heroTitle: loc("Fresh Elements product catalog.", "Catálogo de productos Fresh Elements.", "Catalogo prodotti Fresh Elements."),
     heroDescription: loc(
-      "Our own food line for retail, foodservice and international distribution. Browse snacks, oils, rice and condiments below.",
-      "Nuestra línea de alimentos para retail, foodservice y distribución internacional. Vea snacks, aceites, arroz y condimentos abajo.",
-      "La nostra linea alimentare per retail, foodservice e distribuzione internazionale. Consulti snack, oli, riso e condimenti di seguito.",
+      "Our own food line for retail, foodservice and international distribution. Browse snacks, oils and rice below.",
+      "Nuestra línea de alimentos para retail, foodservice y distribución internacional. Vea snacks, aceites y arroz abajo.",
+      "La nostra linea alimentare per retail, foodservice e distribuzione internazionale. Consulti snack, oli e riso di seguito.",
     ),
-    intro: loc(
-      "Fresh Elements is developed and marketed by Business Link. This catalog is the on-site product list for the brand—separate from partner manufacturers in the broader portfolio.",
-      "Fresh Elements es desarrollada y comercializada por Business Link. Este catálogo es la lista de productos de la marca en el sitio, aparte de los fabricantes asociados del portafolio general.",
-      "Fresh Elements è sviluppata e commercializzata da Business Link. Questo catalogo è l'elenco prodotti del marchio sul sito, distinto dai produttori partner del portafoglio più ampio.",
-    ),
-    lineComingSoon: loc("Products in this line will appear here as they are added.", "Los productos de esta línea aparecerán aquí a medida que se agreguen.", "I prodotti di questa linea appariranno qui man mano che verranno aggiunti."),
-    inquireLine: loc("Inquire about this line", "Consultar esta línea", "Informazioni su questa linea"),
     backToPortfolio: loc("← Portfolio", "← Portafolio", "← Portafoglio"),
   },
   contactPage: {

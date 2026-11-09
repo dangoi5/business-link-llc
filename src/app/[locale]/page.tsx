@@ -55,7 +55,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <section className="bg-white pt-[4.5rem]">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:px-8 lg:min-h-[calc(100dvh-4.5rem)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-16">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-16">
           <div>
             <h1 className="display max-w-[16ch] text-[2.6rem] text-ink sm:text-6xl xl:text-7xl">
               {t(locale, ui.home.heroTitle)}
@@ -74,7 +74,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             </div>
           </div>
 
-          <div className="relative aspect-[5/6] overflow-hidden rounded-xl bg-ink sm:aspect-[4/3] lg:aspect-[4/5]">
+          {/* Height is capped so the brands strip always peeks above the fold on desktop. */}
+          <div className="relative aspect-[5/6] overflow-hidden rounded-xl bg-ink sm:aspect-[4/3] lg:aspect-auto lg:h-[clamp(22rem,calc(100dvh-19rem),44rem)]">
             <Image
               src={images.hero}
               alt={t(locale, ui.home.heroAlt)}
@@ -107,7 +108,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <section className="mx-auto max-w-7xl px-5 pt-14 pb-20 md:px-8 md:pt-20 md:pb-28">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <Reveal className="lg:sticky lg:top-28 lg:self-start">
             <SectionHeading

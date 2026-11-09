@@ -35,12 +35,8 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
         description={t(locale, ui.portfolioPage.heroDescription)}
       />
 
-      <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-        <div className="mb-16">
-          <BrandsWeRepresent locale={locale} />
-        </div>
-
-        <Reveal className="mb-8">
+      <section className="mx-auto max-w-7xl px-5 pt-10 pb-16 md:px-8 md:pt-12 md:pb-24">
+        <Reveal className="mb-6">
           <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
             {t(locale, ui.portfolioPage.foodCategories)}
           </h2>
@@ -49,47 +45,42 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
           </p>
         </Reveal>
 
-        <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-          {portfolioCategories.map((category, index) => (
-            <Reveal key={category.slug} delay={index * 40}>
+        {/*
+          Every category gets an identical tile and they are all visible together:
+          stacked rows on phones, 3 + 2 centered on tablets, one row on desktop.
+        */}
+        <div className="grid gap-3 sm:gap-4 sm:max-lg:grid-cols-6 sm:max-lg:[&>*]:col-span-2 sm:max-lg:[&>:nth-last-child(2):nth-child(3n+1)]:col-start-2 lg:grid-cols-5">
+          {portfolioCategories.map((category) => (
+            <Reveal key={category.slug}>
               <Link
                 href={localizedHref(locale, `/portfolio/${category.slug}`)}
                 id={category.slug}
-                className="group flex h-full scroll-mt-28 overflow-hidden rounded-2xl border border-line bg-white transition hover:border-brand sm:flex-col"
+                className="group flex h-full min-h-24 scroll-mt-28 overflow-hidden rounded-2xl border border-line bg-white transition-colors duration-200 hover:border-brand sm:flex-col"
               >
-                <div className="relative w-28 shrink-0 overflow-hidden bg-surface sm:aspect-square sm:w-full">
+                <div className="relative w-24 shrink-0 overflow-hidden bg-surface sm:aspect-square sm:w-full">
                   <Image
                     src={category.image}
-                    alt={t(locale, category.title)}
+                    alt=""
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 639px) 112px, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                    sizes="(max-width: 639px) 96px, (max-width: 1023px) 33vw, 240px"
                   />
                 </div>
-                <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5">
-                  <h3 className="text-base font-bold tracking-tight text-ink sm:text-lg">
+                <div className="flex min-w-0 flex-1 flex-col justify-center gap-2 p-4 sm:justify-between">
+                  <h3 className="text-base leading-snug font-bold tracking-tight break-words text-ink">
                     {t(locale, category.title)}
                   </h3>
-                  <p className="mt-1 line-clamp-2 flex-1 text-sm leading-relaxed text-slate sm:mt-2 sm:line-clamp-3">
-                    {t(locale, category.summary)}
-                  </p>
-                  <div className="mt-4 hidden flex-wrap gap-1.5 sm:flex">
-                    {category.channels.map((channel) => (
-                      <span
-                        key={channel.en}
-                        className="rounded-full bg-surface px-2.5 py-0.5 text-[11px] font-medium text-slate"
-                      >
-                        {t(locale, channel)}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="mt-2 text-sm font-semibold text-brand transition group-hover:text-brand-deep sm:mt-4">
+                  <span className="text-sm font-semibold text-brand transition-colors duration-200 group-hover:text-brand-deep">
                     {t(locale, ui.portfolioPage.viewProducts)} →
                   </span>
                 </div>
               </Link>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-16 md:mt-20">
+          <BrandsWeRepresent locale={locale} />
         </div>
 
         <Reveal className="mt-14 rounded-2xl bg-brand p-8 text-white md:p-10">

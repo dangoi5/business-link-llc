@@ -105,7 +105,7 @@ export function PageHero({
   logoAlt?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink pt-28 pb-16 md:pt-36 md:pb-20">
+    <section className="relative overflow-hidden bg-ink pt-24 pb-10 md:pt-28 md:pb-12">
       <div
         aria-hidden
         className="absolute inset-0 opacity-60"
@@ -114,24 +114,27 @@ export function PageHero({
             "radial-gradient(circle at 15% 10%, rgba(26,69,144,0.7), transparent 50%), radial-gradient(circle at 90% 0%, rgba(229,168,43,0.16), transparent 40%)",
         }}
       />
-      <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between md:gap-12 md:px-8">
+        <div className="min-w-0">
+          <SectionLabel light>{label}</SectionLabel>
+          <h1 className="display mt-4 max-w-3xl text-4xl break-words text-white md:text-6xl">
+            {title}
+          </h1>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">{description}</p>
+        </div>
         {logoSrc ? (
-          <div className="relative mb-6 h-36 w-64 md:h-44 md:w-80">
+          // Brand logos are drawn for light backgrounds, so they sit on a white tile.
+          <div className="relative order-first h-20 w-40 shrink-0 overflow-hidden rounded-xl bg-white md:order-none md:h-40 md:w-72">
             <Image
               src={logoSrc}
               alt={logoAlt ?? ""}
               fill
               priority
               unoptimized
-              className="object-contain object-left"
+              className="object-contain p-3 md:p-5"
             />
           </div>
         ) : null}
-        <SectionLabel light>{label}</SectionLabel>
-        <h1 className="display mt-4 max-w-3xl text-4xl text-white md:text-6xl">
-          {title}
-        </h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">{description}</p>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ProductGroups } from "@/components/ProductGroups";
 import { Reveal } from "@/components/Reveal";
-import { PageHero, PrimaryButton, TextLink } from "@/components/ui";
+import { PageHero, TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
@@ -32,6 +32,14 @@ export default async function FreshElementsCatalogPage({
   if (!isLocale(raw)) notFound();
   const locale: Locale = raw;
 
+  // A line only appears once it has products, so visitors never land on an empty one.
+  const lines = freshElementsBrand.productLines
+    .map((line) => ({
+      line,
+      products: line.id ? freshElementsProductsForLine(line.id as FreshElementsLineId) : [],
+    }))
+    .filter(({ products }) => products.length > 0);
+
   return (
     <>
       <PageHero
@@ -42,23 +50,15 @@ export default async function FreshElementsCatalogPage({
         logoAlt={freshElementsBrand.name}
       />
 
-      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="max-w-2xl text-sm leading-relaxed text-slate md:text-base">
-            {t(locale, ui.freshElements.intro)}
-          </p>
-          <TextLink href={localizedHref(locale, "/portfolio")}>
-            {t(locale, ui.freshElements.backToPortfolio)}
-          </TextLink>
-        </div>
+      <section className="mx-auto max-w-7xl px-5 pt-6 pb-12 md:px-8 md:pt-8 md:pb-16">
+        <TextLink href={localizedHref(locale, "/portfolio")}>
+          {t(locale, ui.freshElements.backToPortfolio)}
+        </TextLink>
 
         <ProductGroups
-          className="mt-6 sm:mt-12"
+          className="mt-4 sm:mt-6"
           label={t(locale, ui.categoryPage.productGroups)}
-          groups={freshElementsBrand.productLines.map((line) => {
-            const lineId = line.id as FreshElementsLineId;
-            const products = lineId ? freshElementsProductsForLine(lineId) : [];
-
+          groups={lines.map(({ line, products }) => {
             return {
               id: line.label.en,
               label: t(locale, line.label),
@@ -78,20 +78,7 @@ export default async function FreshElementsCatalogPage({
                     </p>
                   ) : null}
 
-                  {products.length > 0 ? (
-                    <ProductGrid products={products} locale={locale} />
-                  ) : (
-                    <div className="mt-6 rounded-2xl border border-dashed border-line bg-surface p-6 md:p-8">
-                      <p className="text-sm leading-relaxed text-slate">
-                        {t(locale, ui.freshElements.lineComingSoon)}
-                      </p>
-                      <div className="mt-5">
-                        <PrimaryButton href={localizedHref(locale, "/contact")}>
-                          {t(locale, ui.freshElements.inquireLine)}
-                        </PrimaryButton>
-                      </div>
-                    </div>
-                  )}
+                  <ProductGrid products={products} locale={locale} />
                 </section>
               </Reveal>
               ),

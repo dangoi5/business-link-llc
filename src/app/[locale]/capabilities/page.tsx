@@ -69,7 +69,7 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
 
   return (
     <>
-      <section className="bg-ink pt-32 pb-14 md:pt-40 md:pb-20">
+      <section className="bg-ink pt-28 pb-10 md:pt-32 md:pb-14">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionLabel light>{t(locale, ui.capabilities.heroLabel)}</SectionLabel>
           <div className="mt-5 grid items-end gap-x-16 gap-y-6 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]">
@@ -81,14 +81,14 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
             </p>
           </div>
 
-          <h2 className="mt-16 text-sm font-semibold text-gold md:mt-24">
+          <h2 className="mt-10 text-sm font-semibold text-gold md:mt-16">
             {t(locale, ui.capabilities.fromOpportunity)}
           </h2>
           <ol className="mt-8 grid lg:grid-cols-5">
             {processSteps.map((step) => (
               <li
                 key={step.step}
-                className="relative border-l border-white/25 pb-8 pl-6 last:pb-0 lg:border-t lg:border-l-0 lg:pt-6 lg:pr-6 lg:pb-0 lg:pl-0"
+                className="relative border-l border-white/25 pb-5 pl-6 last:pb-0 lg:border-t lg:border-l-0 lg:pt-6 lg:pr-6 lg:pb-0 lg:pl-0"
               >
                 <span
                   aria-hidden
@@ -104,8 +104,8 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
-        <ol className="divide-y divide-line border-y border-line">
+      <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:pb-28">
+        <ol className="divide-y divide-line border-b border-line">
           {services.map((item, index) => (
             <li key={item.slug} id={item.slug}>
               <Reveal className={`${rowGrid} gap-y-4 py-10 md:py-14`}>
@@ -183,7 +183,7 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
         </section>
       ) : null}
 
-      <section className="mx-auto max-w-7xl space-y-16 px-5 py-20 md:space-y-24 md:px-8 md:py-28">
+      <section className="mx-auto max-w-7xl space-y-16 px-5 pt-20 pb-14 md:space-y-24 md:px-8 md:pt-28 md:pb-20">
         {audiences.map((audience) => (
           <Reveal key={audience.id}>
             <div id={audience.id} className={`${rowGrid} gap-y-8 border-t border-ink pt-8`}>

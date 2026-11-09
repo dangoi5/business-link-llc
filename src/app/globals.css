@@ -138,14 +138,16 @@ main :focus-visible {
   transform: translateY(0);
 }
 
-/* Scroll reveal: CSS-only, progressive enhancement. */
+/*
+ * Scroll reveal: CSS-only, progressive enhancement. Movement only, never a fade:
+ * content peeking at the bottom of the screen must stay readable so visitors
+ * can tell there is more to scroll to.
+ */
 @keyframes reveal-in {
   from {
-    opacity: 0;
     transform: translateY(16px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }

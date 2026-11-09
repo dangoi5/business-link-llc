@@ -35,7 +35,12 @@ export default async function ContactPage({ params, searchParams }: PageProps<"/
         description={t(locale, ui.contactPage.heroDescription)}
       />
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[0.9fr_1.1fr] md:px-8 md:py-24">
+      {/* The form comes first in the markup so phones reach it right after the hero. */}
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 pt-8 pb-16 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:px-8 md:pt-14 md:pb-24">
+        <Reveal className="md:order-last">
+          <ContactForm locale={locale} defaultRole={defaultRole} />
+        </Reveal>
+
         <Reveal>
           <SectionLabel>{t(locale, ui.contactPage.whyLabel)}</SectionLabel>
           <h2 className="mt-3 text-2xl font-bold text-ink md:text-3xl">
@@ -62,10 +67,6 @@ export default async function ContactPage({ params, searchParams }: PageProps<"/
               {company.email}
             </a>
           </div>
-        </Reveal>
-
-        <Reveal delay={80}>
-          <ContactForm locale={locale} defaultRole={defaultRole} />
         </Reveal>
       </section>
     </>
