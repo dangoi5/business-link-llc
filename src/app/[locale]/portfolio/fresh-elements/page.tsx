@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/ProductGrid";
+import { ProductGroups } from "@/components/ProductGroups";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, PrimaryButton, TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/config";
@@ -51,13 +52,19 @@ export default async function FreshElementsCatalogPage({
           </TextLink>
         </div>
 
-        <div className="mt-12 grid gap-14">
-          {freshElementsBrand.productLines.map((line) => {
+        <ProductGroups
+          className="mt-6 sm:mt-12"
+          label={t(locale, ui.categoryPage.productGroups)}
+          groups={freshElementsBrand.productLines.map((line) => {
             const lineId = line.id as FreshElementsLineId;
             const products = lineId ? freshElementsProductsForLine(lineId) : [];
 
-            return (
-              <Reveal key={line.label.en}>
+            return {
+              id: line.label.en,
+              label: t(locale, line.label),
+              count: products.length,
+              content: (
+              <Reveal>
                 <section>
                   <p className="text-xs font-bold tracking-wider text-gold-ink uppercase">
                     {t(locale, ui.common.ownBrand)}
@@ -87,9 +94,10 @@ export default async function FreshElementsCatalogPage({
                   )}
                 </section>
               </Reveal>
-            );
+              ),
+            };
           })}
-        </div>
+        />
       </section>
     </>
   );

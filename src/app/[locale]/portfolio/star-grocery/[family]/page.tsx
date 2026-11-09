@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/ProductGrid";
+import { ProductGroups } from "@/components/ProductGroups";
 import { TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, locales, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
@@ -81,14 +82,24 @@ export default async function StarGroceryFamilyPage({
           ) : null}
         </div>
 
-        {family.groups.map((group) => (
-          <div key={group.id} className="mt-10">
-            <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
-              {family.groups.length > 1 ? t(locale, group.label) : t(locale, ui.starGrocery.flavors)}
-            </h2>
-            <ProductGrid products={group.products} locale={locale} />
-          </div>
-        ))}
+        <ProductGroups
+          className="mt-6 sm:mt-10"
+          gap="gap-10"
+          label={t(locale, ui.categoryPage.productGroups)}
+          groups={family.groups.map((group) => ({
+            id: group.id,
+            label: t(locale, group.label),
+            count: group.products.length,
+            content: (
+              <>
+                <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+                  {family.groups.length > 1 ? t(locale, group.label) : t(locale, ui.starGrocery.flavors)}
+                </h2>
+                <ProductGrid products={group.products} locale={locale} />
+              </>
+            ),
+          }))}
+        />
       </section>
     </>
   );

@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import Image from "next/image";
 import Link from "next/link";
+import { ProductSheet } from "@/components/ProductSheet";
 import { localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
@@ -58,6 +59,27 @@ function NutritionBlock({
   );
 }
 
+function ProductDetails({ product, locale }: { product: CatalogProduct; locale: Locale }) {
+  return (
+    <>
+      <p className="mt-2 text-sm leading-relaxed text-slate">{t(locale, product.description)}</p>
+      {product.details && product.details.length > 0 ? (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {product.details.map((detail) => (
+            <span
+              key={detail.en}
+              className="rounded-full bg-surface px-2.5 py-1 text-xs font-medium text-slate"
+            >
+              {t(locale, detail)}
+            </span>
+          ))}
+        </div>
+      ) : null}
+      {product.nutrition ? <NutritionBlock nutrition={product.nutrition} locale={locale} /> : null}
+    </>
+  );
+}
+
 async function productImageSrc(src: string): Promise<string> {
   if (!src.startsWith("/products/")) return src;
   try {
@@ -78,56 +100,68 @@ export async function ProductGrid({
   const imageSources = await Promise.all(products.map((product) => productImageSrc(product.image)));
 
   return (
-    <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-6 lg:grid-cols-3">
       {products.map((product, index) => {
+        const name = t(locale, product.name);
+        const exportNotice = product.unavailableForExport ? (
+          <p className="mt-2 inline-flex self-start rounded-full bg-gold/10 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-gold-ink uppercase">
+            {t(locale, ui.categoryPage.notAvailableForExport)}
+          </p>
+        ) : null;
         const card = (
           <article
             key={product.slug}
-            className={`overflow-hidden rounded-2xl border border-line bg-white ${
+            className={`relative flex flex-col overflow-hidden rounded-2xl border border-line bg-white ${
               product.href
-                ? "group flex h-full flex-col transition hover:border-brand hover:shadow-lg hover:shadow-ink/5"
+                ? "group h-full transition hover:border-brand hover:shadow-lg hover:shadow-ink/5"
                 : ""
             }`}
           >
             <div className="relative aspect-square overflow-hidden bg-[#f7f4ee]">
               <Image
                 src={imageSources[index]}
-                alt={t(locale, product.name)}
+                alt={name}
                 fill
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 1023px) 50vw, 33vw"
               />
             </div>
-            <div className={`p-5 ${product.href ? "flex flex-1 flex-col" : ""}`}>
-              <h3 className="text-lg font-bold text-ink">{t(locale, product.name)}</h3>
-              {product.unavailableForExport ? (
-                <p className="mt-2 inline-flex rounded-full bg-gold/10 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-gold-ink uppercase">
-                  {t(locale, ui.categoryPage.notAvailableForExport)}
-                </p>
-              ) : null}
-              <p className="mt-2 text-sm leading-relaxed text-slate">{t(locale, product.description)}</p>
-              {product.details && product.details.length > 0 ? (
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {product.details.map((detail) => (
-                    <span
-                      key={detail.en}
-                      className="rounded-full bg-surface px-2.5 py-1 text-xs font-medium text-slate"
-                    >
-                      {t(locale, detail)}
-                    </span>
-                  ))}
-                </div>
-              ) : null}
-              {product.nutrition ? <NutritionBlock nutrition={product.nutrition} locale={locale} /> : null}
+            <div className="flex flex-1 flex-col p-3 sm:p-5">
+              <h3 className="line-clamp-3 text-sm leading-snug font-bold text-ink sm:line-clamp-none sm:text-lg sm:leading-normal">
+                {name}
+              </h3>
+              {exportNotice}
+              <div className="hidden sm:block">
+                <ProductDetails product={product} locale={locale} />
+              </div>
               {product.href ? (
-                <span className="mt-auto pt-5">
+                <span className="mt-auto hidden pt-5 sm:block">
                   <span className="inline-flex items-center gap-2 rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white transition group-hover:bg-brand-deep">
                     {t(locale, ui.categoryPage.viewAllProducts)}
                     <span aria-hidden className="transition group-hover:translate-x-0.5">→</span>
                   </span>
                 </span>
               ) : null}
+              <span className="mt-auto pt-1.5 text-xs font-semibold text-brand sm:hidden">
+                {t(locale, product.href ? ui.categoryPage.viewAllProducts : ui.categoryPage.viewDetails)}
+              </span>
             </div>
+            {product.href ? null : (
+              <ProductSheet
+                label={`${t(locale, ui.categoryPage.viewDetails)}: ${name}`}
+                closeLabel={t(locale, ui.categoryPage.closeDetails)}
+                title={name}
+              >
+                <div className="relative aspect-[4/3] bg-[#f7f4ee]">
+                  <Image src={imageSources[index]} alt="" fill className="object-contain" sizes="100vw" />
+                </div>
+                <div className="flex flex-col p-5 pb-8">
+                  <p className="text-xl font-bold text-ink">{name}</p>
+                  {exportNotice}
+                  <ProductDetails product={product} locale={locale} />
+                </div>
+              </ProductSheet>
+            )}
           </article>
         );
 

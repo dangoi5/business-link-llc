@@ -487,6 +487,9 @@ export const ui = {
   },
   categoryPage: {
     viewAllProducts: loc("View all products", "Ver todos los productos", "Vedi tutti i prodotti"),
+    viewDetails: loc("View details", "Ver detalles", "Vedi dettagli"),
+    closeDetails: loc("Close", "Cerrar", "Chiudi"),
+    productGroups: loc("Product groups", "Grupos de productos", "Gruppi di prodotti"),
     allCategories: loc("← All categories", "← Todas las categorías", "← Tutte le categorie"),
     products: loc("Products", "Productos", "Prodotti"),
     productsIntro: loc(

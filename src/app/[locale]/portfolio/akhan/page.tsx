@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/ProductGrid";
+import { ProductGroups } from "@/components/ProductGroups";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, SectionHeading, TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/config";
@@ -74,16 +75,23 @@ export default async function AkhanCatalogPage({
 
         <h2 className="display mt-20 text-3xl text-ink md:text-[2.75rem]">{t(locale, ui.akhan.rangeTitle)}</h2>
 
-        <div className="mt-10 grid gap-14">
-          {akhanGroups.map((group) => (
-            <section key={group.id}>
-              <h3 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
-                {t(locale, group.label)}
-              </h3>
-              <ProductGrid products={group.products} locale={locale} />
-            </section>
-          ))}
-        </div>
+        <ProductGroups
+          className="mt-6 sm:mt-10"
+          label={t(locale, ui.categoryPage.productGroups)}
+          groups={akhanGroups.map((group) => ({
+            id: group.id,
+            label: t(locale, group.label),
+            count: group.products.length,
+            content: (
+              <section>
+                <h3 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+                  {t(locale, group.label)}
+                </h3>
+                <ProductGrid products={group.products} locale={locale} />
+              </section>
+            ),
+          }))}
+        />
       </section>
     </>
   );

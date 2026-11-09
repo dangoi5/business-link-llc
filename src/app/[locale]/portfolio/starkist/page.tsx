@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/ProductGrid";
+import { ProductGroups } from "@/components/ProductGroups";
 import { PageHero, TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
@@ -46,19 +47,26 @@ export default async function StarKistCatalogPage({
           </TextLink>
         </div>
 
-        <div className="mt-12 grid gap-14">
-          {starKistGroups.map((group) => (
-            <section key={group.id}>
-              <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
-                {t(locale, group.label)}
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate md:text-base">
-                {t(locale, group.description)}
-              </p>
-              <ProductGrid products={group.products} locale={locale} />
-            </section>
-          ))}
-        </div>
+        <ProductGroups
+          className="mt-6 sm:mt-12"
+          label={t(locale, ui.categoryPage.productGroups)}
+          groups={starKistGroups.map((group) => ({
+            id: group.id,
+            label: t(locale, group.label),
+            count: group.products.length,
+            content: (
+              <section>
+                <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+                  {t(locale, group.label)}
+                </h2>
+                <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate md:text-base">
+                  {t(locale, group.description)}
+                </p>
+                <ProductGrid products={group.products} locale={locale} />
+              </section>
+            ),
+          }))}
+        />
       </section>
     </>
   );
