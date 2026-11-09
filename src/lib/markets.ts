@@ -143,6 +143,13 @@ export const markets: Market[] = [
     mapIds: ["tr"],
   },
   {
+    id: "ukraine",
+    name: loc("Ukraine", "Ucrania", "Ucraina"),
+    region: "Europe",
+    status: "active",
+    mapIds: ["ua"],
+  },
+  {
     id: "philippines",
     name: loc("Philippines", "Filipinas", "Filippine"),
     region: "Asia-Pacific",

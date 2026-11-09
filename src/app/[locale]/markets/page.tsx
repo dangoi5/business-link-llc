@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MarketRegions } from "@/components/MarketRegions";
 import { MarketsMap } from "@/components/MarketsMap";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, SectionLabel } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
-import { distributionPoints, regionLabels, regions } from "@/lib/content";
-import { markets } from "@/lib/markets";
+import { distributionPoints } from "@/lib/content";
 
 export async function generateMetadata({
   params,
@@ -26,11 +26,6 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
   const { locale: raw } = await params;
   if (!isLocale(raw)) notFound();
   const locale: Locale = raw;
-
-  const byRegion = regions.map((region) => ({
-    region,
-    markets: markets.filter((market) => market.region === region),
-  }));
 
   return (
     <>
@@ -51,25 +46,9 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
           <MarketsMap locale={locale} />
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {byRegion.map(({ region, markets: regionMarkets }) =>
-            regionMarkets.length ? (
-              <Reveal key={region}>
-                <div className="h-full rounded-2xl border border-line bg-white p-6">
-                  <h2 className="text-lg font-bold text-brand">{t(locale, regionLabels[region])}</h2>
-                  <ul className="mt-4 space-y-2">
-                    {regionMarkets.map((market) => (
-                      <li key={market.id} className="flex items-center gap-2 text-sm text-ink">
-                        <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-                        {t(locale, market.name)}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Reveal>
-            ) : null,
-          )}
-        </div>
+        <Reveal className="mt-12">
+          <MarketRegions locale={locale} />
+        </Reveal>
       </section>
 
       <section className="border-t border-line bg-ink py-16 text-white md:py-24">

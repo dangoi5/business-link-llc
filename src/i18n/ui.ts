@@ -328,6 +328,17 @@ export const ui = {
       "Mapa mundial de mercados activos y en desarrollo de Business Link",
       "Mappa del mondo dei mercati attivi e in sviluppo di Business Link",
     ),
+    mapZoomIn: loc("Zoom in", "Acercar", "Ingrandisci"),
+    mapZoomOut: loc("Zoom out", "Alejar", "Riduci"),
+    mapReset: loc("Reset map", "Restablecer mapa", "Reimposta mappa"),
+    mapHint: loc(
+      "Pinch, use + and −, or Ctrl + scroll to zoom. Tap or hover over a country to see its name.",
+      "Pellizca, usa + y − o Ctrl + rueda para acercar. Toca un país o pasa el cursor sobre él para ver su nombre.",
+      "Usa due dita, + e − oppure Ctrl + rotellina per ingrandire. Tocca un paese o passaci sopra con il cursore per vederne il nome.",
+    ),
+    mapStatusActive: loc("Active market", "Mercado activo", "Mercato attivo"),
+    mapStatusDeveloping: loc("Market in development", "Mercado en desarrollo", "Mercato in sviluppo"),
+    regionInDevelopment: loc("In development", "En desarrollo", "In sviluppo"),
     inDevelopment: loc("Markets in development", "Mercados en desarrollo", "Mercati in sviluppo"),
     inDevelopmentBody: loc(
       "Active evaluation where commercial structure, compliance and logistics pathways are being established.",
