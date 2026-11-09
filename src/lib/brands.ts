@@ -25,6 +25,12 @@ export type Brand = {
   slug: string;
   name: string;
   logo?: string;
+  /**
+   * Width of the logo in the homepage strip, as a % of its grid cell.
+   * Tune per logo so they all carry similar visual weight: wide wordmarks
+   * get more width, compact or solid marks get less. Defaults to 55.
+   */
+  logoWidth?: number;
   note?: Loc;
   /** Short selling points shown as a bullet list under the note. */
   highlights?: Loc[];
@@ -224,6 +230,7 @@ export const representedBrands: Brand[] = [
     slug: "fresh-elements",
     name: "Fresh Elements",
     logo: "/brands/fresh-elements-logo.png",
+    logoWidth: 48,
     note: loc(
       "Our own product line for retail, foodservice and international trade.",
       "Nuestra línea de productos para retail, foodservice y comercio internacional.",
@@ -238,6 +245,7 @@ export const representedBrands: Brand[] = [
     slug: "ameriqual",
     name: "AmeriQual Group, LLC",
     logo: "/brands/ameriqual-group.jpg",
+    logoWidth: 56,
     note: loc(
       "Parent company. Facilities in Evansville, IN and Stone Mountain, GA.",
       "Empresa matriz. Plantas en Evansville, IN y Stone Mountain, GA.",
@@ -318,6 +326,7 @@ export const representedBrands: Brand[] = [
     slug: "star-grocery",
     name: "Star Grocery LLC",
     logo: "/brands/star-grocery-logo.png",
+    logoWidth: 54,
     note: loc(
       "Ukrainian grocery and snack manufacturer. Khutorok, Pansky, The Banka, La Pasta, Perfetto, Kitto, Flint and Hroom.",
       "Fabricante de abarrotes y snacks de Ucrania. Khutorok, Pansky, The Banka, La Pasta, Perfetto, Kitto, Flint y Hroom.",
@@ -400,6 +409,7 @@ export const representedBrands: Brand[] = [
     slug: "quinoa-club",
     name: "Quinoa Club",
     logo: "/brands/quinoa-club-logo.png",
+    logoWidth: 69,
     note: loc(
       "Colombian manufacturer in Jamundí, Valle del Cauca. Gluten-free quinoa grocery, breakfast and snacks.",
       "Fabricante colombiano en Jamundí, Valle del Cauca. Abarrotes, desayuno y snacks de quinua sin gluten.",
@@ -456,6 +466,7 @@ export const representedBrands: Brand[] = [
     slug: "tronix",
     name: "Tronix",
     logo: "/brands/tronix.png",
+    logoWidth: 50,
     note: loc(
       "Central American extruded snack manufacturer. Torti Chips, Boliqueso, Cebollitas and Cheesitos.",
       "Fabricante centroamericano de snacks extruidos. Torti Chips, Boliqueso, Cebollitas y Cheesitos.",
@@ -488,6 +499,7 @@ export const representedBrands: Brand[] = [
     slug: "lasco",
     name: "Lasco",
     logo: "/brands/lasco.png",
+    logoWidth: 42,
     note: loc(
       "Jamaican manufacturer. Lasco Food Drink in multiple flavors, plus instant chocolate drink mixes.",
       "Fabricante de Jamaica. Lasco Food Drink en varios sabores, más mezclas de chocolate instantáneo.",
@@ -519,6 +531,7 @@ export const representedBrands: Brand[] = [
     slug: "akhan",
     name: "Akhan Makarna",
     logo: "/brands/akhan-logo.png",
+    logoWidth: 44,
     note: loc(
       "Turkish durum wheat pasta from Mardin, in Mesopotamia — the land many consider the birthplace of durum wheat. Business Link is working with Akhan to bring it to the Americas for its history, quality and price.",
       "Pasta turca elaborada en Mardin, en Mesopotamia, la tierra que muchos consideran la cuna del trigo duro. Business Link trabaja con Akhan para traerla a las Américas por su historia, calidad y precio.",
@@ -580,6 +593,7 @@ export const representedBrands: Brand[] = [
     slug: "chupa-chups",
     name: "Chupa Chups Popcorn",
     logo: "/brands/chupa-chups-logo.png",
+    logoWidth: 30,
     note: loc(
       "Chupa Chups Popcorn by CRNCH Popcorn Concepts (Netherlands). Round popcorn glazed in Chupa Chups lollipop flavors.",
       "Palomitas Chupa Chups de CRNCH Popcorn Concepts (Países Bajos). Palomitas redondas glaseadas con sabores de paleta Chupa Chups.",
@@ -603,6 +617,7 @@ export const representedBrands: Brand[] = [
     slug: "starkist",
     name: "StarKist",
     logo: "/brands/starkist-logo.jpg",
+    logoWidth: 84,
     note: loc(
       "Wild-caught tuna and salmon in cans and single-serve pouches. Classic cans, Tuna Creations flavored pouches and StarKist Selects specialty cans.",
       "Atún y salmón de pesca silvestre en latas y sobres individuales. Latas clásicas, sobres saborizados Tuna Creations y latas especiales StarKist Selects.",
@@ -643,6 +658,7 @@ export const representedBrands: Brand[] = [
     slug: "camaguey",
     name: "Camagüey",
     logo: "/brands/camaguey.png",
+    logoWidth: 56,
     catalogHref: undefined,
     catalogLabel: loc("View full catalog", "Ver catálogo completo", "Consulta il catalogo completo"),
     photos: [],

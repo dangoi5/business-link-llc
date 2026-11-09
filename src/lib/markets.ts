@@ -31,6 +31,13 @@ export const markets: Market[] = [
     mapIds: ["us"],
   },
   {
+    id: "mexico",
+    name: loc("Mexico", "México", "Messico"),
+    region: "Americas",
+    status: "active",
+    mapIds: ["mx"],
+  },
+  {
     id: "jamaica",
     name: loc("Jamaica", "Jamaica", "Giamaica"),
     region: "Caribbean",

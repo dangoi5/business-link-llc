@@ -90,15 +90,16 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <section aria-label={t(locale, ui.home.brandsHeading)} className="border-y border-line bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 md:px-8 lg:flex-row lg:items-center lg:gap-12">
           <p className="shrink-0 text-sm font-semibold text-ink">{t(locale, ui.home.brandsHeading)}</p>
-          <ul className="grid flex-1 grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
+          <ul className="grid flex-1 grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-5 sm:gap-x-6 lg:gap-x-8">
             {logos.map((brand) => (
-              <li key={brand.slug} className="flex h-10 items-center justify-center">
+              <li key={brand.slug} className="flex h-14 items-center justify-center">
                 <Image
                   src={brand.logo as string}
                   alt={brand.name}
                   width={160}
                   height={64}
-                  className="h-full w-auto max-w-full object-contain"
+                  className="h-full object-contain"
+                  style={{ width: `${brand.logoWidth ?? 55}%` }}
                 />
               </li>
             ))}
