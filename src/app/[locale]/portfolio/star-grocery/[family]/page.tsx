@@ -3,10 +3,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ProductGroups } from "@/components/ProductGroups";
-import { TextLink } from "@/components/ui";
+import { TealButton, TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, locales, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
+import { getCategoryBySlug } from "@/lib/content";
 import { getStarGroceryFamily, starGroceryFamilies } from "@/lib/star-grocery-catalog";
 
 export function generateStaticParams() {
@@ -38,6 +39,18 @@ export default async function StarGroceryFamilyPage({
   const family = getStarGroceryFamily(slug);
   if (!family) notFound();
 
+  const category = getCategoryBySlug(
+    family.slug === "flint-hroom-snacks" ? "snacks-nuts" : "grocery-consumer",
+  );
+  // The hash brings visitors back to the tile they clicked, so they carry on from there.
+  const backHref = category
+    ? `${localizedHref(locale, `/portfolio/${category.slug}`)}#${family.slug}`
+    : localizedHref(locale, "/portfolio");
+  const backLabel = category
+    ? t(locale, ui.starGrocery.backToCategory).replace("{category}", t(locale, category.title))
+    : t(locale, ui.portfolioPage.heroLabel);
+  const brandHref = localizedHref(locale, "/portfolio/star-grocery");
+
   return (
     <>
       <section className="relative overflow-hidden bg-ink pt-28">
@@ -66,10 +79,9 @@ export default async function StarGroceryFamilyPage({
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
-        <div className="flex flex-wrap gap-x-5 gap-y-2">
-          <TextLink href={localizedHref(locale, "/portfolio/star-grocery")}>
-            {t(locale, ui.starGrocery.backToFamilies)}
-          </TextLink>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <TealButton href={backHref}>{backLabel}</TealButton>
+          <TextLink href={brandHref}>{t(locale, ui.starGrocery.viewOnlyBrand)}</TextLink>
           {family.catalogHref ? (
             <a
               href={family.catalogHref}
@@ -100,6 +112,11 @@ export default async function StarGroceryFamilyPage({
             ),
           }))}
         />
+
+        <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-8">
+          <TealButton href={backHref}>{backLabel}</TealButton>
+          <TextLink href={brandHref}>{t(locale, ui.starGrocery.viewOnlyBrand)}</TextLink>
+        </div>
       </section>
     </>
   );

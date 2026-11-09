@@ -111,6 +111,7 @@ export async function ProductGrid({
         const card = (
           <article
             key={product.slug}
+            id={product.href ? product.slug : undefined}
             className={`relative flex flex-col overflow-hidden rounded-2xl border border-line bg-white ${
               product.href
                 ? "group h-full transition hover:border-brand hover:shadow-lg hover:shadow-ink/5"
