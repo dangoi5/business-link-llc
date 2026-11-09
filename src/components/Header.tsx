@@ -213,12 +213,12 @@ export function Header({ locale }: { locale: Locale }) {
           </Link>
         </div>
 
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3 md:hidden">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2 md:hidden">
           <LanguageSwitcher locale={locale} solid={solid} />
           <button
             type="button"
             aria-label={open ? t(locale, ui.common.closeMenu) : t(locale, ui.common.openMenu)}
-            className={solid ? "text-ink" : "text-white"}
+            className={`flex h-11 w-11 items-center justify-center ${solid ? "text-ink" : "text-white"}`}
             onClick={() => setOpen((v) => !v)}
           >
             <div className="flex h-4 w-5 flex-col justify-between">
