@@ -49,31 +49,31 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
           </p>
         </Reveal>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
           {portfolioCategories.map((category, index) => (
             <Reveal key={category.slug} delay={index * 40}>
               <Link
                 href={localizedHref(locale, `/portfolio/${category.slug}`)}
                 id={category.slug}
-                className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-line bg-white transition hover:border-brand"
+                className="group flex h-full scroll-mt-28 overflow-hidden rounded-2xl border border-line bg-white transition hover:border-brand sm:flex-col"
               >
-                <div className="relative aspect-square overflow-hidden bg-surface">
+                <div className="relative w-28 shrink-0 overflow-hidden bg-surface sm:aspect-square sm:w-full">
                   <Image
                     src={category.image}
                     alt={t(locale, category.title)}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 639px) 112px, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <h3 className="text-lg font-bold tracking-tight text-ink">
+                <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5">
+                  <h3 className="text-base font-bold tracking-tight text-ink sm:text-lg">
                     {t(locale, category.title)}
                   </h3>
-                  <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-slate">
+                  <p className="mt-1 line-clamp-2 flex-1 text-sm leading-relaxed text-slate sm:mt-2 sm:line-clamp-3">
                     {t(locale, category.summary)}
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-1.5">
+                  <div className="mt-4 hidden flex-wrap gap-1.5 sm:flex">
                     {category.channels.map((channel) => (
                       <span
                         key={channel.en}
@@ -83,7 +83,7 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
                       </span>
                     ))}
                   </div>
-                  <span className="mt-4 text-sm font-semibold text-brand transition group-hover:text-brand-deep">
+                  <span className="mt-2 text-sm font-semibold text-brand transition group-hover:text-brand-deep sm:mt-4">
                     {t(locale, ui.portfolioPage.viewProducts)} →
                   </span>
                 </div>
