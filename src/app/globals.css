@@ -206,6 +206,11 @@ main :focus-visible {
   line-height: 0.92;
 }
 
+/* Trims a headline's box to its cap height and baseline, so spacing and alignment follow the letters. */
+.trim-cap {
+  text-box: trim-both cap alphabetic;
+}
+
 .hero-tag {
   font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 0.75rem;

@@ -11,7 +11,7 @@ import { ProductReel } from "./ProductReel";
 const wrap = "mx-auto w-full max-w-[100rem] px-4 md:px-8";
 
 const button =
-  "hero-tag inline-flex items-center justify-center gap-3 border-2 border-ink px-6 py-3.5 whitespace-nowrap transition-colors duration-150 active:translate-y-px";
+  "hero-tag inline-flex h-12 items-center justify-center gap-3 border-2 border-ink px-4 whitespace-nowrap transition-colors duration-150 active:translate-y-px";
 
 /**
  * The reel, by product slug: at least one single-pack photo from every brand, ordered so
@@ -89,18 +89,24 @@ export function HomeHeroStats({ locale }: { locale: Locale }) {
     <div>
       {/* Compact enough that the product shelf is on screen before any scrolling on desktop. */}
       <section className="bg-surface pt-[4.5rem]">
-        <div className={`${wrap} pt-6 pb-7 md:pt-8 md:pb-8`}>
+        {/*
+          Layout rules: the headline box is trimmed to its cap height and baseline (.trim-cap), so
+          spacing is measured from the letters themselves. On desktop the right column is
+          bottom-aligned, so the buttons sit exactly on the headline's last baseline.
+        */}
+        <div className={`${wrap} pt-6 pb-8 md:pt-8 md:pb-10`}>
           <p className="hero-tag text-ink">{t(locale, company.subtitle)}</p>
-          <div className="mt-3 grid gap-5 md:mt-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:items-end lg:gap-14">
+          <div className="mt-5 grid gap-6 md:mt-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,27rem)] lg:items-end lg:gap-12">
             {/* Sized by height as well as width, so short laptop screens still reach the shelf. */}
-            <h1 className="hero-display text-[11vw] text-ink md:text-[clamp(2.75rem,min(5.5vw,10.5vh),6rem)]">
+            <h1 className="hero-display trim-cap text-[11vw] text-ink md:text-[clamp(2.75rem,min(5.5vw,10.5vh),6rem)]">
               {t(locale, ui.home.heroTitle)}
             </h1>
             <div>
-              <p className="max-w-[46ch] text-base leading-snug font-medium text-ink md:text-lg">
+              <p className="max-w-[46ch] text-base leading-normal font-medium text-ink/85 md:text-lg">
                 {t(locale, ui.home.heroBody)}
               </p>
-              <div className="mt-5 flex flex-wrap items-center gap-3">
+              {/* Equal-width buttons that span the paragraph, so the column ends in a clean rectangle. */}
+              <div className="mt-6 grid max-w-[46ch] grid-cols-1 gap-3 min-[400px]:grid-cols-2 lg:max-w-none">
                 <Link
                   href={`${contactHref}?role=buyer`}
                   className={`${button} bg-gold text-ink hover:bg-ink hover:text-gold`}
