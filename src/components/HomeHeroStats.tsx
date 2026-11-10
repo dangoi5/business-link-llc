@@ -1,5 +1,4 @@
 import { Archivo, Geist_Mono } from "next/font/google";
-import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { localizedHref } from "@/i18n/config";
@@ -8,6 +7,7 @@ import { ui } from "@/i18n/ui";
 import { representedBrands } from "@/lib/brands";
 import { activeMarkets, company, portfolioCategories } from "@/lib/content";
 import { getStarGroceryFamily } from "@/lib/star-grocery-catalog";
+import { ProductReel } from "./ProductReel";
 
 // Loaded here rather than in the root layout, so the rest of the site keeps its own type.
 const archivo = Archivo({
@@ -134,36 +134,7 @@ export function HomeHeroStats({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="reel overflow-hidden border-y-2 border-ink bg-white">
-          <div className="reel-track">
-            {[0, 1].map((copy) => (
-              <ul key={copy} aria-hidden={copy === 1} className="flex shrink-0">
-                {reel.map((item, index) => (
-                  <li key={item.key} className="w-[8.5rem] shrink-0 border-r border-ink md:w-[min(14rem,31vh)]">
-                    <Link href={item.href} tabIndex={copy === 1 ? -1 : undefined} className="group block">
-                      <span className="relative block aspect-square overflow-hidden bg-white">
-                        <Image
-                          src={item.image}
-                          alt=""
-                          fill
-                          loading={copy === 0 && index < 10 ? "eager" : "lazy"}
-                          className="object-cover"
-                          sizes="224px"
-                        />
-                      </span>
-                      <span className="block border-t border-ink px-3 py-2.5 transition-colors duration-150 group-hover:bg-gold">
-                        <span className="block truncate text-sm font-semibold text-ink">{item.name}</span>
-                        <span className="hero-tag mt-0.5 block truncate text-slate group-hover:text-ink">
-                          {item.category}
-                        </span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ))}
-          </div>
-        </div>
+        <ProductReel items={reel} />
       </section>
 
       <section className="bg-ink text-white">

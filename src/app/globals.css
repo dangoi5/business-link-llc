@@ -182,41 +182,26 @@ main :focus-visible {
   text-transform: uppercase;
 }
 
-/* Product reel: the list is rendered twice and slid by half its width, so it loops seamlessly. */
-@keyframes reel {
-  to {
-    transform: translateX(-50%);
-  }
+/* Product reel: moved and dragged by ProductReel.tsx. Vertical swipes still scroll the page. */
+.reel {
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.reel.is-dragging {
+  cursor: grabbing;
 }
 
 .reel-track {
   display: flex;
   width: max-content;
-  animation: reel 125s linear infinite;
-}
-
-/* Phones: tiles are 15% smaller, so the loop is shorter too; 92s makes the reel move 15% faster on screen. */
-@media (max-width: 767px) {
-  .reel-track {
-    animation-duration: 92s;
-  }
-}
-
-.reel:hover .reel-track,
-.reel:focus-within .reel-track {
-  animation-play-state: paused;
+  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .reel {
-    overflow-x: auto;
-  }
-
-  .reel-track {
-    animation: none;
   }
 }
