@@ -139,7 +139,7 @@ export function HomeHeroStats({ locale }: { locale: Locale }) {
             {[0, 1].map((copy) => (
               <ul key={copy} aria-hidden={copy === 1} className="flex shrink-0">
                 {reel.map((item, index) => (
-                  <li key={item.key} className="w-40 shrink-0 border-r border-ink md:w-[min(14rem,31vh)]">
+                  <li key={item.key} className="w-[8.5rem] shrink-0 border-r border-ink md:w-[min(14rem,31vh)]">
                     <Link href={item.href} tabIndex={copy === 1 ? -1 : undefined} className="group block">
                       <span className="relative block aspect-square overflow-hidden bg-white">
                         <Image

@@ -195,6 +195,13 @@ main :focus-visible {
   animation: reel 125s linear infinite;
 }
 
+/* Phones: tiles are 15% smaller, so the loop is shorter too; 92s makes the reel move 15% faster on screen. */
+@media (max-width: 767px) {
+  .reel-track {
+    animation-duration: 92s;
+  }
+}
+
 .reel:hover .reel-track,
 .reel:focus-within .reel-track {
   animation-play-state: paused;
