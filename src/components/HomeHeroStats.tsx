@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { localizedHref } from "@/i18n/config";
@@ -8,7 +9,8 @@ import { activeMarkets, company, portfolioCategories } from "@/lib/content";
 import { getStarGroceryFamily } from "@/lib/star-grocery-catalog";
 import { ProductReel } from "./ProductReel";
 
-const wrap = "mx-auto w-full max-w-[100rem] px-4 md:px-8";
+// Same container as the header and footer, so the logo, headline and numbers share one left and right edge.
+const wrap = "mx-auto w-full max-w-7xl px-5 md:px-8";
 
 const button =
   "hero-tag inline-flex h-12 items-center justify-center gap-3 border-2 border-ink px-4 whitespace-nowrap transition-colors duration-150 active:translate-y-px";
@@ -90,38 +92,59 @@ export function HomeHeroStats({ locale }: { locale: Locale }) {
       {/* Compact enough that the product shelf is on screen before any scrolling on desktop. */}
       <section className="bg-surface pt-[4.5rem]">
         {/*
-          Layout rules: the headline box is trimmed to its cap height and baseline (.trim-cap), so
-          spacing is measured from the letters themselves. On desktop the right column is
-          bottom-aligned, so the buttons sit exactly on the headline's last baseline.
+          Desktop is a two-by-two grid: a flexible headline column and a fixed 25rem column.
+          The numbers bar below runs edge to edge, so the headline's left edge meets "35+" and the
+          right column's right edge meets "10".
+            row 1: eyebrow            | (empty)
+            row 2: headline           | pitch, buttons, direct email   (tops aligned at the cap height)
+          The left column never moves for the right one: the headline always sits right under
+          the eyebrow. Headline and pitch are trimmed to cap height (.trim-cap) so their tops
+          line up on the letters. On phones everything stacks in that order.
         */}
-        <div className={`${wrap} pt-6 pb-8 md:pt-8 md:pb-10`}>
-          <p className="hero-tag text-ink">{t(locale, company.subtitle)}</p>
-          <div className="mt-5 grid gap-6 md:mt-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,27rem)] lg:items-end lg:gap-12">
-            {/* Sized by height as well as width, so short laptop screens still reach the shelf. */}
-            <h1 className="hero-display trim-cap text-[11vw] text-ink md:text-[clamp(2.75rem,min(5.5vw,10.5vh),6rem)]">
-              {t(locale, ui.home.heroTitle)}
-            </h1>
-            <div>
-              <p className="max-w-[46ch] text-base leading-normal font-medium text-ink/85 md:text-lg">
-                {t(locale, ui.home.heroBody)}
-              </p>
-              {/* Equal-width buttons that span the paragraph, so the column ends in a clean rectangle. */}
-              <div className="mt-6 grid max-w-[46ch] grid-cols-1 gap-3 min-[400px]:grid-cols-2 lg:max-w-none">
-                <Link
-                  href={`${contactHref}?role=buyer`}
-                  className={`${button} bg-gold text-ink hover:bg-ink hover:text-gold`}
-                >
-                  {t(locale, ui.common.getInTouch)}
-                  <span aria-hidden>→</span>
-                </Link>
-                <Link
-                  href={`${contactHref}?role=manufacturer`}
-                  className={`${button} text-ink hover:bg-ink hover:text-white`}
-                >
-                  {t(locale, ui.home.heroSupplier)}
-                </Link>
-              </div>
+        <div
+          className={`${wrap} grid pt-6 pb-8 md:pt-8 md:pb-10 lg:grid-cols-[minmax(0,1fr)_25rem] lg:items-start lg:gap-x-12`}
+        >
+          <p className="hero-tag text-ink lg:col-start-1 lg:row-start-1 lg:self-baseline">
+            {t(locale, company.subtitle)}
+          </p>
+          {/*
+            Three lines on desktop: "Food, exported / and distributed / worldwide." The 8.5em cap
+            fits each of those lines (about 6.8em at most) but not "Food, exported and" (about
+            8.9em), so the breaks stay put at every width. Also sized by height so short laptops
+            still reach the shelf.
+          */}
+          <h1 className="hero-display trim-cap mt-5 text-[11vw] text-ink md:mt-6 md:text-[clamp(2.75rem,min(5.2vw,10.5vh),5rem)] lg:col-start-1 lg:row-start-2 lg:max-w-[8.5em]">
+            {t(locale, ui.home.heroTitle)}
+          </h1>
+          <div className="mt-8 max-w-[30rem] md:mt-6 lg:col-start-2 lg:row-start-2 lg:max-w-none">
+            <p className="trim-cap text-base leading-normal font-medium text-ink/85 md:text-lg">
+              {t(locale, ui.home.heroBody)}
+            </p>
+            {/* Equal-width buttons that span the paragraph, so the column ends in a clean rectangle. */}
+            <div className="mt-6 grid grid-cols-1 gap-3 min-[400px]:grid-cols-2">
+              <Link
+                href={`${contactHref}?role=buyer`}
+                className={`${button} bg-gold text-ink hover:bg-ink hover:text-gold`}
+              >
+                {t(locale, ui.common.getInTouch)}
+                <span aria-hidden>→</span>
+              </Link>
+              <Link
+                href={`${contactHref}?role=manufacturer`}
+                className={`${button} text-ink hover:bg-ink hover:text-white`}
+              >
+                {t(locale, ui.home.heroSupplier)}
+              </Link>
             </div>
+            <p className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <span className="hero-tag text-slate">{t(locale, ui.home.heroOrEmail)}</span>
+              <a
+                href={`mailto:${company.email}`}
+                className="text-sm font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4 transition-colors duration-150 hover:text-brand"
+              >
+                {company.email}
+              </a>
+            </p>
           </div>
         </div>
 
@@ -129,21 +152,30 @@ export function HomeHeroStats({ locale }: { locale: Locale }) {
       </section>
 
       <section className="bg-ink text-white">
-        <dl className={`${wrap} grid grid-cols-2 lg:grid-cols-4`}>
+        {/*
+          Desktop: the four numbers are spread edge to edge with equal space between them, so
+          "35+" starts on the container's left edge (under the headline) and "10" ends on its
+          right edge (under the pitch and buttons). Dividers sit exactly halfway between numbers.
+          Each label wraps to its number's width (w-0 min-w-full), so the numbers set the edges.
+          Phones and tablets keep the two-by-two grid.
+        */}
+        <div className={`${wrap} grid grid-cols-2 lg:flex lg:justify-between`}>
           {stats.map((stat, index) => (
-            <div
-              key={stat.label}
-              className={`flex flex-col-reverse justify-end py-8 md:py-10 ${
-                index % 2 === 1 ? "border-l border-white/25 pl-4 md:pl-8" : ""
-              } ${index > 1 ? "border-t border-white/25 lg:border-t-0" : ""} ${
-                index === 2 ? "lg:border-l lg:border-white/25 lg:pl-8" : ""
-              }`}
-            >
-              <dt className="hero-tag mt-3 max-w-[20ch] text-white/75">{stat.label}</dt>
-              <dd className="hero-display text-7xl tabular-nums md:text-9xl">{stat.value}</dd>
-            </div>
+            <Fragment key={stat.label}>
+              {index > 0 ? <span aria-hidden className="hidden w-px self-stretch bg-white/25 lg:block" /> : null}
+              <div
+                className={`flex flex-col py-8 md:py-10 ${
+                  index % 2 === 1 ? "border-l border-white/25 pl-4 md:pl-8 lg:border-l-0 lg:pl-0" : ""
+                } ${index > 1 ? "border-t border-white/25 lg:border-t-0" : ""}`}
+              >
+                <p className="hero-display text-7xl tabular-nums md:text-9xl">{stat.value}</p>
+                <p className="hero-tag mt-3 max-w-[20ch] text-white/75 lg:w-0 lg:min-w-full lg:max-w-none">
+                  {stat.label}
+                </p>
+              </div>
+            </Fragment>
           ))}
-        </dl>
+        </div>
       </section>
     </div>
   );
