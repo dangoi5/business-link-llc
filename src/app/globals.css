@@ -162,7 +162,7 @@ main :focus-visible {
   }
 }
 
-/* Home hero and numbers bar only: heavy condensed headlines and small mono labels. */
+/* Home hero, numbers bar and footer email: heavy condensed headlines and small mono labels. */
 .hero-display {
   font-family: var(--font-archivo), system-ui, sans-serif;
   font-variation-settings: "wdth" 68;

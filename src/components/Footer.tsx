@@ -4,10 +4,11 @@ import { localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import { company, navLinks } from "@/lib/content";
+import { archivo } from "@/lib/fonts";
 
 export function Footer({ locale }: { locale: Locale }) {
   return (
-    <footer className="bg-ink text-white">
+    <footer className={`${archivo.variable} bg-ink text-white`}>
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.3fr_1fr_1fr] md:px-8">
         <div>
           <Link
@@ -46,12 +47,20 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
         <div>
           <p className="text-sm font-semibold text-white">{t(locale, ui.common.contact)}</p>
-          <a href={`mailto:${company.email}`} className="mt-4 block text-sm text-gold hover:underline">
-            {company.email}
-          </a>
-          <p className="mt-3 text-sm leading-relaxed text-white/65">
+          <p className="mt-4 text-sm leading-relaxed text-white/65">
             {t(locale, ui.common.footerBlurb)}
           </p>
+        </div>
+      </div>
+      {/* The email as a headline of its own, carried over from the redesign test site. */}
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="border-t border-white/10 py-10">
+          <a
+            href={`mailto:${company.email}`}
+            className="hero-display text-2xl break-all text-white underline decoration-gold decoration-2 underline-offset-4 transition-colors duration-150 hover:text-gold md:text-4xl"
+          >
+            {company.email}
+          </a>
         </div>
       </div>
       <div className="border-t border-white/10">

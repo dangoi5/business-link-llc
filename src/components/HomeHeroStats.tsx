@@ -1,4 +1,4 @@
-import { Archivo, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { localizedHref } from "@/i18n/config";
@@ -6,17 +6,11 @@ import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import { representedBrands } from "@/lib/brands";
 import { activeMarkets, company, portfolioCategories } from "@/lib/content";
+import { archivo } from "@/lib/fonts";
 import { getStarGroceryFamily } from "@/lib/star-grocery-catalog";
 import { ProductReel } from "./ProductReel";
 
 // Loaded here rather than in the root layout, so the rest of the site keeps its own type.
-const archivo = Archivo({
-  variable: "--font-archivo",
-  axes: ["wdth"],
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-});
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin", "latin-ext"],
