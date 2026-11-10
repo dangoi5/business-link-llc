@@ -93,6 +93,8 @@ export const ui = {
       "Mettiamo in contatto produttori con importatori, distributori e acquirenti foodservice, e vendiamo la nostra linea, Fresh Elements.",
     ),
     heroSupplier: loc("Become a supplier", "Ser proveedor", "Diventa fornitore"),
+    statYears: loc("Years of international experience", "Años de experiencia internacional", "Anni di esperienza internazionale"),
+    statBrands: loc("Brands represented", "Marcas representadas", "Marchi rappresentati"),
     brandsHeading: loc("Brands we work with", "Marcas con las que trabajamos", "Marchi con cui lavoriamo"),
     freshTitle: loc("Fresh Elements, our own line", "Fresh Elements, nuestra línea propia", "Fresh Elements, la nostra linea"),
     freshBody: loc(

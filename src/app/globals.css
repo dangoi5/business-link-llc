@@ -162,8 +162,54 @@ main :focus-visible {
   }
 }
 
+/* Home hero and numbers bar only: heavy condensed headlines and small mono labels. */
+.hero-display {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-variation-settings: "wdth" 68;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  line-height: 0.92;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.hero-tag {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Product reel: the list is rendered twice and slid by half its width, so it loops seamlessly. */
+@keyframes reel {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.reel-track {
+  display: flex;
+  width: max-content;
+  animation: reel 125s linear infinite;
+}
+
+.reel:hover .reel-track,
+.reel:focus-within .reel-track {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .reel {
+    overflow-x: auto;
+  }
+
+  .reel-track {
+    animation: none;
   }
 }
