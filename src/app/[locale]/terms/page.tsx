@@ -33,7 +33,7 @@ export default async function TermsPage({ params }: PageProps<"/[locale]/terms">
       />
       <section className="mx-auto max-w-4xl px-5 py-16 md:px-8 md:py-24">
         <div className="rounded-2xl border border-line bg-white p-7 md:p-10">
-          <h2 className="text-2xl font-bold text-ink md:text-3xl">{t(locale, ui.termsPage.heading)}</h2>
+          <h2 className="display type-3 text-ink">{t(locale, ui.termsPage.heading)}</h2>
           <p className="mt-4 text-sm leading-relaxed text-slate md:text-base">{t(locale, termsIntro)}</p>
           <div className="mt-10 space-y-10">
             {termsSections.map((section, index) => (

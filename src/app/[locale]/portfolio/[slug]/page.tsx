@@ -59,7 +59,7 @@ export default async function PortfolioCategoryPage({
           <p className="eyebrow text-gold">
             <span>{t(locale, ui.portfolioPage.heroLabel)}</span>
           </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">
+          <h1 className="display type-1 mt-4 max-w-3xl text-white">
             {t(locale, category.title)}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
@@ -87,7 +87,7 @@ export default async function PortfolioCategoryPage({
 
         {isSupplyPage ? (
           <div className="mt-10">
-            <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+            <h2 className="display type-3 text-ink">
               {t(locale, ui.categoryPage.buyersTitle)}
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
@@ -131,7 +131,7 @@ export default async function PortfolioCategoryPage({
               </div>
               <div className="p-6 md:p-8">
                 <p className="text-xs font-bold tracking-wider text-gold-ink uppercase">AmeriQual Foods</p>
-                <h2 className="mt-2 text-xl font-bold text-ink md:text-2xl">
+                <h2 className="display type-4 mt-2 text-ink">
                   {t(locale, ui.ameriqualMilitary.bannerTitle)}
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
@@ -146,7 +146,7 @@ export default async function PortfolioCategoryPage({
         ) : null}
 
         <div className="mt-10">
-          <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+          <h2 className="display type-3 text-ink">
             {t(locale, isSupplyPage ? ui.categoryPage.featuredProductsTitle : ui.categoryPage.products)}
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate md:text-base">

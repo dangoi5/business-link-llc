@@ -36,7 +36,8 @@
   --color-gold-hover: var(--gold-hover);
   --color-gold-ink: var(--gold-ink);
   --font-sans: var(--font-geist), system-ui, sans-serif;
-  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-display: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   --z-header: 50;
   --z-menu: 60;
   --z-skip: 100;
@@ -74,13 +75,50 @@ p {
   color: var(--ink);
 }
 
-/* Display face for headlines: a characterful grotesque with an optical-size axis. */
-.display {
-  font-family: var(--font-bricolage), system-ui, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
+/*
+ * Type system: Archivo condensed for headlines (.display), Geist for reading text,
+ * Geist Mono for small labels (.eyebrow, .hero-tag). Card and product titles stay in Geist.
+ */
+.display,
+.hero-display {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-variation-settings: "wdth" 68;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+/* Heading sizes. Pair with .display; very large hero and call-to-action lines size themselves. */
+.type-1 {
+  font-size: 2.5rem;
+}
+.type-2 {
+  font-size: 2rem;
+}
+.type-3 {
+  font-size: 1.625rem;
+}
+.type-4 {
+  font-size: 1.375rem;
+}
+
+@media (min-width: 768px) {
+  .type-1 {
+    font-size: 3.75rem;
+  }
+  .type-2 {
+    font-size: 3rem;
+  }
+  .type-3 {
+    font-size: 2.125rem;
+  }
+  .type-4 {
+    font-size: 1.625rem;
+  }
 }
 
 .numeral {
@@ -93,9 +131,10 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -162,16 +201,9 @@ main :focus-visible {
   }
 }
 
-/* Home hero, numbers bar and footer email: heavy condensed headlines and small mono labels. */
+/* Home hero, numbers bar and footer: the .display face set a touch tighter for very large lines. */
 .hero-display {
-  font-family: var(--font-archivo), system-ui, sans-serif;
-  font-variation-settings: "wdth" 68;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.005em;
   line-height: 0.92;
-  overflow-wrap: anywhere;
-  min-width: 0;
 }
 
 .hero-tag {

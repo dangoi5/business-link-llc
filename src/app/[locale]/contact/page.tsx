@@ -43,7 +43,7 @@ export default async function ContactPage({ params, searchParams }: PageProps<"/
 
         <Reveal>
           <SectionLabel>{t(locale, ui.contactPage.whyLabel)}</SectionLabel>
-          <h2 className="mt-3 text-2xl font-bold text-ink md:text-3xl">
+          <h2 className="display type-3 mt-3 text-ink">
             {t(locale, ui.contactPage.whyTitle)}
           </h2>
           <ul className="mt-6 space-y-4 text-sm leading-relaxed text-slate md:text-base">

@@ -4,12 +4,11 @@ import { localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import { company, navLinks } from "@/lib/content";
-import { archivo, geistMono } from "@/lib/fonts";
 
 /** Carried over from the redesign test site, sized to the main site's container and type. */
 export function Footer({ locale }: { locale: Locale }) {
   return (
-    <footer className={`${archivo.variable} ${geistMono.variable} bg-ink text-white`}>
+    <footer className="bg-ink text-white">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <p className="hero-display max-w-4xl py-12 text-3xl text-white sm:text-4xl md:py-16 md:text-5xl">
           {t(locale, company.tagline)}

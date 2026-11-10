@@ -72,7 +72,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-16 md:grid-cols-2 md:px-8 md:py-24">
           <Reveal>
             <div className="h-full rounded-2xl border border-line bg-white p-7 md:p-8">
-              <h2 className="text-xl font-bold text-ink md:text-2xl">{t(locale, a.missionTitle)}</h2>
+              <h2 className="display type-4 text-ink">{t(locale, a.missionTitle)}</h2>
               <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate md:text-base">
                 {a.mission.map((p) => (
                   <p key={p.en}>{t(locale, p)}</p>
@@ -82,7 +82,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
           </Reveal>
           <Reveal>
             <div className="h-full rounded-2xl border border-line bg-white p-7 md:p-8">
-              <h2 className="text-xl font-bold text-ink md:text-2xl">{t(locale, a.visionTitle)}</h2>
+              <h2 className="display type-4 text-ink">{t(locale, a.visionTitle)}</h2>
               <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate md:text-base">
                 {a.vision.map((p) => (
                   <p key={p.en}>{t(locale, p)}</p>

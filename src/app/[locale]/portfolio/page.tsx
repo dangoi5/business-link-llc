@@ -37,7 +37,7 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
 
       <section className="mx-auto max-w-7xl px-5 pt-10 pb-16 md:px-8 md:pt-12 md:pb-24">
         <Reveal className="mb-6">
-          <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+          <h2 className="display type-3 text-ink">
             {t(locale, ui.portfolioPage.foodCategories)}
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
@@ -84,7 +84,7 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
         </div>
 
         <Reveal className="mt-14 rounded-2xl bg-brand p-8 text-white md:p-10">
-          <h3 className="text-2xl font-bold">{t(locale, ui.portfolioPage.lookingTitle)}</h3>
+          <h3 className="display type-3">{t(locale, ui.portfolioPage.lookingTitle)}</h3>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/75 md:text-base">
             {t(locale, ui.portfolioPage.lookingBody)}
           </p>

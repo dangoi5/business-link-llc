@@ -1,9 +1,10 @@
-import { Archivo, Geist_Mono } from "next/font/google";
+import { Archivo, Geist, Geist_Mono } from "next/font/google";
 
-// Loaded per section rather than in the root layout, so the rest of the site keeps its own type.
-// Apply `.variable` on the element that uses `.hero-display` / `.hero-tag`.
+/**
+ * The site's three type families, loaded once in the root layout:
+ * Archivo (condensed) for headlines, Geist for reading text, Geist Mono for small labels.
+ */
 
-/** Condensed display face for the home hero and the footer. */
 export const archivo = Archivo({
   variable: "--font-archivo",
   axes: ["wdth"],
@@ -11,7 +12,12 @@ export const archivo = Archivo({
   display: "swap",
 });
 
-/** Small uppercase labels in the home hero and the footer. */
+export const geist = Geist({
+  variable: "--font-geist",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+
 export const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin", "latin-ext"],

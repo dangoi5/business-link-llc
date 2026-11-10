@@ -69,7 +69,7 @@ export default async function StarGroceryFamilyPage({
           <p className="eyebrow text-gold">
             <span>{family.brand}</span>
           </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">
+          <h1 className="display type-1 mt-4 max-w-3xl text-white">
             {t(locale, family.name)}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
@@ -104,7 +104,7 @@ export default async function StarGroceryFamilyPage({
             count: group.products.length,
             content: (
               <>
-                <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+                <h2 className="display type-3 text-ink">
                   {family.groups.length > 1 ? t(locale, group.label) : t(locale, ui.starGrocery.flavors)}
                 </h2>
                 <ProductGrid products={group.products} locale={locale} />

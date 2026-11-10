@@ -61,7 +61,7 @@ export default async function AmeriqualMilitaryPage({
             </div>
           </div>
           <SectionLabel light>{t(locale, ui.ameriqualMilitary.heroLabel)}</SectionLabel>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">
+          <h1 className="display type-1 mt-4 max-w-3xl text-white">
             {t(locale, ui.ameriqualMilitary.heroTitle)}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
@@ -88,7 +88,7 @@ export default async function AmeriqualMilitaryPage({
           </Reveal>
           <Reveal delay={80}>
             <SectionLabel>{t(locale, ui.ameriqualMilitary.heroLabel)}</SectionLabel>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink md:text-4xl">
+            <h2 className="display type-2 mt-3 text-ink">
               {t(locale, ui.ameriqualMilitary.supportsTitle)}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-slate md:text-lg">
@@ -106,7 +106,7 @@ export default async function AmeriqualMilitaryPage({
       <section className="bg-surface py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight text-ink md:text-4xl">
+            <h2 className="display type-2 text-ink">
               {t(locale, ui.ameriqualMilitary.individualLabel)}
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate">
@@ -184,7 +184,7 @@ export default async function AmeriqualMilitaryPage({
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>
-          <h2 className="text-3xl font-bold tracking-tight text-ink md:text-4xl">
+          <h2 className="display type-2 text-ink">
             {t(locale, ui.ameriqualMilitary.groupLabel)}
           </h2>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate">
@@ -234,7 +234,7 @@ export default async function AmeriqualMilitaryPage({
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="grid items-center gap-10 lg:grid-cols-[1fr_minmax(0,22rem)]">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+              <h2 className="display type-3 text-ink">
                 {t(locale, ui.ameriqualMilitary.commercialLabel)}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-slate md:text-base">

@@ -56,7 +56,7 @@ export default async function StarKistCatalogPage({
             count: group.products.length,
             content: (
               <section>
-                <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+                <h2 className="display type-3 text-ink">
                   {t(locale, group.label)}
                 </h2>
                 <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate md:text-base">

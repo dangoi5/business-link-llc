@@ -35,7 +35,7 @@ export default async function PrivacyPage({ params }: PageProps<"/[locale]/priva
         <div className="space-y-10">
           {privacySections.map((section) => (
             <Reveal key={section.title.en}>
-              <h2 className="text-xl font-bold text-ink">{t(locale, section.title)}</h2>
+              <h2 className="display type-4 text-ink">{t(locale, section.title)}</h2>
               <div className="mt-3 space-y-3 text-sm leading-relaxed text-slate md:text-base">
                 {section.body.map((paragraph) => (
                   <p key={paragraph.en}>{t(locale, paragraph)}</p>

@@ -55,7 +55,7 @@ export default async function MarketsPage({ params }: PageProps<"/[locale]/marke
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionLabel light>{t(locale, ui.marketsPage.distribution)}</SectionLabel>
-            <h2 className="mt-3 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
+            <h2 className="display type-2 mt-3 max-w-2xl">
               {t(locale, ui.marketsPage.distributionTitle)}
             </h2>
           </Reveal>

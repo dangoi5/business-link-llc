@@ -5,7 +5,6 @@ import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
 import { representedBrands } from "@/lib/brands";
 import { activeMarkets, company, portfolioCategories } from "@/lib/content";
-import { archivo, geistMono } from "@/lib/fonts";
 import { getStarGroceryFamily } from "@/lib/star-grocery-catalog";
 import { ProductReel } from "./ProductReel";
 
@@ -87,7 +86,7 @@ export function HomeHeroStats({ locale }: { locale: Locale }) {
   });
 
   return (
-    <div className={`${archivo.variable} ${geistMono.variable}`}>
+    <div>
       {/* Compact enough that the product shelf is on screen before any scrolling on desktop. */}
       <section className="bg-surface pt-[4.5rem]">
         <div className={`${wrap} pt-6 pb-7 md:pt-8 md:pb-8`}>

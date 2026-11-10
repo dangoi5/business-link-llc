@@ -69,7 +69,7 @@ export default async function FreshElementsCatalogPage({
                   <p className="text-xs font-bold tracking-wider text-gold-ink uppercase">
                     {t(locale, ui.common.ownBrand)}
                   </p>
-                  <h2 className="mt-2 text-2xl font-bold tracking-tight text-ink md:text-3xl">
+                  <h2 className="display type-3 mt-2 text-ink">
                     {t(locale, line.label)}
                   </h2>
                   {line.detail ? (

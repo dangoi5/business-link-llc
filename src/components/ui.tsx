@@ -25,7 +25,7 @@ export function SectionHeading({
     <div className="max-w-2xl">
       {label ? <SectionLabel light={light}>{label}</SectionLabel> : null}
       <h2
-        className={`display mt-3 text-3xl md:text-[2.75rem] ${light ? "text-white" : "text-ink"}`}
+        className={`display type-2 mt-3 ${light ? "text-white" : "text-ink"}`}
       >
         {title}
       </h2>
@@ -117,7 +117,7 @@ export function PageHero({
       <div className="relative mx-auto flex max-w-7xl flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between md:gap-12 md:px-8">
         <div className="min-w-0">
           <SectionLabel light>{label}</SectionLabel>
-          <h1 className="display mt-4 max-w-3xl text-4xl break-words text-white md:text-6xl">
+          <h1 className="display type-1 mt-4 max-w-3xl text-white">
             {title}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">{description}</p>

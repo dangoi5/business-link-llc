@@ -64,7 +64,7 @@ export default async function AkhanCatalogPage({
 
         <Reveal className="mt-16">
           <div className="rounded-2xl bg-ink px-7 py-10 text-white md:px-12 md:py-12">
-            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">{t(locale, ui.akhan.americasTitle)}</h2>
+            <h2 className="display type-3">{t(locale, ui.akhan.americasTitle)}</h2>
             <div className="mt-5 max-w-3xl space-y-4 text-base leading-relaxed text-white/80 md:text-lg">
               {ui.akhan.americasBody.map((p) => (
                 <p key={p.en}>{t(locale, p)}</p>
@@ -73,7 +73,7 @@ export default async function AkhanCatalogPage({
           </div>
         </Reveal>
 
-        <h2 className="display mt-20 text-3xl text-ink md:text-[2.75rem]">{t(locale, ui.akhan.rangeTitle)}</h2>
+        <h2 className="display type-2 mt-20 text-ink">{t(locale, ui.akhan.rangeTitle)}</h2>
 
         <ProductGroups
           className="mt-6 sm:mt-10"
@@ -84,7 +84,7 @@ export default async function AkhanCatalogPage({
             count: group.products.length,
             content: (
               <section>
-                <h3 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+                <h3 className="display type-3 text-ink">
                   {t(locale, group.label)}
                 </h3>
                 <ProductGrid products={group.products} locale={locale} />

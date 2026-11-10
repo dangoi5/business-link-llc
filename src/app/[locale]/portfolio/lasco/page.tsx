@@ -56,7 +56,7 @@ export default async function LascoCatalogPage({
             count: group.products.length,
             content: (
               <section>
-                <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+                <h2 className="display type-3 text-ink">
                   {t(locale, group.label)}
                 </h2>
                 <ProductGrid products={group.products} locale={locale} />
