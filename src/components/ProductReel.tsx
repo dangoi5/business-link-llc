@@ -20,7 +20,7 @@ const DRAG_THRESHOLD = 6;
 
 /**
  * Moving product shelf. The list is rendered twice and the offset wraps at half the track,
- * so it loops seamlessly. It drifts on its own, pauses while hovered, focused or held,
+ * so it loops seamlessly. It drifts on its own, pauses only while held or keyboard-focused,
  * and can be dragged sideways with a finger or mouse.
  */
 export function ProductReel({ items }: { items: ReelItem[] }) {
@@ -38,7 +38,6 @@ export function ProductReel({ items }: { items: ReelItem[] }) {
     let offset = 0;
     let last = performance.now();
     let frame = 0;
-    let hovering = false;
     let focused = false;
     let pressed = false;
     let dragging = false;
@@ -59,7 +58,7 @@ export function ProductReel({ items }: { items: ReelItem[] }) {
     const tick = (now: number) => {
       const elapsed = Math.min(now - last, 100);
       last = now;
-      if (!pressed && !hovering && !focused && !reduceMotion.matches && !document.hidden) {
+      if (!pressed && !focused && !reduceMotion.matches && !document.hidden) {
         const loopMs = (phone.matches ? LOOP_SECONDS_PHONE : LOOP_SECONDS_DESKTOP) * 1000;
         offset = wrapOffset(offset + (half() * elapsed) / loopMs);
         render();
@@ -113,14 +112,9 @@ export function ProductReel({ items }: { items: ReelItem[] }) {
       event.stopPropagation();
     };
 
-    const onEnter = (event: PointerEvent) => {
-      if (event.pointerType === "mouse") hovering = true;
-    };
-    const onLeave = (event: PointerEvent) => {
-      if (event.pointerType === "mouse") hovering = false;
-    };
-    const onFocusIn = () => {
-      focused = true;
+    // Only keyboard focus pauses the reel; a mouse press also focuses the link it lands on.
+    const onFocusIn = (event: FocusEvent) => {
+      focused = (event.target as Element).matches(":focus-visible");
     };
     const onFocusOut = (event: FocusEvent) => {
       if (!reel.contains(event.relatedTarget as Node | null)) focused = false;
@@ -135,8 +129,6 @@ export function ProductReel({ items }: { items: ReelItem[] }) {
     reel.addEventListener("pointerup", endPress);
     reel.addEventListener("pointercancel", endPress);
     reel.addEventListener("click", onClick, true);
-    reel.addEventListener("pointerenter", onEnter);
-    reel.addEventListener("pointerleave", onLeave);
     reel.addEventListener("focusin", onFocusIn);
     reel.addEventListener("focusout", onFocusOut);
     window.addEventListener("resize", onResize);
@@ -148,8 +140,6 @@ export function ProductReel({ items }: { items: ReelItem[] }) {
       reel.removeEventListener("pointerup", endPress);
       reel.removeEventListener("pointercancel", endPress);
       reel.removeEventListener("click", onClick, true);
-      reel.removeEventListener("pointerenter", onEnter);
-      reel.removeEventListener("pointerleave", onLeave);
       reel.removeEventListener("focusin", onFocusIn);
       reel.removeEventListener("focusout", onFocusOut);
       window.removeEventListener("resize", onResize);
