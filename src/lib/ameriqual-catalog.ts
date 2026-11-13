@@ -632,32 +632,6 @@ export const ameriqualShelfStableProducts: PortfolioProduct[] = [
       sodium: "40mg",
     }),
   },
-  {
-    slug: "elbows-pasta",
-    name: loc("Food Life Balanced Elbows", "Coditos Food Life Balanced", "Gomiti Food Life Balanced"),
-    description: loc(
-      "Domestic enriched elbow macaroni from Food Life Balanced. 1 lb retail carton, with additional shapes and a whole-grain option available.",
-      "Coditos enriquecidos de producción nacional de Food Life Balanced. Caja retail de 1 lb, con otros formatos y opción integral disponibles.",
-      "Gomiti arricchiti di produzione nazionale di Food Life Balanced. Scatola retail da 1 lb, con altri formati e opzione integrale disponibili.",
-    ),
-    image: "/products/ameriqual/elbows-pasta.jpg",
-    details: [
-      flb,
-      loc("1 lb carton", "Caja de 1 lb", "Scatola da 1 lb"),
-      loc("Domestic product", "Producto nacional", "Prodotto nazionale"),
-      loc("Enriched macaroni", "Macarrón enriquecido", "Maccheroni arricchiti"),
-    ],
-    imageFit: "contain",
-    nutrition: nf("2 oz (55g)", "2 oz (55 g)", "2 oz (55 g)", "190", {
-      servingsEn: "8 servings per container",
-      servingsEs: "8 porciones por envase",
-      servingsIt: "8 porzioni per confezione",
-      protein: "7g",
-      fat: "1g",
-      carbs: "40g",
-      sodium: "0mg",
-    }),
-  },
 ];
 
 export const ameriqualFoodserviceProducts: PortfolioProduct[] = [
