@@ -451,9 +451,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Snacks", "Snacks", "Snack"),
         detail: loc(
-          "Cronchy Protein, quinoa toasts, sacha inchi toasts, rings, Quinoa Snacks, Quinoa Puff and Quinoa Chips",
-          "Cronchy Protein, tostadas de quinua, tostaditas de sacha inchi, aros, Quinoa Snacks, Quinoa Puff y Quinoa Chips",
-          "Cronchy Protein, toast di quinoa, toast di sacha inchi, anelli, Quinoa Snacks, Quinoa Puff e Quinoa Chips",
+          "Cronchy Protein, quinoa toasts, rings, Quinoa Snacks, Quinoa Puff and Quinoa Chips",
+          "Cronchy Protein, tostadas de quinua, aros, Quinoa Snacks, Quinoa Puff y Quinoa Chips",
+          "Cronchy Protein, toast di quinoa, anelli, Quinoa Snacks, Quinoa Puff e Quinoa Chips",
         ),
       },
     ],
