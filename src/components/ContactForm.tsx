@@ -22,9 +22,11 @@ const MAX = {
 export function ContactForm({
   locale,
   defaultRole = "manufacturer",
+  defaultProduct,
 }: {
   locale: Locale;
   defaultRole?: (typeof roleKeys)[number];
+  defaultProduct?: string;
 }) {
   const statusId = useId();
   const [phoneKey, setPhoneKey] = useState(0);
@@ -174,6 +176,7 @@ export function ContactForm({
           <span className="font-medium text-ink">{t(locale, ui.form.product)}</span>
           <input
             name="product"
+            defaultValue={defaultProduct}
             maxLength={MAX.product}
             disabled={status === "sending"}
             className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 disabled:opacity-70"

@@ -22,8 +22,10 @@ export async function generateMetadata({
 
 export default async function ContactPage({ params, searchParams }: PageProps<"/[locale]/contact">) {
   const { locale: raw } = await params;
-  const { role } = await searchParams;
+  const { role, product } = await searchParams;
   const defaultRole = (["manufacturer", "buyer", "other"] as const).find((key) => key === role) ?? "buyer";
+  // Set by "Inquire about this product" in a product's details window.
+  const defaultProduct = typeof product === "string" ? product.slice(0, 160) : undefined;
   if (!isLocale(raw)) notFound();
   const locale: Locale = raw;
 
@@ -38,7 +40,7 @@ export default async function ContactPage({ params, searchParams }: PageProps<"/
       {/* The form comes first in the markup so phones reach it right after the hero. */}
       <section className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 pt-8 pb-16 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:px-8 md:pt-14 md:pb-24">
         <Reveal className="md:order-last">
-          <ContactForm locale={locale} defaultRole={defaultRole} />
+          <ContactForm locale={locale} defaultRole={defaultRole} defaultProduct={defaultProduct} />
         </Reveal>
 
         <Reveal>

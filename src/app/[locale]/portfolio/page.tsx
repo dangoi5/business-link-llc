@@ -43,6 +43,9 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
             {t(locale, ui.portfolioPage.foodCategoriesBody)}
           </p>
+          <div className="mt-4">
+            <TextLink href={localizedHref(locale, "/products")}>{t(locale, ui.catalog.browseAll)}</TextLink>
+          </div>
         </Reveal>
 
         {/*

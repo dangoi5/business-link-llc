@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "dev", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev"], "port": 3000 }
+    { "name": "dev", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev"], "port": 3000 },
+    { "name": "redesign", "runtimeExecutable": "npm", "runtimeArgs": ["--prefix", "../foodbusiness-redesign", "run", "dev", "--", "-p", "3100"], "port": 3100 }
   ]
 }

@@ -78,7 +78,7 @@ export default async function FreshElementsCatalogPage({
                     </p>
                   ) : null}
 
-                  <ProductGrid products={products} locale={locale} />
+                  <ProductGrid products={products} locale={locale} brand="Fresh Elements" />
                 </section>
               </Reveal>
               ),

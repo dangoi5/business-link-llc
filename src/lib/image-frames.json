@@ -1,0 +1,2962 @@
+{
+ "/products/akhan/acini-di-pepe.jpg": {
+  "aspect": 1.008,
+  "x": 0.2857,
+  "y": 0.2347,
+  "w": 0.4577,
+  "h": 0.5387,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/bucatini.jpg": {
+  "aspect": 1.008,
+  "x": 0.409,
+  "y": 0.1729,
+  "w": 0.1768,
+  "h": 0.6915,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/cornetto-lisci.jpg": {
+  "aspect": 1.008,
+  "x": 0.2639,
+  "y": 0.2287,
+  "w": 0.4538,
+  "h": 0.5426,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/cornetto-rigati.jpg": {
+  "aspect": 1.0053,
+  "x": 0.2646,
+  "y": 0.234,
+  "w": 0.4577,
+  "h": 0.5399,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/couscous.jpg": {
+  "aspect": 1.008,
+  "x": 0.2718,
+  "y": 0.234,
+  "w": 0.4538,
+  "h": 0.5399,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/ditalini.jpg": {
+  "aspect": 1.0107,
+  "x": 0.285,
+  "y": 0.2347,
+  "w": 0.4565,
+  "h": 0.5387,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/farfalle.jpg": {
+  "aspect": 1.008,
+  "x": 0.2639,
+  "y": 0.2287,
+  "w": 0.4538,
+  "h": 0.5426,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/fettuccine.jpg": {
+  "aspect": 1.008,
+  "x": 0.4063,
+  "y": 0.1569,
+  "w": 0.1768,
+  "h": 0.6941,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/fusilli.jpg": {
+  "aspect": 1.008,
+  "x": 0.2857,
+  "y": 0.2347,
+  "w": 0.4577,
+  "h": 0.5387,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/linguine.jpg": {
+  "aspect": 1.0053,
+  "x": 0.4074,
+  "y": 0.1569,
+  "w": 0.1772,
+  "h": 0.6941,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/orzo.jpg": {
+  "aspect": 1.0107,
+  "x": 0.285,
+  "y": 0.2347,
+  "w": 0.4565,
+  "h": 0.5387,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/penne-rigate-staged.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ac8868"
+ },
+ "/products/akhan/penne-rigate.jpg": {
+  "aspect": 1.0107,
+  "x": 0.285,
+  "y": 0.2347,
+  "w": 0.4565,
+  "h": 0.5387,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/pennine.jpg": {
+  "aspect": 1.008,
+  "x": 0.2857,
+  "y": 0.2347,
+  "w": 0.4577,
+  "h": 0.5387,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/rigatoni.jpg": {
+  "aspect": 1.008,
+  "x": 0.285,
+  "y": 0.234,
+  "w": 0.4565,
+  "h": 0.5399,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/rotini.jpg": {
+  "aspect": 1.0053,
+  "x": 0.2646,
+  "y": 0.2287,
+  "w": 0.455,
+  "h": 0.5426,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/sedani-rigati.jpg": {
+  "aspect": 1.008,
+  "x": 0.285,
+  "y": 0.234,
+  "w": 0.4565,
+  "h": 0.5399,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/sedanini-rigati.jpg": {
+  "aspect": 1.0053,
+  "x": 0.2857,
+  "y": 0.234,
+  "w": 0.4577,
+  "h": 0.5399,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/spaghetti.jpg": {
+  "aspect": 1.008,
+  "x": 0.4063,
+  "y": 0.1569,
+  "w": 0.1768,
+  "h": 0.6941,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/spaghettini.jpg": {
+  "aspect": 1.0053,
+  "x": 0.4074,
+  "y": 0.1569,
+  "w": 0.1772,
+  "h": 0.6941,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/tripolini.jpg": {
+  "aspect": 1.0053,
+  "x": 0.2857,
+  "y": 0.234,
+  "w": 0.4577,
+  "h": 0.5399,
+  "bg": "#fbf4ea"
+ },
+ "/products/akhan/vermicelli.jpg": {
+  "aspect": 1.008,
+  "x": 0.2857,
+  "y": 0.2427,
+  "w": 0.4577,
+  "h": 0.5413,
+  "bg": "#fbf4ea"
+ },
+ "/products/ameriqual/apack-ready-meal.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceb29a"
+ },
+ "/products/ameriqual/bbq-sauce-with-beef.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dcc6b1"
+ },
+ "/products/ameriqual/bbq-white-chicken.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ddc1a9"
+ },
+ "/products/ameriqual/buffalo-chicken.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ccb098"
+ },
+ "/products/ameriqual/cheesy-mac.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c8ab8d"
+ },
+ "/products/ameriqual/chicken-noodle-soup.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c1a188"
+ },
+ "/products/ameriqual/chicken-salad.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4baa3"
+ },
+ "/products/ameriqual/chicken-sausage-quinoa.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#e0c3a5"
+ },
+ "/products/ameriqual/chili-with-bean.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdb297"
+ },
+ "/products/ameriqual/cream-of-mushroom.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cca98b"
+ },
+ "/products/ameriqual/hearty-beef-stew-7oz.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ccae96"
+ },
+ "/products/ameriqual/hearty-beef-stew.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ccae96"
+ },
+ "/products/ameriqual/hot-chili.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c9aa8e"
+ },
+ "/products/ameriqual/joy2-peanut-butter.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c0a08b"
+ },
+ "/products/ameriqual/joy2-yogurt-mixed-berry.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfb6a0"
+ },
+ "/products/ameriqual/joy2-yogurt-strawberry.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbb59e"
+ },
+ "/products/ameriqual/joy2-yogurt-vanilla.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c0ad"
+ },
+ "/products/ameriqual/marinara-mac.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c3a893"
+ },
+ "/products/ameriqual/mediterranean-chicken-orzo.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c0a48e"
+ },
+ "/products/ameriqual/pasta-garden-vegetables.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c7a893"
+ },
+ "/products/ameriqual/pasta-meat-sauce.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cab5a2"
+ },
+ "/products/ameriqual/pizza-mac.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdb49e"
+ },
+ "/products/ameriqual/pollo-asado.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c9a990"
+ },
+ "/products/ameriqual/ready-ration.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c4b4"
+ },
+ "/products/ameriqual/ring-o-roni.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c5a689"
+ },
+ "/products/ameriqual/rustic-beef-stew.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c7a991"
+ },
+ "/products/ameriqual/savory-breakfast-hash.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dec7b5"
+ },
+ "/products/ameriqual/southwestern-chicken-rice.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c9a78c"
+ },
+ "/products/ameriqual/spaghetti-meat-sauce.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5bba2"
+ },
+ "/products/ameriqual/spaghetti-tomato-sauce.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdaf97"
+ },
+ "/products/ameriqual/tomato-soup.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbaf97"
+ },
+ "/products/ameriqual/vegetable-soup.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c7a079"
+ },
+ "/products/ameriqual/white-chicken-chili.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#bf9879"
+ },
+ "/products/ameriqual/white-chicken.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cab49c"
+ },
+ "/products/chupa-chups/chupa-chups-popcorn-apple.png": {
+  "aspect": 0.7667,
+  "x": 0.0145,
+  "y": 0.01,
+  "w": 0.9696,
+  "h": 0.9778,
+  "bg": null
+ },
+ "/products/chupa-chups/chupa-chups-popcorn-caramel-staged.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#bc916e"
+ },
+ "/products/chupa-chups/chupa-chups-popcorn-caramel.png": {
+  "aspect": 0.76,
+  "x": 0.0146,
+  "y": 0.01,
+  "w": 0.9678,
+  "h": 0.9778,
+  "bg": null
+ },
+ "/products/chupa-chups/chupa-chups-popcorn-cola.png": {
+  "aspect": 0.7544,
+  "x": 0.0133,
+  "y": 0.0111,
+  "w": 0.9705,
+  "h": 0.9744,
+  "bg": null
+ },
+ "/products/chupa-chups/chupa-chups-popcorn-strawberry.png": {
+  "aspect": 0.7578,
+  "x": 0.0132,
+  "y": 0.01,
+  "w": 0.9707,
+  "h": 0.9767,
+  "bg": null
+ },
+ "/products/fresh-elements/basmati-jasmine-rice.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceb8a3"
+ },
+ "/products/fresh-elements/do-it-all-spread-tub-v2.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceb9a6"
+ },
+ "/products/fresh-elements/do-it-all-spread-tub-v2.webp": {
+  "aspect": 1,
+  "x": 0.0542,
+  "y": 0.1942,
+  "w": 0.8925,
+  "h": 0.6117,
+  "bg": null
+ },
+ "/products/fresh-elements/do-it-all-spread-v2.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceb9a6"
+ },
+ "/products/fresh-elements/flavored-peanuts.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3bda8"
+ },
+ "/products/fresh-elements/flavored-peanuts.webp": {
+  "aspect": 1,
+  "x": 0.0858,
+  "y": 0.0542,
+  "w": 0.8292,
+  "h": 0.8925,
+  "bg": null
+ },
+ "/products/fresh-elements/margarine-traditional-50g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c6b09b"
+ },
+ "/products/fresh-elements/margarine-traditional.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c6b09b"
+ },
+ "/products/fresh-elements/margarine-traditional.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.3217,
+  "w": 0.8933,
+  "h": 0.3567,
+  "bg": null
+ },
+ "/products/fresh-elements/palm-oil-blend-900ml.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1bba6"
+ },
+ "/products/fresh-elements/palm-oil-blend-900ml.webp": {
+  "aspect": 1,
+  "x": 0.3592,
+  "y": 0.0542,
+  "w": 0.2817,
+  "h": 0.8925,
+  "bg": null
+ },
+ "/products/fresh-elements/palm-oil-blend.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1bba6"
+ },
+ "/products/fresh-elements/platanitos.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbad91"
+ },
+ "/products/fresh-elements/platanitos.webp": {
+  "aspect": 1,
+  "x": 0.0542,
+  "y": 0.1925,
+  "w": 0.8925,
+  "h": 0.615,
+  "bg": null
+ },
+ "/products/fresh-elements/salted-peanuts-15kg.webp": {
+  "aspect": 1,
+  "x": 0.045,
+  "y": 0.0833,
+  "w": 0.91,
+  "h": 0.8333,
+  "bg": null
+ },
+ "/products/lasco/instant-chocolate-mix-cans-6oz-12oz-20oz.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdb39c"
+ },
+ "/products/lasco/lasco-almond-120g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c8b098"
+ },
+ "/products/lasco/lasco-almond-50-sachet.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c9b09a"
+ },
+ "/products/lasco/lasco-caramel-instant-chocolate-display-box.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbb59e"
+ },
+ "/products/lasco/lasco-carrot-120g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ccb299"
+ },
+ "/products/lasco/lasco-cherryberry-120g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c8af99"
+ },
+ "/products/lasco/lasco-chocolate-120g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbac90"
+ },
+ "/products/lasco/lasco-creamy-malt-50-less-sugar.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d7ba9c"
+ },
+ "/products/lasco/lasco-instant-chocolate-mix-french-vanilla-display-box.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cab099"
+ },
+ "/products/lasco/lasco-instant-chocolate-mix-mint-1oz.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfb199"
+ },
+ "/products/lasco/lasco-instant-chocolate-mix-nutmeg-display-box.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceb398"
+ },
+ "/products/lasco/lasco-marshmallow-instant-chocolate-display-box.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdb39c"
+ },
+ "/products/lasco/lasco-peanut-punch-120g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2b49a"
+ },
+ "/products/lasco/lasco-pineapple-orange-120g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c7ad96"
+ },
+ "/products/lasco/lasco-strawberry-120g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b59d"
+ },
+ "/products/lasco/lasco-vanilla-120g.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfb79f"
+ },
+ "/products/lasco/lasco-vanilla-50-sachet.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbb198"
+ },
+ "/products/quinoa-club/baby-quinoa.jpg": {
+  "aspect": 1.3333,
+  "x": 0.254,
+  "y": 0.04,
+  "w": 0.493,
+  "h": 0.92,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/cereal-puff.jpg": {
+  "aspect": 1.3333,
+  "x": 0.035,
+  "y": 0.0973,
+  "w": 0.931,
+  "h": 0.8053,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/crunchy-protein.jpg": {
+  "aspect": 1.3333,
+  "x": 0.251,
+  "y": 0.0387,
+  "w": 0.497,
+  "h": 0.9227,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/lifestyle/baby-quinoa.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 0.9825,
+  "bg": "#ddc4b0"
+ },
+ "/products/quinoa-club/lifestyle/cereal-puff.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b69c"
+ },
+ "/products/quinoa-club/lifestyle/crunchy-protein.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d9c4b3"
+ },
+ "/products/quinoa-club/lifestyle/musli.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dacdbd"
+ },
+ "/products/quinoa-club/lifestyle/protein-loops.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#b8997c"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-chips.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#e3d5cc"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-fusilli.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#e6ceb6"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-grain.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#eedcce"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-macaroni.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dcc7b6"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-puff.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#e2cdbc"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-rings.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#e2d1c1"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-snacks.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#b29279"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-spaghetti.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dbcdc4"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-toasts.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ddd1c5"
+ },
+ "/products/quinoa-club/lifestyle/quinoa-waffles.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0.0431,
+  "w": 1,
+  "h": 0.9569,
+  "bg": "#deccb6"
+ },
+ "/products/quinoa-club/lifestyle/quinoarepa.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6c8ae"
+ },
+ "/products/quinoa-club/lifestyle/soyquinoa.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2b49a"
+ },
+ "/products/quinoa-club/musli.jpg": {
+  "aspect": 1.3333,
+  "x": 0.256,
+  "y": 0.04,
+  "w": 0.489,
+  "h": 0.92,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/baby-quinoa.jpg": {
+  "aspect": 1.3333,
+  "x": 0.254,
+  "y": 0.04,
+  "w": 0.493,
+  "h": 0.92,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/cereal-puff.jpg": {
+  "aspect": 1.3333,
+  "x": 0.035,
+  "y": 0.0973,
+  "w": 0.931,
+  "h": 0.8053,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/crunchy-protein.jpg": {
+  "aspect": 1.3333,
+  "x": 0.251,
+  "y": 0.0387,
+  "w": 0.497,
+  "h": 0.9227,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/musli.jpg": {
+  "aspect": 1.3333,
+  "x": 0.256,
+  "y": 0.04,
+  "w": 0.489,
+  "h": 0.92,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/protein-loops.jpg": {
+  "aspect": 1.3333,
+  "x": 0.034,
+  "y": 0.1,
+  "w": 0.932,
+  "h": 0.8,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-chips.jpg": {
+  "aspect": 1.3333,
+  "x": 0.035,
+  "y": 0.0627,
+  "w": 0.932,
+  "h": 0.876,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-fusilli.jpg": {
+  "aspect": 1.3333,
+  "x": 0.255,
+  "y": 0.0387,
+  "w": 0.491,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-grain.jpg": {
+  "aspect": 1.3333,
+  "x": 0.241,
+  "y": 0.0387,
+  "w": 0.518,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-macaroni.jpg": {
+  "aspect": 1.3333,
+  "x": 0.254,
+  "y": 0.04,
+  "w": 0.492,
+  "h": 0.92,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-puff.jpg": {
+  "aspect": 1.3333,
+  "x": 0.033,
+  "y": 0.0733,
+  "w": 0.933,
+  "h": 0.8533,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-rings.jpg": {
+  "aspect": 1.3333,
+  "x": 0.033,
+  "y": 0.1107,
+  "w": 0.933,
+  "h": 0.78,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-snacks.jpg": {
+  "aspect": 1.9444,
+  "x": 0.0307,
+  "y": 0.1764,
+  "w": 0.9386,
+  "h": 0.65,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-spaghetti.jpg": {
+  "aspect": 1.7742,
+  "x": 0.0409,
+  "y": 0.1758,
+  "w": 0.92,
+  "h": 0.6597,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-toasts.jpg": {
+  "aspect": 1.3333,
+  "x": 0.239,
+  "y": 0.0387,
+  "w": 0.524,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoa-waffles.jpg": {
+  "aspect": 1.3333,
+  "x": 0.035,
+  "y": 0.0787,
+  "w": 0.932,
+  "h": 0.8453,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/quinoarepa.jpg": {
+  "aspect": 1.3333,
+  "x": 0.227,
+  "y": 0.0387,
+  "w": 0.546,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/packs/soyquinoa.jpg": {
+  "aspect": 1.3333,
+  "x": 0.247,
+  "y": 0.0387,
+  "w": 0.508,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/protein-loops.jpg": {
+  "aspect": 1.3333,
+  "x": 0.034,
+  "y": 0.1,
+  "w": 0.932,
+  "h": 0.8,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-chips.jpg": {
+  "aspect": 1.3333,
+  "x": 0.035,
+  "y": 0.0627,
+  "w": 0.932,
+  "h": 0.876,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-fusilli.jpg": {
+  "aspect": 1.3333,
+  "x": 0.255,
+  "y": 0.0387,
+  "w": 0.491,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-grain.jpg": {
+  "aspect": 1.3333,
+  "x": 0.241,
+  "y": 0.0387,
+  "w": 0.518,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-macaroni.jpg": {
+  "aspect": 1.3333,
+  "x": 0.254,
+  "y": 0.04,
+  "w": 0.492,
+  "h": 0.92,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-puff.jpg": {
+  "aspect": 1.3333,
+  "x": 0.033,
+  "y": 0.0733,
+  "w": 0.933,
+  "h": 0.8533,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-rings.jpg": {
+  "aspect": 1.3333,
+  "x": 0.033,
+  "y": 0.1107,
+  "w": 0.933,
+  "h": 0.78,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-snacks.jpg": {
+  "aspect": 1.9444,
+  "x": 0.0307,
+  "y": 0.1764,
+  "w": 0.9386,
+  "h": 0.65,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-spaghetti.jpg": {
+  "aspect": 1.7742,
+  "x": 0.0409,
+  "y": 0.1758,
+  "w": 0.92,
+  "h": 0.6597,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-toasts.jpg": {
+  "aspect": 1.3333,
+  "x": 0.239,
+  "y": 0.0387,
+  "w": 0.524,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoa-waffles.jpg": {
+  "aspect": 1.3333,
+  "x": 0.035,
+  "y": 0.0787,
+  "w": 0.932,
+  "h": 0.8453,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/quinoarepa.jpg": {
+  "aspect": 1.3333,
+  "x": 0.227,
+  "y": 0.0387,
+  "w": 0.546,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/quinoa-club/soyquinoa.jpg": {
+  "aspect": 1.3333,
+  "x": 0.247,
+  "y": 0.0387,
+  "w": 0.508,
+  "h": 0.9213,
+  "bg": "#f7f4ed"
+ },
+ "/products/star-grocery/families/hutorok-canned-meat-family-collection.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#e4c8b0"
+ },
+ "/products/star-grocery/families/khutorok-beans-sauces-preserves.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0b194"
+ },
+ "/products/star-grocery/families/khutorok-flour.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2ae8a"
+ },
+ "/products/star-grocery/families/khutorok-groats.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b08d"
+ },
+ "/products/star-grocery/families/khutorok-instant-noodles.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cca886"
+ },
+ "/products/star-grocery/families/khutorok-juices.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceaf93"
+ },
+ "/products/star-grocery/families/khutorok-pasta.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2af8f"
+ },
+ "/products/star-grocery/families/khutorok-pickled-vegetables.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2b396"
+ },
+ "/products/star-grocery/families/kitto-instant-egg-noodles.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c8a98d"
+ },
+ "/products/star-grocery/families/kitto-sauces.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0b192"
+ },
+ "/products/star-grocery/families/la-pasta-flour.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b18e"
+ },
+ "/products/star-grocery/families/la-pasta-pasta.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b392"
+ },
+ "/products/star-grocery/families/la-pasta-perfetto.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1af8c"
+ },
+ "/products/star-grocery/families/pansky-boil-in-bag-groats.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceaf90"
+ },
+ "/products/star-grocery/families/the-banka-juices.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b191"
+ },
+ "/products/star-grocery/families/the-banka-vegetables.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#caac90"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/hutorok-canned-meat-family-collection/17_hutorok_canned_meat/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5c1a9"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1a77f"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1a57e"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cead8e"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b091"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d9ab87"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ccae92"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b08c"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b599"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdb092"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_10.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b495"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_11.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#e4b490"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_12.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b697"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_13.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdac8b"
+ },
+ "/products/star-grocery/flavors/khutorok-beans-sauces-preserves/06_khutorok_beans_sauces_preserves/product_14.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d7ab84"
+ },
+ "/products/star-grocery/flavors/khutorok-flour/01_khutorok_flour/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dbb591"
+ },
+ "/products/star-grocery/flavors/khutorok-flour/01_khutorok_flour/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbaa8b"
+ },
+ "/products/star-grocery/flavors/khutorok-flour/01_khutorok_flour/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c8ae95"
+ },
+ "/products/star-grocery/flavors/khutorok-flour/01_khutorok_flour/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3af8f"
+ },
+ "/products/star-grocery/flavors/khutorok-flour/01_khutorok_flour/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d9a88a"
+ },
+ "/products/star-grocery/flavors/khutorok-flour/01_khutorok_flour/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cba88a"
+ },
+ "/products/star-grocery/flavors/khutorok-flour/01_khutorok_flour/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceab8b"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d8b58f"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfac8e"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b89c"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0ac92"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b498"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbb289"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfae8d"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#caa88c"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dab28e"
+ },
+ "/products/star-grocery/flavors/khutorok-groats/02_khutorok_groats/product_10.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b295"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/30_khutorok_instant_noodles_bag_60g/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdb092"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/30_khutorok_instant_noodles_bag_60g/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0b194"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/30_khutorok_instant_noodles_bag_60g/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d8b494"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/30_khutorok_instant_noodles_bag_60g/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbad91"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/30_khutorok_instant_noodles_bag_60g/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c8ad92"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/30_khutorok_instant_noodles_bag_60g/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1af8c"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/30_khutorok_instant_noodles_bag_60g/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfb79f"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/30_khutorok_instant_noodles_bag_60g/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c8ae97"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/31_khutorok_instant_noodles_cup_80g/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b898"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/31_khutorok_instant_noodles_cup_80g/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfad92"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/31_khutorok_instant_noodles_cup_80g/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b296"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/32_khutorok_instant_noodles_tray_90g/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbb095"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/32_khutorok_instant_noodles_tray_90g/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceae97"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/32_khutorok_instant_noodles_tray_90g/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3af8f"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/33_khutorok_instant_noodles_bag_90g/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ccb49c"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/33_khutorok_instant_noodles_bag_90g/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b596"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/33_khutorok_instant_noodles_bag_90g/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdb59d"
+ },
+ "/products/star-grocery/flavors/khutorok-instant-noodles/33_khutorok_instant_noodles_bag_90g/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b799"
+ },
+ "/products/star-grocery/flavors/khutorok-juices/07_khutorok_juices/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b599"
+ },
+ "/products/star-grocery/flavors/khutorok-juices/07_khutorok_juices/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#caa988"
+ },
+ "/products/star-grocery/flavors/khutorok-juices/07_khutorok_juices/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d7ad85"
+ },
+ "/products/star-grocery/flavors/khutorok-juices/07_khutorok_juices/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceaf93"
+ },
+ "/products/star-grocery/flavors/khutorok-juices/07_khutorok_juices/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b293"
+ },
+ "/products/star-grocery/flavors/khutorok-juices/07_khutorok_juices/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceab8d"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdaa8a"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b291"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b497"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b495"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d8b494"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cead8e"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0b296"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0af8e"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b093"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_10.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5ae87"
+ },
+ "/products/star-grocery/flavors/khutorok-pasta/04_khutorok_pasta/product_11.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdaa8c"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b599"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dbb89a"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5ae8d"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0af90"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d8b492"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dab797"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2b396"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b294"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b18d"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_10.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5ad8a"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_11.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b697"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_12.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d8b0a6"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_13.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d8b798"
+ },
+ "/products/star-grocery/flavors/khutorok-pickled-vegetables/05_khutorok_pickled_vegetables/product_14.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b794"
+ },
+ "/products/star-grocery/flavors/kitto-instant-egg-noodles/34_kitto_instant_egg_noodles_130g/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfb59a"
+ },
+ "/products/star-grocery/flavors/kitto-instant-egg-noodles/34_kitto_instant_egg_noodles_130g/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b295"
+ },
+ "/products/star-grocery/flavors/kitto-instant-egg-noodles/34_kitto_instant_egg_noodles_130g/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceb8a3"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1ae8e"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b497"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d7b790"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0af8e"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dab392"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b498"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b699"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#caad8f"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbac8f"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_10.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b393"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_11.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b18d"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_12.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d9b696"
+ },
+ "/products/star-grocery/flavors/kitto-sauces/13_kitto_sauces/product_13.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b390"
+ },
+ "/products/star-grocery/flavors/la-pasta-flour/12_la_pasta_flour/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdac8b"
+ },
+ "/products/star-grocery/flavors/la-pasta-flour/12_la_pasta_flour/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2b18e"
+ },
+ "/products/star-grocery/flavors/la-pasta-flour/12_la_pasta_flour/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d9ba9e"
+ },
+ "/products/star-grocery/flavors/la-pasta-flour/12_la_pasta_flour/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d8b08c"
+ },
+ "/products/star-grocery/flavors/la-pasta-flour/12_la_pasta_flour/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cead8e"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdac8b"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b495"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b191"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2ac85"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b294"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b295"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b090"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b495"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfae8f"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_10.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dcb08b"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_11.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b090"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_12.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d1b295"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_13.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b495"
+ },
+ "/products/star-grocery/flavors/la-pasta-pasta/10_la_pasta_pasta/product_14.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2ac85"
+ },
+ "/products/star-grocery/flavors/la-pasta-perfetto/11_la_pasta_perfetto/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b191"
+ },
+ "/products/star-grocery/flavors/la-pasta-perfetto/11_la_pasta_perfetto/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2b190"
+ },
+ "/products/star-grocery/flavors/la-pasta-perfetto/11_la_pasta_perfetto/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b699"
+ },
+ "/products/star-grocery/flavors/la-pasta-perfetto/11_la_pasta_perfetto/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cca989"
+ },
+ "/products/star-grocery/flavors/pansky-boil-in-bag-groats/03_pansky_boil_in_bag/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfae8d"
+ },
+ "/products/star-grocery/flavors/pansky-boil-in-bag-groats/03_pansky_boil_in_bag/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdae8f"
+ },
+ "/products/star-grocery/flavors/pansky-boil-in-bag-groats/03_pansky_boil_in_bag/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceaf92"
+ },
+ "/products/star-grocery/flavors/pansky-boil-in-bag-groats/03_pansky_boil_in_bag/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cead8e"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0ad8d"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfac8e"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b89c"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbad91"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#e4b48c"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d9ba9d"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d7b89b"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4b28f"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3b293"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_10.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5b292"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_11.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2af8f"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_12.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dcb896"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_13.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cead8e"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_14.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d5ae85"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_15.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dcb093"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_16.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0ae89"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_17.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b194"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_18.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#dab38a"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_19.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cead8e"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_20.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b99b"
+ },
+ "/products/star-grocery/flavors/the-banka-juices/09_the_banka_juices/product_21.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d7b590"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_01.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cdae91"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_02.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ddb38d"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_03.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6b491"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_04.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d8b494"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_05.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfad91"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_06.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2af8f"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_07.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0b087"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_08.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cfae8f"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_09.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2af8f"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_10.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d6af90"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_11.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cda987"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_12.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#cbad91"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_13.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2af89"
+ },
+ "/products/star-grocery/flavors/the-banka-vegetables/08_the_banka_vegetables/product_14.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d0b296"
+ },
+ "/products/star-grocery/snacks/flint-baguette.png": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d4bda8"
+ },
+ "/products/star-grocery/snacks/flint-craft-bars.png": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceb69f"
+ },
+ "/products/star-grocery/snacks/flint-grenki.png": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d2baa5"
+ },
+ "/products/star-grocery/snacks/flint-ua-food.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c3ac82"
+ },
+ "/products/star-grocery/snacks/flint-wheat-rye-croutons.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#d3baa4"
+ },
+ "/products/star-grocery/snacks/hroom-chips.png": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#ceb197"
+ },
+ "/products/starkist/starkist-chunk-light-oil.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.2358,
+  "w": 0.8933,
+  "h": 0.5292,
+  "bg": null
+ },
+ "/products/starkist/starkist-chunk-light-water-low-sodium.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.2433,
+  "w": 0.8933,
+  "h": 0.5142,
+  "bg": null
+ },
+ "/products/starkist/starkist-chunk-light-water-staged.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#caa27f"
+ },
+ "/products/starkist/starkist-chunk-light-water.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.2508,
+  "w": 0.8933,
+  "h": 0.4975,
+  "bg": null
+ },
+ "/products/starkist/starkist-chunk-white-water.webp": {
+  "aspect": 1,
+  "x": 0.0542,
+  "y": 0.2317,
+  "w": 0.8933,
+  "h": 0.5375,
+  "bg": null
+ },
+ "/products/starkist/starkist-creations-bold-jalapeno.webp": {
+  "aspect": 1,
+  "x": 0.165,
+  "y": 0.0533,
+  "w": 0.6708,
+  "h": 0.8933,
+  "bg": null
+ },
+ "/products/starkist/starkist-creations-herb-garlic.webp": {
+  "aspect": 1,
+  "x": 0.1508,
+  "y": 0.0533,
+  "w": 0.6992,
+  "h": 0.8933,
+  "bg": null
+ },
+ "/products/starkist/starkist-creations-hickory-smoke.webp": {
+  "aspect": 1,
+  "x": 0.1517,
+  "y": 0.0533,
+  "w": 0.6975,
+  "h": 0.8933,
+  "bg": null
+ },
+ "/products/starkist/starkist-creations-honey-bbq.webp": {
+  "aspect": 1,
+  "x": 0.175,
+  "y": 0.0533,
+  "w": 0.65,
+  "h": 0.8933,
+  "bg": null
+ },
+ "/products/starkist/starkist-creations-lemon-pepper.webp": {
+  "aspect": 1,
+  "x": 0.1533,
+  "y": 0.0533,
+  "w": 0.6933,
+  "h": 0.8933,
+  "bg": null
+ },
+ "/products/starkist/starkist-creations-sweet-spicy.webp": {
+  "aspect": 1,
+  "x": 0.1708,
+  "y": 0.0533,
+  "w": 0.6583,
+  "h": 0.8942,
+  "bg": null
+ },
+ "/products/starkist/starkist-pouch-light-sunflower-oil.webp": {
+  "aspect": 1,
+  "x": 0.1458,
+  "y": 0.0533,
+  "w": 0.7092,
+  "h": 0.8942,
+  "bg": null
+ },
+ "/products/starkist/starkist-pouch-light-water-low-sodium.webp": {
+  "aspect": 1,
+  "x": 0.1617,
+  "y": 0.0533,
+  "w": 0.6775,
+  "h": 0.8942,
+  "bg": null
+ },
+ "/products/starkist/starkist-pouch-light-water.webp": {
+  "aspect": 1,
+  "x": 0.1642,
+  "y": 0.0533,
+  "w": 0.6725,
+  "h": 0.8933,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-albacore-evoo.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.2975,
+  "w": 0.8933,
+  "h": 0.4058,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-albacore-water.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.3025,
+  "w": 0.8942,
+  "h": 0.3958,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-chunk-white-no-salt.webp": {
+  "aspect": 1,
+  "x": 0.0542,
+  "y": 0.3067,
+  "w": 0.8933,
+  "h": 0.3875,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-pink-salmon.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.305,
+  "w": 0.8942,
+  "h": 0.39,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-yellowfin-basil-pesto.webp": {
+  "aspect": 1,
+  "x": 0.0542,
+  "y": 0.3092,
+  "w": 0.8925,
+  "h": 0.3825,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-yellowfin-evoo.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.3017,
+  "w": 0.8933,
+  "h": 0.3967,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-yellowfin-lemon-dill.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.3175,
+  "w": 0.8933,
+  "h": 0.3658,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-yellowfin-red-peppers.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.305,
+  "w": 0.8933,
+  "h": 0.3908,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-yellowfin-roasted-garlic.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.3233,
+  "w": 0.8933,
+  "h": 0.3533,
+  "bg": null
+ },
+ "/products/starkist/starkist-selects-yellowfin-water.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.31,
+  "w": 0.8933,
+  "h": 0.38,
+  "bg": null
+ },
+ "/products/starkist/starkist-solid-white-oil.webp": {
+  "aspect": 1,
+  "x": 0.0542,
+  "y": 0.2358,
+  "w": 0.8933,
+  "h": 0.5292,
+  "bg": null
+ },
+ "/products/starkist/starkist-solid-white-water-low-sodium.webp": {
+  "aspect": 1,
+  "x": 0.0533,
+  "y": 0.2208,
+  "w": 0.8942,
+  "h": 0.56,
+  "bg": null
+ },
+ "/products/starkist/starkist-solid-white-water.webp": {
+  "aspect": 1,
+  "x": 0.0542,
+  "y": 0.2275,
+  "w": 0.8925,
+  "h": 0.5467,
+  "bg": null
+ },
+ "/products/tronix/boliqueso.jpg": {
+  "aspect": 1,
+  "x": 0.161,
+  "y": 0.026,
+  "w": 0.677,
+  "h": 0.947,
+  "bg": "#ffffff"
+ },
+ "/products/tronix/cebollitas.jpg": {
+  "aspect": 1,
+  "x": 0.1738,
+  "y": 0.0215,
+  "w": 0.6387,
+  "h": 0.9541,
+  "bg": "#fefefc"
+ },
+ "/products/tronix/cheesitos.jpg": {
+  "aspect": 1,
+  "x": 0.1768,
+  "y": 0.0244,
+  "w": 0.6543,
+  "h": 0.9521,
+  "bg": "#fefefc"
+ },
+ "/products/tronix/torti-chips-bbq-staged.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c59469"
+ },
+ "/products/tronix/torti-chips-bbq.jpg": {
+  "aspect": 1,
+  "x": 0.1885,
+  "y": 0.0264,
+  "w": 0.6143,
+  "h": 0.9521,
+  "bg": "#fefefc"
+ },
+ "/products/tronix/torti-chips-chile-limon.jpg": {
+  "aspect": 1,
+  "x": 0.204,
+  "y": 0.052,
+  "w": 0.577,
+  "h": 0.902,
+  "bg": "#ffffff"
+ },
+ "/products/tronix/torti-chips-jalapeno.jpg": {
+  "aspect": 1,
+  "x": 0.2023,
+  "y": 0.0273,
+  "w": 0.5957,
+  "h": 0.9327,
+  "bg": "#ffffff"
+ },
+ "/products/tronix/torti-chips-limon.jpg": {
+  "aspect": 1,
+  "x": 0.182,
+  "y": 0.024,
+  "w": 0.634,
+  "h": 0.948,
+  "bg": "#ffffff"
+ },
+ "/products/tronix/torti-chips-natural.jpg": {
+  "aspect": 1,
+  "x": 0.1963,
+  "y": 0.0283,
+  "w": 0.6133,
+  "h": 0.9346,
+  "bg": "#fefefc"
+ },
+ "/products/tronix/torti-chips-queso.jpg": {
+  "aspect": 1,
+  "x": 0.2002,
+  "y": 0.0283,
+  "w": 0.6025,
+  "h": 0.9297,
+  "bg": "#fefefc"
+ }
+}

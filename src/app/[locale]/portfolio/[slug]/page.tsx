@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ProductGrid } from "@/components/ProductGrid";
+import { ProductCatalogSection } from "@/components/ProductCatalogSection";
 import { PrimaryButton, TextLink } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, locales, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
@@ -80,9 +80,12 @@ export default async function PortfolioCategoryPage({
               </span>
             ))}
           </div>
-          <TextLink href={localizedHref(locale, "/portfolio")}>
-            {t(locale, ui.categoryPage.allCategories)}
-          </TextLink>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <TextLink href={localizedHref(locale, "/products")}>{t(locale, ui.catalog.browseAll)}</TextLink>
+            <TextLink href={localizedHref(locale, "/portfolio")}>
+              {t(locale, ui.categoryPage.allCategories)}
+            </TextLink>
+          </div>
         </div>
 
         {isSupplyPage ? (
@@ -154,17 +157,25 @@ export default async function PortfolioCategoryPage({
           </p>
         </div>
 
-        {category.products.length > 0 ? (
-          <ProductGrid products={category.products} locale={locale} />
-        ) : (
+        {category.products.length > 0 ? null : (
           <div className="mt-8">
             <PrimaryButton href={localizedHref(locale, "/contact")}>
               {t(locale, ui.categoryPage.inquire)}
             </PrimaryButton>
           </div>
         )}
+      </section>
 
-        <div className="mt-16 border-t border-line pt-10">
+      {category.products.length > 0 ? (
+        <section className="bg-[#f6f4ef]">
+          <div className="mx-auto max-w-[96rem] px-5 py-10 md:px-8 md:py-14">
+            <ProductCatalogSection locale={locale} category={category.slug} />
+          </div>
+        </section>
+      ) : null}
+
+      <section className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-16">
+        <div className="mt-12 border-t border-line pt-10 md:mt-16">
           <h3 className="text-lg font-bold text-ink">{t(locale, ui.categoryPage.otherCategories)}</h3>
           <div className="mt-4 flex flex-wrap gap-2">
             {otherCategories.map((item) => (
