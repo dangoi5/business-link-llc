@@ -863,22 +863,6 @@
   "h": 1,
   "bg": "#b29279"
  },
- "/products/quinoa-club/lifestyle/quinoa-spaghetti.jpg": {
-  "aspect": 1,
-  "x": 0,
-  "y": 0,
-  "w": 1,
-  "h": 1,
-  "bg": "#dbcdc4"
- },
- "/products/quinoa-club/lifestyle/quinoa-toasts.jpg": {
-  "aspect": 1,
-  "x": 0,
-  "y": 0,
-  "w": 1,
-  "h": 1,
-  "bg": "#ddd1c5"
- },
  "/products/quinoa-club/lifestyle/quinoa-waffles.jpg": {
   "aspect": 1,
   "x": 0,
@@ -1007,22 +991,6 @@
   "h": 0.65,
   "bg": "#f7f4ed"
  },
- "/products/quinoa-club/packs/quinoa-spaghetti.jpg": {
-  "aspect": 1.7742,
-  "x": 0.0409,
-  "y": 0.1758,
-  "w": 0.92,
-  "h": 0.6597,
-  "bg": "#f7f4ed"
- },
- "/products/quinoa-club/packs/quinoa-toasts.jpg": {
-  "aspect": 1.3333,
-  "x": 0.239,
-  "y": 0.0387,
-  "w": 0.524,
-  "h": 0.9213,
-  "bg": "#f7f4ed"
- },
  "/products/quinoa-club/packs/quinoa-waffles.jpg": {
   "aspect": 1.3333,
   "x": 0.035,
@@ -1109,22 +1077,6 @@
   "y": 0.1764,
   "w": 0.9386,
   "h": 0.65,
-  "bg": "#f7f4ed"
- },
- "/products/quinoa-club/quinoa-spaghetti.jpg": {
-  "aspect": 1.7742,
-  "x": 0.0409,
-  "y": 0.1758,
-  "w": 0.92,
-  "h": 0.6597,
-  "bg": "#f7f4ed"
- },
- "/products/quinoa-club/quinoa-toasts.jpg": {
-  "aspect": 1.3333,
-  "x": 0.239,
-  "y": 0.0387,
-  "w": 0.524,
-  "h": 0.9213,
   "bg": "#f7f4ed"
  },
  "/products/quinoa-club/quinoa-waffles.jpg": {

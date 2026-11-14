@@ -59,18 +59,6 @@ export const quinoaClubGroceryProducts: PortfolioProduct[] = [
     imageFit: "cover",
   },
   {
-    slug: "quinoa-club-spaghetti",
-    name: loc("Quinoa Club Spaghetti", "Espagueti Quinoa Club", "Spaghetti Quinoa Club"),
-    description: loc(
-      "Spaghetti fortified with quinoa — wheat semolina and quinoa flour. Egg-free, with no preservatives, artificial colors or added sugar. 250 g folding box.",
-      "Espagueti fortificado con quinua: sémola de trigo y harina de quinua. Sin huevo, sin conservantes, colorantes artificiales ni azúcar añadida. Caja de 250 g.",
-      "Spaghetti fortificati con quinoa: semola di grano e farina di quinoa. Senza uova, senza conservanti, coloranti artificiali né zuccheri aggiunti. Scatola da 250 g.",
-    ),
-    image: "/products/quinoa-club/lifestyle/quinoa-spaghetti.jpg",
-    details: [brand, loc("250 g", "250 g", "250 g"), loc("Fortified with quinoa", "Fortificado con quinua", "Fortificato con quinoa"), kosher, shelf12],
-    imageFit: "cover",
-  },
-  {
     slug: "quinoa-club-fusilli",
     name: loc("Quinoa Club High-Protein Fusilli", "Fusilli de proteína Quinoa Club", "Fusilli proteici Quinoa Club"),
     description: loc(
@@ -199,25 +187,6 @@ export const quinoaClubSnackProducts: PortfolioProduct[] = [
     ),
     image: "/products/quinoa-club/lifestyle/crunchy-protein.jpg",
     details: [brand, loc("115 g", "115 g", "115 g"), loc("Lemon", "Limón", "Limone"), probiotics, glutenFree, shelf9],
-    imageFit: "cover",
-  },
-  {
-    slug: "quinoa-club-toasts",
-    name: loc("Quinoa Club Quinoa Toasts", "Tostadas de quinua Quinoa Club", "Toast di quinoa Quinoa Club"),
-    description: loc(
-      "Expanded quinoa toasts with probiotics, quinoa protein concentrate, brown rice and Himalayan salt. Natural and cheese. Allergen-free, vegan and gluten free. 130 g zipper pouch.",
-      "Tostadas de quinua expandida con probióticos, concentrado de proteína de quinua, arroz integral y sal del Himalaya. Natural y queso. Sin alérgenos, vegano y sin gluten. Doypack de 130 g.",
-      "Toast di quinoa soffiata con probiotici, concentrato di proteine di quinoa, riso integrale e sale dell’Himalaya. Naturale e formaggio. Senza allergeni, vegano e senza glutine. Busta doypack da 130 g.",
-    ),
-    image: "/products/quinoa-club/lifestyle/quinoa-toasts.jpg",
-    details: [
-      brand,
-      loc("130 g", "130 g", "130 g"),
-      loc("Natural & cheese", "Natural y queso", "Naturale e formaggio"),
-      vegan,
-      glutenFree,
-      shelf9,
-    ],
     imageFit: "cover",
   },
   {

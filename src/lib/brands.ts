@@ -427,9 +427,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Pasta", "Pasta", "Pasta"),
         detail: loc(
-          "Spaghetti fortified with quinoa; high-protein fusilli and macaroni (24% protein)",
-          "Espagueti fortificado con quinua; fusilli y macarrones de alta proteína (24% de proteína)",
-          "Spaghetti fortificati con quinoa; fusilli e maccheroni ad alto contenuto proteico (24% di proteine)",
+          "High-protein fusilli and macaroni (24% protein)",
+          "Fusilli y macarrones de alta proteína (24% de proteína)",
+          "Fusilli e maccheroni ad alto contenuto proteico (24% di proteine)",
         ),
       },
       {
@@ -451,9 +451,9 @@ export const representedBrands: Brand[] = [
       {
         label: loc("Snacks", "Snacks", "Snack"),
         detail: loc(
-          "Cronchy Protein, quinoa toasts, rings, Quinoa Snacks, Quinoa Puff and Quinoa Chips",
-          "Cronchy Protein, tostadas de quinua, aros, Quinoa Snacks, Quinoa Puff y Quinoa Chips",
-          "Cronchy Protein, toast di quinoa, anelli, Quinoa Snacks, Quinoa Puff e Quinoa Chips",
+          "Cronchy Protein, rings, Quinoa Snacks, Quinoa Puff and Quinoa Chips",
+          "Cronchy Protein, aros, Quinoa Snacks, Quinoa Puff y Quinoa Chips",
+          "Cronchy Protein, anelli, Quinoa Snacks, Quinoa Puff e Quinoa Chips",
         ),
       },
     ],
