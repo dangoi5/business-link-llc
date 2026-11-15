@@ -14,7 +14,7 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/functions": "^3.9.9",
     "flag-icons": "^7.2.3",
-    "next": "16.3.5",
+    "next": "^16.4.6",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "resend": "^6.28.1",
@@ -26,7 +26,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.5",
+    "eslint-config-next": "^16.4.6",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

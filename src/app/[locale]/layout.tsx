@@ -20,6 +20,7 @@ export async function generateMetadata({
   const { locale: raw } = await params;
   const locale: Locale = isLocale(raw) ? raw : "en";
   return {
+    metadataBase: new URL("https://www.businesslinkgroup.com"),
     title: {
       default: t(locale, ui.meta.titleDefault),
       template: t(locale, ui.meta.titleTemplate),

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import {
   languageNativeNames,
@@ -54,7 +54,26 @@ function LocaleFlag({ locale, className }: { locale: Locale; className?: string 
   return <UsFlag className={className} />;
 }
 
-const flagClass = "h-3.5 w-[1.2rem] shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/20";
+/**
+ * Open/closed state that resets automatically on navigation: the menu stores
+ * the path it was opened on, so it reads as closed once the path changes.
+ */
+function useMenuOpenForPath(pathname: string) {
+  const [openPath, setOpenPath] = useState<string | null>(null);
+  const open = openPath === pathname;
+  const setOpen = useCallback(
+    (next: boolean | ((prev: boolean) => boolean)) => {
+      setOpenPath((prev) => {
+        const value = typeof next === "function" ? next(prev === pathname) : next;
+        return value ? pathname : null;
+      });
+    },
+    [pathname],
+  );
+  return [open, setOpen] as const;
+}
+
+const flagClass ="h-3.5 w-[1.2rem] shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/20";
 
 export function LanguageSwitcher({
   locale,
@@ -64,12 +83,8 @@ export function LanguageSwitcher({
   solid: boolean;
 }) {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useMenuOpenForPath(pathname);
   const rootRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -88,7 +103,7 @@ export function LanguageSwitcher({
       document.removeEventListener("mousedown", onPointerDown);
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, [open]);
+  }, [open, setOpen]);
 
   return (
     <div ref={rootRef} className="relative shrink-0">
@@ -96,7 +111,6 @@ export function LanguageSwitcher({
         type="button"
         aria-haspopup="menu"
         aria-expanded={open}
-        aria-label={t(locale, ui.language.switchTo)}
         onClick={() => setOpen((value) => !value)}
         className={`inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-[11px] font-bold uppercase tracking-wide ${
           solid
@@ -105,6 +119,7 @@ export function LanguageSwitcher({
         }`}
       >
         <LocaleFlag locale={locale} className={flagClass} />
+        <span className="sr-only">{t(locale, ui.language.switchTo)}: </span>
         {locale}
         <svg
           viewBox="0 0 12 12"
@@ -150,12 +165,8 @@ export function LanguageSwitcher({
 
 export function Header({ locale }: { locale: Locale }) {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useMenuOpenForPath(pathname);
   const homeHref = localizedHref(locale, "/");
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   const solid = true;
 
