@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Menu } from "@base-ui/react/menu";
+import { useCallback, useState } from "react";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import {
   languageNativeNames,
@@ -73,8 +74,12 @@ function useMenuOpenForPath(pathname: string) {
   return [open, setOpen] as const;
 }
 
-const flagClass ="h-3.5 w-[1.2rem] shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/20";
+const flagClass = "h-3.5 w-[1.2rem] shrink-0 overflow-hidden rounded-[2px] ring-1 ring-black/20";
 
+/**
+ * Language picker. Base UI's Menu supplies the keyboard behaviour (arrow keys,
+ * type-ahead, Escape, focus return) and closes on outside presses.
+ */
 export function LanguageSwitcher({
   locale,
   solid,
@@ -83,36 +88,11 @@ export function LanguageSwitcher({
   solid: boolean;
 }) {
   const pathname = usePathname();
-  const [open, setOpen] = useMenuOpenForPath(pathname);
-  const rootRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!open) return;
-
-    function onPointerDown(event: MouseEvent) {
-      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
-    }
-
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") setOpen(false);
-    }
-
-    document.addEventListener("mousedown", onPointerDown);
-    document.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.removeEventListener("mousedown", onPointerDown);
-      document.removeEventListener("keydown", onKeyDown);
-    };
-  }, [open, setOpen]);
 
   return (
-    <div ref={rootRef} className="relative shrink-0">
-      <button
-        type="button"
-        aria-haspopup="menu"
-        aria-expanded={open}
-        onClick={() => setOpen((value) => !value)}
-        className={`inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-[11px] font-bold uppercase tracking-wide ${
+    <Menu.Root>
+      <Menu.Trigger
+        className={`group inline-flex shrink-0 items-center gap-1.5 rounded-full px-2 py-1 text-[11px] font-bold uppercase tracking-wide select-none ${
           solid
             ? "border border-line bg-surface text-ink"
             : "border border-white/25 bg-black/25 text-white"
@@ -123,43 +103,41 @@ export function LanguageSwitcher({
         {locale}
         <svg
           viewBox="0 0 12 12"
-          className={`h-2.5 w-2.5 shrink-0 transition ${open ? "rotate-180" : ""}`}
+          className="h-2.5 w-2.5 shrink-0 transition group-data-[popup-open]:rotate-180"
           aria-hidden
         >
           <path d="M2.5 4.5 L6 8 L9.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
         </svg>
-      </button>
+      </Menu.Trigger>
 
-      {open ? (
-        <div
-          role="menu"
-          className="absolute right-0 z-[60] mt-2 min-w-[11.5rem] overflow-hidden rounded-xl border border-line bg-white py-1 shadow-lg"
-        >
-          {locales.map((item) => {
-            const selected = item === locale;
-            return (
-              <Link
-                key={item}
-                role="menuitem"
-                href={switchLocalePath(pathname, item)}
-                hrefLang={item}
-                aria-current={selected ? "true" : undefined}
-                onClick={() => setOpen(false)}
-                className={`flex items-center gap-2.5 px-3 py-2 text-sm font-medium ${
-                  selected ? "bg-brand/10 text-brand" : "text-ink hover:bg-surface"
-                }`}
-              >
-                <LocaleFlag locale={item} className={flagClass} />
-                <span>{languageNativeNames[item]}</span>
-                <span className="ml-auto text-[11px] font-bold uppercase tracking-wide text-slate">
-                  {item}
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      ) : null}
-    </div>
+      <Menu.Portal>
+        <Menu.Positioner side="bottom" align="end" sideOffset={8} className="z-[60] outline-none">
+          <Menu.Popup className="min-w-[11.5rem] origin-[var(--transform-origin)] overflow-hidden rounded-xl border border-line bg-white py-1 shadow-lg outline-none transition-[scale,opacity] duration-150 ease-out data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[starting-style]:scale-95 data-[starting-style]:opacity-0">
+            {locales.map((item) => {
+              const selected = item === locale;
+              return (
+                <Menu.LinkItem
+                  key={item}
+                  closeOnClick
+                  label={languageNativeNames[item]}
+                  render={<Link href={switchLocalePath(pathname, item)} hrefLang={item} />}
+                  aria-current={selected ? "true" : undefined}
+                  className={`flex items-center gap-2.5 px-3 py-2 text-sm font-medium outline-none ${
+                    selected ? "bg-brand/10 text-brand" : "text-ink data-[highlighted]:bg-surface"
+                  }`}
+                >
+                  <LocaleFlag locale={item} className={flagClass} />
+                  <span>{languageNativeNames[item]}</span>
+                  <span className="ml-auto text-[11px] font-bold uppercase tracking-wide text-slate">
+                    {item}
+                  </span>
+                </Menu.LinkItem>
+              );
+            })}
+          </Menu.Popup>
+        </Menu.Positioner>
+      </Menu.Portal>
+    </Menu.Root>
   );
 }
 

@@ -1,10 +1,15 @@
 "use client";
 
-import { useRef, type ReactNode } from "react";
+import { useRef, useState, type ReactNode } from "react";
+import { BottomSheet } from "@/components/BottomSheet";
+
+/** Matches Tailwind's `lg` breakpoint, where the details window becomes a centered window. */
+const DESKTOP_QUERY = "(min-width: 1024px)";
 
 /**
- * Tap target covering a product card that opens the product's details window:
- * a bottom sheet on phones and tablets, a centered window on desktop.
+ * Tap target covering a product card that opens the product's details window.
+ * Desktop: a native modal <dialog>, centered. Its content is server-rendered, so the
+ * details stay in the page's HTML. Phones and tablets: a swipe-to-dismiss bottom sheet.
  */
 export function ProductSheet({
   label,
@@ -18,8 +23,13 @@ export function ProductSheet({
   children: ReactNode;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const [sheetOpen, setSheetOpen] = useState(false);
 
   function open() {
+    if (!window.matchMedia(DESKTOP_QUERY).matches) {
+      setSheetOpen(true);
+      return;
+    }
     dialogRef.current?.showModal();
     // A modal dialog doesn't stop the page behind it from scrolling on iOS.
     document.documentElement.style.overflow = "hidden";
@@ -44,7 +54,7 @@ export function ProductSheet({
         onClick={(event) => {
           if (event.target === dialogRef.current) dialogRef.current.close();
         }}
-        className="product-modal mt-auto max-h-[92dvh] w-full max-w-none overflow-y-auto overscroll-contain rounded-t-3xl bg-white text-left lg:m-auto lg:max-h-none lg:w-[min(1280px,calc(100vw-4rem))] lg:overflow-hidden lg:rounded-3xl"
+        className="product-modal m-auto w-[min(1280px,calc(100vw-4rem))] max-w-none overflow-hidden rounded-3xl bg-white text-left"
       >
         <div className="relative">
           {children}
@@ -54,7 +64,7 @@ export function ProductSheet({
             // Start focus here rather than on the first link, so nothing looks pre-selected.
             autoFocus
             onClick={() => dialogRef.current?.close()}
-            className="absolute top-3 right-3 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-ink shadow-md transition hover:bg-surface lg:top-5 lg:right-5 lg:h-12 lg:w-12"
+            className="absolute top-5 right-5 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-line bg-white text-ink shadow-md transition hover:bg-surface"
           >
             <svg aria-hidden="true" viewBox="0 0 16 16" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <path d="M3 3l10 10M13 3L3 13" />
@@ -62,6 +72,9 @@ export function ProductSheet({
           </button>
         </div>
       </dialog>
+      <BottomSheet open={sheetOpen} onOpenChange={setSheetOpen} title={title} closeLabel={closeLabel}>
+        {children}
+      </BottomSheet>
     </>
   );
 }

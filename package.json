@@ -10,6 +10,7 @@
     "brain:sync": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sync-brain.mjs"
   },
   "dependencies": {
+    "@base-ui/react": "^1.9.0",
     "@svg-maps/world": "^2.0.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/functions": "^3.9.9",

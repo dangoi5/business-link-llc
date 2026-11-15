@@ -521,7 +521,7 @@ export const ui = {
       "Nessun prodotto corrisponde a questi filtri.",
     ),
     showFilters: loc("Filters", "Filtros", "Filtri"),
-    hideFilters: loc("Hide filters", "Ocultar filtros", "Nascondi filtri"),
+    showResults: loc("Show {count} products", "Ver {count} productos", "Mostra {count} prodotti"),
   },
   categoryPage: {
     viewAllProducts: loc("View all products", "Ver todos los productos", "Vedi tutti i prodotti"),

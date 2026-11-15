@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
+import { BottomSheet } from "@/components/BottomSheet";
 
 export type CatalogItem = {
   slug: string;
@@ -36,7 +37,8 @@ export type CatalogLabels = {
   sortZa: string;
   noResults: string;
   showFilters: string;
-  hideFilters: string;
+  /** Uses {count}. Button that closes the filter sheet on phones. */
+  showResults: string;
 };
 
 type SortKey = "featured" | "az" | "za";
@@ -161,8 +163,7 @@ export function ProductCatalog({
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
   const [sort, setSort] = useState<SortKey>("featured");
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const panelId = useId();
+  const [sheetOpen, setSheetOpen] = useState(false);
   const chipsRef = useRef<HTMLElement>(null);
 
   // Phones: bring the current category's chip into view in the scrolling row.
@@ -212,8 +213,15 @@ export function ProductCatalog({
     setSelectedSizes([]);
   }
 
-  const panel = (
-    <div className="overflow-hidden rounded-2xl border border-[#ede8df] bg-white shadow-[0_1px_4px_rgba(0,0,0,0.05)]">
+  // Desktop shows it as a card in the sidebar; phones show it bare inside the bottom sheet.
+  const filterPanel = (inSheet: boolean) => (
+    <div
+      className={
+        inSheet
+          ? "pt-3"
+          : "overflow-hidden rounded-2xl border border-[#ede8df] bg-white shadow-[0_1px_4px_rgba(0,0,0,0.05)]"
+      }
+    >
       <div className="flex items-center justify-between px-5 pt-5 pb-4">
         <p className="text-[15px] font-semibold text-ink">{labels.filters}</p>
         {activeCount > 0 ? (
@@ -242,7 +250,9 @@ export function ProductCatalog({
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder={labels.search}
-            className="w-full rounded-xl border border-[#e3ddd1] bg-white py-2.5 pr-3 pl-10 text-[15px] text-ink outline-none placeholder:text-slate/60 focus:border-brand focus:ring-2 focus:ring-brand/20"
+            enterKeyHint="search"
+            // 16px on phones keeps iOS from zooming the page when the field gains focus.
+            className="w-full rounded-xl border border-[#e3ddd1] bg-white py-2.5 pr-3 pl-10 text-base text-ink lg:text-[15px] outline-none placeholder:text-slate/60 focus:border-brand focus:ring-2 focus:ring-brand/20"
           />
         </label>
       </div>
@@ -273,7 +283,7 @@ export function ProductCatalog({
   return (
     <div className="items-start lg:grid lg:grid-cols-[17rem_minmax(0,1fr)] lg:gap-7">
       <aside className="sticky top-24 hidden max-h-[calc(100dvh-7rem)] overflow-y-auto overscroll-contain rounded-2xl [scrollbar-width:thin] lg:block">
-        {panel}
+        {filterPanel(false)}
       </aside>
 
       <div>
@@ -304,12 +314,11 @@ export function ProductCatalog({
           <div className="flex items-center gap-2">
             <button
               type="button"
-              aria-expanded={mobileOpen}
-              aria-controls={panelId}
-              onClick={() => setMobileOpen((value) => !value)}
-              className="inline-flex items-center gap-2 rounded-xl border border-[#e3ddd1] bg-white px-3.5 py-2 text-sm font-semibold text-ink lg:hidden"
+              aria-haspopup="dialog"
+              onClick={() => setSheetOpen(true)}
+              className="inline-flex items-center gap-2 rounded-xl border border-[#e3ddd1] bg-white px-3.5 py-2 text-sm font-semibold text-ink transition select-none active:scale-[0.97] lg:hidden"
             >
-              {mobileOpen ? labels.hideFilters : labels.showFilters}
+              {labels.showFilters}
               {activeCount > 0 ? (
                 <span className="rounded-full bg-brand px-1.5 text-xs text-white">{activeCount}</span>
               ) : null}
@@ -329,9 +338,22 @@ export function ProductCatalog({
           </div>
         </div>
 
-        <div id={panelId} hidden={!mobileOpen} className="mt-4 lg:hidden">
-          {panel}
-        </div>
+        <BottomSheet
+          open={sheetOpen}
+          onOpenChange={setSheetOpen}
+          title={labels.filters}
+          footer={
+            <button
+              type="button"
+              onClick={() => setSheetOpen(false)}
+              className="w-full rounded-xl bg-brand px-4 py-3 text-[15px] font-semibold text-white transition select-none active:scale-[0.98]"
+            >
+              {labels.showResults.replace("{count}", String(visible.length))}
+            </button>
+          }
+        >
+          {filterPanel(true)}
+        </BottomSheet>
 
         {visible.length > 0 ? (
           <div className="mt-5 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">

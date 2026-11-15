@@ -1,7 +1,8 @@
 "use client";
 
 import "flag-icons/css/flag-icons.min.css";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { Combobox } from "@base-ui/react/combobox";
+import { useId, useMemo, useRef, useState } from "react";
 import type { Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
@@ -16,6 +17,8 @@ import {
 // Total E.164 length is capped at 15 digits including the country code.
 const E164_MAX = 15;
 
+type CountryOption = (typeof phoneCountries)[number] & { label: string };
+
 function Flag({ iso }: { iso: string }) {
   return (
     <span
@@ -25,6 +28,17 @@ function Flag({ iso }: { iso: string }) {
   );
 }
 
+/** Matches a country by name, ISO code, or dial code (with or without the leading +). */
+function matchesCountry(option: CountryOption, query: string) {
+  const q = query.trim().toLowerCase().replace(/^\+/, "");
+  if (!q) return true;
+  return option.label.toLowerCase().includes(q) || option.iso.toLowerCase() === q || option.dial.startsWith(q);
+}
+
+/**
+ * Phone number with a searchable country-code picker. Base UI's Combobox supplies the
+ * listbox keyboard behaviour (arrow keys, Enter, Escape, focus return).
+ */
 export function PhoneField({
   locale,
   disabled,
@@ -35,14 +49,11 @@ export function PhoneField({
   name?: string;
 }) {
   const id = useId();
-  const rootRef = useRef<HTMLDivElement>(null);
-  const searchRef = useRef<HTMLInputElement>(null);
+  const fieldRef = useRef<HTMLDivElement>(null);
   const [iso, setIso] = useState(DEFAULT_PHONE_COUNTRY);
   const [national, setNational] = useState("");
-  const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
 
-  const options = useMemo(() => {
+  const options = useMemo<CountryOption[]>(() => {
     let names: Intl.DisplayNames | null = null;
     try {
       names = new Intl.DisplayNames([locale], { type: "region" });
@@ -56,82 +67,96 @@ export function PhoneField({
 
   const country = options.find((option) => option.iso === iso) ?? options[0];
 
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase().replace(/^\+/, "");
-    if (!q) return options;
-    return options.filter(
-      (option) =>
-        option.label.toLowerCase().includes(q) ||
-        option.iso.toLowerCase() === q ||
-        option.dial.startsWith(q),
-    );
-  }, [options, query]);
-
   const maxDigitsFor = (c: { format: string; dial: string }) =>
     Math.min(Math.max(digitCount(c.format), 10), E164_MAX - c.dial.length);
 
-  useEffect(() => {
-    if (!open) return;
-    searchRef.current?.focus();
-    function onPointerDown(event: PointerEvent) {
-      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
-    }
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") setOpen(false);
-    }
-    document.addEventListener("pointerdown", onPointerDown);
-    document.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.removeEventListener("pointerdown", onPointerDown);
-      document.removeEventListener("keydown", onKeyDown);
-    };
-  }, [open]);
-
-  function choose(next: (typeof options)[number]) {
+  function choose(next: CountryOption | null) {
+    if (!next) return;
     setIso(next.iso);
     setNational((current) => formatNational(current, next.format, maxDigitsFor(next)));
-    setOpen(false);
-    setQuery("");
   }
 
   const value = national ? `+${country.dial} ${national}` : "";
 
   return (
-    <div ref={rootRef} className="relative block text-sm">
+    <div className="relative block text-sm">
       <label htmlFor={`${id}-number`} className="font-medium text-ink">
         {t(locale, ui.form.phone)}
       </label>
 
       <div
+        ref={fieldRef}
         className={`mt-1.5 flex items-stretch rounded-lg border border-line bg-white transition focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/25 ${
           disabled ? "opacity-70" : ""
         }`}
       >
-        <button
-          type="button"
+        <Combobox.Root
+          items={options}
+          value={country}
+          onValueChange={choose}
+          filter={matchesCountry}
+          isItemEqualToValue={(a, b) => a.iso === b.iso}
+          itemToStringLabel={(option) => option.label}
+          autoHighlight
           disabled={disabled}
-          aria-haspopup="listbox"
-          aria-expanded={open}
-          aria-controls={`${id}-list`}
-          aria-label={`${t(locale, ui.form.phoneCountry)}: ${country.label} +${country.dial}`}
-          onClick={() => setOpen((current) => !current)}
-          className="flex shrink-0 items-center gap-2 rounded-l-lg border-r border-line px-3 py-2.5 transition hover:bg-surface focus-visible:outline-none"
         >
-          <Flag iso={country.iso} />
-          <span className="tabular-nums text-ink">+{country.dial}</span>
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 20 20"
-            className={`h-4 w-4 text-slate transition ${open ? "rotate-180" : ""}`}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+          <Combobox.Trigger
+            aria-label={`${t(locale, ui.form.phoneCountry)}: ${country.label} +${country.dial}`}
+            className="group flex shrink-0 items-center gap-2 rounded-l-lg border-r border-line px-3 py-2.5 transition select-none hover:bg-surface focus-visible:outline-none"
           >
-            <path d="m5 8 5 5 5-5" />
-          </svg>
-        </button>
+            <Flag iso={country.iso} />
+            <span className="tabular-nums text-ink">+{country.dial}</span>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 20 20"
+              className="h-4 w-4 text-slate transition group-data-[popup-open]:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m5 8 5 5 5-5" />
+            </svg>
+          </Combobox.Trigger>
+
+          <Combobox.Portal>
+            {/* Anchored to the whole field so the list lines up with it on phones. */}
+            <Combobox.Positioner anchor={fieldRef} align="start" sideOffset={8} className="z-30 outline-none">
+              <Combobox.Popup
+                aria-label={t(locale, ui.form.phoneSearch)}
+                className="w-[var(--anchor-width)] origin-[var(--transform-origin)] overflow-hidden rounded-xl border border-line bg-white text-sm shadow-xl shadow-ink/10 outline-none transition-[scale,opacity] duration-150 ease-out data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[starting-style]:scale-95 data-[starting-style]:opacity-0 sm:w-80"
+              >
+                <div className="border-b border-line p-2">
+                  <Combobox.Input
+                    placeholder={t(locale, ui.form.phoneSearch)}
+                    aria-label={t(locale, ui.form.phoneSearch)}
+                    enterKeyHint="search"
+                    // 16px keeps iOS from zooming the page when the field gains focus.
+                    className="w-full rounded-md bg-surface px-3 py-2 text-base outline-none placeholder:text-slate/60 focus:ring-2 focus:ring-brand/25 sm:text-sm"
+                  />
+                </div>
+                <Combobox.Empty className="px-3 py-3 text-sm text-slate empty:hidden">
+                  {t(locale, ui.form.phoneNoResults)}
+                </Combobox.Empty>
+                <Combobox.List className="max-h-64 overflow-y-auto overscroll-contain py-1 empty:hidden">
+                  {(option: CountryOption) => (
+                    <Combobox.Item
+                      key={option.iso}
+                      value={option}
+                      className="flex w-full cursor-default items-center gap-3 px-3 py-2 text-left text-ink outline-none select-none data-[highlighted]:bg-surface data-[selected]:bg-brand/5 data-[selected]:font-semibold data-[selected]:text-brand"
+                    >
+                      <Flag iso={option.iso} />
+                      <span className="min-w-0 flex-1 truncate">{option.label}</span>
+                      <span className="tabular-nums text-slate">+{option.dial}</span>
+                    </Combobox.Item>
+                  )}
+                </Combobox.List>
+              </Combobox.Popup>
+            </Combobox.Positioner>
+          </Combobox.Portal>
+        </Combobox.Root>
+
         <input
           id={`${id}-number`}
           type="tel"
@@ -147,52 +172,6 @@ export function PhoneField({
         />
       </div>
       <input type="hidden" name={name} value={value} />
-
-      {open ? (
-        <div className="absolute left-0 right-0 z-30 mt-2 overflow-hidden rounded-xl border border-line bg-white shadow-xl shadow-ink/10 sm:right-auto sm:w-80">
-          <div className="border-b border-line p-2">
-            <input
-              ref={searchRef}
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              onKeyDown={(event) => {
-                if (event.key === "Enter") {
-                  event.preventDefault();
-                  if (filtered[0]) choose(filtered[0]);
-                }
-              }}
-              placeholder={t(locale, ui.form.phoneSearch)}
-              aria-label={t(locale, ui.form.phoneSearch)}
-              className="w-full rounded-md bg-surface px-3 py-2 text-sm outline-none placeholder:text-slate/60 focus:ring-2 focus:ring-brand/25"
-            />
-          </div>
-          <ul id={`${id}-list`} role="listbox" className="max-h-64 overflow-y-auto py-1">
-            {filtered.length === 0 ? (
-              <li className="px-3 py-3 text-sm text-slate">{t(locale, ui.form.phoneNoResults)}</li>
-            ) : (
-              filtered.map((option) => {
-                const selected = option.iso === iso;
-                return (
-                  <li key={option.iso} role="option" aria-selected={selected}>
-                    <button
-                      type="button"
-                      onClick={() => choose(option)}
-                      className={`flex w-full items-center gap-3 px-3 py-2 text-left transition hover:bg-surface ${
-                        selected ? "bg-brand/5 font-semibold text-brand" : "text-ink"
-                      }`}
-                    >
-                      <Flag iso={option.iso} />
-                      <span className="min-w-0 flex-1 truncate">{option.label}</span>
-                      <span className="tabular-nums text-slate">+{option.dial}</span>
-                    </button>
-                  </li>
-                );
-              })
-            )}
-          </ul>
-        </div>
-      ) : null}
     </div>
   );
 }

@@ -85,7 +85,7 @@ export async function ProductCatalogSection({
           sortZa: t(locale, c.sortZa),
           noResults: t(locale, c.noResults),
           showFilters: t(locale, c.showFilters),
-          hideFilters: t(locale, c.hideFilters),
+          showResults: t(locale, c.showResults),
         }}
       />
     </div>
