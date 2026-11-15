@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { HomeHeroStats } from "@/components/HomeHeroStats";
 import { MarketsMap } from "@/components/MarketsMap";
 import { Reveal } from "@/components/Reveal";
-import { PrimaryButton, SectionHeading, TextLink } from "@/components/ui";
+import { PrimaryButton, SectionHeading, TealButton, TextLink } from "@/components/ui";
 import { isLocale, localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
@@ -188,8 +188,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             </li>
           ))}
         </ul>
-        <div className="mt-8">
-          <TextLink href={localizedHref(locale, "/markets")}>{t(locale, ui.home.viewFootprint)}</TextLink>
+        <div className="mt-10">
+          <TealButton href={localizedHref(locale, "/markets")}>{t(locale, ui.home.viewFootprint)}</TealButton>
         </div>
       </section>
 
