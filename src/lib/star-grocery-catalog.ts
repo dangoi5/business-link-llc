@@ -67,7 +67,7 @@ const flintSnackProducts: CatalogProduct[] = [
       "Snacks de baguette de trigo Flint. Sabores: langosta, cerdo picante, salsa cremosa con hierbas, queso francés, champiñones en salsa cremosa, y crema y cebolla. Empaques de 60 g, 100 g y 150 g.",
       "Snack di baguette di frumento Flint. Gusti: aragosta, maiale piccante, salsa cremosa alle erbe, formaggio francese, funghi in salsa cremosa, e panna e cipolla. Confezioni da 60 g, 100 g e 150 g.",
     ),
-    image: "/products/star-grocery/snacks/flint-baguette.png",
+    image: "/products/star-grocery/snacks/flint-baguette.jpg",
     details: [
       loc("Flint", "Flint", "Flint"),
       loc("Star Grocery", "Star Grocery", "Star Grocery"),
@@ -99,7 +99,7 @@ const flintSnackProducts: CatalogProduct[] = [
       "Tostadas de centeno con sabores de bar: salchichas bávaras, ajo, tocino y rábano picante, tomate picante y ternera con adjika. Empaques de 65 g, 70 g y 100 g.",
       "Crostini di segale con gusti da bar: salsicce bavaresi, aglio, bacon e rafano, pomodoro piccante e vitello con adjika. Confezioni da 65 g, 70 g e 100 g.",
     ),
-    image: "/products/star-grocery/snacks/flint-grenki.png",
+    image: "/products/star-grocery/snacks/flint-grenki.jpg",
     details: [
       loc("Flint Grenki", "Flint Grenki", "Flint Grenki"),
       loc("Star Grocery", "Star Grocery", "Star Grocery"),
@@ -115,7 +115,7 @@ const flintSnackProducts: CatalogProduct[] = [
       "Snacks Flint de receta craft en forma de barra y chip de pan. Sabores: kabanosa con mostaza, ajo y cecina picante. Empaques de 90 g.",
       "Snack Flint di ricetta craft in forma di barretta e chip di pane. Gusti: kabanosa con senape, aglio e jerky piccante. Confezioni da 90 g.",
     ),
-    image: "/products/star-grocery/snacks/flint-craft-bars.png",
+    image: "/products/star-grocery/snacks/flint-craft-bars.jpg",
     details: [
       loc("Flint Craft", "Flint Craft", "Flint Craft"),
       loc("Star Grocery", "Star Grocery", "Star Grocery"),
@@ -134,7 +134,7 @@ const hroomSnackProducts: CatalogProduct[] = [
       "Papas Hroom en rodaja fina: cangrejo, tocino, queso, kebab, crema agria con hierbas, queso y cebolla, carne a la parrilla y paprika. Empaques de 50 g y 100 g.",
       "Patatine Hroom in fetta sottile: granchio, bacon, formaggio, kebab, panna acida con erbe, formaggio e cipolla, carne alla griglia e paprika. Confezioni da 50 g e 100 g.",
     ),
-    image: "/products/star-grocery/snacks/hroom-chips.png",
+    image: "/products/star-grocery/snacks/hroom-chips.jpg",
     details: [
       loc("Hroom", "Hroom", "Hroom"),
       loc("Star Grocery", "Star Grocery", "Star Grocery"),
