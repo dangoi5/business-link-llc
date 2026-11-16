@@ -65,14 +65,15 @@ function BrandLinks({ brand, locale }: { brand: Brand; locale: Locale }) {
   const catalogHref = locale === "es" && brand.catalogHrefEs ? brand.catalogHrefEs : brand.catalogHref;
 
   return (
-    <div className="flex flex-wrap gap-x-4 gap-y-1.5">
+    <div className="flex flex-wrap gap-2">
       {catalogHref ? (
         <CatalogAnchor
           href={catalogHref}
           locale={locale}
-          className="inline-flex text-sm font-semibold text-brand transition hover:text-brand-deep"
+          className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-brand-deep active:translate-y-px"
         >
-          {t(locale, brand.catalogLabel ?? ui.common.viewFullCatalog)} →
+          {t(locale, brand.catalogLabel ?? ui.common.viewFullCatalog)}
+          <span aria-hidden>→</span>
         </CatalogAnchor>
       ) : null}
       {brand.extraLinks?.map((link) => (
@@ -80,9 +81,10 @@ function BrandLinks({ brand, locale }: { brand: Brand; locale: Locale }) {
           key={link.href}
           href={link.href}
           locale={locale}
-          className="inline-flex text-sm font-semibold text-brand transition hover:text-brand-deep"
+          className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-lg border border-line bg-white px-4 py-2 text-sm font-semibold text-ink transition duration-200 hover:border-brand/40 hover:bg-surface active:translate-y-px"
         >
-          {t(locale, link.label)} →
+          {t(locale, link.label)}
+          <span aria-hidden>→</span>
         </CatalogAnchor>
       ))}
     </div>

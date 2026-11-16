@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BrandsWeRepresent } from "@/components/BrandsWeRepresent";
 import { Reveal } from "@/components/Reveal";
-import { PageHero, TextLink } from "@/components/ui";
+import { PageHero, PrimaryButton, TealButton } from "@/components/ui";
 import { isLocale, localeAlternates, localizedHref, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
@@ -43,8 +43,8 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate md:text-base">
             {t(locale, ui.portfolioPage.foodCategoriesBody)}
           </p>
-          <div className="mt-4">
-            <TextLink href={localizedHref(locale, "/products")}>{t(locale, ui.catalog.browseAll)}</TextLink>
+          <div className="mt-5">
+            <TealButton href={localizedHref(locale, "/products")}>{t(locale, ui.catalog.browseAll)}</TealButton>
           </div>
         </Reveal>
 
@@ -73,8 +73,9 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
                   <h3 className="text-base leading-snug font-bold tracking-tight break-words text-ink">
                     {t(locale, category.title)}
                   </h3>
-                  <span className="text-sm font-semibold text-brand transition-colors duration-200 group-hover:text-brand-deep">
-                    {t(locale, ui.portfolioPage.viewProducts)} →
+                  <span className="inline-flex min-h-9 items-center justify-center gap-1.5 self-start rounded-lg bg-brand px-3.5 py-2 text-sm font-semibold text-white transition-colors duration-200 group-hover:bg-brand-deep">
+                    {t(locale, ui.portfolioPage.viewProducts)}
+                    <span aria-hidden>→</span>
                   </span>
                 </div>
               </Link>
@@ -92,11 +93,9 @@ export default async function PortfolioPage({ params }: PageProps<"/[locale]/por
             {t(locale, ui.portfolioPage.lookingBody)}
           </p>
           <div className="mt-6">
-            <TextLink href={localizedHref(locale, "/contact")}>
-              <span className="text-gold hover:underline">
-                {t(locale, ui.portfolioPage.discussPortfolio)}
-              </span>
-            </TextLink>
+            <PrimaryButton href={localizedHref(locale, "/contact")}>
+              {t(locale, ui.portfolioPage.discussPortfolio)}
+            </PrimaryButton>
           </div>
         </Reveal>
       </section>
