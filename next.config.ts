@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { catalogCanonicals, siteUrl } from "./src/lib/site";
 
 const nextConfig: NextConfig = {
   images: {
@@ -10,10 +11,6 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "tronixsnacks.com",
       },
     ],
   },
@@ -47,6 +44,12 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Point each catalog PDF at the page that shows the same products, so
+      // links to the PDF build up that page's ranking instead of the file's.
+      ...Object.entries(catalogCanonicals).map(([file, page]) => ({
+        source: `/catalogs/${file}`,
+        headers: [{ key: "Link", value: `<${siteUrl}${page}>; rel="canonical"` }],
+      })),
     ];
   },
 };
