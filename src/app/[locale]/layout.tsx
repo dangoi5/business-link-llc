@@ -4,9 +4,11 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HtmlLang } from "@/components/HtmlLang";
+import { OrganizationJsonLd } from "@/components/OrganizationJsonLd";
 import { isLocale, localeAlternates, localeOg, locales, type Locale } from "@/i18n/config";
 import { t } from "@/i18n/t";
 import { ui } from "@/i18n/ui";
+import { siteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -20,7 +22,7 @@ export async function generateMetadata({
   const { locale: raw } = await params;
   const locale: Locale = isLocale(raw) ? raw : "en";
   return {
-    metadataBase: new URL("https://www.businesslinkgroup.com"),
+    metadataBase: new URL(siteUrl),
     title: {
       default: t(locale, ui.meta.titleDefault),
       template: t(locale, ui.meta.titleTemplate),
@@ -47,6 +49,7 @@ export default async function LocaleLayout({
   return (
     <>
       <HtmlLang locale={locale} />
+      <OrganizationJsonLd locale={locale} />
       <Suspense fallback={null}>
         <Header locale={locale} />
       </Suspense>
