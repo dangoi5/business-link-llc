@@ -570,7 +570,7 @@ export const catalogDocs = [
     logo: "/brands/star-grocery-logo.png",
     title: loc("General catalog 2026", "Catálogo general 2026", "Catalogo generale 2026"),
     href: "/catalogs/star-grocery-2026.pdf",
-    sizeMb: 8.8,
+    sizeMb: 9.3,
   },
   {
     brand: "Star Grocery",
