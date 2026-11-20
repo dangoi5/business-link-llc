@@ -64,9 +64,9 @@ export const freshElementsBrand = {
       id: "snacks",
       label: loc("Snacks", "Snacks", "Snack"),
       detail: loc(
-        "Platanitos plantain chips — gluten free, Salt and Chile Limón — and flavored peanuts in all pack sizes, including bulk",
-        "Platanitos — chips de plátano sin gluten, Sal y Chile Limón — y maní saborizado en todos los tamaños, incluido granel",
-        "Platanitos — chips di platano senza glutine, Sale e Chile Limón — e arachidi aromatizzate in tutti i formati, compresa la rinfusa",
+        "Plantain chips — gluten free, Sea Salt 140 g and Chili Lime 70 g — and flavored peanuts in all pack sizes, including bulk",
+        "Chips de plátano — sin gluten, Sal de mar 140 g y Chile limón 70 g — y maní saborizado en todos los tamaños, incluido granel",
+        "Chips di platano — senza glutine, Sale marino 140 g e Peperoncino e lime 70 g — e arachidi aromatizzate in tutti i formati, compresa la rinfusa",
       ),
     },
     {
@@ -90,23 +90,69 @@ export const freshElementsBrand = {
     { id: "condiments", label: loc("Condiments", "Condimentos", "Condimenti") },
   ] satisfies ProductLine[],
   products: [
-    {
-      slug: "flavored-peanuts",
+    ...[
+      {
+        slug: "mani-picante",
+        name: loc("Spicy Peanuts — Maní Picante", "Maní picante", "Arachidi piccanti"),
+        flavor: loc(
+          "spicy chili-seasoned peanuts",
+          "maní sazonado con chile picante",
+          "arachidi condite con peperoncino piccante",
+        ),
+      },
+      {
+        slug: "mani-japones",
+        name: loc("Japanese Style Peanuts", "Maní estilo japonés", "Arachidi stile giapponese"),
+        flavor: loc(
+          "crunchy Japanese-style coated peanuts",
+          "maní japonés crocante con cubierta",
+          "arachidi ricoperte croccanti in stile giapponese",
+        ),
+      },
+      {
+        slug: "mani-limon-sal",
+        name: loc("Lime & Salt Peanuts — Maní con Limón & Sal", "Maní con limón y sal", "Arachidi lime e sale"),
+        flavor: loc(
+          "peanuts seasoned with lime and salt",
+          "maní sazonado con limón y sal",
+          "arachidi condite con lime e sale",
+        ),
+      },
+      {
+        slug: "mani-con-sal",
+        name: loc("Salted Peanuts — Maní con Sal", "Maní con sal", "Arachidi salate"),
+        flavor: loc("classic salted peanuts", "maní salado clásico", "classiche arachidi salate"),
+      },
+      {
+        slug: "mani-caramelizado-ajonjoli",
+        name: loc(
+          "Caramelized Peanuts with Sesame",
+          "Maní caramelizado con ajonjolí",
+          "Arachidi caramellate al sesamo",
+        ),
+        flavor: loc(
+          "caramelized peanuts coated with sesame",
+          "maní caramelizado cubierto con ajonjolí",
+          "arachidi caramellate ricoperte di sesamo",
+        ),
+      },
+    ].map(({ slug, name, flavor }) => ({
+      slug,
       line: "snacks",
-      name: loc("Flavored Peanuts", "Maní saborizado", "Arachidi aromatizzate"),
+      name,
       description: loc(
-        "Flavored peanuts from Fresh Elements in five flavors: spicy, Japanese-style, lime & salt, salted, and caramelized with sesame. Packs can be produced in all sizes, including bulk for export.",
-        "Maní saborizado Fresh Elements en cinco sabores: picante, estilo japonés, limón y sal, con sal, y caramelizado con ajonjolí. Se puede producir en todos los tamaños, incluido granel para exportación.",
-        "Arachidi aromatizzate Fresh Elements in cinque gusti: piccante, stile giapponese, lime e sale, salate e caramellate con sesamo. Possono essere prodotte in tutti i formati, compresa la rinfusa per l’esportazione.",
+        `Fresh Elements ${flavor.en} in a 42 g (1.5 oz) bag. 160 calories, 2 g protein and 0 g trans fat per bag. Also produced in other pack sizes, including bulk for export.`,
+        `${flavor.es[0].toUpperCase()}${flavor.es.slice(1)} Fresh Elements en bolsa de 42 g (1.5 oz). 160 calorías, 2 g de proteína y 0 g de grasas trans por bolsa. También se produce en otros tamaños, incluido granel para exportación.`,
+        `${flavor.it[0].toUpperCase()}${flavor.it.slice(1)} Fresh Elements in busta da 42 g (1.5 oz). 160 calorie, 2 g di proteine e 0 g di grassi trans per busta. Disponibili anche in altri formati, compresa la rinfusa per l’esportazione.`,
       ),
-      image: "/products/fresh-elements/flavored-peanuts.webp",
+      image: `/products/fresh-elements/${slug}.webp`,
       details: [
-        loc("All pack sizes", "Todos los tamaños", "Tutti i formati"),
-        loc("Bulk export", "Exportación a granel", "Esportazione alla rinfusa"),
-        loc("5 flavors", "5 sabores", "5 gusti"),
+        loc("42 g / 1.5 oz", "42 g / 1.5 oz", "42 g / 1.5 oz"),
+        loc("160 calories", "160 calorías", "160 calorie"),
+        loc("2 g protein", "2 g de proteína", "2 g di proteine"),
       ],
       imageFit: "contain" as const,
-    },
+    })),
     {
       slug: "salted-peanuts-15kg",
       line: "snacks",
@@ -129,19 +175,44 @@ export const freshElementsBrand = {
       imageFit: "contain" as const,
     },
     {
-      slug: "platanitos",
+      slug: "plantain-chips-sea-salt",
       line: "snacks",
-      name: loc("Platanitos", "Platanitos", "Platanitos"),
-      description: loc(
-        "Gluten-free plantain chips from Fresh Elements. Two flavors: Salt and Chile Limón (Spicy Lime), packed for retail snacking.",
-        "Chips de plátano sin gluten de Fresh Elements. Dos sabores: Sal y Chile Limón, en empaque para snack de retail.",
-        "Chips di platano senza glutine di Fresh Elements. Due gusti: Sale e Chile Limón, in confezione per lo snacking da retail.",
+      name: loc(
+        "Plantain Chips — Sea Salt",
+        "Chips de plátano — Sal de mar",
+        "Chips di platano — Sale marino",
       ),
-      image: "/products/fresh-elements/platanitos.webp",
+      description: loc(
+        "Fresh Elements plantain chips seasoned with sea salt. Gluten free, in a 140 g (4.94 oz) bag for retail snacking.",
+        "Chips de plátano Fresh Elements con sal de mar. Sin gluten, en bolsa de 140 g (4.94 oz) para snack de retail.",
+        "Chips di platano Fresh Elements al sale marino. Senza glutine, in busta da 140 g (4.94 oz) per lo snacking da retail.",
+      ),
+      image: "/products/fresh-elements/plantain-chips-sea-salt.webp",
       details: [
+        loc("140 g / 4.94 oz", "140 g / 4.94 oz", "140 g / 4.94 oz"),
+        loc("Sea salt", "Sal de mar", "Sale marino"),
         loc("Gluten free", "Sin gluten", "Senza glutine"),
-        loc("Salt & Chile Limón", "Sal y chile limón", "Sale e Chile Limón"),
-        loc("1 oz (28 g) serving", "Porción de 1 oz (28 g)", "Porzione da 1 oz (28 g)"),
+      ],
+      imageFit: "contain" as const,
+    },
+    {
+      slug: "plantain-chips-chili-lime",
+      line: "snacks",
+      name: loc(
+        "Plantain Chips — Chili Lime",
+        "Chips de plátano — Chile limón",
+        "Chips di platano — Peperoncino e lime",
+      ),
+      description: loc(
+        "Fresh Elements plantain chips with a spicy chili and lime seasoning. Gluten free, in a 70 g (2.47 oz) bag for retail snacking.",
+        "Chips de plátano Fresh Elements con sazón picante de chile y limón. Sin gluten, en bolsa de 70 g (2.47 oz) para snack de retail.",
+        "Chips di platano Fresh Elements con condimento piccante al peperoncino e lime. Senza glutine, in busta da 70 g (2.47 oz) per lo snacking da retail.",
+      ),
+      image: "/products/fresh-elements/plantain-chips-chili-lime.webp",
+      details: [
+        loc("70 g / 2.47 oz", "70 g / 2.47 oz", "70 g / 2.47 oz"),
+        loc("Chili lime", "Chile limón", "Peperoncino e lime"),
+        loc("Gluten free", "Sin gluten", "Senza glutine"),
       ],
       imageFit: "contain" as const,
     },

@@ -21,7 +21,7 @@ import {
 
 const packshots = {
   oil: "/products/fresh-elements/palm-oil-blend.jpg",
-  chips: "/products/fresh-elements/platanitos.jpg",
+  chips: "/products/fresh-elements/plantain-chips-sea-salt-staged.jpg",
   spread: "/products/fresh-elements/do-it-all-spread-v2.jpg",
 };
 
@@ -139,9 +139,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               <div className="relative col-span-4 overflow-hidden rounded-xl bg-white">
                 <Image
                   src={packshots.chips}
-                  alt="Fresh Elements Platanitos plantain chips, salt and chile limón"
+                  alt="Fresh Elements Plantain Chips, Sea Salt 140 g bag"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[50%_35%]"
                   sizes="(max-width: 1024px) 60vw, 33vw"
                 />
               </div>

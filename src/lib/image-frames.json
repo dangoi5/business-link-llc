@@ -527,12 +527,44 @@
   "h": 1,
   "bg": "#d3bda8"
  },
- "/products/fresh-elements/flavored-peanuts.webp": {
+ "/products/fresh-elements/mani-caramelizado-ajonjoli.webp": {
   "aspect": 1,
-  "x": 0.0858,
-  "y": 0.0542,
-  "w": 0.8292,
-  "h": 0.8925,
+  "x": 0.216,
+  "y": 0.04,
+  "w": 0.567,
+  "h": 0.92,
+  "bg": null
+ },
+ "/products/fresh-elements/mani-con-sal.webp": {
+  "aspect": 1,
+  "x": 0.221,
+  "y": 0.04,
+  "w": 0.558,
+  "h": 0.92,
+  "bg": null
+ },
+ "/products/fresh-elements/mani-japones.webp": {
+  "aspect": 1,
+  "x": 0.223,
+  "y": 0.04,
+  "w": 0.553,
+  "h": 0.92,
+  "bg": null
+ },
+ "/products/fresh-elements/mani-limon-sal.webp": {
+  "aspect": 1,
+  "x": 0.222,
+  "y": 0.04,
+  "w": 0.555,
+  "h": 0.92,
+  "bg": null
+ },
+ "/products/fresh-elements/mani-picante.webp": {
+  "aspect": 1,
+  "x": 0.224,
+  "y": 0.04,
+  "w": 0.552,
+  "h": 0.92,
   "bg": null
  },
  "/products/fresh-elements/margarine-traditional-50g.jpg": {
@@ -583,20 +615,36 @@
   "h": 1,
   "bg": "#d1bba6"
  },
- "/products/fresh-elements/platanitos.jpg": {
+ "/products/fresh-elements/plantain-chips-chili-lime-staged.jpg": {
   "aspect": 1,
   "x": 0,
   "y": 0,
   "w": 1,
   "h": 1,
-  "bg": "#cbad91"
+  "bg": "#c8a484"
  },
- "/products/fresh-elements/platanitos.webp": {
+ "/products/fresh-elements/plantain-chips-chili-lime.webp": {
   "aspect": 1,
-  "x": 0.0542,
-  "y": 0.1925,
-  "w": 0.8925,
-  "h": 0.615,
+  "x": 0.1408,
+  "y": 0.04,
+  "w": 0.7192,
+  "h": 0.92,
+  "bg": null
+ },
+ "/products/fresh-elements/plantain-chips-sea-salt-staged.jpg": {
+  "aspect": 1,
+  "x": 0,
+  "y": 0,
+  "w": 1,
+  "h": 1,
+  "bg": "#c39f7d"
+ },
+ "/products/fresh-elements/plantain-chips-sea-salt.webp": {
+  "aspect": 1,
+  "x": 0.1333,
+  "y": 0.04,
+  "w": 0.7325,
+  "h": 0.92,
   "bg": null
  },
  "/products/fresh-elements/salted-peanuts-15kg.webp": {
@@ -2573,7 +2621,7 @@
   "y": 0,
   "w": 1,
   "h": 1,
-  "bg": "#d4bda8"
+  "bg": "#d4bdab"
  },
  "/products/star-grocery/snacks/flint-craft-bars.jpg": {
   "aspect": 1,
@@ -2581,7 +2629,7 @@
   "y": 0,
   "w": 1,
   "h": 1,
-  "bg": "#ceb69f"
+  "bg": "#cfb59e"
  },
  "/products/star-grocery/snacks/flint-grenki.jpg": {
   "aspect": 1,
@@ -2589,7 +2637,7 @@
   "y": 0,
   "w": 1,
   "h": 1,
-  "bg": "#d2baa5"
+  "bg": "#d3baa4"
  },
  "/products/star-grocery/snacks/flint-ua-food.jpg": {
   "aspect": 1,
@@ -2613,7 +2661,7 @@
   "y": 0,
   "w": 1,
   "h": 1,
-  "bg": "#ceb197"
+  "bg": "#ccb299"
  },
  "/products/starkist/starkist-chunk-light-oil.webp": {
   "aspect": 1,

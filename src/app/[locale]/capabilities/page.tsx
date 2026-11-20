@@ -21,7 +21,7 @@ const rowGrid = "grid gap-x-8 lg:grid-cols-[3.5rem_minmax(0,5fr)_minmax(0,6fr)]"
 
 const packshots = {
   oil: "/products/fresh-elements/palm-oil-blend.jpg",
-  chips: "/products/fresh-elements/platanitos.jpg",
+  chips: "/products/fresh-elements/plantain-chips-chili-lime-staged.jpg",
   spread: "/products/fresh-elements/do-it-all-spread-v2.jpg",
 };
 
@@ -162,9 +162,9 @@ export default async function CapabilitiesPage({ params }: PageProps<"/[locale]/
                 <div className="relative col-span-4 overflow-hidden rounded-xl bg-white">
                   <Image
                     src={packshots.chips}
-                    alt="Fresh Elements Platanitos plantain chips, salt and chile limón"
+                    alt="Fresh Elements Plantain Chips, Chili Lime 70 g bag"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[50%_35%]"
                     sizes="(max-width: 1024px) 60vw, 28vw"
                   />
                 </div>

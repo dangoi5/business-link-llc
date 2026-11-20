@@ -747,9 +747,9 @@ export const ui = {
   freshElements: {
     metaTitle: loc("Fresh Elements", "Fresh Elements", "Fresh Elements"),
     metaDescription: loc(
-      "Fresh Elements product catalog from Business Link LLC: flavored peanuts, Platanitos, palm oil, margarine spreads, basmati and jasmine rice, for retail, foodservice and international trade.",
-      "Catálogo de productos Fresh Elements de Business Link LLC: maní saborizado, Platanitos, aceite de palma, margarinas, arroz basmati y jazmín, para retail, foodservice y comercio internacional.",
-      "Catalogo prodotti Fresh Elements di Business Link LLC: arachidi aromatizzate, Platanitos, olio di palma, margarine spalmabili, riso basmati e jasmine, per retail, foodservice e commercio internazionale.",
+      "Fresh Elements product catalog from Business Link LLC: flavored peanuts, plantain chips, palm oil, margarine spreads, basmati and jasmine rice, for retail, foodservice and international trade.",
+      "Catálogo de productos Fresh Elements de Business Link LLC: maní saborizado, chips de plátano, aceite de palma, margarinas, arroz basmati y jazmín, para retail, foodservice y comercio internacional.",
+      "Catalogo prodotti Fresh Elements di Business Link LLC: arachidi aromatizzate, chips di platano, olio di palma, margarine spalmabili, riso basmati e jasmine, per retail, foodservice e commercio internazionale.",
     ),
     heroLabel: loc("Own brand", "Marca propia", "Marchio proprio"),
     heroTitle: loc("Fresh Elements product catalog.", "Catálogo de productos Fresh Elements.", "Catalogo prodotti Fresh Elements."),

@@ -37,6 +37,7 @@ const reelPicks = [
   "khutorok-groats", // Star Grocery
   "quinoa-club-quinoarepa", // Quinoa Club
   "lasco-peanut-punch-120g", // Lasco
+  "plantain-chips-sea-salt", // Fresh Elements
   "flint-baguette", // Star Grocery
   "buffalo-style-chicken", // AmeriQual
   "margarine-traditional", // Fresh Elements
@@ -50,6 +51,7 @@ const reelStagedPhotos: Record<string, string> = {
   "palm-oil-blend": "/products/fresh-elements/palm-oil-blend-900ml.jpg",
   "do-it-all-spread": "/products/fresh-elements/do-it-all-spread-tub-v2.jpg",
   "margarine-traditional": "/products/fresh-elements/margarine-traditional.jpg",
+  "plantain-chips-sea-salt": "/products/fresh-elements/plantain-chips-sea-salt-staged.jpg",
   "starkist-chunk-light-water": "/products/starkist/starkist-chunk-light-water-staged.jpg",
   "tronix-torti-chips-bbq": "/products/tronix/torti-chips-bbq-staged.jpg",
   "akhan-penne-rigate": "/products/akhan/penne-rigate-staged.jpg",
